@@ -1,0 +1,30 @@
+
+# Disable redirects with trailing slashes when URLs match the directory paths
+# DirectorySlash Off
+
+
+
+
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+# The Home page
+RewriteRule ^/?$ pages/home.php [QSA,L,NC]
+
+# Page routing
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} ^/?([^/]+)/?
+RewriteCond %{DOCUMENT_ROOT}/pages/%1.php -f
+RewriteRule .? pages/%1.php?_slug=%1 [QSA,L,NC]
+
+# Redirect URLs with trailing slashes to versions without
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule (.+)/$ /$1 [R=301,QSA,L,NC]
+
+# Default fallback
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule .? / [R=301,QSA,L,NC]
+
+</IfModule>
