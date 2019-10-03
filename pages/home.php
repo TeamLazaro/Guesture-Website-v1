@@ -19,7 +19,7 @@
 <section class="sample-section">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
+			<div class="columns small-12 space-50-top-bottom">
 			</div>
 		</div>
 	</div>
@@ -28,45 +28,70 @@
 
 
 <!-- Intro Section -->
-<section class="intro-section">
+<section class="intro-section fill-green-1 space-150-top-bottom">
 	<div class="container">
-		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
-				<!-- Guesture Logo -->
-				<!-- Just bring your bag. -->
-				<!-- Say no to landlords, brokers and rent. -->
-				<!-- Try Coliving instead. -->
-				<!-- (Points)
-					 	10 min 
-						Check-in 
-
-						STAY Packages for 
-						1 day to 60 day
-
-						LIVE Packages for 
-						2 months to 7 years
-
-						Fully 
-						Furnished
-
-						High Speed 
-						Internet
-
-						24x7 Lift and 
-						Power Backup
-
-						Hotel Style
-						Housekeeping
-
-						Dedicated Gaming 
-						and Chilling Areas
-
-						Round-the-clock 
-						Security
-
-						Fully Stocked
-						Cafeteria
-				 -->
+		<div class="intro row space-50-bottom">
+			<div class="columns small-10 small-offset-1">
+				<div class="logo"></div>
+				<div class="h2">Just bring your bag.</div>
+				<div class="h3">Say no to landlords, brokers and rent.</div>
+				<div class="h3 strong">Try Coliving instead.</div>
+			</div>
+		</div>
+		<div class="points row">
+			<div class="columns small-10 small-offset-1 large-3">
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">10 min <br>
+					Check-in</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left text-light"><strong>STAY Packages</strong> for <br>
+					1 day to 60 day</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left text-light"><strong>LIVE Packages</strong> for <br>
+					2 months to 7 years</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">Fully <br>
+					Furnished</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">High Speed <br>
+					Internet</div>
+				</div>
+			</div>
+			<div class="columns small-10 small-offset-1 large-3 xlarge-offset-0">
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">24x7 Lift and <br>
+					Power Backup</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">Hotel Style <br>
+					Housekeeping</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">Dedicated Gaming <br>
+					and Chilling Areas</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">Round-the-clock <br>
+					Security</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 inline-middle space-25-left">Fully Stocked <br>
+					Cafeteria</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -76,13 +101,16 @@
 
 
 <!-- Booking Section -->
-<section class="booking-section">
+<section class="booking-section space-150-top-bottom">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
-				<!-- Coliving with like-minded people -->
-				<!-- Guesture @Alta Vista -->
-				<!-- in   BLR - Electronic City Phase 1 -->
+			<div class="intro columns small-10 small-offset-1">
+				<div class="label text-neutral-3 text-uppercase">Location</div>
+				<div class="h4 text-green-2 strong">Coliving with like-minded people</div>
+				<div class="h2 text-green-2">Guesture @Alta Vista</div>
+				<div class="h4 text-green-2 strong inline">in</div>
+				<select class="inline"><option>BLR - Electronic City Phase 1</option></select>
+			</div>
 				<!-- (Workplaces)
 						9min 
 						to HCL Technologies
@@ -126,25 +154,36 @@
 					<- Book Now ->
 				 -->
 
-				<!-- (Checkin)
-					10 Minute Check-in
-					Just carry "any one" of these KYC documents for a quick check-in.
-					AADHAR Card 
-					Driver’s License
-					Voter’s ID Card
-					Passport
-					Full KYC Policy ›
-				 -->
-
-				<!-- (Enquire)
-					Request a call-back
-					Full Name
-					Email Id
-					Mobile Number
-					Submit
-				 -->
-
-				 <!-- or Call us on +91-98860-98860 -->
+			<div class="checkin columns small-10 small-offset-1">	
+				<div class="label text-neutral-3 text-uppercase">Check-in</div>
+					<div class="">10 Minute Check-in</div>
+					<div class="">Just carry "any one" of these KYC documents for a quick check-in.</div>
+					<div class="">AADHAR Card</div>
+					<div class="">Driver’s License</div>
+					<div class="">Voter’s ID Card</div>
+					<div class="">Passport</div>
+					<div class="">Full KYC Policy ›</div>
+			</div>
+			<div class="contact columns small-10 small-offset-1">	
+				<div class="label text-neutral-3 text-uppercase">Contact-us</div>
+					<div class="h2 text-green-2">Request a call-back</div>
+					<div class="label">
+						<span class="text-neutral-3 text-uppercase">Full Name</span>
+						<input class="block" type="text">
+					</div>
+					<div class="label">
+						<span class="text-neutral-3 text-uppercase">Email Id</span>
+						<input class="block" type="text">
+					</div>
+					<div class="label">
+						<span class="text-neutral-3 text-uppercase">Mobile Number</span>
+						<input class="block" type="text">
+					</div>
+					<div class="label">
+						<span class="text-neutral-3 text-uppercase">Submit</span>
+						<button class="block">Contact</button>
+					</div>
+				 	<div class="h3 strong">or Call us on <span class="text-green-2">+91-98860-98860</span></div>
 			</div>
 		</div>
 	</div>
@@ -154,19 +193,19 @@
 
 
 <!-- Trial : Trap Section -->
-<section class="trial--trap-section">
+<section class="trial--trap-section fill-green-2 space-50-top-bottom">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
-				<!-- 
-					Book a  "3 Day Trial"  online today
-					Come experience like-minded coliving.
-					3 days and 2 nights
-					Money back guarantee *
-					* If cancelled within 36 hours of check-in
-					$1199
-					Book Now
-				 -->
+			<div class="columns small-10 small-offset-1">
+				<div class="h3 strong">Book a "3 Day Trial" online today</div>
+				<div class="h4">Come experience like-minded coliving.</div>
+				<div clas="points">
+					<div class="point h6 text-uppercase">3 days and 2 nights</div>
+					<div class="point h6 text-uppercase">Money back guarantee *</div>
+				</div>
+				<div class="small">* If cancelled within 36 hours of check-in</div>
+				<div class="h1">$1199</div>
+				<button class="button">Book Now</button>				
 			</div>
 		</div>
 	</div>
@@ -176,53 +215,152 @@
 
 
 <!-- Live Section -->
-<section class="live-section">
+<section class="live-section space-150-top-bottom">
 	<div class="container">
-		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
-				<!-- The Environment 
-					at Guesture -->
-				<!-- we built cultural spaces into 
-					your environment. -->
-				<!-- 
-					Urban living often forces people to abandon their passions & interests.
-
-					The environment at Guesture is designed and built to provide interaction spaces, spaces for yoga and meditation, studio and amphitheater spaces for cultural activities, coworking spaces for working, sports areas for pursuing fitness and sports interests, and an overall sustainable system which does not hurt nature or the environment. -->
-
-				<!-- (Amenities)
-
-					Swimming Pool
-
-					Gymnasium
-
-					Amphitheatre
-
-					Table Tennis
-
-					Tennis Courts
-
-					Yoga Hall
-
-					Snooker Tables
-
-					Laundry
-
-					Meditation Hall
-
-					Open Air Screen
-
-					Basket Ball Court
-
-					Outdoor Bowling Alley
-
-					Mini Football Courts
-
-					Doctor on-call
-
-					Shuttle Bus Service
-
-					Cafeteria
-				 -->
+		<div class="intro row">
+			<div class="columns small-10 small-offset-1 large-6">
+				<div class="h2 text-green-2 space-min-bottom">The Environment at Guesture</div>
+				<div class="h3 text-neutral-5 space-min-bottom">we built cultural spaces into your environment.</div>
+			</div>
+			<div class="description columns small-10 small-offset-1 medium-9 large-7 xlarge-6 space-50-bottom">
+				<div class="h5 text-green-2 strong space-min-bottom">Urban living often forces people to abandon their passions & interests.</div>
+				<div class="h6 text-neutral-4">The environment at Guesture is designed and built to provide interaction spaces, spaces for yoga and meditation, studio and amphitheater spaces for cultural activities, coworking spaces for working, sports areas for pursuing fitness and sports interests, and an overall sustainable system which does not hurt nature or the environment.</div>
+			</div>
+		</div>
+		<div class="amenities points row space-50-bottom">
+			<div class="columns small-10 small-offset-1 medium-5 large-3">
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Swimming Pool</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Gymnasium</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Amphitheater</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Table Tennis</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Tennis Courts</div>
+				</div>
+			</div>
+			<div class="columns small-10 small-offset-1 medium-5 medium-offset-0 large-3 large-offset-1 xlarge-offset-0">
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Yoga Hall</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Snooker Tables</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Laundry</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Meditation Hall</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Open Air Screen</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Sliding Gallery -->
+	<div class="sliding-gallery block js_sliding_gallery">
+		<div class="container-track">
+			<div class="track js_track">
+				<div class="image bg-image" style="background-image: url( 'media/anthias.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/butterfly-fish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/cherax-destructor.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/cleaner-wrasse-attends-to-an-angel-fish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/cleaner-wrasse.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/clownfish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/clownfish.jpeg' )">
+				</div>
+			</div>
+		</div>
+		<div class="container-track">
+			<div class="track js_track">
+				<div class="image bg-image" style="background-image: url( 'media/coral-trout.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/fish-mural.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/hairy-red-hermit-crab.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/lobsters-at-cairns-aquarium.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/luminescent-corals.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/mandarinfish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/tube-worm.jpeg' )">
+				</div>
+			</div>
+		</div>
+		<div class="container-track">
+			<div class="track js_track">
+				<div class="image bg-image" style="background-image: url( 'media/mud-crab.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/pink-starfish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/spine-cheek-anemonefish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/stonefish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/striped-surgeon-fish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/surgeon-fish.jpeg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/surgeon-fish.jpeg' )">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END: Sliding Gallery -->
+	<div class="container">
+		<div class="amenities points row space-50-top">
+			<div class="columns small-10 small-offset-1 medium-5 large-3">
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Basket Ball Court</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Outdoor Bowling Alley</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Mini Football Courts</div>
+				</div>
+			</div>
+			<div class="columns small-10 small-offset-1 medium-5 medium-offset-0 large-3 large-offset-1 xlarge-offset-0">
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Doctor on-call</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Shuttle Bus Service</div>
+				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+					<div class="text h6 text-green-2 inline-middle space-25-left">Cafeteria</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -231,14 +369,13 @@
 
 
 <!-- Womens Block : Trap Section -->
-<section class="womens-block--trap-section">
+<section class="womens-block--trap-section fill-red">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
-				<!-- Peace of mind for you and  "your parents" -->
-				<!-- womens 
-					only block -->
-				<!-- block your room -->
+			<div class="columns small-10 small-offset-1 space-50-top-bottom">
+				<div class="h3 strong">Peace of mind for you and "your parents"</div>
+				<div class="h1">womens only block</div>
+				<button>Block Your Room</button>
 			</div>
 		</div>
 	</div>
@@ -247,17 +384,108 @@
 
 
 <!-- Testimonial Section -->
-<section class="testimonial-section">
+<section class="testimonial-section space-150-top-bottom">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
-				<!-- Coliving with 
-					like-mided people -->
-				<!-- CoLiving is morathan 
-					just shared living spaces. -->
-				<!-- (Testimonals) -->
-				<!-- It is a combination of privacy, safety and opportunities for interaction and self-discovery. -->
-				<!-- Guesture is a unique approach to solving the problem of the high cost of living in cities, without compromising on comfort and safety. Coliving at Guesture gives you shared living spaces with the same level of amenities as service apartments, but optimized resources, hence lower costs. -->
+			<div class="columns small-10 small-offset-1 large-7">
+				<div class="h2 text-green-2">Coliving with <br>like-minded people</div>
+			</div>
+			<div class="columns small-10 small-offset-1 large-6 xlarge-5">
+				<div class="h3">CoLiving is more than just shared living spaces.</div>
+			</div>
+		</div>
+	</div>
+	<!-- Testimonials -->
+	<div class="testimonials carousel block space-50-top-bottom">
+		<div class="carousel-list">
+			<div class="carousel-list-item">
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item">
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item">
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item">
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+				<div class="testimonial">
+					<div class="image"></div>
+					<div class="info">
+						<div class="name h5 text-green-2 strong">Lorem Ipsum</div>
+						<div class="designation label text-uppercase">PokÉMon Master</div>
+						<div class="quote label text-neutral-4 space-min-top">Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End: Testimonials -->
+	<div class="container">
+		<div class="row">
+			<div class="description columns small-10 small-offset-1 medium-9 large-7 xlarge-6">
+				<div class="h5 text-green-2 strong space-min-bottom">It is a combination of privacy, safety and opportunities for interaction and self-discovery.</div>
+				<div class="h6">Guesture is a unique approach to solving the problem of the high cost of living in cities, without compromising on comfort and safety. Coliving at Guesture gives you shared living spaces with the same level of amenities as service apartments, but optimized resources, hence lower costs.</div>
 			</div>
 		</div>
 	</div>
@@ -266,10 +494,10 @@
 
 
 <!-- Address Section -->
-<section class="address-section">
+<section class="address-section fill-green-1">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
+			<div class="columns small-12 space-50-top-bottom">
 				<!-- locations -->
 			</div>
 		</div>
@@ -282,18 +510,22 @@
 <section class="about-section">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-half-top-bottom">
-				<!-- the gu[]esture story -->
+			<div class="columns small-10 small-offset-1">
+				<div class="h1">the gu[]esture story</div>
 
-				<!-- Guesture believes that CoLiving is the answer to modern day challenges of urban living faced by the youth. It is a way of living in thoughtfully designed spaces meant for collaboration, community building, sustainability and a holistic approach to a good life.
+				<div class="p text-neutral-4">
+					<p>Guesture believes that CoLiving is the answer to modern day challenges of urban living faced by the youth. It is a way of living in thoughtfully designed spaces meant for collaboration, community building, sustainability and a holistic approach to a good life.</p>
 
-				Guesture provides coliving spaces with top tier amenities like high-speed Wifi, swimming pool, sports arena, coworking spaces, event spaces, laundry and cleaning services, meal services, shuttle services and more. Sign up is hassle free and quick. It is a plug and play approach to living in a city. You don’t need to bring anything other than your suitcase. -->
-
-				<!-- Corporate Addtress
-					—
+					<p>Guesture provides coliving spaces with top tier amenities like high-speed Wifi, swimming pool, sports arena, coworking spaces, event spaces, laundry and cleaning services, meal services, shuttle services and more. Sign up is hassle free and quick. It is a plug and play approach to living in a city. You don’t need to bring anything other than your suitcase.</p>
+				</div>
+			</div>
+			<div class="columns small-10 small-offset-1">
+				<div class="h6 text-green-2 text-uppercase strong">Corporate Addtress</div>
+				<div class="p text-neutral-4">
 					Irina Hospitality Pvt Ltd, No.58, 
 					18th B Main Road, 5th Block, Rajajinagar,
-					Bangalore 560010 -->
+					Bangalore — 560010.
+				</div>
 			</div>
 		</div>
 	</div>
