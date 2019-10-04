@@ -3,22 +3,14 @@
  */
 
 
-@media( min-width: 640px )  {
-	.live-section .description {
-		columns: 2;
-		column-gap: 50px;
-	}
-}
+@media( min-width: 640px )  {}
 @media( min-width: 1040px ) {
 	.live-section .description {
-		column-gap: 85px;
+		columns: 2;
+		column-gap: var(--space-100);
 	}
 }
-@media( min-width: 1480px ) {
-	.live-section .description {
-		column-gap: 120px;
-	}
-}
+@media( min-width: 1480px ) {}
 
 /* -- Sliding Gallery -- */
 .live-section .sliding-gallery {}
@@ -60,6 +52,7 @@
 	border: solid 1px var(--neutral-1);
 	border-radius: var(--space-min);
 	overflow: hidden;
+	background-color: var(--neutral-1)
 }
 
 .live-section .sliding-gallery .container-track .track .image:last-child {

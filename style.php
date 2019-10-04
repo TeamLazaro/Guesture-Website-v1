@@ -16,5 +16,10 @@
 <link rel="stylesheet" type="text/css" href="css/pages/page.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/modal/modal-menu.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/sample-section.css<?php echo $ver ?>">
+<link rel="stylesheet" type="text/css" href="css/pages/section/intro-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/live-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/testimonial-section.css<?php echo $ver ?>">
+<link rel="stylesheet" type="text/css" href="css/pages/section/address-section.css<?php echo $ver ?>">
+<link rel="stylesheet" type="text/css" href="css/pages/section/about-section.css<?php echo $ver ?>">
+<link rel="stylesheet" type="text/css" href="css/pages/section/trial--trap-section.css<?php echo $ver ?>">
+<link rel="stylesheet" type="text/css" href="css/pages/section/womens-block--trap-section.css<?php echo $ver ?>">

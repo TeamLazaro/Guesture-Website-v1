@@ -1,0 +1,11 @@
+/*
+ *	Womens Block - Trap Section
+ */
+
+.womens-block--trap-section {
+	background: linear-gradient(135deg, var(--red) 60%, var(--yellow) 100%);
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

@@ -32,7 +32,7 @@
 	<div class="container">
 		<div class="intro row space-50-bottom">
 			<div class="columns small-10 small-offset-1">
-				<div class="logo"></div>
+				<div class="logo h0 text-green-1">guesture</div>
 				<div class="h2">Just bring your bag.</div>
 				<div class="h3">Say no to landlords, brokers and rent.</div>
 				<div class="h3 strong">Try Coliving instead.</div>
@@ -199,12 +199,12 @@
 			<div class="columns small-10 small-offset-1">
 				<div class="h3 strong">Book a "3 Day Trial" online today</div>
 				<div class="h4">Come experience like-minded coliving.</div>
-				<div clas="points">
-					<div class="point h6 text-uppercase">3 days and 2 nights</div>
-					<div class="point h6 text-uppercase">Money back guarantee *</div>
+				<div class="points space-min-top-bottom">
+					<div class="point label text-uppercase">3 days and 2 nights</div>
+					<div class="point label text-uppercase">Money back guarantee *</div>
 				</div>
 				<div class="small">* If cancelled within 36 hours of check-in</div>
-				<div class="h1">$1199</div>
+				<div class="h0 text-green-2">₹1199</div>
 				<button class="button">Book Now</button>				
 			</div>
 		</div>
@@ -222,7 +222,7 @@
 				<div class="h2 text-green-2 space-min-bottom">The Environment at Guesture</div>
 				<div class="h3 text-neutral-5 space-min-bottom">we built cultural spaces into your environment.</div>
 			</div>
-			<div class="description columns small-10 small-offset-1 medium-9 large-7 xlarge-6 space-50-bottom">
+			<div class="description columns small-10 small-offset-1 medium-8 large-7 xlarge-6 space-50-bottom">
 				<div class="h5 text-green-2 strong space-min-bottom">Urban living often forces people to abandon their passions & interests.</div>
 				<div class="h6 text-neutral-4">The environment at Guesture is designed and built to provide interaction spaces, spaces for yoga and meditation, studio and amphitheater spaces for cultural activities, coworking spaces for working, sports areas for pursuing fitness and sports interests, and an overall sustainable system which does not hurt nature or the environment.</div>
 			</div>
@@ -374,7 +374,7 @@
 		<div class="row">
 			<div class="columns small-10 small-offset-1 space-50-top-bottom">
 				<div class="h3 strong">Peace of mind for you and "your parents"</div>
-				<div class="h1">womens only block</div>
+				<div class="h0 text-red">womens only block</div>
 				<button>Block Your Room</button>
 			</div>
 		</div>
@@ -494,11 +494,49 @@
 
 
 <!-- Address Section -->
-<section class="address-section fill-green-1">
+<section class="address-section fill-green-2 space-50-top-bottom">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-50-top-bottom">
-				<!-- locations -->
+			<div class="columns small-10 small-offset-1">
+				<div class="h0 text-green-1">location</div>
+				<div class="addresses row">
+					<div class="address columns medium-6 large-4 space-50-top space-75-left">
+						<div class="h3 name">Alta Vista</div>
+						<div class="label strong text-uppercase">BLR - Electronic City Phase 1</div>
+						<div class="h6 space-min-top-bottom">Shanders Alta Vista, Veer Sandra, Electronic City, Bengaluru, Karnataka 560100</div>
+						<div class="space-25-bottom">
+							<div class="label strong text-uppercase">Solo Live Package</div>
+							<div class="label strong text-uppercase">Buddy Live Package</div>
+							<div class="label strong text-uppercase">Trio Live Package</div>
+							<div class="label strong text-uppercase invisible">Short Stay Package</div>
+						</div>
+						<a class="inline button" href="#contact">Enquire Now</a>
+					</div>
+					<div class="address columns medium-6 large-4 space-50-top space-75-left">
+						<div class="h3 name">Dwellinton</div>
+						<div class="label strong text-uppercase">BLR - Electronic City Phase 2</div>
+						<div class="h6 space-min-top-bottom">Shanthi Pura, Electronic City Phase 2, Bhovi Palya, Bengaluru, Karnataka 560100</div>
+						<div class="space-25-bottom">
+							<div class="label strong text-uppercase">Solo Live Package</div>
+							<div class="label strong text-uppercase">Buddy Live Package</div>
+							<div class="label strong text-uppercase">Trio Live Package</div>
+							<div class="label strong text-uppercase">Short Stay Package</div>
+						</div>
+						<a class="inline button" href="#contact">Enquire Now</a>
+					</div>
+					<div class="address columns medium-6 large-4 space-50-top space-75-left">
+						<div class="h3 name">Enclave</div>
+						<div class="label strong text-uppercase">BLR - Electronic City Phase 2</div>
+						<div class="h6 space-min-top-bottom">Electronic City Phase 2, Electronic City, Bhovi Palya, Bengaluru, Karnataka 560099</div>
+						<div class="space-25-bottom">
+							<div class="label strong text-uppercase">Solo Live Package</div>
+							<div class="label strong text-uppercase">Buddy Live Package</div>
+							<div class="label strong text-uppercase">Trio Live Package</div>
+							<div class="label strong text-uppercase">Short Stay Package</div>
+						</div>
+						<a class="inline button" href="#contact">Enquire Now</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -507,23 +545,24 @@
 
 
 <!-- About Section -->
-<section class="about-section">
+<section class="about-section space-150-top-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-10 small-offset-1">
-				<div class="h1">the gu[]esture story</div>
-
-				<div class="p text-neutral-4">
+				<div class="h0 text-light space-50-bottom">the gu[]esture story</div>
+			</div>
+			<div class="columns small-10 small-offset-1 large-7">
+				<div class="description p text-neutral-4 space-50-bottom space-50-right">
 					<p>Guesture believes that CoLiving is the answer to modern day challenges of urban living faced by the youth. It is a way of living in thoughtfully designed spaces meant for collaboration, community building, sustainability and a holistic approach to a good life.</p>
-
+					<br><br>
 					<p>Guesture provides coliving spaces with top tier amenities like high-speed Wifi, swimming pool, sports arena, coworking spaces, event spaces, laundry and cleaning services, meal services, shuttle services and more. Sign up is hassle free and quick. It is a plug and play approach to living in a city. You don’t need to bring anything other than your suitcase.</p>
 				</div>
 			</div>
-			<div class="columns small-10 small-offset-1">
-				<div class="h6 text-green-2 text-uppercase strong">Corporate Addtress</div>
+			<div class="columns small-10 small-offset-1 large-3 large-offset-0">
+				<div class="h6 text-green-2 text-uppercase strong space-min-bottom">Corporate Address</div>
 				<div class="p text-neutral-4">
 					Irina Hospitality Pvt Ltd, No.58, 
-					18th B Main Road, 5th Block, Rajajinagar,
+					18th B Main Road, 5th Block, Rajajinagar,<br>
 					Bangalore — 560010.
 				</div>
 			</div>

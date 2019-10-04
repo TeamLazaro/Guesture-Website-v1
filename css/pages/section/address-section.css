@@ -1,0 +1,27 @@
+/*
+ * Address Section
+ */
+
+.address-section {
+	background: linear-gradient(135deg, var(--green-1) 60%, var(--green-2) 100%);
+}
+
+.address-section .addresses .address .name {
+	position: relative;
+}
+
+.address-section .addresses .address .name:before {
+	content: '';
+	display: block;
+	width: calc( var(--space-75) - var(--space-min) );
+	height: calc( var(--space-75) - var(--space-min) );
+	background-color: peachpuff;
+	position: absolute;
+	top: 50%;
+	left: calc( var(--space-75) * -1 );
+	transform: translateY(-50%);
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

@@ -1,0 +1,13 @@
+/*
+ * About Section
+ */
+
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.about-section .description {
+		columns: 2;
+		column-gap: var(--space-50);
+	}
+}
+@media( min-width: 1480px ) {}

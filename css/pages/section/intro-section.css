@@ -1,0 +1,11 @@
+/*
+ * Intro Section
+ */
+
+.intro-section{
+	background: linear-gradient(-135deg, var(--green-1) 60%, var(--green-2) 100%);
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

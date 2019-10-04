@@ -1,0 +1,11 @@
+/*
+ *	Trial - Trap Section
+ */
+
+.trial--trap-section {
+	background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}
