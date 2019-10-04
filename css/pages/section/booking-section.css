@@ -4,6 +4,10 @@
 
 .booking-section {}
 
+
+
+
+
 /* -- Workplace -- */
 .booking-section .workplaces .workplace:first-child {
 	margin-bottom: var(--space-25);
@@ -33,6 +37,51 @@
 		width: var(--space-100);
 	}
 }
+
+
+
+
+/* -- Pricing -- */
+
+.booking-section .pricing {
+}
+
+.booking-section .pricing .pricing-list {
+	position: relative;
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	padding: 0 calc( (100vw - var(--container-width))/2 ) var(--space-50);
+	scroll-snap-type: x mandatory;
+	font-size: 0;
+}
+
+.booking-section .pricing .pricing-list .price {
+	display: inline-block;
+	position: relative;
+	white-space: normal;
+	width: calc( 6 * var(--space-100) );
+	scroll-snap-align: center;
+	font-size: 1.4rem;
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.booking-section .pricing .pricing-list .price {
+		width: calc( 4 * var(--space-100) );
+	}
+}
+@media( min-width: 1480px ) {
+	.booking-section .pricing .pricing-list .price {
+		width: calc( 3 * var(--space-100) );
+	}
+}
+
+
+
 
 
 /* -- Contact -- */

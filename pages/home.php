@@ -183,51 +183,80 @@
 		</div>
 	</div>
 	<!-- End: Workplaces -->
+	<!-- Pricing -->
+	<div class="pricing">
+		<div class="pricing-list">
+			<div class="price fill-neutral-2">
+				<-Character Cutouts->
+				Solo
+				<-Room Pictures->
+				A Dedicated room in a 3 Bedroom Suite.
+				Prefered by Managers living alone in Bangalore, away from their family.
+
+				Balcony --- Attached
+				Bathroom -- Attached
+				Live ------ 3 Months
+				@ ---- Alta Vista - BLR
+
+				$726 Per Day
+				$21800 monthly Fee
+				<- Book Now ->
+			</div>
+			<div class="price fill-neutral-3">
+				<-Character Cutouts->
+				Solo
+				<-Room Pictures->
+				A Dedicated room in a 3 Bedroom Suite.
+				Prefered by Managers living alone in Bangalore, away from their family.
+
+				Balcony --- Attached
+				Bathroom -- Attached
+				Live ------ 3 Months
+				@ ---- Alta Vista - BLR
+
+				$726 Per Day
+				$21800 monthly Fee
+				<- Book Now ->
+			</div>
+			<div class="price fill-neutral-4">
+				<-Character Cutouts->
+				Solo
+				<-Room Pictures->
+				A Dedicated room in a 3 Bedroom Suite.
+				Prefered by Managers living alone in Bangalore, away from their family.
+
+				Balcony --- Attached
+				Bathroom -- Attached
+				Live ------ 3 Months
+				@ ---- Alta Vista - BLR
+
+				$726 Per Day
+				$21800 monthly Fee
+				<- Book Now ->
+			</div>
+			<div class="price fill-neutral-5">
+				<-Character Cutouts->
+				Solo
+				<-Room Pictures->
+				A Dedicated room in a 3 Bedroom Suite.
+				Prefered by Managers living alone in Bangalore, away from their family.
+
+				Balcony --- Attached
+				Bathroom -- Attached
+				Live ------ 3 Months
+				@ ---- Alta Vista - BLR
+
+				$726 Per Day
+				$21800 monthly Fee
+				<- Book Now ->
+			</div>
+		</div>
+	</div>
+	<!-- End: Pricing -->
+					
+
 	<div class="container">
 		<div class="row">
-				<!-- (Workplaces)
-						9min 
-						to HCL Technologies
-
-						12min
-						to Infosys Campus
-
-						10min
-						to Velankani Campus
-
-						13min
-						to WIPRO
-
-						15min
-						to BioCon
-
-						9min
-						to Hewlett Packard
-
-						15min
-						to Siemens
-
-						17min
-						to Tata BP Solar
-				 -->
-
-				<!-- (Pricing)
-					<-Character Cutouts->
-					Solo
-					<-Room Pictures->
-					A Dedicated room in a 3 Bedroom Suite.
-					Prefered by Managers living alone in Bangalore, away from their family.
-
-					Balcony --- Attached
-					Bathroom -- Attached
-					Live ------ 3 Months
-					@ ---- Alta Vista - BLR
-
-					$726 Per Day
-					$21800 monthly Fee
-					<- Book Now ->
-				 -->
-
 			<div class="checkin columns small-10 small-offset-1 space-100-top">	
 				<div class="label text-neutral-3 text-uppercase space-min-bottom">Check-in</div>
 				<div class="h3 strong text-green-2 space-min-bottom">10 Minute Check-in</div>
