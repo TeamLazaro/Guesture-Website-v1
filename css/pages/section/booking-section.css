@@ -4,6 +4,37 @@
 
 .booking-section {}
 
+/* -- Workplace -- */
+.booking-section .workplaces .workplace:first-child {
+	margin-bottom: var(--space-25);
+}
+
+.booking-section .workplaces .workplace .image {
+	background-color: var(--neutral-1);
+	display: inline-block;
+	vertical-align: middle;
+	height: var(--space-150);
+	width: var(--space-150);
+	border-radius: var(--space-min);
+}
+	
+.booking-section .workplaces .workplace .info {
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: var(--space-25);
+	width: calc( ( var(--space-100) * 3 ) );
+	height: auto;
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.booking-section .workplaces .workplace .image {
+		height: var(--space-100);
+		width: var(--space-100);
+	}
+}
+
+
 /* -- Contact -- */
 .booking-section .contact .form-row {
 	padding-bottom: var(--space-min);

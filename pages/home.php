@@ -105,12 +105,86 @@
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-10 small-offset-1">
-				<div class="label text-neutral-3 text-uppercase">Location</div>
+				<div class="label text-neutral-3 text-uppercase space-min-bottom">Location</div>
 				<div class="h4 text-green-2 strong">Coliving with like-minded people</div>
 				<div class="h2 text-green-2">Guesture @Alta Vista</div>
 				<div class="h4 text-green-2 strong inline">in</div>
 				<select class="inline"><option>BLR - Electronic City Phase 1</option></select>
 			</div>
+		</div>
+	</div>
+	<!-- Workplaces -->
+	<div class="workplaces carousel block space-50-top-bottom">
+		<div class="carousel-list">
+			<div class="carousel-list-item">
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">9min</div>
+						<div class="h6 strong text-neutral-2">to HCL Technologies</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">12min</div>
+						<div class="h6 strong text-neutral-2">to Infosys Campus</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item">
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">10min</div>
+						<div class="h6 strong text-neutral-2">to Velankani Campus</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">13min</div>
+						<div class="h6 strong text-neutral-2">to WIPRO</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item">
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">15min</div>
+						<div class="h6 strong text-neutral-2">to BioCon</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">9min</div>
+						<div class="h6 strong text-neutral-2">to Hewlett Packard</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item">
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">15min</div>
+						<div class="h6 strong text-neutral-2">to Siemens</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<div class="image"></div>
+					<div class="info">
+						<div class="h4 strong">17min</div>
+						<div class="h6 strong text-neutral-2">to Tata BP Solar</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End: Workplaces -->
+	<div class="container">
+		<div class="row">
 				<!-- (Workplaces)
 						9min 
 						to HCL Technologies
@@ -154,15 +228,31 @@
 					<- Book Now ->
 				 -->
 
-			<div class="checkin columns small-10 small-offset-1">	
-				<div class="label text-neutral-3 text-uppercase">Check-in</div>
-					<div class="">10 Minute Check-in</div>
-					<div class="">Just carry "any one" of these KYC documents for a quick check-in.</div>
-					<div class="">AADHAR Card</div>
-					<div class="">Driver’s License</div>
-					<div class="">Voter’s ID Card</div>
-					<div class="">Passport</div>
-					<div class="">Full KYC Policy ›</div>
+			<div class="checkin columns small-10 small-offset-1 space-100-top">	
+				<div class="label text-neutral-3 text-uppercase space-min-bottom">Check-in</div>
+				<div class="h3 strong text-green-2 space-min-bottom">10 Minute Check-in</div>
+				<div class="h4 text-neutral-3">Just carry <span class="strong text-green-2">"any one"</span> of these KYC documents for a quick check-in.</div>
+			</div>
+			<div class="checkin columns small-10 small-offset-1 xlarge-9">	
+				<div class="row space-min-top-bottom">
+					<div class="columns small-12 medium-6 large-3">
+						<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+						<div class="h6 strong text-green-2 text-uppercase inline-middle">AADHAR Card</div>
+					</div>
+					<div class="columns small-12 medium-6 large-3">
+						<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+						<div class="h6 strong text-green-2 text-uppercase inline-middle">Driver’s License</div>
+					</div>
+					<div class="columns small-12 medium-6 large-3">
+						<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+						<div class="h6 strong text-green-2 text-uppercase inline-middle">Voter’s ID Card</div>
+					</div>
+					<div class="columns small-12 medium-6 large-3">
+						<div class="icon inline-middle"><img src="https://via.placeholder.com/64"></div>
+						<div class="h6 strong text-green-2 text-uppercase inline-middle">Passport</div>
+					</div>
+				</div>
+				<div class="h6 strong text-uppercase">Full KYC Policy ›</div>
 			</div>
 			<div id="contact" class="contact columns small-10 small-offset-1 space-100-top space-25-bottom">	
 				<div class="label text-neutral-3 text-uppercase space-min-bottom">Contact-us</div>
