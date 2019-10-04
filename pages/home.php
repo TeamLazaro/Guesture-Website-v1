@@ -32,7 +32,7 @@
 	<div class="container">
 		<div class="intro row space-50-bottom">
 			<div class="columns small-10 small-offset-1">
-				<div class="logo h0 text-green-1">guesture</div>
+				<div class="logo h0 text-green-1 space-50-bottom">guesture</div>
 				<div class="h2">Just bring your bag.</div>
 				<div class="h3">Say no to landlords, brokers and rent.</div>
 				<div class="h3 strong">Try Coliving instead.</div>
@@ -164,26 +164,40 @@
 					<div class="">Passport</div>
 					<div class="">Full KYC Policy ›</div>
 			</div>
-			<div class="contact columns small-10 small-offset-1">	
-				<div class="label text-neutral-3 text-uppercase">Contact-us</div>
-					<div class="h2 text-green-2">Request a call-back</div>
-					<div class="label">
-						<span class="text-neutral-3 text-uppercase">Full Name</span>
-						<input class="block" type="text">
-					</div>
-					<div class="label">
-						<span class="text-neutral-3 text-uppercase">Email Id</span>
-						<input class="block" type="text">
-					</div>
-					<div class="label">
-						<span class="text-neutral-3 text-uppercase">Mobile Number</span>
-						<input class="block" type="text">
-					</div>
-					<div class="label">
-						<span class="text-neutral-3 text-uppercase">Submit</span>
-						<button class="block">Contact</button>
-					</div>
-				 	<div class="h3 strong">or Call us on <span class="text-green-2">+91-98860-98860</span></div>
+			<div id="contact" class="contact columns small-10 small-offset-1 space-100-top space-25-bottom">	
+				<div class="label text-neutral-3 text-uppercase space-min-bottom">Contact-us</div>
+				<div class="h2 text-green-2">Request a <span class="no-wrap">call-back</span></div>
+			</div>
+			<div class="contact columns small-10 small-offset-1 large-8">
+				<div class="contact-form row space-100-bottom">
+					<form action="">
+						<div class="form-row columns small-12 medium-6">
+							<label>
+								<span class="label inline text-neutral-3 text-uppercase">Full Name</span>
+								<input class="block" type="text">
+							</label>
+						</div>
+						<div class="form-row columns small-12 medium-6">
+							<label>
+								<span class="label inline text-neutral-3 text-uppercase">Email Id</span>
+								<input class="block" type="text">
+							</label>
+						</div>
+						<div class="form-row columns small-12 medium-6">
+							<label>
+								<span class="label inline text-neutral-3 text-uppercase">Mobile Number</span>
+								<input class="block" type="text">
+							</label>
+						</div>
+						<div class="form-row columns small-12 medium-6">
+							<label>
+								<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
+								<button class="block">Contact</button>
+							</label>
+						</div>
+					</form>
+				</div>
+				<div class="h3 strong">or Call us on <span class="text-green-2 no-wrap">+91-98860-98860</span></div>
 			</div>
 		</div>
 	</div>

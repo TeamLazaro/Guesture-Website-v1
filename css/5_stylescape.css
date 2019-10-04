@@ -216,7 +216,7 @@ button,
 	background-color: var(--dark);
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	border: none;
-	border-radius: 0;
+	border-radius: calc(var(--space-min)/2);
 	filter: brightness(1);
 	-webkit-transition: filter 0.2s;
 	-moz-transition: filter 0.2s;
@@ -275,7 +275,6 @@ button:focus,
 		padding: 0 calc(var(--space-75)/2);
 		font-size: 1.2rem;
 		line-height: var(--space-75);
-		border-radius: 0;
 	}
 
 	.button-large {
@@ -283,7 +282,6 @@ button:focus,
 		padding: 0 calc( (var(--space-75)*1.5)/2 );
 		font-size: 1.6rem;
 		line-height: calc( var(--space-75)*1.5 );
-		border-radius: 0;
 	}
 }
 @media( min-width: 1040px ) {
@@ -296,7 +294,6 @@ button:focus,
 		padding: 0 calc(var(--space-50)/2);
 		font-size: 1.3rem;
 		line-height: var(--space-50);
-		border-radius: 0;
 	}
 
 	.button-large {
@@ -304,7 +301,6 @@ button:focus,
 		padding: 0 calc(var(--space-75)/2);
 		font-size: 1.6rem;
 		line-height: var(--space-75);
-		border-radius: 0;
 	}
 
 	.button-large img {
@@ -326,7 +322,6 @@ button:focus,
 		height: var(--space-50);
 		font-size: 1.6rem; 
 		line-height: var(--space-50);
-		border-radius: 0;
 	}
 
 	.button-large {
@@ -334,7 +329,6 @@ button:focus,
 		height: var(--space-75);
 		font-size: 2.4rem;
 		line-height: var(--space-75);
-		border-radius: 0;
 	}
 
 	.button-large img {
@@ -372,9 +366,9 @@ select {
 	font-size: 1.4rem;
 	color: var(--dark);
 	background-color: var(--light);
-	border: 0;
-	border-radius: 0;
-	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	border: solid 1px var(--neutral-1);
+	border-radius: calc(var(--space-min)/2);
+	/*box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);*/
 }
 
 textarea {
@@ -392,10 +386,15 @@ input[type="date"]:focus,
 textarea:focus,
 select:focus {
 	outline: 0;
-	box-shadow: 0px 2px 6px rgba(20,20,10,0.5);
+	border-color: var(--green-2);
+	/*box-shadow: 0px 2px 6px rgba(20,20,10,0.5);*/
 }
 
 select { cursor: pointer; }
+
+.form-row:focus-within span.label {
+	color: var(--green-2);
+}
 
 .input-large.input-large {
 	height: calc( var(--space-75)*1.5 - 10 );
@@ -467,6 +466,7 @@ select { cursor: pointer; }
 		height: var(--space-50);
 		padding: 11px calc(var(--space-50)/2); /* This vertically centers text on FF, ignored by Webkit */
 		font-size: 1.8rem;
+		border: solid 2px var(--neutral-1);
 	}
 
 	.input-large.input-large {

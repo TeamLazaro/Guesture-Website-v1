@@ -1,0 +1,21 @@
+/*
+ * Booking Section
+ */
+
+.booking-section {}
+
+/* -- Contact -- */
+.booking-section .contact .form-row {
+	padding-bottom: var(--space-min);
+}
+
+@media( min-width: 640px )  {
+	.booking-section .contact .form-row:nth-child(2n) {
+		padding-left: var(--space-25);
+	}
+	.booking-section .contact .form-row:nth-child(2n+1) {
+		padding-right: var(--space-25);
+	}
+}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}
