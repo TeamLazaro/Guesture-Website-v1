@@ -364,12 +364,12 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="checkin columns small-10 small-offset-1 space-100-top">	
+			<div class="checkin columns small-10 small-offset-1 space-100-top">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom">Check-in</div>
 				<div class="h3 strong text-green-2 space-min-bottom">10 Minute Check-in</div>
 				<div class="h4 text-neutral-3">Just carry <span class="strong text-green-2">"any one"</span> of these KYC documents for a quick check-in.</div>
 			</div>
-			<div class="checkin columns small-10 small-offset-1 xlarge-9">	
+			<div class="checkin columns small-10 small-offset-1 xlarge-9">
 				<div class="row space-min-top-bottom">
 					<div class="columns small-12 medium-6 large-3 space-min-bottom">
 						<div class="icon inline-middle"><img src="media/icons/icon-aadhar.svg<?php echo $ver ?>"></div>
@@ -390,13 +390,13 @@
 				</div>
 				<div class="h6 strong text-uppercase">Full KYC Policy ›</div>
 			</div>
-			<div id="contact" class="contact columns small-10 small-offset-1 space-100-top space-25-bottom">	
+			<div id="contact" class="contact columns small-10 small-offset-1 space-100-top space-25-bottom">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom">Contact-us</div>
 				<div class="h2 text-green-2">Request a <span class="no-wrap">call-back</span></div>
 			</div>
 			<div class="contact columns small-10 small-offset-1 large-8">
-				<div class="contact-form row space-100-bottom">
-					<form action="">
+				<div class="contact-form row space-100-bottom qpid_login_site js_contact_form_section" data-context="">
+					<form class="js_contact_form">
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Full Name</span>
@@ -409,17 +409,40 @@
 								<input class="block" type="text">
 							</label>
 						</div>
-						<div class="form-row columns small-12 medium-6">
-							<label>
-								<span class="label inline text-neutral-3 text-uppercase">Mobile Number</span>
-								<input class="block" type="text">
-							</label>
+						<div class="form-row columns small-12 medium-6" style="position: relative">
+							<label><span class="label inline text-neutral-3 text-uppercase">Mobile Number</span></label>
+							<div>
+								<div style="position: relative">
+									<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+										<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+									</select>
+									<input type="text" class="js_phone_country_code_label" value="+91" style="pointer-events: none; min-width: 100px">
+								</div>
+								<input class="block" type="text" name="phone-number">
+							</div>
 						</div>
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
 								<button class="block">Contact</button>
 							</label>
+						</div>
+					</form>
+					<!-- OTP form -->
+					<form class="js_otp_form">
+						<div class="form-row columns small-12 medium-6">
+							<label>
+								<span class="label inline text-neutral-3 text-uppercase">Please provide the OTP we've sent you.</span>
+								<input class="block" type="text" name="otp">
+							</label>
+						</div>
+						<div class="form-row columns small-12 medium-6">
+							<label>
+								<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
+								<button class="block">Verify</button>
+							</label>
+							<button>Re-send OTP</button>
+							<button>Enter different number</button>
 						</div>
 					</form>
 				</div>
@@ -433,7 +456,7 @@
 
 
 <!-- Trial : Trap Section -->
-<section class="trial--trap-section fill-green-2">
+<section class="trial--trap-section fill-green-2 js_trial_section qpid_login_site" data-context="">
 	<div class="container">
 		<div class="character"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-50-top-bottom">
@@ -448,7 +471,44 @@
 			</div>
 			<div class="columns small-10 small-offset-1">
 				<div class="h0 text-green-2 space-25-top-bottom">₹1199</div>
-				<button class="button">Book Now</button>				
+				<button class="button">Book Now</button>
+				<form class="js_phone_form">
+					<div class="form-row columns small-12 medium-6" style="position: relative">
+						<label><span class="label inline text-neutral-3 text-uppercase">Mobile Number</span></label>
+						<div>
+							<div style="position: relative">
+								<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+									<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+								</select>
+								<input type="text" class="js_phone_country_code_label" value="+91" style="pointer-events: none; min-width: 100px">
+							</div>
+							<input class="block" type="text" name="phone-number">
+						</div>
+					</div>
+					<div class="form-row columns small-12 medium-6">
+						<label>
+							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
+							<button class="block">Contact</button>
+						</label>
+					</div>
+				</form>
+				<!-- OTP form -->
+				<form class="js_otp_form">
+					<div class="form-row columns small-12 medium-6">
+						<label>
+							<span class="label inline text-neutral-3 text-uppercase">Please provide the OTP we've sent you.</span>
+							<input class="block" type="text" name="otp">
+						</label>
+					</div>
+					<div class="form-row columns small-12 medium-6">
+						<label>
+							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
+							<button class="block">Verify</button>
+						</label>
+						<button>Re-send OTP</button>
+						<button>Enter different number</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -612,7 +672,7 @@
 
 
 <!-- Womens Block : Trap Section -->
-<section class="womens-block--trap-section fill-red">
+<section class="womens-block--trap-section fill-red js_women_block_section qpid_login_site" data-context="">
 	<div class="container">
 		<div class="character"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-50-top-bottom">
@@ -620,6 +680,43 @@
 				<div class="h3 strong">Peace of mind for you and "your parents"</div>
 				<div class="h0 text-red space-25-bottom">womens only block</div>
 				<button class="button">Block Your Room</button>
+				<form class="js_phone_form">
+					<div class="form-row columns small-12 medium-6" style="position: relative">
+						<label><span class="label inline text-neutral-3 text-uppercase">Mobile Number</span></label>
+						<div>
+							<div style="position: relative">
+								<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+									<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+								</select>
+								<input type="text" class="js_phone_country_code_label" value="+91" style="pointer-events: none; min-width: 100px">
+							</div>
+							<input class="block" type="text" name="phone-number">
+						</div>
+					</div>
+					<div class="form-row columns small-12 medium-6">
+						<label>
+							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
+							<button class="block">Contact</button>
+						</label>
+					</div>
+				</form>
+				<!-- OTP form -->
+				<form class="js_otp_form">
+					<div class="form-row columns small-12 medium-6">
+						<label>
+							<span class="label inline text-neutral-3 text-uppercase">Please provide the OTP we've sent you.</span>
+							<input class="block" type="text" name="otp">
+						</label>
+					</div>
+					<div class="form-row columns small-12 medium-6">
+						<label>
+							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
+							<button class="block">Verify</button>
+						</label>
+						<button>Re-send OTP</button>
+						<button>Enter different number</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -805,7 +902,7 @@
 			<div class="columns small-10 small-offset-1 large-3 large-offset-0">
 				<div class="h6 text-green-2 text-uppercase strong space-min-bottom">Corporate Address</div>
 				<div class="p text-neutral-4">
-					Irina Hospitality Pvt Ltd, No.58, 
+					Irina Hospitality Pvt Ltd, No.58,
 					18th B Main Road, 5th Block, Rajajinagar,<br>
 					Bangalore — 560010.
 				</div>
