@@ -2,12 +2,35 @@
  * About Section
  */
 
+ .about-section .title svg {
+ 	width: 245px;
+ 	margin-top: 15px;
+ 	margin-bottom: 5px;
+ }
 
-@media( min-width: 640px )  {}
+@media( min-width: 640px )  {
+	.about-section .title svg {
+		width: 530px;
+		margin-top: 15px;
+	}
+}
 @media( min-width: 1040px ) {
+	.about-section .title svg {
+		width: 550px;
+		margin-top: 25px;
+	}
 	.about-section .description {
 		columns: 2;
 		column-gap: var(--space-50);
 	}
 }
-@media( min-width: 1480px ) {}
+@media( min-width: 1480px ) {
+	.about-section .description {
+		columns: 2;
+		column-gap: var(--space-50);
+	}
+	.about-section .title svg {
+		width: 670px;
+		margin-top: 30px;
+	}
+}

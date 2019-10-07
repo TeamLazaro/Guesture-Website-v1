@@ -66,6 +66,23 @@
 	width: calc( 6 * var(--space-100) );
 	scroll-snap-align: center;
 	font-size: 1.4rem;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	border: solid 1px var(--neutral-1);
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+}
+
+.booking-section .pricing .pricing-list .price:first-child {
+	border-top-left-radius: var(--space-min);
+	border-bottom-left-radius: var(--space-min);
+	border-left-width: 2px;
+}
+.booking-section .pricing .pricing-list .price:last-child {
+	border-top-right-radius: var(--space-min);
+	border-bottom-right-radius: var(--space-min);
+	border-right-width: 2px;
 }
 
 @media( min-width: 640px )  {}
@@ -77,8 +94,41 @@
 @media( min-width: 1480px ) {
 	.booking-section .pricing .pricing-list .price {
 		width: calc( 3 * var(--space-100) );
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 20px;
 	}
 }
+
+
+
+
+
+
+
+/* -- Checkin -- */
+.booking-section .checkin {}
+
+.booking-section .checkin .icon {
+	width: 32px;
+	margin-right: 5px;
+}
+
+@media( min-width: 640px )  {
+	.booking-section .checkin .icon {
+		width: 40px;
+		margin-right: 5px;
+	}
+}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {
+	.booking-section .checkin .icon {
+		width: 48px;
+		margin-right: 10px;
+	}
+}
+
+
 
 
 

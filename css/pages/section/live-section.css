@@ -2,12 +2,22 @@
  * Sample Section
  */
 
-
-@media( min-width: 640px )  {}
+.live-section .points .point .icon {
+	width: 48px;
+}
+@media( min-width: 640px )  {
+.live-section .points .point .icon {
+	width: 56px;
+}
+}
 @media( min-width: 1040px ) {
 	.live-section .description {
 		columns: 2;
 		column-gap: var(--space-100);
+	}
+
+	.live-section .points .point .icon {
+		width: 64px;
 	}
 }
 @media( min-width: 1480px ) {}
