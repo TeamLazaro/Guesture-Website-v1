@@ -3,9 +3,96 @@
  */
 
 .trial--trap-section {
+	position: relative;
 	background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);
 }
 
-@media( min-width: 640px )  {}
-@media( min-width: 1040px ) {}
-@media( min-width: 1480px ) {}
+
+.trial--trap-section .trap {
+	position: relative;
+	z-index: 2;
+}
+
+.trial--trap-section .trap .points {
+	margin-top: 400px;
+}
+
+.trial--trap-section .trap .points .point {
+	position: relative;
+	padding-left: 25px;
+}
+.trial--trap-section .trap .points .point:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: 0px ;
+	width: 16px;
+	height: 16px;
+	background-color: var(--light);
+	opacity: 0.5;
+}
+
+.trial--trap-section .trap .button {
+	width: calc( var(--space-100) * 5 );
+}
+
+@media( min-width: 640px )  {
+	.trial--trap-section .trap .points {
+		margin-top: 0;
+	}
+
+	.trial--trap-section .trap .button {
+		width: calc( var(--space-100) * 4 );
+	}
+}
+@media( min-width: 1040px ) {
+	.trial--trap-section .trap .button {
+		width: calc( var(--space-100) * 3 );
+	}
+}
+@media( min-width: 1480px ) {
+	.trial--trap-section .trap .points .point {
+		padding-left: 30px;
+	}
+
+	.trial--trap-section .trap .points .point:before {
+		width: 18px;
+		height: 18px;
+	}
+
+	.trial--trap-section .trap .button {
+		width: calc( var(--space-100) * 2 );
+	}
+}
+
+
+/* -- Character -- */
+
+.trial--trap-section .character {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	width: 220px;
+	transform: translate(-20%, -43%);
+	font-size: 0;
+	line-height: 0;
+}
+
+@media( min-width: 640px )  {
+	.trial--trap-section .character {
+		width: 280px;
+		transform: translate(0, 0);
+	}
+}
+@media( min-width: 1040px ) {
+	.trial--trap-section .character {
+		width: 340px;
+	}
+}
+@media( min-width: 1480px ) {
+	.trial--trap-section .character {
+		width: 460px;
+	}
+}

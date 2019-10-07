@@ -433,18 +433,21 @@
 
 
 <!-- Trial : Trap Section -->
-<section class="trial--trap-section fill-green-2 space-50-top-bottom">
+<section class="trial--trap-section fill-green-2">
 	<div class="container">
-		<div class="row">
-			<div class="columns small-10 small-offset-1">
+		<div class="character"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
+		<div class="trap row space-50-top-bottom">
+			<div class="columns small-10 small-offset-1 medium-6 large-10">
 				<div class="h3 strong">Book a "3 Day Trial" online today</div>
-				<div class="h4">Come experience like-minded coliving.</div>
-				<div class="points space-min-top-bottom">
-					<div class="point label text-uppercase">3 days and 2 nights</div>
-					<div class="point label text-uppercase">Money back guarantee *</div>
+				<div class="h4 space-25-bottom">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
+				<div class="points">
+					<div class="point label text-uppercase space-min-bottom">3 days and 2 nights</div>
+					<div class="point label text-uppercase space-min-bottom">Money back guarantee *</div>
 				</div>
 				<div class="small">* If cancelled within 36 hours of check-in</div>
-				<div class="h0 text-green-2">₹1199</div>
+			</div>
+			<div class="columns small-10 small-offset-1">
+				<div class="h0 text-green-2 space-25-top-bottom">₹1199</div>
 				<button class="button">Book Now</button>				
 			</div>
 		</div>
@@ -611,11 +614,12 @@
 <!-- Womens Block : Trap Section -->
 <section class="womens-block--trap-section fill-red">
 	<div class="container">
-		<div class="row">
-			<div class="columns small-10 small-offset-1 space-50-top-bottom">
+		<div class="character"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
+		<div class="trap row space-50-top-bottom">
+			<div class="columns small-10 small-offset-1 xlarge-9 space-50-top-bottom">
 				<div class="h3 strong">Peace of mind for you and "your parents"</div>
-				<div class="h0 text-red">womens only block</div>
-				<button>Block Your Room</button>
+				<div class="h0 text-red space-25-bottom">womens only block</div>
+				<button class="button">Block Your Room</button>
 			</div>
 		</div>
 	</div>
