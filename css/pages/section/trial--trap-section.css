@@ -89,6 +89,7 @@
 @media( min-width: 1040px ) {
 	.trial--trap-section .character {
 		width: 340px;
+		transform: translate(0, 15%);
 	}
 }
 @media( min-width: 1480px ) {

@@ -4,7 +4,22 @@
 
 .booking-section {}
 
+@media( max-width: 639px )  {
+	.booking-section .intro select.minimal {
+		margin-top: 10px;
+	}
+}
 
+@media( min-width: 640px )  {
+	.booking-section .intro select.minimal {
+		margin-left: 5px;
+	}
+}
+@media( min-width: 1040px ) {
+	.booking-section .intro select.minimal {
+		margin-left: 10px;
+	}
+}
 
 
 
@@ -52,7 +67,7 @@
 	width: 100%;
 	white-space: nowrap;
 	overflow-x: auto;
-	overflow-y: hidden;
+	overflow-y: visible;
 	-webkit-overflow-scrolling: touch;
 	padding: 0 calc( (100vw - var(--container-width))/2 ) var(--space-50);
 	scroll-snap-type: x mandatory;
@@ -72,6 +87,7 @@
 	border: solid 1px var(--neutral-1);
 	border-top-width: 2px;
 	border-bottom-width: 2px;
+	margin-top: 110px;
 }
 
 .booking-section .pricing .pricing-list .price:first-child {
@@ -85,10 +101,64 @@
 	border-right-width: 2px;
 }
 
-@media( min-width: 640px )  {}
+.booking-section .pricing .pricing-list .price .character {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	padding: 0 20px;
+	transform: translateY(-130px);
+}
+
+.booking-section .pricing .pricing-list .price .title {
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.125), 0px 2px 5px rgba(0,0,0,0.25);
+	position: relative;
+	z-index: 2;
+	padding: 10px 0;
+}
+.booking-section .pricing .pricing-list .price .thumbnail {
+	position: relative;
+	z-index: 2;
+	border-radius: var(--space-min);
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.booking-section .pricing .pricing-list .price .config {
+	line-height: 1;
+}
+
+.booking-section .pricing .pricing-list .price .config .flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding-bottom: 15px;
+}
+
+@media( min-width: 640px )  {
+	.booking-section .pricing .pricing-list .price {
+		margin-top: 90px
+	}
+	.booking-section .pricing .pricing-list .price .character {
+		transform: translateY(-110px);
+	}
+
+	.booking-section .pricing .pricing-list .price .title {
+		padding: 20px 0 10px;
+	}
+}
 @media( min-width: 1040px ) {
 	.booking-section .pricing .pricing-list .price {
 		width: calc( 4 * var(--space-100) );
+		margin-top: 110px
+	}
+	.booking-section .pricing .pricing-list .price .character {
+		transform: translateY(-130px);
+	}
+
+	.booking-section .pricing .pricing-list .price .config .flex {
+		padding-bottom: 10px;
 	}
 }
 @media( min-width: 1480px ) {
@@ -97,6 +167,10 @@
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-bottom: 20px;
+		margin-top: 110px;
+	}
+	.booking-section .pricing .pricing-list .price .character {
+		transform: translateY(-130px);
 	}
 }
 

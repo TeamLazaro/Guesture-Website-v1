@@ -591,7 +591,7 @@ select { cursor: pointer; }
 .space-min-left { padding-left: var(--space-min); }
 .space-min-right { padding-right: var(--space-min); }
 .space-min-top-bottom { padding-top: var(--space-min); padding-bottom: var(--space-min); }
-.space-min-left-right { padding-left: var(--space-three-min); padding-right: var(--space-three-min); }
+.space-min-left-right { padding-left: var(--space-min); padding-right: var(--space-min); }
 
 .space-100 { padding: var(--space-100); }
 .space-100-top { padding-top: var(--space-100); }
@@ -599,7 +599,7 @@ select { cursor: pointer; }
 .space-100-left { padding-left: var(--space-100); }
 .space-100-right { padding-right: var(--space-100); }
 .space-100-top-bottom { padding-top: var(--space-100); padding-bottom: var(--space-100); }
-.space-100-left-right { padding-left: var(--space-three-one); padding-right: var(--space-three-one); }
+.space-100-left-right { padding-left: var(--space-100); padding-right: var(--space-100); }
 
 .space-50 { padding: var(--space-50); }
 .space-50-top { padding-top: var(--space-50); }
@@ -650,7 +650,9 @@ select { cursor: pointer; }
  */
 
 .opacity-0 { opacity: 0; }
+.opacity-25 { opacity: 0.25; }
 .opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
 .opacity-100 { opacity: 1; }
 
 
@@ -696,7 +698,24 @@ select { cursor: pointer; }
  *
  */
 
-.carousel {}
+.carousel {
+	width: 100%;
+	position: relative;
+	/*z-index: 1;*/
+}
+
+.carousel:before,
+.carousel:after {
+	pointer-events: none;
+	content: '';
+	display: inline-block;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	width: calc((100vw - var(--container-width) ) / 2);
+}
+
 .carousel .carousel-list {
 	position: relative;
 	display: block;
@@ -708,13 +727,27 @@ select { cursor: pointer; }
 	padding: 0 calc( (100vw - var(--container-width))/2 ) var(--space-50);
 	scroll-snap-type: x mandatory;
 }
+
+.carousel:before {
+	left: 0;
+	background-image: linear-gradient( to left, rgba(256,256,256,0) 0%, rgba(256,256,256,1) 90%);
+}
+
+.carousel:after {
+	right: 0;
+	background-image: linear-gradient( to right, rgba(256,256,256,0) 0%, rgba(256,256,256,1) 90%);
+}
+
 .carousel .carousel-list .carousel-list-item {
 	display: inline-block;
+	vertical-align: top;
 	position: relative;
 	white-space: normal;
 	width: calc( 5 * var(--space-100) );
 	scroll-snap-align: center;
 }
+
+.carousel .carousel-list .carousel-list-item * { pointer-events:  none; }
 
 /* -- Base -- */
 .carousel .carousel-controls {
@@ -734,7 +767,7 @@ select { cursor: pointer; }
 .h0 {
 	font-size: 6.3rem;
 	font-weight: 900;
-	text-shadow: 0px 2px 3px rgba(0,0,0,0.125), 0px 2px 8px rgba(0,0,0,0.25);
+	text-shadow: 0px 2px 3px rgba(0,0,0,0.25), 0px 2px 8px rgba(0,0,0,0.25);
 	line-height: .95;
 }
 
@@ -745,10 +778,86 @@ select { cursor: pointer; }
 @media( min-width: 1040px ) {
 	.h0 { 
 		font-size: 14.4rem; 
-		text-shadow: 0px 4px 5px rgba(0,0,0,0.125), 0px 2px 15px rgba(0,0,0,0.25);
+		text-shadow: 0px 4px 5px rgba(0,0,0,0.25), 0px 2px 15px rgba(0,0,0,0.25);
 	}
 }
 
 @media( min-width: 1480px ) {
 	.h0 { font-size: 18.0rem; }
 }
+
+
+
+
+
+
+/* Select Minimal */
+
+select.minimal {
+	position: relative;
+	line-height: 1;
+	height: auto;
+	padding: 3px 0px;
+	padding-right: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	border-radius: 0;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-color: var(--dark);
+	border-width: 2px;
+	background-color: transparent;
+	font-size: 1.4rem;
+	background-image: url('../../media/glyph/select.svg'); 
+	background-position: 100% 50%;
+	background-size: 14px 10px;
+	background-repeat: no-repeat;
+}
+
+select.minimal.xl {
+	padding: 5px 0px;
+	font-size: 1.6rem;
+	padding-right: 21px;
+	background-size: 17px 12px;
+}
+
+select.minimal.dark {
+	color: var(--light);
+	border-color: var(--light);
+	background-image: url('../../media/glyph/select-dark.svg'); 
+}
+
+@media( min-width: 640px )  {
+	select.minimal { font-size: 1.4rem; }
+	select.minimal.xl { font-size: 1.8rem; }
+}
+
+@media( min-width: 1040px ) {
+	select.minimal {
+		font-size: 1.5rem;
+		background-position: 100% 45%;
+	}
+	select.minimal.xl { font-size: 1.8rem; }
+}
+
+@media( min-width: 1480px ) {
+	select.minimal {
+		font-size: 1.7rem;
+		padding-right: 22px;
+		background-size: 17px 12px;
+	}
+	select.minimal.xl { 
+		font-size: 2.4rem;
+		padding-right: 26px;
+		background-size: 21px 15px;
+	}
+}
+
+
+/* -- Alt Font -- */
+.alt-font {
+	font-family: fira-sans, 'Arial Black', Arial, sans-serif;
+	font-weight: 800;
+}
+

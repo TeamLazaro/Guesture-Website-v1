@@ -211,30 +211,30 @@
  */
 
 @media ( max-width: 639px ) {
-	.hide-for-mobile {
+	.hide-for-small {
 		display: none !important;
 	}
 }
 
-.show-for-mobile { display: none !important; }
+.show-for-small { display: none !important; }
 
 @media ( max-width: 639px ) {
-	.show-for-mobile {
+	.show-for-small {
 		display: block !important;
 	}
 }
 
 
 @media ( max-width: 1039px ) {
-	.hide-for-tablet {
+	.hide-for-medium {
 		display: none !important;
 	}
 }
 
-.show-for-tablet { display: none !important; }
+.show-for-medium { display: none !important; }
 
 @media ( max-width: 1039px ) {
-	.show-for-tablet {
+	.show-for-medium {
 		display: block !important;
 	}
 }

@@ -11,17 +11,63 @@
 }
 
 .address-section .addresses .address .name:before {
-	content: '';
+	content: '@';
+	font-family: fira-sans, 'Arial Black', Arial, sans-serif;
+	line-height: 1;
+	font-weight: 800;
 	display: block;
 	width: calc( var(--space-75) - var(--space-min) );
 	height: calc( var(--space-75) - var(--space-min) );
-	background-color: peachpuff;
+	/*background-color: peachpuff;*/
 	position: absolute;
 	top: 50%;
 	left: calc( var(--space-75) * -1 );
 	transform: translateY(-50%);
+	opacity: 0.5;
 }
 
-@media( min-width: 640px )  {}
-@media( min-width: 1040px ) {}
-@media( min-width: 1480px ) {}
+.address-section .addresses .address .points .point {
+	position: relative;
+	padding-left: 15px;
+}
+
+.address-section .addresses .address .points .point:before {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	background-color: var(--light);
+	transform: translateY(-50%);
+}
+
+@media( min-width: 640px )  {
+	.address-section .addresses .address .name:before {
+		font-size: 3.2rem;
+		transform: translateY(-65%);
+	}
+}
+@media( min-width: 1040px ) {
+	.address-section .addresses .address .name:before {
+		font-size: 3.2rem;
+		left: calc( var(--space-50) * -1 );
+		transform: translateY(-40%);
+	}
+}
+@media( min-width: 1480px ) {
+	.address-section .addresses .address .name:before {
+		font-size: 4.6rem;
+		transform: translateY(-35%);
+	}
+
+	.address-section .addresses .address .points .point {
+		padding-left: 20px;
+	}
+	
+	.address-section .addresses .address .points .point:before {
+		width: 12px;
+		height: 12px;
+	}
+}
