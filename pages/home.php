@@ -181,6 +181,18 @@
 				</div>
 			</div>
 		</div>
+		<div class="scroll-controls">
+			<div class="row">
+				<div class="container">
+					<div class="columns small-6">
+						<div class="scroll-button button fill-green-2 scroll-left unselectable js_pager" data-dir="left" tabindex="-1"><img src="media/glyph/32-leftarrow.svg?v=20190917"></div>
+					</div>
+					<div class="columns small-6 text-right">
+						<div class="scroll-button button fill-green-2 scroll-right unselectable js_pager" data-dir="right" tabindex="-1"><img src="media/glyph/32-rightarrow.svg?v=20190917"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- End: Workplaces -->
 	<!-- Pricing -->
@@ -367,6 +379,18 @@
 				<button class="button block fill-green-3">Book Now</button>
 			</div>
 		</div>
+		<div class="scroll-controls">
+			<div class="row">
+				<div class="container">
+					<div class="columns small-6">
+						<div class="scroll-button button fill-green-2 scroll-left unselectable js_pager" data-dir="left" tabindex="-1"><img src="media/glyph/32-leftarrow.svg?v=20190917"></div>
+					</div>
+					<div class="columns small-6 text-right">
+						<div class="scroll-button button fill-green-2 scroll-right unselectable js_pager" data-dir="right" tabindex="-1"><img src="media/glyph/32-rightarrow.svg?v=20190917"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- End: Pricing -->
 	<div class="container">
@@ -471,7 +495,7 @@
 		<div class="character"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 medium-6 large-10">
-				<div class="h3 strong">Book a "3 Day Trial" online today</div>
+				<div class="h3 strong"><span class="opacity-50">Book a </span>3 Day Trial<span class="opacity-50"> online today</span></div>
 				<div class="h4 space-25-bottom">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
 				<div class="points">
 					<div class="point label text-uppercase space-min-bottom">3 days and 2 nights</div>
@@ -602,55 +626,55 @@
 	<div class="sliding-gallery block js_sliding_gallery">
 		<div class="container-track">
 			<div class="track js_track">
-				<div class="image bg-image" style="background-image: url( 'media/anthias.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7261.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/butterfly-fish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7140.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/cherax-destructor.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6519.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/cleaner-wrasse-attends-to-an-angel-fish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6793.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/cleaner-wrasse.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6875.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/clownfish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7181.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/clownfish.jpeg' )">
-				</div>
-			</div>
-		</div>
-		<div class="container-track">
-			<div class="track js_track">
-				<div class="image bg-image" style="background-image: url( 'media/coral-trout.jpeg' )">
-				</div>
-				<div class="image bg-image" style="background-image: url( 'media/fish-mural.jpeg' )">
-				</div>
-				<div class="image bg-image" style="background-image: url( 'media/hairy-red-hermit-crab.jpeg' )">
-				</div>
-				<div class="image bg-image" style="background-image: url( 'media/lobsters-at-cairns-aquarium.jpeg' )">
-				</div>
-				<div class="image bg-image" style="background-image: url( 'media/luminescent-corals.jpeg' )">
-				</div>
-				<div class="image bg-image" style="background-image: url( 'media/mandarinfish.jpeg' )">
-				</div>
-				<div class="image bg-image" style="background-image: url( 'media/tube-worm.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7190.jpg' )">
 				</div>
 			</div>
 		</div>
 		<div class="container-track">
 			<div class="track js_track">
-				<div class="image bg-image" style="background-image: url( 'media/mud-crab.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6686.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/pink-starfish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6988.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/spine-cheek-anemonefish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6647.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/stonefish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6541.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/striped-surgeon-fish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6968.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/surgeon-fish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6595.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/surgeon-fish.jpeg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6703.jpg' )">
+				</div>
+			</div>
+		</div>
+		<div class="container-track">
+			<div class="track js_track">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6838.jpg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6772.jpg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7102.jpg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7009.jpg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7493.jpg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A4978.jpg' )">
+				</div>
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6581.jpg' )">
 				</div>
 			</div>
 		</div>
@@ -698,7 +722,7 @@
 		<div class="character"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 xlarge-9 space-50-top-bottom">
-				<div class="h3 strong">Peace of mind for you and "your parents"</div>
+				<div class="h3 strong"><span class="opacity-50">Peace of mind for you and </span>your parents</div>
 				<div class="h0 text-red space-25-bottom">womens only block</div>
 				<div class="action row">
 					<!-- Phone Trap Trigger -->
@@ -850,6 +874,18 @@
 				</div>
 			</div>
 		</div>
+		<div class="scroll-controls">
+			<div class="row">
+				<div class="container">
+					<div class="columns small-6">
+						<div class="scroll-button button fill-green-2 scroll-left unselectable js_pager" data-dir="left" tabindex="-1"><img src="media/glyph/32-leftarrow.svg?v=20190917"></div>
+					</div>
+					<div class="columns small-6 text-right">
+						<div class="scroll-button button fill-green-2 scroll-right unselectable js_pager" data-dir="right" tabindex="-1"><img src="media/glyph/32-rightarrow.svg?v=20190917"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- End: Testimonials -->
 	<div class="container">
@@ -905,7 +941,7 @@
 							<div class="point label strong text-uppercase">Trio Live Package</div>
 							<div class="point label strong text-uppercase">Short Stay Package</div>
 						</div>
-						<a class="inline button" href="#contact">Enquire Now</a>
+						<a class="inline button no-pointer fill-neutral-5" href="#contact">Coming Soon</a>
 					</div>
 				</div>
 			</div>

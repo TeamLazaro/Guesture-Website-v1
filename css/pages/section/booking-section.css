@@ -53,12 +53,28 @@
 	}
 }
 
+/*
+ * Scroll Controls
+ */
+
+.booking-section .workplaces .scroll-controls {
+	top: var(--space-150);
+}
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.booking-section .workplaces .scroll-controls {
+		transform: translateY(-25%);
+	}
+}
+@media( min-width: 1480px ) {}
+
 
 
 
 /* -- Pricing -- */
 
 .booking-section .pricing {
+	position: relative;
 }
 
 .booking-section .pricing .pricing-list {
@@ -182,6 +198,27 @@
 	}
 	.booking-section .pricing .pricing-list .price .character {
 		transform: translateY(-130px);
+	}
+}
+
+
+/*
+ * Scroll Controls
+ */
+
+.booking-section .pricing .scroll-controls {
+	top: 280px;
+}
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.booking-section .pricing .scroll-controls {
+		top: 320px;
+	}
+}
+@media( min-width: 1480px ) {
+	.booking-section .pricing .scroll-controls {
+		display: none;
+		top: 340px;
 	}
 }
 

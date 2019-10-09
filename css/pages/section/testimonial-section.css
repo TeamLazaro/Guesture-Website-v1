@@ -49,3 +49,23 @@
 	}
 }
 @media( min-width: 1480px ) {}
+
+
+
+
+
+
+/*
+ * Scroll Controls
+ */
+
+.testimonial-section .testimonials .scroll-controls {
+	top: var(--space-150);
+}
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.testimonial-section .testimonials .scroll-controls {
+		top: var(--space-100);
+	}
+}
+@media( min-width: 1480px ) {}

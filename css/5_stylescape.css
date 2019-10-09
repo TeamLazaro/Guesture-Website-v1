@@ -759,6 +759,66 @@ select { cursor: pointer; }
 	pointer-events: all;
 }
 
+/*
+ * Scroll Controls
+ */
+
+.scroll-controls {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	pointer-events: none;
+}
+
+.scroll-button {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0; 
+	width: var(--space-100);
+	height: var(--space-100);
+	text-align: center;
+	font-size: 0;
+	line-height: 0;
+	outline: none !important;
+	pointer-events: auto;
+}
+
+.scroll-button:hover,
+.scroll-button:focus { filter: brightness(1.25); }
+
+
+
+.scroll-button * { pointer-events: none; }
+
+.scroll-button img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	/*margin-top: calc(var(--space-100) * -0.05);*/
+	transform: translate(-50%, -50%);
+}
+
+.scroll-controls .scroll-left {
+	transform: translateX(-50%);
+}
+	
+.scroll-controls .scroll-right {
+	transform: translateX(50%);
+}
+
+@media( min-width: 1040px ) {
+	.scroll-button {
+		height: var(--space-50);
+		width: var(--space-50);
+	}
+}
+
+
 
 
 
