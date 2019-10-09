@@ -417,7 +417,7 @@
 									</select>
 									<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
 								</div>
-								<input class="number inline" type="text" name="phone-number">
+								<input class="phone block" type="text" name="phone-number">
 							</div>
 						</div>
 						<div class="form-row columns small-12 medium-6">
@@ -441,8 +441,9 @@
 								<button class="block">Verify</button>
 							</label>
 						</div>
+						<br>
 						<div class="form-row columns small-12 large-6 clearfix">
-							<div class="label strong text-green-2 opacity-50 text-uppercase inline-middle cursor-pointer" tabindex="-1">Re-send OTP</div>
+							<div class="label strong text-green-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 							<div class="label strong text-green-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 						</div>
 					</form>
@@ -460,7 +461,7 @@
 <section class="trial--trap-section fill-green-2 js_trial_section qpid_login_site" data-context="">
 	<div class="container">
 		<div class="character"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
-		<div class="trap row space-50-top-bottom">
+		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 medium-6 large-10">
 				<div class="h3 strong">Book a "3 Day Trial" online today</div>
 				<div class="h4 space-25-bottom">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
@@ -471,45 +472,56 @@
 				<div class="small opacity-50">* If cancelled within 36 hours of check-in</div>
 			</div>
 			<div class="columns small-10 small-offset-1">
-				<div class="h0 text-green-2 space-25-top-bottom">₹1199</div>
-				<button class="button">Book Now</button>
-				<form class="js_phone_form hidden">
-					<div class="form-row columns small-12 medium-6" style="position: relative">
-						<label><span class="label inline text-neutral-3 text-uppercase">Mobile Number</span></label>
-						<div>
-							<div style="position: relative">
-								<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-									<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-								</select>
-								<input type="text" class="js_phone_country_code_label" value="+91" style="pointer-events: none; min-width: 100px">
+				<div class="h0 text-green-2 space-25-top">₹1199</div>
+			</div>
+			<div class="columns small-10 small-offset-1">
+				<div class="action row">
+					<!-- Phone Trap Trigger -->
+					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4">
+						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+						<button class="button block">Book Now</button>
+					</label>
+					<br>
+					<!-- Phone Trap form -->
+					<form class="js_phone_form hidden">
+						<div class="form-row columns small-12 medium-6" style="position: relative">
+							<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
+							<div class="phone-trap minimal phone-number">
+								<div class="block prefix-group" style="position: relative">
+									<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+										<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+									</select>
+									<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+								</div>
+								<input class="phone block" type="text" name="phone-number">
+								<label class="submit block">
+									<span class="hidden label inline text-neutral-1 text-uppercase">Submit</span>
+									<button class="button block">→</button>
+								</label>
 							</div>
-							<input class="block" type="text" name="phone-number">
 						</div>
-					</div>
-					<div class="form-row columns small-12 medium-6">
-						<label>
-							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
-							<button class="block">Contact</button>
-						</label>
-					</div>
-				</form>
-				<!-- OTP form -->
-				<form class="js_otp_form hidden">
-					<div class="form-row columns small-12 medium-6">
-						<label>
-							<span class="label inline text-neutral-3 text-uppercase">Please provide the OTP we've sent you.</span>
-							<input class="block" type="text" name="otp">
-						</label>
-					</div>
-					<div class="form-row columns small-12 medium-6">
-						<label>
-							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
-							<button class="block">Verify</button>
-						</label>
-						<button>Re-send OTP</button>
-						<button>Enter different number</button>
-					</div>
-				</form>
+					</form>
+					<!-- OTP form -->
+					<form class="js_otp_form hidden">
+						<div class="form-row columns small-12 medium-6">
+							<div class="otp-trap minimal">
+								<label class="block">
+									<span class="label inline text-neutral-1 text-uppercase">Enter the OTP</span>
+									<input class="otp block" type="text" name="otp">
+								</label>
+								<label class="submit block">
+									<span class="invisible label inline text-neutral-1 text-uppercase">Submit</span>
+									<button class="button block">→</button>
+								</label>
+							</div>
+						</div>
+						<br>
+						<div class="form-row columns small-12 large-6 clearfix">
+							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -676,48 +688,57 @@
 <section class="womens-block--trap-section fill-red js_women_block_section qpid_login_site" data-context="">
 	<div class="container">
 		<div class="character"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
-		<div class="trap row space-50-top-bottom">
+		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 xlarge-9 space-50-top-bottom">
 				<div class="h3 strong">Peace of mind for you and "your parents"</div>
 				<div class="h0 text-red space-25-bottom">womens only block</div>
-				<button class="button">Block Your Room</button>
-				<form class="js_phone_form hidden">
-					<div class="form-row columns small-12 medium-6" style="position: relative">
-						<label><span class="label inline text-neutral-3 text-uppercase">Mobile Number</span></label>
-						<div>
-							<div style="position: relative">
-								<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-									<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-								</select>
-								<input type="text" class="js_phone_country_code_label" value="+91" style="pointer-events: none; min-width: 100px">
+				<div class="action row">
+					<!-- Phone Trap Trigger -->
+					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4">
+						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+						<button class="button block">Book Now</button>
+					</label>
+					<br>
+					<!-- Phone Trap form -->
+					<form class="js_phone_form hidden">
+						<div class="form-row columns small-12 medium-6" style="position: relative">
+							<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
+							<div class="phone-trap minimal phone-number">
+								<div class="block prefix-group" style="position: relative">
+									<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+										<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+									</select>
+									<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+								</div>
+								<input class="phone block" type="text" name="phone-number">
+								<label class="submit block">
+									<span class="hidden label inline text-neutral-1 text-uppercase">Submit</span>
+									<button class="button block">→</button>
+								</label>
 							</div>
-							<input class="block" type="text" name="phone-number">
 						</div>
-					</div>
-					<div class="form-row columns small-12 medium-6">
-						<label>
-							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
-							<button class="block">Contact</button>
-						</label>
-					</div>
-				</form>
-				<!-- OTP form -->
-				<form class="js_otp_form hidden">
-					<div class="form-row columns small-12 medium-6">
-						<label>
-							<span class="label inline text-neutral-3 text-uppercase">Please provide the OTP we've sent you.</span>
-							<input class="block" type="text" name="otp">
-						</label>
-					</div>
-					<div class="form-row columns small-12 medium-6">
-						<label>
-							<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
-							<button class="block">Verify</button>
-						</label>
-						<button>Re-send OTP</button>
-						<button>Enter different number</button>
-					</div>
-				</form>
+					</form>
+					<!-- OTP form -->
+					<form class="js_otp_form hidden">
+						<div class="form-row columns small-12 medium-6">
+							<div class="otp-trap minimal">
+								<label class="block">
+									<span class="label inline text-neutral-1 text-uppercase">Enter the OTP</span>
+									<input class="otp block" type="text" name="otp">
+								</label>
+								<label class="submit block">
+									<span class="invisible label inline text-neutral-1 text-uppercase">Submit</span>
+									<button class="button block">→</button>
+								</label>
+							</div>
+						</div>
+						<br>
+						<div class="form-row columns small-12 large-6 clearfix">
+							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

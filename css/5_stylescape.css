@@ -868,6 +868,64 @@ select.minimal.dark {
 
 
 
+/* -- Form Row -- */
+.form-row {
+	padding-bottom: var(--space-min);
+}
+
+.form-row .label {
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+}
+
+input.name,
+input.email,
+input.phone {
+	position: relative;
+	padding-right: var(--space-50);
+	background-repeat: no-repeat;
+	background-position: center right; 
+	background-size: var(--space-50) 24px;
+}
+input.name { background-image: url('../../../media/glyph/input-name.svg'); }
+input.email { background-image: url('../../../media/glyph/input-email.svg'); }
+input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
+
+@media( min-width: 640px )  {
+	.form-row:nth-child(2n) {
+		padding-left: var(--space-25);
+	}
+	.form-row:nth-child(2n+1) {
+		padding-right: var(--space-25);
+	}
+}
+@media( min-width: 1040px ) {
+	.form-row .label {
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-bottom: 4px;
+	}
+}
+@media( min-width: 1480px ) {
+	.form-row .label {
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+	}
+
+	input.name,
+	input.email,
+	input.phone {
+		background-size: var(--space-50) 32px;
+	}
+}
+
+
+
+
+
+
 /* -- Phone Trap -- */
 .phone-trap.phone-number {
 	display: flex;
@@ -883,7 +941,7 @@ select.minimal.dark {
 	padding-left: 0;
 	padding-right: 0;
 }
-.phone-trap.phone-number .number {
+.phone-trap.phone-number .phone {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	width: 100%;
@@ -896,3 +954,47 @@ select.minimal.dark {
 	}
 }
 @media( min-width: 1480px ) {}
+
+
+
+
+
+
+/* -- Phone Trap -- */
+.phone-trap.minimal,
+.otp-trap.minimal {
+	display: flex;
+	align-items: center;
+}
+
+.phone-trap.minimal .submit,
+.otp-trap.minimal .submit {
+	width: var(--space-150);
+}
+.phone-trap.minimal .submit .button,
+.otp-trap.minimal .submit .button {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.phone-trap.minimal .phone,
+.otp-trap.minimal .otp {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	width: 100%;
+	padding-left: var(--space-min); 
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.phone-trap.minimal .submit,
+	.otp-trap.minimal .submit {
+		width: var(--space-100);
+	}
+}
+@media( min-width: 1480px ) {}
+
+
+
