@@ -223,11 +223,13 @@
 						<a href="" class="label strong text-uppercase float-right">What is included[?]</a>
 					</div>
 				</div>
-				<div class="action text-center">
-					<div class="h4 strong text-dark text-uppercase">₹726 Per Day</div>
-					<div class="h6 strong text-neutral-3 text-uppercase space-25-bottom">₹21800 Per Month</div>
-					<button class="button block fill-green-2">Book Now</button>
+				<div class="action text-center space-25-bottom">
+					<div class="h4 data strong text-dark text-uppercase">₹726 Per Day</div>
+					<div class="h4 strong text-dark text-uppercase">Ooops!</div>
+					<div class="h6 strong text-neutral-3 text-uppercase">₹21800 Per Month</div>
+					<div class="h6 strong text-red text-uppercase">No Rooms Found</div>
 				</div>
+				<button class="button block fill-green-2">Book Now</button>
 			</div>
 			<div class="price fill-green-2" style="background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);">
 				<div class="character"><img class="block" src="media/characters/pricing/buddy-1.png<?php echo $ver ?>"></div>
@@ -266,11 +268,13 @@
 						<a href="" class="label strong text-dark text-uppercase float-right">What is included[?]</a>
 					</div>
 				</div>
-				<div class="action text-center">
-					<div class="h4 strong text-uppercase">₹726 Per Day</div>
-					<div class="h6 strong text-uppercase opacity-50 space-25-bottom">₹21800 Per Month</div>
-					<button class="button block">Book Now</button>
+				<div class="action text-center space-25-bottom">
+					<div class="h4 data strong text-uppercase">₹726 Per Day</div>
+					<div class="h4 strong text-uppercase">Ooops!</div>
+					<div class="h6 strong text-uppercase opacity-50">₹21800 Per Month</div>
+					<div class="h6 strong text-uppercase text-yellow">No Rooms Found</div>
 				</div>
+				<button class="button block">Book Now</button>
 			</div>
 			<div class="price fill-light">
 				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
@@ -309,11 +313,13 @@
 						<a href="" class="label strong text-uppercase float-right">What is included[?]</a>
 					</div>
 				</div>
-				<div class="action text-center">
-					<div class="h4 strong text-uppercase">₹726 Per Day</div>
-					<div class="h6 strong text-uppercase text-neutral-3 space-25-bottom">₹21800 Per Month</div>
-					<button class="button block fill-green-2 ">Book Now</button>
+				<div class="action text-center space-25-bottom">
+					<div class="h4 data strong text-uppercase">₹726 Per Day</div>
+					<div class="h4 strong text-uppercase">Ooops!</div>
+					<div class="h6 strong text-uppercase text-neutral-3">₹21800 Per Month</div>
+					<div class="h6 strong text-uppercase text-red">No Rooms Found</div>
 				</div>
+				<button class="button block fill-green-2">Book Now</button>
 			</div>
 			<div class="price fill-dark" style="background: linear-gradient(45deg, var(--dark) 60%, var(--neutral-5) 100%);">
 				<div class="character"><!-- Character Cutouts --></div>
@@ -352,11 +358,13 @@
 						<a href="" class="label strong text-uppercase float-right">What is included[?]</a>
 					</div>
 				</div>
-				<div class="action text-center">
-					<div class="h4 strong text-uppercase">₹726 Per Day</div>
-					<div class="h6 strong text-uppercase text-neutral-3 space-25-bottom invisible">N/A Per Month</div>
-					<button class="button block fill-green-3">Book Now</button>
+				<div class="action text-center space-25-bottom">
+					<div class="h4 data strong text-uppercase">₹726 Per Day</div>
+					<div class="h4 strong text-uppercase">Ooops!</div>
+					<div class="h6 strong text-uppercase text-neutral-3 invisible">N/A Per Month</div>
+					<div class="h6 strong text-uppercase text-yellow">No Rooms Found</div>
 				</div>
+				<button class="button block fill-green-3">Book Now</button>
 			</div>
 		</div>
 	</div>
