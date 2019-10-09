@@ -855,9 +855,44 @@ select.minimal.dark {
 }
 
 
+
+
+
 /* -- Alt Font -- */
 .alt-font {
 	font-family: fira-sans, 'Arial Black', Arial, sans-serif;
 	font-weight: 800;
 }
 
+
+
+
+
+/* -- Phone Trap -- */
+.phone-trap.phone-number {
+	display: flex;
+	align-items: center;
+
+}
+.phone-trap.phone-number .prefix-group {
+	width: var(--space-150);
+}
+.phone-trap.phone-number .prefix {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+.phone-trap.phone-number .number {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	width: 100%;
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.phone-trap.phone-number .prefix-group {
+		width: var(--space-100);
+	}
+}
+@media( min-width: 1480px ) {}

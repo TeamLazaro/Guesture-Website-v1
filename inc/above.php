@@ -47,7 +47,7 @@ http_response_code( 200 );
 
 	<div id="page-wrapper"><!-- Page Wrapper -->
 
-		<?php require_once 'navigation.php'; ?>
+		<?php // require_once 'navigation.php'; ?>
 
 		<!-- Page Content -->
 		<div id="page-content">

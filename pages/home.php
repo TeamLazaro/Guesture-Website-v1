@@ -19,7 +19,7 @@
 <section class="sample-section">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 space-50-top-bottom">
+			<div class="columns small-12">
 			</div>
 		</div>
 	</div>
@@ -361,7 +361,6 @@
 		</div>
 	</div>
 	<!-- End: Pricing -->
-
 	<div class="container">
 		<div class="row">
 			<div class="checkin columns small-10 small-offset-1 space-100-top">
@@ -400,25 +399,25 @@
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Full Name</span>
-								<input class="block" type="text">
+								<input class="name block" type="text">
 							</label>
 						</div>
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Email Id</span>
-								<input class="block" type="text">
+								<input class="email block" type="text">
 							</label>
 						</div>
 						<div class="form-row columns small-12 medium-6" style="position: relative">
 							<label><span class="label inline text-neutral-3 text-uppercase">Mobile Number</span></label>
-							<div>
-								<div class="hidden" style="position: relative">
+							<div class="phone-trap phone-number">
+								<div class="inline prefix-group" style="position: relative">
 									<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
 										<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
 									</select>
-									<input type="text" class="js_phone_country_code_label" value="+91" style="pointer-events: none; min-width: 100px">
+									<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
 								</div>
-								<input class="block" type="text" name="phone-number">
+								<input class="number inline" type="text" name="phone-number">
 							</div>
 						</div>
 						<div class="form-row columns small-12 medium-6">
@@ -432,7 +431,7 @@
 					<form class="js_otp_form hidden">
 						<div class="form-row columns small-12 medium-6">
 							<label>
-								<span class="label inline text-neutral-3 text-uppercase">Please provide the OTP we've sent you.</span>
+								<span class="label inline text-neutral-3 text-uppercase">Enter the OTP</span>
 								<input class="block" type="text" name="otp">
 							</label>
 						</div>
@@ -441,8 +440,10 @@
 								<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
 								<button class="block">Verify</button>
 							</label>
-							<button>Re-send OTP</button>
-							<button>Enter different number</button>
+						</div>
+						<div class="form-row columns small-12 large-6 clearfix">
+							<div class="label strong text-green-2 opacity-50 text-uppercase inline-middle cursor-pointer" tabindex="-1">Re-send OTP</div>
+							<div class="label strong text-green-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 						</div>
 					</form>
 				</div>
@@ -900,7 +901,7 @@
 				</div>
 			</div>
 			<div class="columns small-10 small-offset-1 large-3 large-offset-0">
-				<div class="h6 text-green-2 text-uppercase strong space-min-bottom">Corporate Address</div>
+				<div class="h6 text-green-2 text-uppercase strong opacity-50 space-min-bottom">Corporate Address</div>
 				<div class="p text-neutral-4">
 					Irina Hospitality Pvt Ltd, No.58,
 					18th B Main Road, 5th Block, Rajajinagar,<br>
