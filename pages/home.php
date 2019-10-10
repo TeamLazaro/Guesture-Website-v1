@@ -431,13 +431,13 @@
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Full Name</span>
-								<input class="name block" type="text">
+								<input class="name block" type="text" name="name">
 							</label>
 						</div>
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Email Id</span>
-								<input class="email block" type="text">
+								<input class="email block" type="text" name="email-address">
 							</label>
 						</div>
 						<div class="form-row columns small-12 medium-6" style="position: relative">
@@ -455,12 +455,12 @@
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
-								<button class="block">Contact</button>
+								<button class="block" type="submit">Contact</button>
 							</label>
 						</div>
 					</form>
 					<!-- OTP form -->
-					<form class="js_otp_form hidden">
+					<form class="js_otp_form" style="display: none">
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Enter the OTP</span>
@@ -509,13 +509,13 @@
 			<div class="columns small-10 small-offset-1">
 				<div class="action row">
 					<!-- Phone Trap Trigger -->
-					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4">
+					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<button class="button block">Book Now</button>
+						<a class="button block js_book_trial" href="https://example.com/" target="_blank">Book Now</a>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
-					<form class="js_phone_form hidden">
+					<form class="js_phone_form" style="display: none">
 						<div class="form-row columns small-12 medium-6" style="position: relative">
 							<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 							<div class="phone-trap minimal phone-number">
@@ -726,13 +726,13 @@
 				<div class="h0 text-red space-25-bottom">womens only block</div>
 				<div class="action row">
 					<!-- Phone Trap Trigger -->
-					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4">
+					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<button class="button block">Book Now</button>
+						<button class="button block js_book_womens_block">Book Now</button>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
-					<form class="js_phone_form hidden">
+					<form class="js_phone_form" style="display: none">
 						<div class="form-row columns small-12 medium-6" style="position: relative">
 							<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 							<div class="phone-trap minimal phone-number">
@@ -751,7 +751,7 @@
 						</div>
 					</form>
 					<!-- OTP form -->
-					<form class="js_otp_form hidden">
+					<form class="js_otp_form" style="display: none">
 						<div class="form-row columns small-12 medium-6">
 							<div class="otp-trap minimal">
 								<label class="block">
