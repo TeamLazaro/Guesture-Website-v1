@@ -431,13 +431,13 @@
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Full Name</span>
-								<input class="name block" type="text">
+								<input class="name block" type="text" name="name">
 							</label>
 						</div>
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Email Id</span>
-								<input class="email block" type="text">
+								<input class="email block" type="text" name="email-address">
 							</label>
 						</div>
 						<div class="form-row columns small-12 medium-6" style="position: relative">
@@ -455,12 +455,12 @@
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="invisible label inline text-neutral-3 text-uppercase">Submit</span>
-								<button class="block">Contact</button>
+								<button class="block" type="submit">Contact</button>
 							</label>
 						</div>
 					</form>
 					<!-- OTP form -->
-					<form class="js_otp_form hidden">
+					<form class="js_otp_form" style="display: none">
 						<div class="form-row columns small-12 medium-6">
 							<label>
 								<span class="label inline text-neutral-3 text-uppercase">Enter the OTP</span>
