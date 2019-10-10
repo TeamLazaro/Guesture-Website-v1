@@ -509,13 +509,13 @@
 			<div class="columns small-10 small-offset-1">
 				<div class="action row">
 					<!-- Phone Trap Trigger -->
-					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4">
+					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<button class="button block">Book Now</button>
+						<a class="button block js_book_trial" href="https://example.com/" target="_blank">Book Now</a>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
-					<form class="js_phone_form hidden">
+					<form class="js_phone_form" style="display: none">
 						<div class="form-row columns small-12 medium-6" style="position: relative">
 							<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 							<div class="phone-trap minimal phone-number">
