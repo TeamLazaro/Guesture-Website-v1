@@ -114,9 +114,9 @@
 		</div>
 	</div>
 	<!-- Workplaces -->
-	<div class="workplaces carousel block space-50-top-bottom">
-		<div class="carousel-list">
-			<div class="carousel-list-item">
+	<div class="workplaces carousel block space-50-top-bottom js_carousel_container">
+		<div class="carousel-list js_carousel_content">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-hcl.svg<?php echo $ver ?>"></div>
 					<div class="info">
@@ -132,7 +132,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="carousel-list-item">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-velankani.svg<?php echo $ver ?>"></div>
 					<div class="info">
@@ -148,7 +148,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="carousel-list-item">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-biocon.svg<?php echo $ver ?>"></div>
 					<div class="info">
@@ -164,7 +164,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="carousel-list-item">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-siemens.svg<?php echo $ver ?>"></div>
 					<div class="info">
@@ -196,9 +196,9 @@
 	</div>
 	<!-- End: Workplaces -->
 	<!-- Pricing -->
-	<div class="pricing">
-		<div class="pricing-list">
-			<div class="price fill-light">
+	<div class="pricing js_carousel_container">
+		<div class="pricing-list js_carousel_content">
+			<div class="price fill-light js_carousel_item">
 				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
 				<div class="thumbnail"><img src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>"></div>
@@ -243,7 +243,7 @@
 				</div>
 				<button class="button block fill-green-2">Book Now</button>
 			</div>
-			<div class="price fill-green-2" style="background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);">
+			<div class="price fill-green-2 js_carousel_item" style="background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);">
 				<div class="character"><img class="block" src="media/characters/pricing/buddy-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Buddy</div>
 				<div class="thumbnail"><img src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>"></div>
@@ -288,7 +288,7 @@
 				</div>
 				<button class="button block">Book Now</button>
 			</div>
-			<div class="price fill-light">
+			<div class="price fill-light js_carousel_item">
 				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
 				<div class="thumbnail"><img src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>"></div>
@@ -333,7 +333,7 @@
 				</div>
 				<button class="button block fill-green-2">Book Now</button>
 			</div>
-			<!-- <div class="price fill-dark" style="background: linear-gradient(45deg, var(--dark) 60%, var(--neutral-5) 100%);">
+			<!-- <div class="price fill-dark js_carousel_item" style="background: linear-gradient(45deg, var(--dark) 60%, var(--neutral-5) 100%);">
 				<div class="character"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Premium</div>
 				<div class="thumbnail"><img src="https://via.placeholder.com/400"></div>
@@ -791,9 +791,9 @@
 		</div>
 	</div>
 	<!-- Testimonials -->
-	<div class="testimonials carousel block space-50-top-bottom">
-		<div class="carousel-list">
-			<div class="carousel-list-item">
+	<div class="testimonials carousel block space-50-top-bottom js_carousel_container">
+		<div class="carousel-list js_carousel_content">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="testimonial">
 					<div class="image" style="background-image: url('media/testimonials/vibha.jpg<?php echo $ver ?>');"></div>
 					<div class="info">
@@ -813,7 +813,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="carousel-list-item">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="testimonial">
 					<div class="image" style="background-image: url('media/testimonials/nitin.jpeg<?php echo $ver ?>');"></div>
 					<div class="info">
@@ -833,7 +833,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="carousel-list-item">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="testimonial">
 					<div class="image" style="background-image: url('media/testimonials/sachin.jpg<?php echo $ver ?>');"></div>
 					<div class="info">
@@ -853,7 +853,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="carousel-list-item">
+			<div class="carousel-list-item js_carousel_item">
 				<div class="testimonial">
 					<div class="image" style="background-image: url('media/testimonials/ashutosh.png<?php echo $ver ?>');"></div>
 					<div class="info">

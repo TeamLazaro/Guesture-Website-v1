@@ -37,6 +37,7 @@
 	<script type="text/javascript" src="/js/modules/cupid/user.js"></script>
 	<script type="text/javascript" src="/js/forms.js"></script>
 	<script type="text/javascript" src="/js/login-prompts.js"></script>
+	<script type="text/javascript" src="/js/modules/carousel.js"></script>
 
 	<script type="text/javascript">
 
