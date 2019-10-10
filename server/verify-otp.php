@@ -17,11 +17,13 @@ set_time_limit( 0 );
 
 header( 'Content-Type: application/json' );
 
+$input = json_decode( file_get_contents( 'php://input' ), true );
+
 /*
  * Get the data from the request
  */
-$otp = $_REQUEST[ 'otp' ];
-$sessionId = $_REQUEST[ 'sessionId' ];
+$otp = $input[ 'otp' ];
+$sessionId = $input[ 'sessionId' ];
 
 $apiKey = '693bc978-580e-11e8-a895-0200cd936042';
 
