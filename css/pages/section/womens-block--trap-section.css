@@ -20,9 +20,6 @@
 		line-height: .825;
 		margin-bottom: 130px;
 	}
-	.womens-block--trap-section .trap .button {
-		width: calc( var(--space-100) * 4 );
-	}
 }
 @media( min-width: 1040px ) {
 	.womens-block--trap-section .trap {
@@ -32,15 +29,8 @@
 	.womens-block--trap-section .trap .h0 {
 		margin-bottom: var(--space-50);
 	}
-	.womens-block--trap-section .trap .button {
-		width: calc( var(--space-100) * 3 );
-	}
 }
-@media( min-width: 1480px ) {
-	.womens-block--trap-section .trap .button {
-		width: calc( var(--space-100) * 2 );
-	}
-}
+@media( min-width: 1480px ) {}
 
 
 /* -- Character -- */

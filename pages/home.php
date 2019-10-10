@@ -398,7 +398,7 @@
 			<div class="checkin columns small-10 small-offset-1 space-100-top">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom">Check-in</div>
 				<div class="h3 strong text-green-2 space-min-bottom">10 Minute Check-in</div>
-				<div class="h4 text-neutral-3">Just carry <span class="strong text-green-2">"any one"</span> of these KYC documents for a quick check-in.</div>
+				<div class="h4 text-neutral-3">Just carry <span class="strong text-green-2">any one</span> of these KYC documents for a quick check-in.</div>
 			</div>
 			<div class="checkin columns small-10 small-offset-1 xlarge-9">
 				<div class="row space-min-top-bottom">
@@ -480,7 +480,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="h3 strong">or Call us on <span class="text-green-2 no-wrap">+91-98860-98860</span></div>
+				<div class="h3 strong"><span class="sparkle sparkle-or-light h5 strong text-green-2 text-uppercase">or</span> Call us on <span class="sparkle sparkle-or-number-light text-green-2 no-wrap">+91-98860-98860</span></div>
 			</div>
 		</div>
 	</div>
@@ -945,7 +945,7 @@
 					</div>
 				</div>
 				<div class="space-100-top">
-					<div class="h3 strong">or Call us on <span class="text-yellow no-wrap">+91-98860-98860</span></div>
+					<div class="h3 strong"><span class="sparkle sparkle-or-dark h5 strong text-yellow text-uppercase">or</span> Call us on <span class="sparkle sparkle-or-number-dark text-yellow no-wrap">+91-98860-98860</span></div>
 				</div>
 			</div>
 		</div>
