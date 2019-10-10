@@ -21,51 +21,51 @@
 	position: relative;
 	padding-left: 25px;
 }
-.trial--trap-section .trap .points .point:before {
+.trial--trap-section .trap .points .point:before,
+.trial--trap-section .trap .points .point:after {
 	content: '';
 	display: block;
 	position: absolute;
 	top: -1px;
 	left: 0px ;
-	width: 16px;
-	height: 16px;
-	background-color: var(--light);
-	opacity: 0.5;
+	width: 15px;
+	height: 15px;
 }
-
-/*.trial--trap-section .trap .button {
-	width: calc( var(--space-100) * 5 );
-}*/
+.trial--trap-section .trap .points .point:before {
+	background-color: var(--light);
+	opacity: 0.25;
+}
+.trial--trap-section .trap .points .point:after {
+	content: '✓';
+	font-size: 24px;
+	margin-top: -12px;
+	margin-left: 0px;
+}
 
 @media( min-width: 640px )  {
 	.trial--trap-section .trap .points {
 		margin-top: 0;
 	}
-
-	/*.trial--trap-section .trap .button {
-		width: calc( var(--space-100) * 4 );
-	}*/
 }
 @media( min-width: 1040px ) {
 	.trial--trap-section .trap {
 		padding-top: var(--space-50);
 		padding-bottom: var(--space-50);
 	}
-	/*.trial--trap-section .trap .button {
-		width: calc( var(--space-100) * 3 );
-	}*/
 }
 @media( min-width: 1480px ) {
 	.trial--trap-section .trap .points .point {
 		padding-left: 30px;
 	}
-	.trial--trap-section .trap .points .point:before {
-		width: 18px;
-		height: 18px;
+	.trial--trap-section .trap .points .point:before,
+	.trial--trap-section .trap .points .point:after {
+		width: 17px;
+		height: 17px;
 	}
-	/*.trial--trap-section .trap .button {
-		width: calc( var(--space-100) * 2 );
-	}*/
+	.trial--trap-section .trap .points .point:after {
+		font-size: 28px;
+		margin-top: -14px;
+	}
 }
 
 

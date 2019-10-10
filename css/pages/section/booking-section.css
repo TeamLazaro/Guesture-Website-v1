@@ -100,21 +100,17 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 15px;
-	border: solid 1px var(--neutral-1);
-	border-top-width: 2px;
-	border-bottom-width: 2px;
 	margin-top: 110px;
+	box-shadow: 0px 0px 0px 2px var(--neutral-1);
 }
 
 .booking-section .pricing .pricing-list .price:first-child {
 	border-top-left-radius: var(--space-min);
 	border-bottom-left-radius: var(--space-min);
-	border-left-width: 2px;
 }
 .booking-section .pricing .pricing-list .price:last-child {
 	border-top-right-radius: var(--space-min);
 	border-bottom-right-radius: var(--space-min);
-	border-right-width: 2px;
 }
 
 .booking-section .pricing .pricing-list .price .character {
@@ -139,6 +135,11 @@
 	overflow: hidden;
 	font-size: 0;
 	line-height: 0;
+	background-color: var(--green-1);
+}
+.booking-section .pricing .pricing-list .price .thumbnail img {
+	filter: grayscale(0.5) brightness(1.25);
+	/*mix-blend-mode: multiply;*/
 }
 
 .booking-section .pricing .pricing-list .price .config {
@@ -150,6 +151,10 @@
 	justify-content: space-between;
 	align-items: baseline;
 	padding-bottom: 15px;
+}
+
+.booking-section .pricing .pricing-list .price .config .included img {
+	margin-top: -2px;
 }
 
 .booking-section .pricing .pricing-list .price .action .data + *,
@@ -187,8 +192,17 @@
 	.booking-section .pricing .pricing-list .price .config .flex {
 		padding-bottom: 10px;
 	}
+
+	.booking-section .pricing .pricing-list .price .config .included {
+		padding-top: var(--space-min);
+	}
 }
 @media( min-width: 1480px ) {
+	
+	/* -- vvv Delete This Upon Adding the 4th Price Column -- */
+	.booking-section .pricing { padding-left: var(--space-100); }
+	/* -- ^^^ -- */
+
 	.booking-section .pricing .pricing-list .price {
 		width: calc( 3 * var(--space-100) );
 		padding-left: 20px;
@@ -198,6 +212,11 @@
 	}
 	.booking-section .pricing .pricing-list .price .character {
 		transform: translateY(-130px);
+	}
+
+	.booking-section .pricing .pricing-list .price .config .included img {
+		width: 16px;
+		margin-top: -2px;
 	}
 }
 
@@ -212,12 +231,12 @@
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {
 	.booking-section .pricing .scroll-controls {
+		display: none;
 		top: 320px;
 	}
 }
 @media( min-width: 1480px ) {
 	.booking-section .pricing .scroll-controls {
-		display: none;
 		top: 340px;
 	}
 }
