@@ -281,7 +281,7 @@
 					</div>
 				</div>
 				<div class="action text-center space-25-bottom">
-					<div class="h4 data strong text-uppercase">₹726 Per Day</div>
+					<div class="h4 sparkle title-2-left title-2-right data strong text-uppercase">₹726 Per Day</div>
 					<div class="h4 strong text-uppercase">Ooops!</div>
 					<div class="h6 strong text-uppercase opacity-50">₹21800 Per Month</div>
 					<div class="h6 strong text-uppercase text-yellow">No Rooms Found</div>
@@ -398,7 +398,7 @@
 			<div class="checkin columns small-10 small-offset-1 space-100-top">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom">Check-in</div>
 				<div class="h3 strong text-green-2 space-min-bottom">10 Minute Check-in</div>
-				<div class="h4 text-neutral-3">Just carry <span class="strong text-green-2">any one</span> of these KYC documents for a quick check-in.</div>
+				<div class="h4 text-neutral-3">Just carry <span class="strong text-green-2 sparkle title-3-left title-3-right">any one</span> of these KYC documents for a quick check-in.</div>
 			</div>
 			<div class="checkin columns small-10 small-offset-1 xlarge-9">
 				<div class="row space-min-top-bottom">
@@ -480,7 +480,7 @@
 						</div>
 					</form>
 				</div>
-				<div class="h3 strong"><span class="sparkle or-light h5 strong text-green-2 text-uppercase">or</span> Call us on <span class="sparkle or-number-light text-green-2 no-wrap">+91-98860-98860</span></div>
+				<a href="tel:+91-82877-70011" class="h3 strong inline"><span class="sparkle or-light h5 strong text-green-2 text-uppercase">or</span> Call us on <span class="sparkle or-number-light text-green-2 no-wrap">+91-828-7770011</span></a>
 			</div>
 		</div>
 	</div>
@@ -495,7 +495,7 @@
 		<div class="character"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 medium-6 large-10">
-				<div class="h3 strong"><span class="opacity-50">Book a </span><span class="sparkle title-1-left-dark title-1-right-dark">3 Day Trial</span><span class="opacity-50"> online today</span></div>
+				<div class="h3 strong"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right">3 Day Trial</span><span class="opacity-50"> online today</span></div>
 				<div class="h4 space-25-bottom">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
 				<div class="points">
 					<div class="point label text-uppercase space-min-bottom">3 days and 2 nights</div>
@@ -722,7 +722,7 @@
 		<div class="character"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 xlarge-9 space-50-top-bottom">
-				<div class="h3 strong"><span class="opacity-50">Peace of mind for you and </span><span class="sparkle title-2-left-dark title-2-right-dark">your parents</span></div>
+				<div class="h3 strong"><span class="opacity-50">Peace of mind for you and </span><span class="sparkle title-2-left title-2-right">your parents</span></div>
 				<div class="h0 text-red space-25-bottom">womens only block</div>
 				<div class="action row">
 					<!-- Phone Trap Trigger -->
@@ -945,7 +945,7 @@
 					</div>
 				</div>
 				<div class="space-100-top">
-					<div class="h3 strong"><span class="sparkle or-dark h5 strong text-yellow text-uppercase">or</span> Call us on <span class="sparkle or-number-dark text-yellow no-wrap">+91-98860-98860</span></div>
+					<a href="tel:+91-82877-70011" class="h3 strong inline"><span class="sparkle or-dark h5 strong text-yellow text-uppercase">or</span> Call us on <span class="sparkle or-number-dark text-yellow no-wrap">+91-828-7770011</span></a>
 				</div>
 			</div>
 		</div>
