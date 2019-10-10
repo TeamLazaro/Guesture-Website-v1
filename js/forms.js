@@ -216,3 +216,20 @@ $( document ).on( "submit", ".js_contact_form", function ( event ) {
 	$form.find( "[ type = 'submit' ]" ).text( "We'll call you shortly." );
 
 } );
+
+
+
+
+/*
+ * -------------------------------\
+ * Womens-only Block
+ * -------------------------------|
+ */
+$( document ).on( "click", ".js_book_womens_block", function ( event ) {
+	var $button = $( event.target );
+	$button.prop( "disabled", true );
+	$button.text( "We'll contact you soon!" );
+
+	__.user.isInterestedIn( "Guesture", "Womens-only Block" );
+	__.user.update();
+} );

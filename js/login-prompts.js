@@ -303,9 +303,109 @@ loginPrompts.bookTrial.on( "login", function () {
 	__.user.update();
 	this.$site.find( ".js_book_trial" ).text( "Click here to book." );
 } );
+
+
+
+
+/*
+ * 3. Women's Block section
+ */
+loginPrompts.womensBlock = new __.LoginPrompt( "Womens Block", $( ".qpid_login_site.js_women_block_section" ) );
+loginPrompts.womensBlock.triggerFlowOn( "click", ".js_book_womens_block" );
+// Skip the phone form because it is already integrated with the contact form
+loginPrompts.womensBlock.on( "requirePhone", function ( event ) {
+	var $loginTrigger = this.$site.find( ".js_login_trigger_region" );
+	var $phoneForm = this.$site.find( ".js_phone_form" );
+	$loginTrigger.slideUp( 500, function () {
+		$phoneForm.slideDown();
 	} );
-	__.user.update();
 } );
+// Since the phone number is already provided in the contact form, simply submit it programmatically
+loginPrompts.womensBlock.on( "phoneSubmit", function ( event ) {
+	var loginPrompt = this;
+	var $form = $( event.target ).closest( "form" );
+
+	// Pull data from the form
+	var formData;
+	try {
+		formData = getFormData( $form, {
+			phoneNumber: { type: "phone number", $: ".js_phone_country_code, [ name = 'phone-number' ]" }
+		} );
+	}
+	catch ( e ) {
+		// Reflect back sanitized values to the form
+		setFormData( $form, e );
+		// Report the message
+		alert( "Please provide a phone number." );
+		return;
+	}
+
+	// Reflect back sanitized values to the form
+	setFormData( $form, formData );
+
+	// Get the relevant data
+	var phoneNumber = formData[ 0 ].value.join( "" );
+
+	// Create a new (but temporary) Person object
+	__.tempUser = new __.Person( phoneNumber, loginPrompt.context );
+		// Set the device id
+	__.utils.getAnalyticsId()
+		.then( function ( deviceId ) {
+			__.tempUser.hasDeviceId( deviceId );
+		} )
+		// Attempt to find the person in the database
+		.then( function () {
+			return __.tempUser.getFromDB()
+				// If the person exists, log in
+				.then( function ( person ) {
+					__.user = person;
+					loginPrompt.$phoneForm.slideUp( 300, function () {
+						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+							loginPrompt.trigger( "login", person );
+						} );
+					} );
+				} )
+				// If the person don't exist, add the person, and send an OTP
+				.catch( function () {
+					return __.tempUser.add()
+						.then( function () {
+							loginPrompt.trigger( "requireOTP" );
+						} )
+						.catch( function () {
+							loginPrompt.trigger( "phoneError" );
+						} );
+				} )
+		} );
+
+} );
+// When the phone number is to be submitted
+loginPrompts.womensBlock.on( "requireOTP", function ( event, phoneNumber ) {
+	var loginPrompt = this;
+	disableForm( loginPrompt.$phoneForm );
+	__.tempUser.requestOTP( loginPrompt.context )
+		.then( function ( otpSessionId ) {
+			__.tempUser.otpSessionId = otpSessionId;
+			// Show OTP form, after hiding the phone form
+			loginPrompt.$phoneForm.slideUp( 500, function () {
+				loginPrompt.$OTPForm.slideDown();
+			} );
+		} )
+		.catch( function ( e ) {
+			alert( e.message );
+			enableForm( loginPrompt.$phoneForm );
+		} )
+} );
+// When the OTP is required
+loginPrompts.womensBlock.on( "OTPSubmit", onOTPSubmit );
+loginPrompts.womensBlock.on( "OTPError", function ( event ) {
+	alert( e.message );
+} );
+loginPrompts.womensBlock.on( "OTPVerified", function ( event ) {
+	// Track conversion
+	this.trigger( "login" );
+} );
+// When the user is logged in
+loginPrompts.womensBlock.on( "login", onLogin );
 
 
 

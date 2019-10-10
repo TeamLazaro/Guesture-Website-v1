@@ -726,13 +726,13 @@
 				<div class="h0 text-red space-25-bottom">womens only block</div>
 				<div class="action row">
 					<!-- Phone Trap Trigger -->
-					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4">
+					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<button class="button block">Book Now</button>
+						<button class="button block js_book_womens_block">Book Now</button>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
-					<form class="js_phone_form hidden">
+					<form class="js_phone_form" style="display: none">
 						<div class="form-row columns small-12 medium-6" style="position: relative">
 							<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 							<div class="phone-trap minimal phone-number">
@@ -751,7 +751,7 @@
 						</div>
 					</form>
 					<!-- OTP form -->
-					<form class="js_otp_form hidden">
+					<form class="js_otp_form" style="display: none">
 						<div class="form-row columns small-12 medium-6">
 							<div class="otp-trap minimal">
 								<label class="block">
