@@ -114,7 +114,7 @@
 		</div>
 	</div>
 	<!-- Workplaces -->
-	<div class="workplaces carousel block space-50-top-bottom js_carousel_container">
+	<div class="workplaces altavista carousel block space-50-top-bottom js_carousel_container">
 		<div class="carousel-list js_carousel_content">
 			<div class="carousel-list-item js_carousel_item">
 				<div class="workplace">
@@ -177,6 +177,70 @@
 					<div class="info">
 						<div class="h4 strong">17min</div>
 						<div class="h6 strong text-neutral-2">to Tata BP Solar</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroll-controls">
+			<div class="row">
+				<div class="container">
+					<div class="columns small-6">
+						<div class="scroll-button button fill-green-2 scroll-left unselectable js_pager" data-dir="left" tabindex="-1"><img src="media/glyph/32-leftarrow.svg?v=20190917"></div>
+					</div>
+					<div class="columns small-6 text-right">
+						<div class="scroll-button button fill-green-2 scroll-right unselectable js_pager" data-dir="right" tabindex="-1"><img src="media/glyph/32-rightarrow.svg?v=20190917"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="workplaces hidden dwellington carousel block space-50-top-bottom js_carousel_container">
+		<div class="carousel-list js_carousel_content">
+			<div class="carousel-list-item js_carousel_item">
+				<div class="workplace">
+					<div class="image"><img class="block" src="media/icons/icon-siemens.svg<?php echo $ver ?>"></div>
+					<div class="info">
+						<div class="h4 strong">20min</div>
+						<div class="h6 strong text-neutral-2">to Siemens</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<div class="image"><img class="block" src="media/icons/icon-tata.svg<?php echo $ver ?>"></div>
+					<div class="info">
+						<div class="h4 strong">20min</div>
+						<div class="h6 strong text-neutral-2">to Tata Consultancy Services</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item js_carousel_item">
+				<div class="workplace">
+					<div class="image"><img class="block" src="media/icons/icon-techmahindra.svg<?php echo $ver ?>"></div>
+					<div class="info">
+						<div class="h4 strong">20min</div>
+						<div class="h6 strong text-neutral-2">to Tech Mahindra</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<div class="image"><img class="block" src="media/icons/icon-infosys.svg<?php echo $ver ?>"></div>
+					<div class="info">
+						<div class="h4 strong">22min</div>
+						<div class="h6 strong text-neutral-2">to Infosys Campus</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-list-item js_carousel_item">
+				<div class="workplace">
+					<div class="image"><img class="block" src="media/icons/icon-biocon.svg<?php echo $ver ?>"></div>
+					<div class="info">
+						<div class="h4 strong">29min</div>
+						<div class="h6 strong text-neutral-2">to BioCon</div>
+					</div>
+				</div>
+				<div class="workplace">
+					<div class="image"><img class="block" src="media/icons/icon-ge.svg<?php echo $ver ?>"></div>
+					<div class="info">
+						<div class="h4 strong">28min</div>
+						<div class="h6 strong text-neutral-2">to GE Intelligent Platforms</div>
 					</div>
 				</div>
 			</div>
