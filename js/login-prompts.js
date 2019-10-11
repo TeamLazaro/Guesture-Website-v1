@@ -289,7 +289,7 @@ loginPrompts.bookTrial.on( "requireOTP", function ( event, phoneNumber ) {
 } );
 // When the OTP is required
 loginPrompts.bookTrial.on( "OTPSubmit", onOTPSubmit );
-loginPrompts.bookTrial.on( "OTPError", function ( event ) {
+loginPrompts.bookTrial.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
 loginPrompts.bookTrial.on( "OTPVerified", function ( event ) {
@@ -397,7 +397,7 @@ loginPrompts.womensBlock.on( "requireOTP", function ( event, phoneNumber ) {
 } );
 // When the OTP is required
 loginPrompts.womensBlock.on( "OTPSubmit", onOTPSubmit );
-loginPrompts.womensBlock.on( "OTPError", function ( event ) {
+loginPrompts.womensBlock.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
 loginPrompts.womensBlock.on( "OTPVerified", function ( event ) {
