@@ -863,8 +863,8 @@
 					<div class="info">
 						<div class="name h5 text-green-2 strong">Dr Vibha</div>
 						<div class="designation label text-uppercase">MD Swajal Water</div>
-						<div class="quote label text-neutral-4 space-min-top">We had very nice stay here. The staff is quite courteous and room are quite neat and clean.</div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<div class="quote label text-neutral-4 space-min-top">We had a very nice stay here. The staff is quite courteous and room are quite neat and clean.</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 				<div class="testimonial">
@@ -872,8 +872,8 @@
 					<div class="info">
 						<div class="name h5 text-green-2 strong">Saira Philipose</div>
 						<div class="designation label text-uppercase">Operations Senior Manager, Common Purpose Africa</div>
-						<div class="quote label text-neutral-4 space-min-top">I have absolutely no words to express firstly our gratitude and secondly the diligence, sincerity and commitment the entire team of Ms.Radhika, Ms.Suryam, Aneetha and the warden, they were all fantastic! <br><br>The room was well stocked, clean and new. It would have helped if there were few things like fresh towels, toilet roll and sheets to cover, just a feed back. Much thanks. </div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<div class="quote label text-neutral-4 space-min-top">I have absolutely no words to express our gratitude and secondly the diligence, sincerity and commitment of the entire team of Ms.Radhika, Ms.Suryam, Aneetha and the warden, they were all fantastic! The room was well stocked, clean and new. Much thanks.</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 			</div>
@@ -883,8 +883,8 @@
 					<div class="info">
 						<div class="name h5 text-green-2 strong">Nitin Gupta</div>
 						<div class="designation label text-uppercase">Founder at Sickle Innovations</div>
-						<div class="quote label text-neutral-4 space-min-top">Place is very nice and comfortable. I was given all information prior with details. Reception table officials were very helpful. Enjoyed every minute here.</div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<div class="quote label text-neutral-4 space-min-top">The place is very nice and comfortable. I was given all the information prior with details. Reception table officials were very helpful. Enjoyed every minute here.</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 				<div class="testimonial">
@@ -892,8 +892,8 @@
 					<div class="info">
 						<div class="name h5 text-green-2 strong">Elsbeth Dixon</div>
 						<div class="designation label text-uppercase">Chief Executive, Common Purpose Africa</div>
-						<div class="quote label text-neutral-4 space-min-top">What a wonderful home from home. This was for The Common Purpose Africa Venture participants! We deeply appreciate your flexibility in making accommodation available to us at such late notice and coping with our often midnight arrival. We are so grateful and admiring of your professionalism and helpfulness.</div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<div class="quote label text-neutral-4 space-min-top">What a wonderful home away from home. The Common Purpose Africa Venture participants deeply appreciate your flexibility in making accommodation available to us at such late notice and coping with our often midnight arrival. We are so grateful and admiring of your professionalism and helpfulness.</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 			</div>
@@ -904,7 +904,7 @@
 						<div class="name h5 text-green-2 strong">Sachin Dubey</div>
 						<div class="designation label text-uppercase">CEO and Cofounder, Module Innovation</div>
 						<div class="quote label text-neutral-4 space-min-top">Wonderful Stay. Nice Hospitality. Would love to stay again.</div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 				<div class="testimonial">
@@ -913,7 +913,7 @@
 						<div class="name h5 text-green-2 strong">Uttam Banerjee</div>
 						<div class="designation label text-uppercase">CEO at Ekam Eco Solutions</div>
 						<div class="quote label text-neutral-4 space-min-top">Great experience and awesome hospitality. Mr.Sharan and his team were always available for any kind of help. Wish you guys all the best. Thank you :)</div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 			</div>
@@ -923,8 +923,8 @@
 					<div class="info">
 						<div class="name h5 text-green-2 strong">Ashutosh Joshi</div>
 						<div class="designation label text-uppercase">Founder Member, JSR Innovative</div>
-						<div class="quote label text-neutral-4 space-min-top">Good stay nice clean apt. Needs some room service if possible it will be good to great. Thank you.</div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<div class="quote label text-neutral-4 space-min-top">Good stay in a nice and clean apartment. Thank you.</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 				<div class="testimonial">
@@ -932,8 +932,8 @@
 					<div class="info">
 						<div class="name h5 text-green-2 strong">Rocky Hatiskar</div>
 						<div class="designation label text-uppercase">COO Greensole</div>
-						<div class="quote label text-neutral-4 space-min-top">Amazing property. But the VSP remains the staff. Very joyal, friendly and at your service always. Would specially like to thanks Mr.Sharan for his lovely hospitality. Cheers.</div>
-						<div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div>
+						<div class="quote label text-neutral-4 space-min-top">Amazing property. But the USP remains the staff. Very jovial, friendly and at your service always. I would specially like to thanks Mr.Sharan for his lovely hospitality. Cheers.</div>
+						<!-- <div class="duration label text-green-2 space-min-top">Guestureite For: 3 Months and Counting</div> -->
 					</div>
 				</div>
 			</div>
