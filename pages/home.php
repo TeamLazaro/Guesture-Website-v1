@@ -262,7 +262,7 @@
 	<!-- Pricing -->
 	<div class="pricing js_carousel_container">
 		<div class="pricing-list js_carousel_content">
-			<div class="price fill-light js_carousel_item">
+			<div class="price fill-light js_carousel_item qpid_login_site js_solo_section">
 				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
 				<div class="thumbnail"><img src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>"></div>
@@ -305,9 +305,51 @@
 					<div class="h6 strong text-neutral-3 text-uppercase">₹21800 Per Month</div>
 					<div class="h6 strong text-red text-uppercase">No Rooms Found</div>
 				</div>
-				<button class="button block fill-green-2">Book Now</button>
+				<label class="block space-min-bottom js_login_trigger_region">
+					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
+					<button class="button block fill-green-2 js_book_solo" data-product="Solo">Book Now</button>
+				</label>
+				<!-- Phone Trap form -->
+				<form class="js_phone_form" style="display: none">
+					<div class="form-row columns small-12 _medium-6" style="position: relative">
+						<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
+						<div class="phone-trap minimal phone-number">
+							<div class="block prefix-group" style="position: relative">
+								<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+									<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+								</select>
+								<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+							</div>
+							<input class="phone block" type="text" name="phone-number">
+							<label class="submit block">
+								<span class="hidden label inline text-neutral-1 text-uppercase">Submit</span>
+								<button class="button block">→</button>
+							</label>
+						</div>
+					</div>
+				</form>
+				<!-- OTP form -->
+				<form class="js_otp_form" style="display: none;">
+					<div class="form-row columns small-12 _medium-6">
+						<div class="otp-trap minimal">
+							<label class="block">
+								<span class="label inline text-neutral-1 text-uppercase">Enter the OTP</span>
+								<input class="otp block" type="text" name="otp">
+							</label>
+							<label class="submit block">
+								<span class="invisible label inline text-neutral-1 text-uppercase">Submit</span>
+								<button class="button block">→</button>
+							</label>
+						</div>
+					</div>
+					<br>
+					<div class="form-row columns small-12 large-6 clearfix">
+						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+					</div>
+				</form>
 			</div>
-			<div class="price fill-green-2 js_carousel_item" style="background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);">
+			<div class="price fill-green-2 js_carousel_item qpid_login_site js_buddy_section" style="background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);">
 				<div class="character"><img class="block" src="media/characters/pricing/buddy-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Buddy</div>
 				<div class="thumbnail"><img src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>"></div>
@@ -350,9 +392,51 @@
 					<div class="h6 strong text-uppercase opacity-50">₹21800 Per Month</div>
 					<div class="h6 strong text-uppercase text-yellow">No Rooms Found</div>
 				</div>
-				<button class="button block">Book Now</button>
+				<label class="block space-min-bottom js_login_trigger_region">
+					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
+					<button class="button block js_book_buddy" data-product="Buddy">Book Now</button>
+				</label>
+				<!-- Phone Trap form -->
+				<form class="js_phone_form" style="display: none">
+					<div class="form-row columns small-12 _medium-6" style="position: relative">
+						<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
+						<div class="phone-trap minimal phone-number">
+							<div class="block prefix-group" style="position: relative">
+								<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+									<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+								</select>
+								<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+							</div>
+							<input class="phone block" type="text" name="phone-number">
+							<label class="submit block">
+								<span class="hidden label inline text-neutral-1 text-uppercase">Submit</span>
+								<button class="button block">→</button>
+							</label>
+						</div>
+					</div>
+				</form>
+				<!-- OTP form -->
+				<form class="js_otp_form" style="display: none;">
+					<div class="form-row columns small-12 _medium-6">
+						<div class="otp-trap minimal">
+							<label class="block">
+								<span class="label inline text-neutral-1 text-uppercase">Enter the OTP</span>
+								<input class="otp block" type="text" name="otp">
+							</label>
+							<label class="submit block">
+								<span class="invisible label inline text-neutral-1 text-uppercase">Submit</span>
+								<button class="button block">→</button>
+							</label>
+						</div>
+					</div>
+					<br>
+					<div class="form-row columns small-12 large-6 clearfix">
+						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+					</div>
+				</form>
 			</div>
-			<div class="price fill-light js_carousel_item">
+			<div class="price fill-light js_carousel_item qpid_login_site js_trio_section">
 				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
 				<div class="thumbnail"><img src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>"></div>
@@ -395,7 +479,49 @@
 					<div class="h6 strong text-uppercase text-neutral-3">₹21800 Per Month</div>
 					<div class="h6 strong text-uppercase text-red">No Rooms Found</div>
 				</div>
-				<button class="button block fill-green-2">Book Now</button>
+				<label class="block space-min-bottom js_login_trigger_region">
+					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
+					<button class="button block fill-green-2 js_book_trio" data-product="Trio">Book Now</button>
+				</label>
+				<!-- Phone Trap form -->
+				<form class="js_phone_form" style="display: none">
+					<div class="form-row columns small-12 _medium-6" style="position: relative">
+						<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
+						<div class="phone-trap minimal phone-number">
+							<div class="block prefix-group" style="position: relative">
+								<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+									<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+								</select>
+								<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+							</div>
+							<input class="phone block" type="text" name="phone-number">
+							<label class="submit block">
+								<span class="hidden label inline text-neutral-1 text-uppercase">Submit</span>
+								<button class="button block">→</button>
+							</label>
+						</div>
+					</div>
+				</form>
+				<!-- OTP form -->
+				<form class="js_otp_form" style="display: none;">
+					<div class="form-row columns small-12 _medium-6">
+						<div class="otp-trap minimal">
+							<label class="block">
+								<span class="label inline text-neutral-1 text-uppercase">Enter the OTP</span>
+								<input class="otp block" type="text" name="otp">
+							</label>
+							<label class="submit block">
+								<span class="invisible label inline text-neutral-1 text-uppercase">Submit</span>
+								<button class="button block">→</button>
+							</label>
+						</div>
+					</div>
+					<br>
+					<div class="form-row columns small-12 large-6 clearfix">
+						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+					</div>
+				</form>
 			</div>
 			<!-- <div class="price fill-dark js_carousel_item" style="background: linear-gradient(45deg, var(--dark) 60%, var(--neutral-5) 100%);">
 				<div class="character"></div>
@@ -598,7 +724,7 @@
 						</div>
 					</form>
 					<!-- OTP form -->
-					<form class="js_otp_form hidden">
+					<form class="js_otp_form" style="display: none">
 						<div class="form-row columns small-12 medium-6">
 							<div class="otp-trap minimal">
 								<label class="block">
