@@ -23,7 +23,7 @@
 @media( min-width: 640px )  {
 	.intro-section {
 		background-size: auto, 640px 960px, auto; 
-		background-position: top left, calc( 50vw - 250px ) 330px, top left;
+		background-position: top left, calc( 50vw - 250px ) 280px, top left;
 	}
 
 	.intro-section .points .point .icon {
@@ -33,7 +33,7 @@
 @media( min-width: 1040px ) {
 	.intro-section {
 		background-size: auto, 640px 960px, auto; 
-		background-position: top left, 50vw 40px, top left;
+		background-position: top left, 50vw 20px, top left;
 	}
 }
 @media( min-width: 1480px ) {
