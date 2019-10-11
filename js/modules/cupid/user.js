@@ -54,6 +54,11 @@ LoginPrompt.prototype.events = [
 LoginPrompt.prototype.triggerFlowOn = function triggerFlowOn ( event, elementSelector ) {
 	this.triggerEvent = event;
 	this.triggerElement = elementSelector;
+	this.triggerRegion = $( elementSelector ).closest( ".js_login_trigger_region" );
+	if ( this.triggerRegion.length )
+		this.triggerRegion = this.triggerRegion.get( 0 );
+	else
+		this.triggerRegion = this.triggerElement;
 	// Storing a reference to this
 	let loginPrompt = this;
 	return $( elementSelector ).on( event, function ( event ) {
@@ -128,7 +133,8 @@ Person.prototype.isInterestedIn = function isInterestedIn ( product, variant, at
 
 	let interest = { };
 	interest.product = product;
-	interest.variant = variant;
+	if ( variant )
+		interest.variant = variant;
 	if ( attributes )
 		interest.attributes = attributes;
 
@@ -345,7 +351,8 @@ Person.prototype.verify = function verify () {
 	var url = apiEndpoint + "/v2/people/verify";
 	var data = {
 		client: __.settings.client,
-		phoneNumbers: [ this.phoneNumber ]
+		phoneNumbers: [ this.phoneNumber ],
+		verificationMethod: "OTP"
 	};
 
 	var ajaxRequest = $.ajax( {

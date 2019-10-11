@@ -1,4 +1,9 @@
 
+# the .DS_Store files everywhere
 .DS_Store
-media
-data
+
+# the media directory
+/media
+
+# the data directory
+/data
