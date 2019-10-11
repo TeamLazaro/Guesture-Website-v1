@@ -38,6 +38,9 @@
 	<script type="text/javascript" src="/js/forms.js"></script>
 	<script type="text/javascript" src="/js/login-prompts.js"></script>
 	<script type="text/javascript" src="/js/modules/carousel.js"></script>
+	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js"></script>
+	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
+	<script type="text/javascript" src="/js/pricing.js"></script>
 
 	<script type="text/javascript">
 

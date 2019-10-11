@@ -265,7 +265,7 @@
 			<div class="price fill-light js_carousel_item qpid_login_site js_solo_section">
 				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
-				<div class="thumbnail"><img src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>"></div>
+				<div class="thumbnail"><img class="js_image" src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>"></div>
 				<div class="intro space-min">
 					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 3 Bedroom Suite.</div>
 					<div class="description h6 text-green-2">Preferred by Managers living alone in Bangalore, away from their family.</div>
@@ -273,25 +273,25 @@
 				<div class="config space-min">
 					<div class="flex">
 						<div class="h4 strong text-green-2 opacity-50 inline">Balcony</div>
-						<select class="minimal inline">
+						<select class="minimal inline js_attribute js_balcony" data-name="balcony">
 							<option>Attached</option>
 						</select>
 					</div>
 					<div class="flex">
 						<div class="h4 strong text-green-2 opacity-50 inline">Bathroom</div>
-						<select class="minimal inline">
+						<select class="minimal inline js_attribute js_bathroom" data-name="bathroom">
 							<option>Attached</option>
 						</select>
 					</div>
 					<div class="flex">
 						<div class="h4 strong text-green-2 opacity-50 inline">Live</div>
-						<select class="minimal inline">
+						<select class="minimal inline js_attribute js_duration" data-name="duration">
 							<option>3 Months</option>
 						</select>
 					</div>
 					<div class="flex">
 						<div class="h4 strong text-green-2 opacity-50 inline alt-font">@</div>
-						<select class="minimal inline">
+						<select class="minimal inline js_attribute js_location" data-name="location">
 							<option>Alta Vista - BLR</option>
 						</select>
 					</div>
@@ -300,9 +300,9 @@
 					</div>
 				</div>
 				<div class="action text-center space-25-bottom">
-					<div class="h4 data strong text-dark text-uppercase">₹726 Per Day</div>
+					<div class="h4 data strong text-dark text-uppercase js_daily_expense">₹726 Per Day</div>
 					<div class="h4 strong text-dark text-uppercase">Ooops!</div>
-					<div class="h6 strong text-neutral-3 text-uppercase">₹21800 Per Month</div>
+					<div class="h6 strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 strong text-red text-uppercase">No Rooms Found</div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
