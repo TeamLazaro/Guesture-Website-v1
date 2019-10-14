@@ -174,6 +174,17 @@ $( function () {
 			// Get the location
 			var location = $placesNearTo.val();
 
+			// Broadcast the change of location
+			$placesNearTo.trigger( "location/change", { location: location } );
+		} );
+
+		$( document ).on( "location/change", function ( event, data ) {
+
+			var location = data.location;
+
+			// Set the new value
+			$placesNearTo.val( location );
+
 			// Get the workspaces to show
 			var workplaceSection = locations.filter( function ( l ) {
 				return location.indexOf( l ) !== -1;
@@ -184,8 +195,6 @@ $( function () {
 				$( ".js_workplaces[ data-name = '" + workplaceSection[ 0 ] + "' ]" ).removeClass( "hidden" );
 			}
 
-			// Broadcast the change of location
-			$placesNearTo.trigger( "location/change", { location: location } );
 		} );
 
 	}
