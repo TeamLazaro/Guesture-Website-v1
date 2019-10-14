@@ -49,7 +49,7 @@ function LoginPrompt ( context, $site ) {
 LoginPrompt.prototype.events = [
 	"requirePhone", "phoneValidationError", "phoneSubmit", "phoneError",
 	"requireOTP", "OTPSubmit", "OTPVerified", "OTPError",
-	"login"
+	"login", "prepare"
 ];
 LoginPrompt.prototype.triggerFlowOn = function triggerFlowOn ( event, elementSelector ) {
 	this.triggerEvent = event;
@@ -71,6 +71,9 @@ LoginPrompt.prototype.triggerFlowOn = function triggerFlowOn ( event, elementSel
 				if ( url )
 					$anchor.attr( "href", url );
 			} );
+			// Take any other preparatory action
+			loginPrompt.trigger( "prepare", getUser() );
+			loginPrompt.off( "prepare" );
 			// Default to the default behavior
 			return;
 		}
@@ -90,6 +93,10 @@ LoginPrompt.prototype.on = function on ( event, fn ) {
 		this.eventHandlers[ event ].push( fn );
 	else
 		this.eventHandlers[ event ] = [ fn ];
+};
+LoginPrompt.prototype.off = function on ( event ) {
+	if ( this.eventHandlers[ event ] )
+		this.eventHandlers[ event ] = [ ];
 };
 LoginPrompt.prototype.trigger = function trigger ( event, ...args ) {
 
