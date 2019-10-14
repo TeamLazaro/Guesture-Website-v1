@@ -35,8 +35,23 @@ $( function () {
 			var $attribute = $( event.target );
 			var name = $attribute.data( "name" );
 			var value = $attribute.val();
+			if ( name == "location" ) {
+				event.preventDefault();
+				_this.$el.trigger( "location/change", {
+					location: value
+				} );
+				return;
+			}
 			_this[ name ] = value;
 			_this.numbers.Sheets[ _this.type ][ _this.sheetCoordinates[ name ] ].v = value;
+			_this.computeDetails();
+		} );
+
+		$( document ).on( "location/change", function ( event, data ) {
+			var location = data.location;
+			_this.$el.find( ".js_location" ).val( location );
+			_this.location = location;
+			_this.numbers.Sheets[ _this.type ][ _this.sheetCoordinates.location ].v = location;
 			_this.computeDetails();
 		} );
 	}
@@ -70,20 +85,6 @@ $( function () {
 		this.$el.find( ".js_daily_expense" ).text( this.perDay );
 		this.$el.find( ".js_monthly_expense" ).text( this.monthlyFee );
 		this.$el.find( ".js_image" ).attr( "src", "media/pricing/rooms/" + this.photo );
-	};
-
-
-	let costCalculators = {
-		"solo": {},
-		"buddy": {},
-		"trio": {
-			B2: { t: "n", v: 10 },
-			B3: { t: "n", v: 1 },
-			B4: { t: "n", v: 5 },
-			B5: { t: "n", v: 25 },
-			B6: { t: "n", v: 150, f: "B2 + B3 + B4 * B5" }
-		},
-		"premium": {}
 	};
 
 	function createSelectOption ( option ) {
@@ -138,8 +139,8 @@ $( function () {
 		return data;
 	}
 
-	function onNumbersReady ( numbers ) {
-		var livingSituationsData = { solo: null };
+	function setupPricingSection ( numbers ) {
+		var livingSituationsData = { solo: null, buddy: null, trio: null };
 		for ( var type in livingSituationsData ) {
 			livingSituationsData[ type ] = getData( numbers[ type ] );
 		}
@@ -158,6 +159,8 @@ $( function () {
 	}
 
 	// Okay, now go fetch them numbers!
-	getNumbers().then( onNumbersReady );
+	getNumbers()
+		.then( setupPricingSection )
 
 } );
+
