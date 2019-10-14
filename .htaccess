@@ -13,6 +13,9 @@ RewriteEngine On
 # The Home page
 RewriteRule ^/?$ pages/home.php [QSA,L,NC]
 
+# The tracking page
+RewriteRule ^/?track/$ pages/track.php [QSA,L,NC]
+
 # Page routing
 RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
 RewriteCond %{REQUEST_URI} ^/?([^/]+)/?
