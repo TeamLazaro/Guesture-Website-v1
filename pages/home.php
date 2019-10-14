@@ -728,7 +728,7 @@
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<a class="button block js_book_trial" href="https://example.com/" target="_blank">Book Now</a>
+						<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank">Book Now</a>
 					</label>
 					<br>
 					<!-- Phone Trap form -->

@@ -303,6 +303,29 @@ loginPrompts.bookTrial.on( "login", function () {
 	__.user.update();
 	this.$site.find( ".js_book_trial" ).text( "Click here to book." );
 } );
+loginPrompts.bookTrial.on( "prepare", function ( person ) {
+	var queryParameters = [ ];
+	if ( person.name )
+		queryParameters = queryParameters.concat( [
+			"data_name=" + person.name,
+			"data_readonly=" + "data_name"
+		] );
+	if ( person.phoneNumber )
+		queryParameters = queryParameters.concat( [
+			"data_phone=" + encodeURIComponent( person.phoneNumber ),
+			"data_readonly=" + "data_phone"
+		] );
+	if ( person.emailAddress )
+		queryParameters = queryParameters.concat( [
+			"data_email=" + person.emailAddress,
+			"data_readonly=" + "data_email"
+		] );
+
+	queryParameters = "?" + queryParameters.join( "&" );
+	var baseURL = this.$site.find( ".js_book_trial" ).attr( "href" );
+	var fullURL = baseURL + queryParameters;
+	this.$site.find( ".js_book_trial" ).attr( "href", fullURL );
+} );
 
 
 
