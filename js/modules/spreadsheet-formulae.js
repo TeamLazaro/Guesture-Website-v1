@@ -248,6 +248,8 @@
 
 	formulae.ROUND = function( number, digits ) {
 		number = utils.parseNumber( number );
+		if ( digits === void 0 || digits === null )
+			digits = 0;
 		digits = utils.parseNumber( digits );
 		if ( utils.anyIsError( number, digits ) ) {
 			return errors.value;
@@ -280,8 +282,12 @@
 		if ( typeof needle !== "string" || typeof haystack !== "string" )
 			return errors.value;
 		// 1 is subtracted from the index because it is **not** zero-based
-		startPosition = ( startPosition || 0 ) - 1;
-		var position = haystack.toLowerCase().indexOf( needle.toLowerCase() ) + 1;
+		if ( startPosition )
+			startPosition -= 1;
+		else
+			startPosition = 0;
+		// startPosition = ( startPosition || 0 ) - 1;
+		var position = haystack.toLowerCase().indexOf( needle.toLowerCase(), startPosition ) + 1;
 		return position || errors.value;
 	};
 
