@@ -432,10 +432,10 @@ utils.trackPageVisit = function trackPageVisit ( name ) {
 	 *
 	 */
 	// Build the URL
-	var projectBaseURL = __.settings.projectBaseURL;
-	var baseURL = location.origin.replace( /\/$/, "" ) + "/" + projectBaseURL;
+	var baseTrackingURL = ( "/" + __.settings.trackingURL + "/" ).replace( /(\/+)/g, "/" );
+	var baseURL = location.origin.replace( /\/$/, "" ) + baseTrackingURL;
 	name = name.replace( /^[/]*/, "" );
-	var url = baseURL + "/" + name;
+	var url = baseURL + name;
 
 	// Build the iframe
 	utils.openPageInIframe( url, "", {
