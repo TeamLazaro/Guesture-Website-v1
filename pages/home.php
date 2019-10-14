@@ -331,7 +331,7 @@
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_solo" data-product="Solo">Book Now</button>
+					<button class="button block fill-green-2 js_book_solo" data-product="Solo" data-c="pricing-book-solo">Book Now</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -442,7 +442,7 @@
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block js_book_buddy" data-product="Buddy">Book Now</button>
+					<button class="button block js_book_buddy" data-product="Buddy" data-c="pricing-book-buddy">Book Now</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -553,7 +553,7 @@
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_trio" data-product="Trio">Book Now</button>
+					<button class="button block fill-green-2 js_book_trio" data-product="Trio" data-c="pricing-book-trio">Book Now</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -643,7 +643,7 @@
 				<div class="h2 text-green-2">Request a <span class="no-wrap">call-back</span></div>
 			</div>
 			<div class="contact columns small-10 small-offset-1 large-8">
-				<div class="contact-form row space-100-bottom qpid_login_site js_contact_form_section" data-context="">
+				<div class="contact-form row space-100-bottom qpid_login_site js_contact_form_section" data-c="general-enquiry-form">
 					<form class="js_contact_form">
 						<div class="form-row columns small-12 medium-6">
 							<label>
@@ -707,7 +707,7 @@
 
 
 <!-- Trial : Trap Section -->
-<section class="trial--trap-section fill-green-2 js_trial_section qpid_login_site" data-context="">
+<section class="trial--trap-section fill-green-2 js_trial_section qpid_login_site">
 	<div class="container">
 		<div class="character"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
@@ -728,7 +728,7 @@
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank">Book Now</a>
+						<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
@@ -934,7 +934,7 @@
 
 
 <!-- Womens Block : Trap Section -->
-<section class="womens-block--trap-section fill-red js_women_block_section qpid_login_site" data-context="">
+<section class="womens-block--trap-section fill-red js_women_block_section qpid_login_site">
 	<div class="container">
 		<div class="character"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
@@ -945,7 +945,7 @@
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<button class="button block js_book_womens_block">Book Now</button>
+						<button class="button block js_book_womens_block" data-c="block-women-room">Book Now</button>
 					</label>
 					<br>
 					<!-- Phone Trap form -->

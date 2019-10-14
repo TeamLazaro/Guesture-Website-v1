@@ -67,15 +67,22 @@ function onOTPSubmit ( event ) {
 		} );
 
 }
-
-function onLogin ( person ) {
+function onOTPVerified () {
+	var loginPrompt = this;
+	// Track the conversion
+	var conversionUrl = $( loginPrompt.triggerElement ).data( "c" );
+	__.utils.trackPageVisit( conversionUrl );
+	// Trigger the login event
+	loginPrompt.trigger( "login" );
+}
+function onLogin () {
 	var loginPrompt = this;
 	// Set cookie ( for a month )
 	__.utils.setCookie( "cupid-user", __.user, 31 * 24 * 60 * 60 );
 	// Hide the OTP form
 	$( loginPrompt.$OTPForm ).slideUp( 500, function () {
 		// Bring back the trigger element
-		$( loginPrompt.triggerElement ).slideDown( 500, function () {
+		$( loginPrompt.triggerRegion ).slideDown( 500, function () {
 			// Trigger the original event
 			$( loginPrompt.triggerElement ).trigger( loginPrompt.triggerEvent );
 		} );
@@ -189,10 +196,7 @@ loginPrompts.contactUs.on( "OTPSubmit", onOTPSubmit );
 loginPrompts.contactUs.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
-loginPrompts.contactUs.on( "OTPVerified", function ( event ) {
-	// Track conversion
-	this.trigger( "login" );
-} );
+loginPrompts.contactUs.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.contactUs.on( "login", onLogin );
 
@@ -292,10 +296,7 @@ loginPrompts.bookTrial.on( "OTPSubmit", onOTPSubmit );
 loginPrompts.bookTrial.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
-loginPrompts.bookTrial.on( "OTPVerified", function ( event ) {
-	// Track conversion
-	this.trigger( "login" );
-} );
+loginPrompts.bookTrial.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.bookTrial.on( "login", onLogin );
 loginPrompts.bookTrial.on( "login", function () {
@@ -423,10 +424,7 @@ loginPrompts.womensBlock.on( "OTPSubmit", onOTPSubmit );
 loginPrompts.womensBlock.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
-loginPrompts.womensBlock.on( "OTPVerified", function ( event ) {
-	// Track conversion
-	this.trigger( "login" );
-} );
+loginPrompts.womensBlock.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.womensBlock.on( "login", onLogin );
 
@@ -527,10 +525,7 @@ loginPrompts.soloRoom.on( "OTPSubmit", onOTPSubmit );
 loginPrompts.soloRoom.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
-loginPrompts.soloRoom.on( "OTPVerified", function ( event ) {
-	// Track conversion
-	this.trigger( "login" );
-} );
+loginPrompts.soloRoom.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.soloRoom.on( "login", onLogin );
 
@@ -627,10 +622,7 @@ loginPrompts.buddyRoom.on( "OTPSubmit", onOTPSubmit );
 loginPrompts.buddyRoom.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
-loginPrompts.buddyRoom.on( "OTPVerified", function ( event ) {
-	// Track conversion
-	this.trigger( "login" );
-} );
+loginPrompts.buddyRoom.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.buddyRoom.on( "login", onLogin );
 
@@ -727,10 +719,7 @@ loginPrompts.trioRoom.on( "OTPSubmit", onOTPSubmit );
 loginPrompts.trioRoom.on( "OTPError", function ( e ) {
 	alert( e.message );
 } );
-loginPrompts.trioRoom.on( "OTPVerified", function ( event ) {
-	// Track conversion
-	this.trigger( "login" );
-} );
+loginPrompts.trioRoom.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.trioRoom.on( "login", onLogin );
 
