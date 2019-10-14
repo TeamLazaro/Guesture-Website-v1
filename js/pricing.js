@@ -99,8 +99,10 @@ $( function () {
 		this.$el.find( ".js_image" ).attr( "src", "media/pricing/rooms/" + this.photo );
 	};
 
-	function createSelectOption ( option ) {
-		return "<option value=\"" + option + "\">" + option + "</option>";
+	function createSelectOption ( value, label ) {
+		if ( typeof label != "string" )
+			label = value;
+		return "<option value=\"" + value + "\">" + label + "</option>";
 	}
 
 	/*
@@ -169,13 +171,18 @@ $( function () {
 			livingSituation.render();
 		}
 
-		// Initialize the locations in the Nearby Places section
-		$( ".js_places_near_to" ).html(
-			livingSituationsData.solo.locationOptions.map( createSelectOption )
-		);
+		return numbers;
+
 	}
 
-	function setupNearbyPlaces () {
+	function setupNearbyPlaces ( numbers ) {
+
+		var locationOptions = Object.entries( numbers.SETTINGS.locations );
+
+		// Initialize the locations in the Nearby Places section
+		$( ".js_places_near_to" ).html( locationOptions.map( function ( location ) {
+			return createSelectOption( location[ 1 ], location[ 0 ] );
+		} ) );
 
 		$placesNearTo = $( ".js_places_near_to" );
 		var locations = [ ].slice.call( $( ".js_workplaces" ) ).map( function ( domLocation ) {
@@ -185,6 +192,8 @@ $( function () {
 		$placesNearTo.on( "change", function ( event ) {
 			// Get the location
 			var location = $placesNearTo.val();
+			var _location = $placesNearTo.find( ":selected" ).text();
+			console.log( _location )
 
 			// Broadcast the change of location
 			$placesNearTo.trigger( "location/change", { location: location } );
@@ -196,6 +205,8 @@ $( function () {
 
 			// Set the new value
 			$placesNearTo.val( location );
+			var presentableLocationName = "@" + location.replace( /\s+-\s+.+/, "" );
+			$placesNearTo.parent().find( ".js_place" ).text( presentableLocationName );
 
 			// Get the workspaces to show
 			var workplaceSection = locations.filter( function ( l ) {
@@ -207,6 +218,10 @@ $( function () {
 				$( ".js_workplaces[ data-name = '" + workplaceSection[ 0 ] + "' ]" ).removeClass( "hidden" );
 			}
 
+		} );
+
+		$( document ).trigger( "location/change", {
+			location: locationOptions[ 0 ][ 1 ]
 		} );
 
 	}

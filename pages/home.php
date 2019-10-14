@@ -107,7 +107,7 @@
 			<div class="intro columns small-10 small-offset-1">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom">Location</div>
 				<div class="h4 text-green-2 strong">Coliving with like-minded people</div>
-				<div class="h2 text-green-2">Guesture <span class="no-wrap">@Alta Vista</span></div>
+				<div class="h2 text-green-2">Guesture <span class="no-wrap js_place" style="text-transform: capitalize;">@Alta Vista</span></div>
 				<div class="h4 text-green-2 strong inline hide-for-small">in</div>
 				<select class="inline minimal xl js_places_near_to"><option>BLR - Electronic City Phase 1</option></select>
 			</div>
