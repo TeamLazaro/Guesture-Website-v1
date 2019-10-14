@@ -303,7 +303,7 @@
 					</div>
 					<div class="flex">
 						<div class="h4 strong text-green-2 opacity-50 inline">A/C</div>
-						<select class="minimal inline js_attribute js_ac" data-name="ac">
+						<select class="minimal inline js_attribute js_ac" data-name="a/c">
 							<option>Non A/C Room</option>
 						</select>
 					</div>
@@ -414,7 +414,7 @@
 					</div>
 					<div class="flex">
 						<div class="h4 strong opacity-50 inline">A/C</div>
-						<select class="minimal dark inline js_attribute js_ac" data-name="ac">
+						<select class="minimal dark inline js_attribute js_ac" data-name="a/c">
 							<option>Non A/C Room</option>
 						</select>
 					</div>
@@ -525,7 +525,7 @@
 					</div>
 					<div class="flex">
 						<div class="h4 strong text-green-2 opacity-50 inline">A/C</div>
-						<select class="minimal inline js_attribute js_ac" data-name="ac">
+						<select class="minimal inline js_attribute js_ac" data-name="a/c">
 							<option>Non A/C Room</option>
 						</select>
 					</div>

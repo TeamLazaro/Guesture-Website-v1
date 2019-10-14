@@ -79,6 +79,18 @@ $( function () {
 		this.$el.find( ".js_location" ).html(
 			this.locationOptions.map( createSelectOption ).join( "" )
 		);
+		this.$el.find( ".js_view" ).html(
+			this.viewOptions.map( createSelectOption ).join( "" )
+		);
+		this.$el.find( ".js_ac" ).html(
+			this[ "a/cOptions" ].map( createSelectOption ).join( "" )
+		);
+		this.$el.find( ".js_smoking" ).html(
+			this.smokingOptions.map( createSelectOption ).join( "" )
+		);
+		this.$el.find( ".js_diet" ).html(
+			this.dietOptions.map( createSelectOption ).join( "" )
+		);
 		this.renderComputedDetails();
 	};
 	LivingSituation.prototype.renderComputedDetails = function () {
