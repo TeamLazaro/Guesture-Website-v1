@@ -48,7 +48,7 @@
 				<div class="point">
 					<div class="icon inline-middle"><img src="media/icons/icon-work.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left text-light"><strong>STAY Packages</strong> for <br>
-					1 day to 60 day</div>
+					1 day to 60 days</div>
 				</div>
 				<div class="point">
 					<div class="icon inline-middle"><img src="media/icons/icon-house.svg<?php echo $ver ?>"></div>
