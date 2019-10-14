@@ -109,12 +109,12 @@
 				<div class="h4 text-green-2 strong">Coliving with like-minded people</div>
 				<div class="h2 text-green-2">Guesture <span class="no-wrap">@Alta Vista</span></div>
 				<div class="h4 text-green-2 strong inline hide-for-small">in</div>
-				<select class="inline minimal xl"><option>BLR - Electronic City Phase 1</option></select>
+				<select class="inline minimal xl js_places_near_to"><option>BLR - Electronic City Phase 1</option></select>
 			</div>
 		</div>
 	</div>
 	<!-- Workplaces -->
-	<div class="workplaces altavista carousel block space-50-top-bottom js_carousel_container">
+	<div class="workplaces carousel block space-50-top-bottom js_workplaces js_carousel_container" data-name="alta vista">
 		<div class="carousel-list js_carousel_content">
 			<div class="carousel-list-item js_carousel_item">
 				<div class="workplace">
@@ -194,7 +194,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="workplaces hidden dwellington carousel block space-50-top-bottom js_carousel_container">
+	<div class="workplaces carousel block space-50-top-bottom hidden js_workplaces js_carousel_container" data-name="dwellington">
 		<div class="carousel-list js_carousel_content">
 			<div class="carousel-list-item js_carousel_item">
 				<div class="workplace">

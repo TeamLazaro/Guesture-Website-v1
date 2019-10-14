@@ -156,11 +156,44 @@ $( function () {
 			livingSituation.numbers.Sheets[ type ] = numbers[ type ];
 			livingSituation.render();
 		}
+
+		// Initialize the locations in the Nearby Places section
+		$( ".js_places_near_to" ).html(
+			livingSituationsData.solo.locationOptions.map( createSelectOption )
+		);
+	}
+
+	function setupNearbyPlaces () {
+
+		$placesNearTo = $( ".js_places_near_to" );
+		var locations = [ ].slice.call( $( ".js_workplaces" ) ).map( function ( domLocation ) {
+			return domLocation.dataset.name;
+		} );
+
+		$placesNearTo.on( "change", function ( event ) {
+			// Get the location
+			var location = $placesNearTo.val();
+
+			// Get the workspaces to show
+			var workplaceSection = locations.filter( function ( l ) {
+				return location.indexOf( l ) !== -1;
+			} );
+			if ( workplaceSection.length ) {
+				// Show the corresponding workspaces
+				$( ".js_workplaces" ).addClass( "hidden" );
+				$( ".js_workplaces[ data-name = '" + workplaceSection[ 0 ] + "' ]" ).removeClass( "hidden" );
+			}
+
+			// Broadcast the change of location
+			$placesNearTo.trigger( "location/change", { location: location } );
+		} );
+
 	}
 
 	// Okay, now go fetch them numbers!
 	getNumbers()
 		.then( setupPricingSection )
+		.then( setupNearbyPlaces );
 
 } );
 
