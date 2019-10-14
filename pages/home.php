@@ -295,8 +295,32 @@
 							<option>Alta Vista - BLR</option>
 						</select>
 					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">View</div>
+						<select class="minimal inline js_attribute js_view" data-name="view">
+							<option>Not Particular</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">A/C</div>
+						<select class="minimal inline js_attribute js_ac" data-name="ac">
+							<option>Non A/C Room</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">Smoking</div>
+						<select class="minimal inline js_attribute js_smoking" data-name="smoking">
+							<option>Not Particular</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">Diet</div>
+						<select class="minimal inline js_attribute js_diet" data-name="diet">
+							<option>Not Particular</option>
+						</select>
+					</div>
 					<div class="space-25-bottom">
-						<a href="" class="included js_modal_trigger label strong text-uppercase float-right" data-mod-id="sample-video">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></a>
+						<!-- <a href="" class="included js_modal_trigger label strong text-uppercase float-right" data-mod-id="sample-video">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></a> -->
 					</div>
 				</div>
 				<div class="action text-center space-25-bottom">
@@ -382,8 +406,32 @@
 							<option>Alta Vista - BLR</option>
 						</select>
 					</div>
+					<div class="flex">
+						<div class="h4 strong opacity-50 inline">View</div>
+						<select class="minimal dark inline js_attribute js_view" data-name="view">
+							<option>Not Particular</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong opacity-50 inline">A/C</div>
+						<select class="minimal dark inline js_attribute js_ac" data-name="ac">
+							<option>Non A/C Room</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong opacity-50 inline">Smoking</div>
+						<select class="minimal dark inline js_attribute js_smoking" data-name="smoking">
+							<option>Not Particular</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong opacity-50 inline">Diet</div>
+						<select class="minimal dark inline js_attribute js_diet" data-name="diet">
+							<option>Not Particular</option>
+						</select>
+					</div>
 					<div class="space-25-bottom">
-						<a href="" class="included js_modal_trigger label strong text-uppercase float-right" data-mod-id="sample-video">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></a>
+						<!-- <a href="" class="included js_modal_trigger label strong text-uppercase float-right" data-mod-id="sample-video">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></a> -->
 					</div>
 				</div>
 				<div class="action text-center space-25-bottom">
@@ -469,8 +517,32 @@
 							<option>Alta Vista - BLR</option>
 						</select>
 					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">View</div>
+						<select class="minimal inline js_attribute js_view" data-name="view">
+							<option>Not Particular</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">A/C</div>
+						<select class="minimal inline js_attribute js_ac" data-name="ac">
+							<option>Non A/C Room</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">Smoking</div>
+						<select class="minimal inline js_attribute js_smoking" data-name="smoking">
+							<option>Not Particular</option>
+						</select>
+					</div>
+					<div class="flex">
+						<div class="h4 strong text-green-2 opacity-50 inline">Diet</div>
+						<select class="minimal inline js_attribute js_diet" data-name="diet">
+							<option>Not Particular</option>
+						</select>
+					</div>
 					<div class="space-25-bottom">
-						<a href="" class="included js_modal_trigger label strong text-uppercase float-right" data-mod-id="sample-video">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></a>
+						<!-- <a href="" class="included js_modal_trigger label strong text-uppercase float-right" data-mod-id="sample-video">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></a> -->
 					</div>
 				</div>
 				<div class="action text-center space-25-bottom">
@@ -523,51 +595,6 @@
 					</div>
 				</form>
 			</div>
-			<!-- <div class="price fill-dark js_carousel_item" style="background: linear-gradient(45deg, var(--dark) 60%, var(--neutral-5) 100%);">
-				<div class="character"></div>
-				<div class="title block h3 strong text-light text-uppercase text-center">Premium</div>
-				<div class="thumbnail"><img src="https://via.placeholder.com/400"></div>
-				<div class="intro space-min">
-					<div class="heading h5 strong opacity-50 space-min-top">3-star business hotel like accommodation.</div>
-					<div class="description h6">Prefered by Managers who travel to Bangalore for a few months a year.</div>
-				</div>
-				<div class="config space-min">
-					<div class="flex">
-						<div class="h4 strong opacity-50 inline">Balcony</div>
-						<select class="minimal dark">
-							<option>Attached</option>
-						</select>
-					</div>
-					<div class="flex">
-						<div class="h4 strong opacity-50 inline">Bathroom</div>
-						<select class="minimal dark">
-							<option>Attached</option>
-						</select>
-					</div>
-					<div class="flex">
-						<div class="h4 strong opacity-50 inline">Live</div>
-						<select class="minimal dark">
-							<option>3 Months</option>
-						</select>
-					</div>
-					<div class="flex">
-						<div class="h4 strong opacity-50 inline alt-font">@</div>
-						<select class="minimal dark">
-							<option>Alta Vista - BLR</option>
-						</select>
-					</div>
-					<div class="space-25-bottom">
-						<a href="" class="included js_modal_trigger label strong text-uppercase float-right" data-mod-id="sample-video">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></a>
-					</div>
-				</div>
-				<div class="action text-center space-25-bottom">
-					<div class="h4 data strong text-uppercase">₹726 Per Day</div>
-					<div class="h4 strong text-uppercase">Ooops!</div>
-					<div class="h6 strong text-uppercase text-neutral-3 invisible">N/A Per Month</div>
-					<div class="h6 strong text-uppercase text-yellow">No Rooms Found</div>
-				</div>
-				<button class="button block fill-green-3">Book Now</button>
-			</div> -->
 		</div>
 		<div class="scroll-controls">
 			<div class="row">
