@@ -168,7 +168,17 @@ $( function () {
 
 			livingSituation.numbers = { Sheets: { SETTINGS: numbers.SETTINGS } };
 			livingSituation.numbers.Sheets[ type ] = numbers[ type ];
+			// Set the default values from the markup and then compute
 			livingSituation.render();
+			livingSituation.$el.find( ".js_attribute" ).each( function ( _i, el ) {
+				var $attribute = $( el );
+				var name = $attribute.data( "name" );
+				var value = $attribute.val();
+				var coordinateOnSheet = livingSituation.sheetCoordinates[ name ];
+				livingSituation[ name ] = value;
+				livingSituation.numbers.Sheets[ type ][ coordinateOnSheet ].v = value;
+			} );
+			livingSituation.computeDetails();
 		}
 
 		return numbers;
