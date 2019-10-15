@@ -28,7 +28,7 @@
 
 
 <!-- Intro Section -->
-<section class="intro-section fill-green-1 space-150-top-bottom">
+<section class="intro-section fill-green-1 space-150-top-bottom" style="background-image: linear-gradient(-135deg, transparent 60%, var(--yellow) 100%), url('../../../media/characters/intro-section/char-<?php echo rand( 1, 3 ) ?>.png?v=20181126'), url('../../../media/characters/intro-section/intro-section-bg-px.png?v=20181126');">
 	<div class="container">
 		<div class="intro row space-50-bottom">
 			<div class="columns small-10 small-offset-1">
