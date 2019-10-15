@@ -5,7 +5,7 @@
 
 /* ## Basic Breakpoints
  * ====================
- 
+
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {}
 @media( min-width: 1480px ) {}
@@ -95,7 +95,7 @@ body, .body {
 .position-relative { position: relative; }
 
 
-h1, h2, h3, h4, h5, h6, 
+h1, h2, h3, h4, h5, h6,
 p, small, label {
 	margin: 0;
 	display: inline;
@@ -320,7 +320,7 @@ button:focus,
 	.button {
 		padding: 0 calc(var(--space-50)/2);
 		height: var(--space-50);
-		font-size: 1.6rem; 
+		font-size: 1.6rem;
 		line-height: var(--space-50);
 	}
 
@@ -777,7 +777,7 @@ select { cursor: pointer; }
 	position: relative;
 	cursor: pointer;
 	display: inline-block;
-	padding: 0; 
+	padding: 0;
 	width: var(--space-100);
 	height: var(--space-100);
 	text-align: center;
@@ -806,7 +806,7 @@ select { cursor: pointer; }
 .scroll-controls .scroll-left {
 	transform: translateX(-50%);
 }
-	
+
 .scroll-controls .scroll-right {
 	transform: translateX(50%);
 }
@@ -836,8 +836,8 @@ select { cursor: pointer; }
 }
 
 @media( min-width: 1040px ) {
-	.h0 { 
-		font-size: 14.4rem; 
+	.h0 {
+		font-size: 14.4rem;
 		text-shadow: 0px 4px 5px rgba(0,0,0,0.25), 0px 2px 15px rgba(0,0,0,0.25);
 	}
 }
@@ -860,7 +860,6 @@ select.minimal {
 	padding: 3px 0px;
 	padding-right: 18px;
 	font-weight: 900;
-	text-transform: uppercase;
 	border-radius: 0;
 	border-top: 0;
 	border-left: 0;
@@ -869,7 +868,7 @@ select.minimal {
 	border-width: 2px;
 	background-color: transparent;
 	font-size: 1.4rem;
-	background-image: url('../../media/glyph/select.svg'); 
+	background-image: url('../../media/glyph/select.svg');
 	background-position: 100% 50%;
 	background-size: 14px 10px;
 	background-repeat: no-repeat;
@@ -885,7 +884,7 @@ select.minimal.xl {
 select.minimal.dark {
 	color: var(--light);
 	border-color: var(--light);
-	background-image: url('../../media/glyph/select-dark.svg'); 
+	background-image: url('../../media/glyph/select-dark.svg');
 }
 
 @media( min-width: 640px )  {
@@ -907,7 +906,7 @@ select.minimal.dark {
 		padding-right: 22px;
 		background-size: 17px 12px;
 	}
-	select.minimal.xl { 
+	select.minimal.xl {
 		font-size: 2.4rem;
 		padding-right: 26px;
 		background-size: 21px 15px;
@@ -945,7 +944,7 @@ input.phone {
 	position: relative;
 	padding-right: var(--space-50);
 	background-repeat: no-repeat;
-	background-position: center right; 
+	background-position: center right;
 	background-size: var(--space-50) 24px;
 }
 input.name { background-image: url('../../../media/glyph/input-name.svg'); }
@@ -1044,7 +1043,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	width: 100%;
-	padding-left: var(--space-min); 
+	padding-left: var(--space-min);
 }
 
 @media( min-width: 640px )  {}
@@ -1072,7 +1071,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	display: inline-block;
 	position: relative;
 	z-index: -1;
-	margin-right: 25px; 
+	margin-right: 25px;
 }
 .sparkle.or-light:before {
 	content: '';
@@ -1094,7 +1093,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 
 @media( min-width: 1480px ) {
 	.sparkle.or-light {
-		margin-right: 50px; 
+		margin-right: 50px;
 	}
 	.sparkle.or-light:before {
 		width: 150px;
@@ -1108,7 +1107,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	display: inline-block;
 	position: relative;
 	z-index: -1;
-	margin-right: 25px; 
+	margin-right: 25px;
 }
 .sparkle.or-number-light:before {
 	content: '';
@@ -1130,7 +1129,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 
 @media( min-width: 1480px ) {
 	.sparkle.or-number-light {
-		margin-right: 50px; 
+		margin-right: 50px;
 	}
 	.sparkle.or-number-light:before {
 		width: 135px;
@@ -1144,7 +1143,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	display: inline-block;
 	position: relative;
 	z-index: 1;
-	margin-right: 25px; 
+	margin-right: 25px;
 }
 .sparkle.or-dark:before {
 	content: '';
@@ -1166,7 +1165,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 
 @media( min-width: 1480px ) {
 	.sparkle.or-dark {
-		margin-right: 50px; 
+		margin-right: 50px;
 	}
 	.sparkle.or-dark:before {
 		width: 150px;
@@ -1180,7 +1179,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	display: inline-block;
 	position: relative;
 	z-index: 1;
-	margin-right: 25px; 
+	margin-right: 25px;
 }
 .sparkle.or-number-dark:before {
 	content: '';
@@ -1202,7 +1201,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 
 @media( min-width: 1480px ) {
 	.sparkle.or-number-dark {
-		margin-right: 50px; 
+		margin-right: 50px;
 	}
 	.sparkle.or-number-dark:before {
 		width: 135px;
@@ -1217,7 +1216,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		margin-left: 25px; 
+		margin-left: 25px;
 	}
 	.sparkle.title-1-left:before {
 		content: '';
@@ -1235,11 +1234,11 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		background-position: center center;
 		background-size: 50px 90px;
 		opacity: 0.5;
-	}	
+	}
 }
 @media( min-width: 1480px ) {
 	.sparkle.title-1-left {
-		margin-left: 50px; 
+		margin-left: 50px;
 	}
 	.sparkle.title-1-left:before {
 		left: 15px;
@@ -1255,7 +1254,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		margin-right: 25px; 
+		margin-right: 25px;
 	}
 	.sparkle.title-1-right:after {
 		content: '';
@@ -1277,7 +1276,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 @media( min-width: 1480px ) {
 	.sparkle.title-1-right {
-		margin-right: 50px; 
+		margin-right: 50px;
 	}
 	.sparkle.title-1-right:after {
 		right: 15px;
@@ -1293,7 +1292,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		margin-left: 25px; 
+		margin-left: 25px;
 	}
 	.sparkle.title-2-left:before {
 		content: '';
@@ -1315,7 +1314,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 @media( min-width: 1480px ) {
 	.sparkle.title-2-left {
-		margin-left: 50px; 
+		margin-left: 50px;
 	}
 	.sparkle.title-2-left:before {
 		left: 15px;
@@ -1331,7 +1330,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		margin-right: 25px; 
+		margin-right: 25px;
 	}
 	.sparkle.title-2-right:after {
 		content: '';
@@ -1353,7 +1352,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 @media( min-width: 1480px ) {
 	.sparkle.title-2-right {
-		margin-right: 50px; 
+		margin-right: 50px;
 	}
 	.sparkle.title-2-right:after {
 		right: 15px;
@@ -1369,7 +1368,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		margin-left: 25px; 
+		margin-left: 25px;
 	}
 	.sparkle.title-3-left:before {
 		content: '';
@@ -1391,7 +1390,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 @media( min-width: 1480px ) {
 	.sparkle.title-3-left {
-		margin-left: 50px; 
+		margin-left: 50px;
 	}
 	.sparkle.title-3-left:before {
 		left: 20px;
@@ -1407,7 +1406,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		display: inline-block;
 		position: relative;
 		z-index: 1;
-		margin-right: 15px; 
+		margin-right: 15px;
 	}
 	.sparkle.title-3-right:after {
 		content: '';
@@ -1429,7 +1428,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 @media( min-width: 1480px ) {
 	.sparkle.title-3-right {
-		margin-right: 25px; 
+		margin-right: 25px;
 	}
 	.sparkle.title-3-right:after {
 		right: 15px;
