@@ -57,7 +57,7 @@ $pageTitle = getCurrentPageTitle( $links, $baseURL, $siteTitle );
 	- -->
 	<!-- Short description of the document (limit to 150 characters) -->
 	<!-- This content *may* be used as a part of search engine results. -->
-	<meta name="description" content="<?php echo getContent( '', 'description' ); ?>">
+	<meta name="description" content="<?php echo getContent( 'Coliving with like-minded people. At Guesture it\'s more than just shared living spaces. It is a combination of privacy, safety and opportunities for interaction and self-discovery.', 'description' ); ?>">
 	<!-- Short description of your document's subject -->
 	<meta name="subject" content="<?php echo getContent( '', 'subject' ); ?>">
 
@@ -139,8 +139,8 @@ $pageTitle = getCurrentPageTitle( $links, $baseURL, $siteTitle );
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="<?php echo $pageTitle ?>">
 	<meta property="og:image" content="<?php echo $pageImage ?: '' ?>">
-	<meta property="og:description" content="<?php echo getContent( '', 'og -> description' ) ?>">
-	<meta property="og:site_name" content="<?php echo getContent( '', 'site_title' ) ?>">
+	<meta property="og:description" content="<?php echo getContent( 'Coliving with like-minded people. At Guesture it\'s more than just shared living spaces. It is a combination of privacy, safety and opportunities for interaction and self-discovery.', 'og -> description' ) ?>">
+	<meta property="og:site_name" content="<?php echo getContent( 'Guesture', 'site_title' ) ?>">
 
 
 	<!-- Schema.org / Google+ -->
