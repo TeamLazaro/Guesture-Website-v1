@@ -1131,18 +1131,15 @@
 						<div class="points space-25-bottom opacity-50">
 							<div class="point label strong text-uppercase">Solo Live Package</div>
 							<div class="point label strong text-uppercase">Buddy Live Package</div>
-							<div class="point label strong text-uppercase">Trio Live Package</div>
-							<div class="point label strong text-uppercase invisible">Short Stay Package</div>
+							<div class="point label strong text-uppercase">Short Stay Package</div>
 						</div>
 						<a class="inline button" href="#contact">Enquire Now</a>
 					</div>
 					<div class="address columns medium-6 large-4 space-50-top space-75-right">
-						<div class="h3 name">Dwellinton</div>
+						<div class="h3 name">Dwellington</div>
 						<div class="label strong text-uppercase opacity-50">BLR - Electronic City Phase 2</div>
 						<div class="h6 space-min-top-bottom">Shanthi Pura, Electronic City Phase 2, Bhovi Palya, Bengaluru, Karnataka 560100</div>
 						<div class="points space-25-bottom opacity-50">
-							<div class="point label strong text-uppercase">Solo Live Package</div>
-							<div class="point label strong text-uppercase">Buddy Live Package</div>
 							<div class="point label strong text-uppercase">Trio Live Package</div>
 							<div class="point label strong text-uppercase">Short Stay Package</div>
 						</div>
@@ -1153,10 +1150,6 @@
 						<div class="label strong text-uppercase opacity-50">BLR - Electronic City Phase 2</div>
 						<div class="h6 space-min-top-bottom">Electronic City Phase 2, Electronic City, Bhovi Palya, Bengaluru, Karnataka 560099</div>
 						<div class="points space-25-bottom opacity-50">
-							<div class="point label strong text-uppercase">Solo Live Package</div>
-							<div class="point label strong text-uppercase">Buddy Live Package</div>
-							<div class="point label strong text-uppercase">Trio Live Package</div>
-							<div class="point label strong text-uppercase">Short Stay Package</div>
 						</div>
 						<a class="inline button no-pointer fill-neutral-5" href="#contact">Coming Soon</a>
 					</div>
