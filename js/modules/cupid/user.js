@@ -183,10 +183,7 @@ Person.prototype.getFromDB = function getFromDB () {
 			newPerson.name = __.tempUser.name || person.name;
 			newPerson.emailAddress = __.tempUser.emailAddress || person.emailAddress;
 			newPerson.isInterestedIn( __.tempUser.interests );
-			if ( newPerson.verification && newPerson.verification.isVerified )
-				resolve( newPerson );
-			else
-				reject( newPerson );
+			resolve( newPerson );
 		} );
 		ajaxRequest.fail( function ( jqXHR, textStatus, e ) {
 			var errorResponse = utils.getErrorResponse( jqXHR, textStatus, e );
