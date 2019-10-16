@@ -69,11 +69,13 @@ function onOTPSubmit ( event ) {
 }
 function onOTPVerified () {
 	var loginPrompt = this;
+	// Trigger the login event
+	loginPrompt.trigger( "login" );
+}
+function trackConversion ( loginPrompt ) {
 	// Track the conversion
 	var conversionUrl = $( loginPrompt.triggerElement ).data( "c" );
 	__.utils.trackPageVisit( conversionUrl );
-	// Trigger the login event
-	loginPrompt.trigger( "login" );
 }
 function onLogin () {
 	var loginPrompt = this;
@@ -156,11 +158,17 @@ loginPrompts.contactUs.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					__.user = person;
-					loginPrompt.trigger( "login", person );
+					if ( newPerson.verification && newPerson.verification.isVerified ) {
+						__.user = person;
+						loginPrompt.trigger( "login", person );
+					}
+					else
+						Promise.reject( person );
 				} )
 				// If the person don't exist, add the person, and send an OTP
-				.catch( function () {
+				.catch( function ( person ) {
+					if ( ! person )
+						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
 							loginPrompt.trigger( "requireOTP" );
@@ -254,15 +262,21 @@ loginPrompts.bookTrial.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					__.user = person;
-					loginPrompt.$phoneForm.slideUp( 300, function () {
-						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-							loginPrompt.trigger( "login", person );
+					if ( newPerson.verification && newPerson.verification.isVerified ) {
+						__.user = person;
+						loginPrompt.$phoneForm.slideUp( 300, function () {
+							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+								loginPrompt.trigger( "login", person );
+							} );
 						} );
-					} );
+					}
+					else
+						Promise.reject( person );
 				} )
 				// If the person don't exist, add the person, and send an OTP
-				.catch( function () {
+				.catch( function ( person ) {
+					if ( ! person )
+						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
 							loginPrompt.trigger( "requireOTP" );
@@ -382,15 +396,21 @@ loginPrompts.womensBlock.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					__.user = person;
-					loginPrompt.$phoneForm.slideUp( 300, function () {
-						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-							loginPrompt.trigger( "login", person );
+					if ( newPerson.verification && newPerson.verification.isVerified ) {
+						__.user = person;
+						loginPrompt.$phoneForm.slideUp( 300, function () {
+							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+								loginPrompt.trigger( "login", person );
+							} );
 						} );
-					} );
+					}
+					else
+						Promise.reject( person );
 				} )
 				// If the person don't exist, add the person, and send an OTP
-				.catch( function () {
+				.catch( function ( person ) {
+					if ( ! person )
+						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
 							loginPrompt.trigger( "requireOTP" );
@@ -483,15 +503,21 @@ loginPrompts.soloRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					__.user = person;
-					loginPrompt.$phoneForm.slideUp( 300, function () {
-						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-							loginPrompt.trigger( "login", person );
+					if ( newPerson.verification && newPerson.verification.isVerified ) {
+						__.user = person;
+						loginPrompt.$phoneForm.slideUp( 300, function () {
+							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+								loginPrompt.trigger( "login", person );
+							} );
 						} );
-					} );
+					}
+					else
+						Promise.reject( person );
 				} )
 				// If the person don't exist, add the person, and send an OTP
-				.catch( function () {
+				.catch( function ( person ) {
+					if ( ! person )
+						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
 							loginPrompt.trigger( "requireOTP" );
@@ -580,15 +606,21 @@ loginPrompts.buddyRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					__.user = person;
-					loginPrompt.$phoneForm.slideUp( 300, function () {
-						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-							loginPrompt.trigger( "login", person );
+					if ( newPerson.verification && newPerson.verification.isVerified ) {
+						__.user = person;
+						loginPrompt.$phoneForm.slideUp( 300, function () {
+							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+								loginPrompt.trigger( "login", person );
+							} );
 						} );
-					} );
+					}
+					else
+						Promise.reject( person );
 				} )
 				// If the person don't exist, add the person, and send an OTP
-				.catch( function () {
+				.catch( function ( person ) {
+					if ( ! person )
+						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
 							loginPrompt.trigger( "requireOTP" );
@@ -677,15 +709,21 @@ loginPrompts.trioRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					__.user = person;
-					loginPrompt.$phoneForm.slideUp( 300, function () {
-						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-							loginPrompt.trigger( "login", person );
+					if ( newPerson.verification && newPerson.verification.isVerified ) {
+						__.user = person;
+						loginPrompt.$phoneForm.slideUp( 300, function () {
+							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+								loginPrompt.trigger( "login", person );
+							} );
 						} );
-					} );
+					}
+					else
+						Promise.reject( person );
 				} )
 				// If the person don't exist, add the person, and send an OTP
-				.catch( function () {
+				.catch( function ( person ) {
+					if ( ! person )
+						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
 							loginPrompt.trigger( "requireOTP" );
