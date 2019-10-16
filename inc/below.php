@@ -16,7 +16,7 @@
 
 	<!--  ☠  MARKUP ENDS HERE  ☠  -->
 
-	<?php lazaro_disclaimer(); ?>
+	<?php // lazaro_disclaimer(); ?>
 
 
 
@@ -31,7 +31,6 @@
 	<!-- <script type="text/javascript" src="/js/modules/device-charge.js"></script> -->
 	<script type="text/javascript" src="/js/modules/video_embed.js"></script>
 	<script type="text/javascript" src="/js/modules/modal_box.js"></script>
-	<script type="text/javascript" src="/js/modules/disclaimer.js"></script>
 	<script type="text/javascript" src="/js/modules/sliding-gallery.js"></script>
 	<script type="text/javascript" src="/js/modules/cupid/utils.js"></script>
 	<script type="text/javascript" src="/js/modules/cupid/user.js"></script>
