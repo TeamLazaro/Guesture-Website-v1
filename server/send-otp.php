@@ -23,7 +23,7 @@ $input = json_decode( file_get_contents( 'php://input' ), true );
  * Get the data from the request
  */
 $phoneNumber = $input[ 'phoneNumber' ];
-$template = 'Guesture Living';
+$template = 'Guesture';
 
 $apiKey = '693bc978-580e-11e8-a895-0200cd936042';
 
