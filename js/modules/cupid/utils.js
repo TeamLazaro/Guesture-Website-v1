@@ -566,10 +566,9 @@ utils.getErrorResponse = function getErrorResponse ( jqXHR, textStatus, e ) {
 	else {
 		message = jqXHR.responseText;
 	}
-	return {
-		code: code,
-		message: message
-	};
+	var error = new Error( message );
+	error.code = code;
+	return error;
 }
 
 
