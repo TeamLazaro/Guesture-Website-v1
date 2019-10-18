@@ -27,19 +27,19 @@
 
 
 	<!-- JS Modules -->
-	<script type="text/javascript" src="/js/modules/utils.js"></script>
+	<script type="text/javascript" src="/js/modules/utils.js<?= $ver ?>"></script>
 	<!-- <script type="text/javascript" src="/js/modules/device-charge.js"></script> -->
-	<script type="text/javascript" src="/js/modules/video_embed.js"></script>
-	<script type="text/javascript" src="/js/modules/modal_box.js"></script>
-	<script type="text/javascript" src="/js/modules/sliding-gallery.js"></script>
-	<script type="text/javascript" src="/js/modules/cupid/utils.js"></script>
-	<script type="text/javascript" src="/js/modules/cupid/user.js"></script>
-	<script type="text/javascript" src="/js/forms.js"></script>
-	<script type="text/javascript" src="/js/login-prompts.js"></script>
-	<script type="text/javascript" src="/js/modules/carousel.js"></script>
-	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js"></script>
+	<script type="text/javascript" src="/js/modules/video_embed.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/modal_box.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/sliding-gallery.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/cupid/utils.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/cupid/user.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/forms.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/login-prompts.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
-	<script type="text/javascript" src="/js/pricing.js"></script>
+	<script type="text/javascript" src="/js/pricing.js<?= $ver ?>"></script>
 
 	<script type="text/javascript">
 
