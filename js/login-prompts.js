@@ -158,7 +158,7 @@ loginPrompts.contactUs.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( newPerson.verification && newPerson.verification.isVerified ) {
+					if ( person.verification && person.verification.isVerified ) {
 						__.user = person;
 						loginPrompt.trigger( "login", person );
 					}
@@ -262,7 +262,7 @@ loginPrompts.bookTrial.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( newPerson.verification && newPerson.verification.isVerified ) {
+					if ( person.verification && person.verification.isVerified ) {
 						__.user = person;
 						loginPrompt.$phoneForm.slideUp( 300, function () {
 							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
@@ -396,7 +396,7 @@ loginPrompts.womensBlock.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( newPerson.verification && newPerson.verification.isVerified ) {
+					if ( person.verification && person.verification.isVerified ) {
 						__.user = person;
 						loginPrompt.$phoneForm.slideUp( 300, function () {
 							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
@@ -503,7 +503,7 @@ loginPrompts.soloRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( newPerson.verification && newPerson.verification.isVerified ) {
+					if ( person.verification && person.verification.isVerified ) {
 						__.user = person;
 						loginPrompt.$phoneForm.slideUp( 300, function () {
 							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
@@ -606,7 +606,7 @@ loginPrompts.buddyRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( newPerson.verification && newPerson.verification.isVerified ) {
+					if ( person.verification && person.verification.isVerified ) {
 						__.user = person;
 						loginPrompt.$phoneForm.slideUp( 300, function () {
 							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
@@ -709,7 +709,7 @@ loginPrompts.trioRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( newPerson.verification && newPerson.verification.isVerified ) {
+					if ( person.verification && person.verification.isVerified ) {
 						__.user = person;
 						loginPrompt.$phoneForm.slideUp( 300, function () {
 							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
