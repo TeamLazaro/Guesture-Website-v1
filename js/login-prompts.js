@@ -163,11 +163,11 @@ loginPrompts.contactUs.on( "phoneSubmit", function ( event ) {
 						loginPrompt.trigger( "login", person );
 					}
 					else
-						Promise.reject( person );
+						throw person;
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person || person instanceof Error )
+					if ( person instanceof Error || ! person )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -271,11 +271,11 @@ loginPrompts.bookTrial.on( "phoneSubmit", function ( event ) {
 						} );
 					}
 					else
-						Promise.reject( person );
+						throw person;
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person || person instanceof Error )
+					if ( person instanceof Error || ! person )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -405,11 +405,11 @@ loginPrompts.womensBlock.on( "phoneSubmit", function ( event ) {
 						} );
 					}
 					else
-						Promise.reject( person );
+						throw person;
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person || person instanceof Error )
+					if ( person instanceof Error || ! person )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -512,11 +512,11 @@ loginPrompts.soloRoom.on( "phoneSubmit", function ( event ) {
 						} );
 					}
 					else
-						Promise.reject( person );
+						throw person;
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person || person instanceof Error )
+					if ( person instanceof Error || ! person )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -615,11 +615,11 @@ loginPrompts.buddyRoom.on( "phoneSubmit", function ( event ) {
 						} );
 					}
 					else
-						Promise.reject( person );
+						throw person;
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person || person instanceof Error )
+					if ( person instanceof Error || ! person )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -718,11 +718,11 @@ loginPrompts.trioRoom.on( "phoneSubmit", function ( event ) {
 						} );
 					}
 					else
-						Promise.reject( person );
+						throw person;
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person || person instanceof Error )
+					if ( person instanceof Error || ! person )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
