@@ -180,8 +180,11 @@ Person.prototype.getFromDB = function getFromDB () {
 			var person = response.data;
 			var sourcePoint = person.source && person.source.point;
 			var newPerson = new Person( person.phoneNumber, sourcePoint );
-			newPerson.name = __.tempUser.name || person.name;
-			newPerson.emailAddress = __.tempUser.emailAddress || person.emailAddress;
+			newPerson = Object.assign( newPerson, person );
+			if ( __.tempUser.name )
+				newPerson.name = __.tempUser.name;
+			if ( __.tempUser.emailAddress )
+				newPerson.emailAddress = __.tempUser.emailAddress;
 			newPerson.isInterestedIn( __.tempUser.interests );
 			resolve( newPerson );
 		} );
