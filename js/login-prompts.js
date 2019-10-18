@@ -167,7 +167,7 @@ loginPrompts.contactUs.on( "phoneSubmit", function ( event ) {
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person )
+					if ( ! person || person instanceof Error )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -275,7 +275,7 @@ loginPrompts.bookTrial.on( "phoneSubmit", function ( event ) {
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person )
+					if ( ! person || person instanceof Error )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -409,7 +409,7 @@ loginPrompts.womensBlock.on( "phoneSubmit", function ( event ) {
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person )
+					if ( ! person || person instanceof Error )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -516,7 +516,7 @@ loginPrompts.soloRoom.on( "phoneSubmit", function ( event ) {
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person )
+					if ( ! person || person instanceof Error )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -619,7 +619,7 @@ loginPrompts.buddyRoom.on( "phoneSubmit", function ( event ) {
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person )
+					if ( ! person || person instanceof Error )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
@@ -722,7 +722,7 @@ loginPrompts.trioRoom.on( "phoneSubmit", function ( event ) {
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
-					if ( ! person )
+					if ( ! person || person instanceof Error )
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
