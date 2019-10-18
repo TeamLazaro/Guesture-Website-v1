@@ -178,6 +178,13 @@ $( function () {
 				livingSituation[ name ] = value;
 				livingSituation.numbers.Sheets[ type ][ coordinateOnSheet ].v = value;
 			} );
+			if ( type == "trio" ) {
+				livingSituation.$el.find( ".js_location" ).val( "Dwellington - BLR" );
+				livingSituation.location = "Dwellington - BLR";
+				var location__SheetCoordinate = livingSituation.sheetCoordinates.location;
+				livingSituation.numbers.Sheets.trio[ location__SheetCoordinate ].v = "Dwellington - BLR";
+			}
+
 			livingSituation.computeDetails();
 		}
 
@@ -230,9 +237,9 @@ $( function () {
 
 		} );
 
-		$( document ).trigger( "location/change", {
-			location: locationOptions[ 0 ][ 1 ]
-		} );
+		// $( document ).trigger( "location/change", {
+		// 	location: locationOptions[ 0 ][ 1 ]
+		// } );
 
 	}
 
