@@ -24,6 +24,7 @@ __.utils = utils;
  */
 __.settings = {
 	client: "Guesture",
+	clientSlug: "guesture",
 	sourceMedium: "Website",
 	cupidApiEndpoint: "https://guesture.cupid.lazaro.in",
 	trackingURL: "/track/"

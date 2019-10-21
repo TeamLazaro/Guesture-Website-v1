@@ -117,7 +117,7 @@ __.LoginPrompt = LoginPrompt;
 
 function Person ( phoneNumber, sourcePoint ) {
 
-	this.client = __.settings.client;
+	this.client = __.settings.clientSlug;
 	this.source = { medium: __.settings.sourceMedium };
 	this.phoneNumber = phoneNumber;
 
@@ -136,7 +136,7 @@ Person.prototype.hasDeviceId = function hasDeviceId ( id ) {
 
 Person.prototype.isInterestedIn = function isInterestedIn ( product, variant, attributes ) {
 	if ( ! product )
-		product = __.settings.client;
+		product = __.settings.clientSlug;
 
 	let interest = { };
 	interest.product = product;
@@ -360,7 +360,7 @@ Person.prototype.verify = function verify () {
 	var apiEndpoint = __.settings.cupidApiEndpoint;
 	var url = apiEndpoint + "/v2/people/verify";
 	var data = {
-		client: __.settings.client,
+		client: __.settings.clientSlug,
 		phoneNumbers: [ this.phoneNumber ],
 		verificationMethod: "OTP"
 	};
@@ -501,7 +501,7 @@ function getUser__FromLocalStorage ( identifyingAttribute, by, options ) {
 // TODO: Remove
 function getUser__FromDB ( identifyingAttribute, by, options ) {
 
-	var client = __.settings.client;
+	var client = __.settings.clientSlug;
 	var apiEndpoint = __.settings.cupidApiEndpoint;
 	var url = apiEndpoint + "/v2/people";
 	var data = { client: client };
