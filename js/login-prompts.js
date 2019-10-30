@@ -314,7 +314,7 @@ loginPrompts.bookTrial.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.bookTrial.on( "login", onLogin );
 loginPrompts.bookTrial.on( "login", function () {
-	__.user.isInterestedIn( "Guesture", "3-day Trial" );
+	__.user.isInterestedIn( "3-day Trial" );
 	__.user.update();
 	this.$site.find( ".js_book_trial" ).text( "Click here to book." );
 } );

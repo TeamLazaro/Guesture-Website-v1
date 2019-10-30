@@ -134,20 +134,35 @@ Person.prototype.hasDeviceId = function hasDeviceId ( id ) {
 	return this;
 }
 
-Person.prototype.isInterestedIn = function isInterestedIn ( product, variant, attributes ) {
-	if ( ! product )
-		product = __.settings.clientSlug;
+Person.prototype.isInterestedIn = function isInterestedIn ( things ) {
 
-	let interest = { };
-	interest.product = product;
-	if ( variant )
-		interest.variant = variant;
-	if ( attributes )
-		interest.attributes = attributes;
+	if ( typeof things != "string" || ! Array.isArray( things ) )
+		return this;
+
+	if ( typeof things == "string" )
+		things = [ things ];
+
+	// For backward compatibility
+	if ( Array.isArray( things ) ) {
+		things = things
+					.reduce( function ( allThings, interest ) {
+						if ( typeof interest == "object" )
+							return allThings.concat(
+								interest.product, interest.variant
+							);
+						else if ( typeof interest == "string" )
+							return allThings.concat( interest );
+						else
+							return allThings;
+					}, [ ] )
+					.filter( function ( thing ) { return thing } )
+	}
+
 
 	this.interests = this.interests || [ ];
-	this.interests = this.interests.concat( interest );
+	this.interests = this.interests.concat( things );
 	return this;
+
 }
 
 

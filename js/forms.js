@@ -230,7 +230,7 @@ $( document ).on( "click", ".js_book_womens_block", function ( event ) {
 	$button.prop( "disabled", true );
 	$button.text( "We'll contact you soon!" );
 
-	__.user.isInterestedIn( "Guesture", "Womens-only Block" );
+	__.user.isInterestedIn( "Womens-only Block" );
 	__.user.update();
 } );
 
