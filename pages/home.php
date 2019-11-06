@@ -326,7 +326,7 @@
 				<div class="action text-center space-25-bottom">
 					<div class="h4 data strong text-dark text-uppercase js_daily_expense">₹726 Per Day</div>
 					<div class="h4 strong text-dark text-uppercase">Ooops!</div>
-					<div class="h6 strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
+					<div class="label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 strong text-red text-uppercase">No Rooms Found</div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
@@ -437,7 +437,7 @@
 				<div class="action text-center space-25-bottom">
 					<div class="h4 sparkle title-2-left title-2-right data strong text-uppercase js_daily_expense">₹726 Per Day</div>
 					<div class="h4 strong text-uppercase">Ooops!</div>
-					<div class="h6 strong text-uppercase opacity-50 js_monthly_expense">₹21800 Per Month</div>
+					<div class="label strong text-uppercase opacity-50 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 strong text-uppercase text-yellow">No Rooms Found</div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
@@ -548,7 +548,7 @@
 				<div class="action text-center space-25-bottom">
 					<div class="h4 data strong text-uppercase js_daily_expense">₹726 Per Day</div>
 					<div class="h4 strong text-uppercase">Ooops!</div>
-					<div class="h6 strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
+					<div class="label strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 strong text-uppercase text-red">No Rooms Found</div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
