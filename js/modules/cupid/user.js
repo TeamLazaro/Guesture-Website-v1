@@ -136,8 +136,10 @@ Person.prototype.hasDeviceId = function hasDeviceId ( id ) {
 
 Person.prototype.isInterestedIn = function isInterestedIn ( things ) {
 
-	if ( typeof things != "string" || ! Array.isArray( things ) )
-		return this;
+	// If the input neither a String or an Array, return
+	if ( typeof things != "string" )
+		if ( ! Array.isArray( things ) )
+			return this;
 
 	if ( typeof things == "string" )
 		things = [ things ];
