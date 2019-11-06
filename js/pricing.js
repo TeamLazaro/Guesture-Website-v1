@@ -110,7 +110,7 @@ $( function () {
 	 */
 	function getNumbers () {
 
-		var url = "/data/numbers.json";
+		var url = "/data/numbers.json" + "?t=" + ( new Date() ).getTime();
 
 		var ajaxRequest = $.ajax( {
 			url: url,
