@@ -287,6 +287,8 @@ Person.prototype.requestOTP = function requestOTP ( product ) {
 			}
 
 			var responseErrorMessage = response.Details.toLowerCase();
+			// Message reads as follows:
+				// Invalid Phone Number - Length Mismatch(Expected: 10)
 			if ( /invalid/.test( responseErrorMessage ) ) {
 				reject( { code: 1, message: "The phone number you've provided is not valid. Please try again." } );
 				return;
