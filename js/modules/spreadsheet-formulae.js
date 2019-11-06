@@ -216,6 +216,37 @@
 		return operand1 != operand2;
 	};
 
+	formulae.LEN = function ( text ) {
+		if ( typeof text == "string" )
+			return text.length;
+		else if ( typeof text == "number" )
+			return text.toString().length;
+		else
+			return errors.error;
+	};
+
+	formulae.LEFT = function ( text, offset ) {
+		if ( offset < 0 )
+			return errors.value;
+		if ( typeof text == "string" )
+			return text.slice( 0, offset );
+		else if ( typeof text == "number" )
+			return text.toString().slice( 0, offset );
+		else
+			return errors.error;
+	};
+
+	formulae.RIGHT = function ( text, offset ) {
+		if ( offset < 0 )
+			return errors.value;
+		if ( typeof text == "string" )
+			return text.slice( 0, -offset );
+		else if ( typeof text == "number" )
+			return text.toString().slice( -offset );
+		else
+			return errors.error;
+	};
+
 	formulae.CHOOSE = function () {
 		if ( arguments.length < 2 )
 			return errors.na;
