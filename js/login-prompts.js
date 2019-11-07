@@ -89,6 +89,7 @@ function onLogin () {
 			$( loginPrompt.triggerElement ).trigger( loginPrompt.triggerEvent );
 		} );
 	} );
+	__.user.isOnWebsite();
 }
 
 
