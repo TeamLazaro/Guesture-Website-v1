@@ -505,6 +505,7 @@ function getUser () {
 	}
 	return user;
 }
+utils.getUser = getUser;
 
 // TODO: Remove
 function getUserById ( id, options ) {
