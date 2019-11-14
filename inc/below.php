@@ -44,7 +44,11 @@
 	<script type="text/javascript">
 
 		$( function () {
-			//
+
+			var user = __CUPID.utils.getUser();
+			if ( user )
+				user.isOnWebsite();
+
 		} );
 
 	</script>

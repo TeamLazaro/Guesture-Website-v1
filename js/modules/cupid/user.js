@@ -447,6 +447,47 @@ Person.prototype.update = function update () {
 }
 
 
+/*
+ * Notifiy the Person's presence on the website
+ */
+Person.prototype.isOnWebsite = function isOnWebsite () {
+
+	var data = {
+		client: this.client,
+		phoneNumber: this.phoneNumber,
+		interests: this.interests,
+		deviceId: this.deviceId,
+		name: this.name,
+		emailAddress: this.emailAddress
+	};
+
+	var apiEndpoint = __.settings.cupidApiEndpoint;
+	var url = apiEndpoint + "/v2/hooks/person-on-website";
+
+	var ajaxRequest = $.ajax( {
+		url: url,
+		method: "POST",
+		data: JSON.stringify( data ),
+		contentType: "application/json",
+		dataType: "json",
+		// xhrFields: {
+		// 	withCredentials: true
+		// }
+	} );
+
+	return new Promise( function ( resolve, reject ) {
+		ajaxRequest.done( function ( response ) {
+			resolve( response );
+		} );
+		ajaxRequest.fail( function ( jqXHR, textStatus, e ) {
+			var errorResponse = utils.getErrorResponse( jqXHR, textStatus, e );
+			reject( errorResponse );
+		} );
+	} );
+
+}
+
+
 
 /*
  *
@@ -464,6 +505,7 @@ function getUser () {
 	}
 	return user;
 }
+utils.getUser = getUser;
 
 // TODO: Remove
 function getUserById ( id, options ) {
