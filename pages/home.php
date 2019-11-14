@@ -65,6 +65,11 @@
 					<div class="text h6 inline-middle space-25-left">High Speed <br>
 					Internet</div>
 				</div>
+				<div class="point">
+					<div class="icon inline-middle"><img src="media/icons/icon-internet.svg<?php echo $ver ?>"></div>
+					<div class="text h6 inline-middle space-25-left">Women's only <br>
+					Block</div>
+				</div>
 			</div>
 			<div class="columns small-10 small-offset-1 large-3 xlarge-offset-0">
 				<div class="point">
@@ -110,6 +115,9 @@
 				<div class="h2 text-green-2">Guesture <span class="no-wrap js_place" style="text-transform: capitalize;">@Alta Vista</span></div>
 				<div class="h4 text-green-2 strong inline hide-for-small">in</div>
 				<select class="inline minimal xl js_places_near_to"><option>BLR - Electronic City Phase 1</option></select>
+				<div class="space-min-top">
+					<a href="" class="h6 text-dark strong inline-middle"><img class="inline-middle" src="media/glyph/24-maps.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -267,7 +275,7 @@
 				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
 				<div class="thumbnail"><img class="js_image" src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>"></div>
 				<div class="intro space-min">
-					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 3 Bedroom Suite.</div>
+					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 2 or 3 Bedroom Suite.</div>
 					<div class="description h6 text-green-2">Preferred by Managers living alone in Bangalore, away from their family.</div>
 				</div>
 				<div class="config space-min">
@@ -378,7 +386,7 @@
 				<div class="title block h3 strong text-light text-uppercase text-center">Buddy</div>
 				<div class="thumbnail"><img class="js_image" src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>"></div>
 				<div class="intro space-min">
-					<div class="heading h5 strong opacity-50 space-min-top">Twin Sharing room in a 3 Bedroom Suite.</div>
+					<div class="heading h5 strong opacity-50 space-min-top">Twin Sharing room in a 2 or 3 Bedroom Suite.</div>
 					<div class="description h6">Preferred by corporate professionals living alone in Bangalore.</div>
 				</div>
 				<div class="config space-min">
@@ -489,8 +497,8 @@
 				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
 				<div class="thumbnail"><img class="js_image" src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>"></div>
 				<div class="intro space-min">
-					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 3 Bedroom Suite.</div>
-					<div class="description h6 text-green-2">Preferred by Interns and Trainees living alone in Bangalore.</div>
+					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 2 or 3 Bedroom Suite.</div>
+					<div class="description h6 text-green-2">Preferred by Students, Interns and Trainees living alone in Bangalore.</div>
 				</div>
 				<div class="config space-min">
 					<div class="flex">
