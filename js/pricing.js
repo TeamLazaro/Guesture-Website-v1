@@ -218,6 +218,7 @@ $( function () {
 
 		/*
 		 * When a location is selected, update the carousel of places that nearby
+		 * and update the Google Maps link as well
 		 */
 		$( document ).on( "location/change", function ( event, data ) {
 
@@ -235,11 +236,17 @@ $( function () {
 			var workplaceSection = locations.filter( function ( thisLocation ) {
 				return selectedLocation.toLowerCase().indexOf( thisLocation ) !== -1;
 			} );
-			if ( workplaceSection.length ) {
-				// Show the corresponding workspaces
-				$( ".js_workplaces" ).addClass( "hidden" );
-				$( ".js_workplaces[ data-name = '" + workplaceSection[ 0 ] + "' ]" ).removeClass( "hidden" );
-			}
+
+			if ( ! workplaceSection.length )
+				return;
+
+			// Show the corresponding Google Map links
+			$( ".js_location_selector_container .js_google_maps" ).addClass( "hidden" );
+			$( ".js_location_selector_container .js_google_maps[ data-name = '" + workplaceSection[ 0 ] + "' ]" ).removeClass( "hidden" );
+
+			// Show the corresponding workspaces
+			$( ".js_workplaces" ).addClass( "hidden" );
+			$( ".js_workplaces[ data-name = '" + workplaceSection[ 0 ] + "' ]" ).removeClass( "hidden" );
 
 		} );
 
