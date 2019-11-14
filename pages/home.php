@@ -1136,6 +1136,9 @@
 						<div class="h3 name">Alta Vista</div>
 						<div class="label strong text-uppercase opacity-50">BLR - Electronic City Phase 1</div>
 						<div class="h6 space-min-top-bottom">Shanders Alta Vista, Veer Sandra, Electronic City, Bengaluru, Karnataka 560100</div>
+						<div class="space-min-bottom">
+							<a href="https://goo.gl/maps/awWKyDwRoEPzcg8t9" target="_blank" class="h6 text-light strong inline-middle"><img class="inline-middle" src="media/glyph/24-maps-light.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
+						</div>
 						<div class="points space-25-bottom opacity-50">
 							<div class="point label strong text-uppercase">Solo Live Package</div>
 							<div class="point label strong text-uppercase">Buddy Live Package</div>
@@ -1147,6 +1150,9 @@
 						<div class="h3 name">Dwellington</div>
 						<div class="label strong text-uppercase opacity-50">BLR - Electronic City Phase 2</div>
 						<div class="h6 space-min-top-bottom">Shanthi Pura, Electronic City Phase 2, Bhovi Palya, Bengaluru, Karnataka 560100</div>
+						<div class="space-min-bottom">
+							<a href="https://goo.gl/maps/bHF68rUPVkUBXcBa8" target="_blank" class="h6 text-light strong inline-middle"><img class="inline-middle" src="media/glyph/24-maps-light.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
+						</div>
 						<div class="points space-25-bottom opacity-50">
 							<div class="point label strong text-uppercase">Trio Live Package</div>
 							<div class="point label strong text-uppercase">Short Stay Package</div>
