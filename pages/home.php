@@ -66,7 +66,7 @@
 					Internet</div>
 				</div>
 				<div class="point">
-					<div class="icon inline-middle"><img src="media/icons/icon-internet.svg<?php echo $ver ?>"></div>
+					<div class="icon inline-middle"><img src="media/icons/icon-women.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left">Women's only <br>
 					Block</div>
 				</div>
