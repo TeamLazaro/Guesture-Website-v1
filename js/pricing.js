@@ -216,18 +216,24 @@ $( function () {
 			$placesNearTo.trigger( "location/change", { location: location } );
 		} );
 
+		/*
+		 * When a location is selected, update the carousel of places that nearby
+		 */
 		$( document ).on( "location/change", function ( event, data ) {
 
-			var location = data.location;
+			var selectedLocation = data.location;
 
 			// Set the new value
-			$placesNearTo.val( location );
-			var presentableLocationName = "@" + location.replace( /\s+-\s+.+/, "" );
-			$placesNearTo.parent().find( ".js_place" ).text( presentableLocationName );
+			$placesNearTo.val( selectedLocation );
+			var presentableLocationName = "@" + selectedLocation.replace( /\s+-\s+.+/, "" );
+			$placesNearTo
+				.closest( ".js_location_selector_container" )
+				.find( ".js_place" )
+				.text( presentableLocationName );
 
 			// Get the workspaces to show
-			var workplaceSection = locations.filter( function ( l ) {
-				return location.indexOf( l ) !== -1;
+			var workplaceSection = locations.filter( function ( thisLocation ) {
+				return selectedLocation.toLowerCase().indexOf( thisLocation ) !== -1;
 			} );
 			if ( workplaceSection.length ) {
 				// Show the corresponding workspaces
