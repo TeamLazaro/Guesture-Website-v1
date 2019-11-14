@@ -115,8 +115,11 @@
 				<div class="h2 text-green-2">Guesture <span class="no-wrap js_place" style="text-transform: capitalize;">@Alta Vista</span></div>
 				<div class="h4 text-green-2 strong inline hide-for-small">in</div>
 				<select class="inline minimal xl js_places_near_to"><option>BLR - Electronic City Phase 1</option></select>
-				<div class="space-min-top">
+				<div class="space-min-top js_google_maps" data-name="alta vista">
 					<a href="https://goo.gl/maps/awWKyDwRoEPzcg8t9" target="_blank" class="h6 text-dark strong inline-middle"><img class="inline-middle" src="media/glyph/24-maps.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
+				</div>
+				<div class="space-min-top js_google_maps hidden" data-name="dwellington">
+					<a href="https://goo.gl/maps/bHF68rUPVkUBXcBa8" target="_blank" class="h6 text-dark strong inline-middle"><img class="inline-middle" src="media/glyph/24-maps.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
 				</div>
 			</div>
 		</div>
