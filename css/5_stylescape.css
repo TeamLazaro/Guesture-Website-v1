@@ -823,6 +823,34 @@ select { cursor: pointer; }
 
 
 
+/*
+ *
+ *	Scroll Reveal
+ *
+ */
+
+
+
+@media( min-width: 640px )  {
+	.scroll-reveal {
+		opacity: 0;
+		transform: translateY(var(--space-one));
+		transition: opacity .3s ease-out, transform .3s ease-out;
+		transition-delay: var(--td); /* style="--td: 1.25s;" */
+	}
+
+	.scroll-reveal.reveal {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+}
+
+
+
+
+
+
 /* H0 */
 .h0 {
 	font-size: 6.3rem;
