@@ -839,9 +839,23 @@ select { cursor: pointer; }
 		transition-delay: var(--td); /* style="--td: 1.25s;" */
 	}
 
+	@keyframes pop {
+		0%, 100% {
+			transform: scale(1);
+		}
+		75% {
+			transform: scale(1.25);
+		}
+	}
+
 	.scroll-reveal.reveal {
 		opacity: 1;
 		transform: translateY(0);
+	}
+
+	.scroll-reveal.reveal.pop {
+		animation: pop .5s cubic-bezier(0, 0, 0.75, 1.5);
+		animation-delay: var(--td);
 	}
 
 }

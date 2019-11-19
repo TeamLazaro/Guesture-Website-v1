@@ -45,12 +45,12 @@
 					<div class="text h6 inline-middle space-25-left">10 min <br>
 					Check-in</div>
 				</div>
-				<div class="point scroll-reveal" style="--td: 1s;">
+				<div class="point scroll-reveal pop" style="--td: 1.25s;">
 					<div class="icon inline-middle"><img src="media/icons/icon-work.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left text-light"><strong>STAY Packages</strong> for <br>
 					1 day to 60 days</div>
 				</div>
-				<div class="point scroll-reveal" style="--td: 1s;">
+				<div class="point scroll-reveal pop" style="--td: 1.5s;">
 					<div class="icon inline-middle"><img src="media/icons/icon-house.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left text-light"><strong>LIVE Packages</strong> for <br>
 					2 months to 7 years</div>
@@ -720,21 +720,21 @@
 <!-- Trial : Trap Section -->
 <section class="trial--trap-section fill-green-2 js_trial_section qpid_login_site">
 	<div class="container">
-		<div class="character"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
+		<div class="character scroll-reveal" style="--td: .25s;"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 medium-6 large-10">
-				<div class="h3 strong"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right">3 Day Trial</span><span class="opacity-50"> online today</span></div>
-				<div class="h4 space-25-bottom">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
+				<div class="h3 strong scroll-reveal" style="--td: .75s;"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right">3 Day Trial</span><span class="opacity-50"> online today</span></div>
+				<div class="h4 space-25-bottom scroll-reveal" style="--td: 1s;">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
 				<div class="points">
-					<div class="point label text-uppercase space-min-bottom">3 days and 2 nights</div>
-					<div class="point label text-uppercase space-min-bottom">Money back guarantee *</div>
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop" style="--td: 1.25s;">3 days and 2 nights</div>
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop" style="--td: 1.5s;">Money back guarantee *</div>
 				</div>
-				<div class="small opacity-50">* If cancelled within 36 hours of check-in</div>
+				<div class="small opacity-50 scroll-reveal" style="--td: 1.75s;">* If cancelled within 36 hours of check-in</div>
 			</div>
-			<div class="columns small-10 small-offset-1">
+			<div class="columns small-10 small-offset-1 scroll-reveal" style="--td: 2s;">
 				<div class="h0 text-green-2 space-25-top">₹1199</div>
 			</div>
-			<div class="columns small-10 small-offset-1">
+			<div class="columns small-10 small-offset-1 scroll-reveal" style="--td: 2s;">
 				<div class="action row">
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
@@ -947,12 +947,12 @@
 <!-- Womens Block : Trap Section -->
 <section class="womens-block--trap-section fill-red js_women_block_section qpid_login_site">
 	<div class="container">
-		<div class="character"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
+		<div class="character scroll-reveal" style="--td: .25s;"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 xlarge-9 space-50-top-bottom">
-				<div class="h3 strong"><span class="opacity-50">Peace of mind for you and </span><span class="sparkle title-2-left title-2-right">your parents</span></div>
-				<div class="h0 text-red space-25-bottom">womens only block</div>
-				<div class="action row">
+				<div class="h3 strong"><span class="opacity-50 scroll-reveal" style="--td: .75s;">Peace of mind for you and </span><span class="sparkle title-2-left title-2-right scroll-reveal pop" style="--td: 1.25s;">your parents</span></div>
+				<div class="h0 text-red space-25-bottom scroll-reveal" style="--td: 1.75s;">womens only block</div>
+				<div class="action row scroll-reveal" style="--td: 2s;">
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger form-row columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
