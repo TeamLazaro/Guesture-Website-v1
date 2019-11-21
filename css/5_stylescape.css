@@ -834,7 +834,7 @@ select { cursor: pointer; }
 @media( min-width: 640px )  {
 	.scroll-reveal {
 		opacity: 0;
-		transform: translateY(var(--space-one));
+		transform: translateY(var(--space-50));
 		transition: opacity .3s ease-out, transform .3s ease-out;
 		transition-delay: var(--td); /* style="--td: 1.25s;" */
 	}
