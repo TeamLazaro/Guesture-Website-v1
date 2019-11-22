@@ -299,11 +299,13 @@
 	position: relative;
 	white-space: normal;
 	width: calc( 6 * var(--space-100) );
-	min-height: calc( (6 * var(--space-100) * 1.375 ) );
+	/*min-height: calc( (6 * var(--space-100) * 1.375 ) );*/
+	min-height: 500px;
+	padding: 15px;
 	scroll-snap-align: center;
 	font-size: 1.4rem;
 	box-shadow: 0px 0px 0px 2px var(--neutral-1);
-	color: var(--neutral-5);
+	color: var(--dark);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -318,9 +320,22 @@
 	background-color: var(--green-2);
 }
 
-.booking-section .deals .deals-list .deal .title {
-	line-height: 1.125;
+.booking-section .deals .deals-list .deal .thumbnail {
+	width: 100%;
+	padding-top: 100%;
+	border-radius: var(--space-min); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
+
+.booking-section .deals .deals-list .deal .title {
+	height: 110px;
+	line-height: 1.25;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 .booking-section .deals .deals-list .deal .info {
 	position: absolute;
 	z-index: 2;
@@ -339,11 +354,21 @@
 	border-top-right-radius: var(--space-min);
 	border-bottom-right-radius: var(--space-min);
 }
-@media( min-width: 640px )  {}
+@media( min-width: 640px )  {
+	.booking-section .deals .deals-list .deal {
+		min-height: 520px;
+	}
+	.booking-section .deals .deals-list .deal .title {
+		height: 130px;
+	}
+}
+	
 @media( min-width: 1040px ) {
 	.booking-section .deals .deals-list .deal {
 		width: calc( 4 * var(--space-100) );
-		min-height: calc( (4 * var(--space-100) * 1.375 ) );
+		/*min-height: calc( (4 * var(--space-100) * 1.375 ) );*/
+		min-height: 570px;
+		padding: 15px;
 	}
 	.booking-section .deals .deals-list .deal .info {
 		padding: 20px;
@@ -357,9 +382,13 @@
 
 	.booking-section .deals .deals-list .deal {
 		width: calc( 3 * var(--space-100) );
-		min-height: calc( (3 * var(--space-100) * 1.375 ) );
+		/*min-height: calc( (3 * var(--space-100) * 1.375 ) );*/
+		min-height: 660px;
 	}
 
+	.booking-section .deals .deals-list .deal .title {
+		height: 175px;
+	}
 }
 
 /*

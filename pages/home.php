@@ -659,7 +659,9 @@
 	<!-- Deals -->
 	<div class="deals js_carousel_container scroll-reveal">
 		<div class="deals-list js_carousel_content">
-			<div class="deal fill-light js_carousel_item" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');">
+			<div class="deal fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
 					<div class="title h4 space-min-bottom">Bring a Buddy get free meal coupons for a month for the both of you.</div>
@@ -715,7 +717,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="deal dark fill-light js_carousel_item" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');">
+			<div class="deal dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
 					<div class="title h4 space-min-bottom">Book for 3months and get free d-mart coupons worth Rs.899.</div>
@@ -771,7 +775,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="deal fill-light js_carousel_item" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');">
+			<div class="deal fill-light js_carousel_item">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
 					<div class="title h4 space-min-bottom">Book for 6months and get Ola Money for Rs.1899.</div>
@@ -827,7 +833,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="deal fill-light js_carousel_item" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');">
+			<div class="deal fill-light js_carousel_item">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
 					<div class="title h4 space-min-bottom">Book for 11 months and get 1 month free.</div>
@@ -974,7 +982,7 @@
 		<div class="character scroll-reveal"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 medium-6 large-10">
-				<div class="h3 strong scroll-reveal"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right">3 Day Trial</span><span class="opacity-50"> online today</span></div>
+				<div class="h3 strong scroll-reveal"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right scroll-reveal pop">3 Day Trial</span><span class="opacity-50"> online today</span></div>
 				<div class="h4 space-25-bottom scroll-reveal">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
 				<div class="points">
 					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">3 days and 2 nights</div><br>

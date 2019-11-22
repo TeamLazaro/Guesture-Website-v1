@@ -840,11 +840,19 @@ select { cursor: pointer; }
 	}
 
 	@keyframes pop {
-		0%, 100% {
-			transform: scale(1);
+		0% {
+			opacity: 0;
+			transform: scale(1) translateY(var(--space-50));
+		}
+		50% {
+			opacity: 1;
+			transform: scale(1) translateY(0);
 		}
 		75% {
-			transform: scale(1.25);
+			transform: scale(1.25) translateY(0);
+		}
+		100% {
+			transform: scale(1) translateY(0);
 		}
 	}
 
@@ -854,7 +862,9 @@ select { cursor: pointer; }
 	}
 
 	.scroll-reveal.reveal.pop {
-		animation: pop .5s cubic-bezier(0, 0, 0.75, 1.5);
+		transform: none;
+		transition: none;
+		animation: pop .6s cubic-bezier(0, 0, 0.75, 1.5);
 		animation-delay: var(--td);
 	}
 
