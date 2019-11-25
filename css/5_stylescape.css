@@ -1489,3 +1489,133 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		background-size: 75px 135px;
 	}
 }
+
+
+
+
+
+
+/* -- Card Carousel -- */
+
+.card-carousel {
+	position: relative;
+}
+
+.card-carousel .card-list {
+	position: relative;
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: visible;
+	-webkit-overflow-scrolling: touch;
+	padding: var(--space-min) calc( (100vw - var(--container-width))/2 ) var(--space-50);
+	scroll-snap-type: x mandatory;
+	font-size: 0;
+}
+
+.card-carousel .card-list .card {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	white-space: normal;
+	width: calc( 6 * var(--space-100) );
+	/*min-height: calc( (6 * var(--space-100) * 1.375 ) );*/
+	min-height: 500px;
+	padding: 15px;
+	scroll-snap-align: center;
+	font-size: 1.4rem;
+	box-shadow: 0px 0px 0px 2px var(--neutral-1);
+	color: var(--dark);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.card-carousel .card-list .card.dark {
+	background-color: var(--dark);
+	color: var(--light);
+}
+
+.card-carousel .card-list .card.dark .button {
+	background-color: var(--green-2);
+}
+
+.card-carousel .card-list .card .thumbnail {
+	width: 100%;
+	padding-top: 100%;
+	border-radius: var(--space-min); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.card-carousel .card-list .card .title {
+	height: 110px;
+	line-height: 1.25;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.card-carousel .card-list .card .info {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	padding: 15px;
+}
+
+.card-carousel .card-list .card:first-child {
+	border-top-left-radius: var(--space-min);
+	border-bottom-left-radius: var(--space-min);
+}
+.card-carousel .card-list .card:last-child {
+	border-top-right-radius: var(--space-min);
+	border-bottom-right-radius: var(--space-min);
+}
+@media( min-width: 640px )  {
+	.card-carousel .card-list .card {
+		min-height: 520px;
+	}
+	.card-carousel .card-list .card .title {
+		height: 130px;
+	}
+}
+	
+@media( min-width: 1040px ) {
+	.card-carousel .card-list .card {
+		width: calc( 4 * var(--space-100) );
+		/*min-height: calc( (4 * var(--space-100) * 1.375 ) );*/
+		min-height: 570px;
+		padding: 15px;
+	}
+	.card-carousel .card-list .card .info {
+		padding: 20px;
+	}
+}
+@media( min-width: 1480px ) {
+
+	/* -- vvv Delete This Upon Adding the 4th Price Column -- */
+	/*.card-carousel { padding-left: var(--space-100); }*/
+	/* -- ^^^ -- */
+
+	.card-carousel .card-list .card {
+		width: calc( 3 * var(--space-100) );
+		/*min-height: calc( (3 * var(--space-100) * 1.375 ) );*/
+		min-height: 660px;
+	}
+
+	.card-carousel .card-list .card .title {
+		height: 175px;
+	}
+}
+
+/*
+ * Card Carousel Scroll Controls
+ */
+
+.card-carousel .scroll-controls {
+	top: 25%;
+}

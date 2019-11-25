@@ -42,6 +42,37 @@
 	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
 	<script type="text/javascript" src="/js/pricing.js<?= $ver ?>"></script>
 
+	<!-- spirit web player -->
+	<script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
+
+	<!-- play animation -->
+	<script>
+	  // spirit.loadAnimation({
+	  //   autoPlay: true,
+	  //   path: './spirit-animation.json',
+	  // })
+
+	  // load GSAP Tween and Timeline from CDN
+	  spirit.setup().then(() => {
+
+	    // next, load the animation data
+	    // exported with Spirit Studio
+	    spirit.load('./lamp.json').then(groups => {
+
+	      // our animation can have multiple animation groups
+	      // lets get the first
+	      const group = groups.at(0);
+
+	      // construct it
+	      // (this assembles a GSAP Timeline)
+	      const timeline = group.construct();
+
+	      // and finally play it
+	      	timeline.play();
+	    })
+	  })
+	</script>
+
 	<script type="text/javascript">
 
 		$( function () {

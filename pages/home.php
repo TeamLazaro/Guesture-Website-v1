@@ -619,6 +619,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="icon-lamp" style="opacity: 0;"><?php include __DIR__ . '/../media/icons/icon-lamp.svg'; ?></div>
 	</div>
 	<!-- End: Pricing -->
 	<div class="container">
@@ -656,15 +657,15 @@
 			</div>
 		</div>
 	</div>
-	<!-- Deals -->
-	<div class="deals js_carousel_container scroll-reveal">
-		<div class="deals-list js_carousel_content">
-			<div class="deal fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
+	<!-- Deal -->
+	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal">
+		<div class="deal-list card-list js_carousel_content">
+			<div class="deal card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
 				<!-- Thumbnail -->
 				<div class="thumbnail" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
-					<div class="title h4 space-min-bottom">Bring a Buddy get free meal coupons for a month for the both of you.</div>
+					<div class="title h4">Bring a Buddy get free meal coupons for a month for the both of you.</div>
 					<!-- Timer -->
 					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
@@ -717,12 +718,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="deal dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
+			<div class="deal card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
 				<!-- Thumbnail -->
 				<div class="thumbnail" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
-					<div class="title h4 space-min-bottom">Book for 3months and get free d-mart coupons worth Rs.899.</div>
+					<div class="title h4">Book for 3months and get free d-mart coupons worth Rs.899.</div>
 					<!-- Timer -->
 					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
@@ -775,12 +776,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="deal fill-light js_carousel_item">
+			<div class="deal card fill-light js_carousel_item">
 				<!-- Thumbnail -->
 				<div class="thumbnail" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
-					<div class="title h4 space-min-bottom">Book for 6months and get Ola Money for Rs.1899.</div>
+					<div class="title h4">Book for 6months and get Ola Money for Rs.1899.</div>
 					<!-- Timer -->
 					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
@@ -833,12 +834,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="deal fill-light js_carousel_item">
+			<div class="deal card fill-light js_carousel_item">
 				<!-- Thumbnail -->
 				<div class="thumbnail" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');"></div>
 				<div class="info">
 					<!-- Title -->
-					<div class="title h4 space-min-bottom">Book for 11 months and get 1 month free.</div>
+					<div class="title h4">Book for 11 months and get 1 month free.</div>
 					<!-- Timer -->
 					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
@@ -905,7 +906,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- End: Deals -->
+	<!-- End: Deal -->
 	<div class="container">
 		<div class="row">
 			<div id="contact" class="contact columns small-10 small-offset-1 space-75-top space-25-bottom">
@@ -1382,7 +1383,262 @@
 				<div class="h6">Guesture is a unique approach to solving the problem of the high cost of living in cities, without compromising on comfort and safety. Coliving at Guesture gives you shared living spaces with the same level of amenities as service apartments, but optimized resources, hence lower costs.</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
+				<div class="h2 text-green-2 scroll-reveal">Events</div>
+			</div>
+		</div>
 	</div>
+	<!-- Event -->
+	<div class="event-carousel card-carousel js_carousel_container scroll-reveal">
+		<div class="event-list card-list js_carousel_content">
+			<div class="event card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Bring a Buddy get free meal coupons for a month for the both of you.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="event card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Book for 3months and get free d-mart coupons worth Rs.899.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="event card fill-light js_carousel_item">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Book for 6months and get Ola Money for Rs.1899.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="event card fill-light js_carousel_item">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Book for 11 months and get 1 month free.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroll-controls">
+			<div class="row">
+				<div class="container">
+					<div class="columns small-6">
+						<div class="scroll-button button fill-green-2 scroll-left unselectable js_pager" data-dir="left" tabindex="-1"><img src="media/glyph/32-leftarrow.svg?v=20190917"></div>
+					</div>
+					<div class="columns small-6 text-right">
+						<div class="scroll-button button fill-green-2 scroll-right unselectable js_pager" data-dir="right" tabindex="-1"><img src="media/glyph/32-rightarrow.svg?v=20190917"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End: Event -->
 </section>
 <!-- END: Testimonial Section -->
 
@@ -1444,8 +1700,266 @@
 <section class="about-section space-150-top-bottom">
 	<div class="container">
 		<div class="row">
+			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-min-bottom">
+				<div class="h2 text-green-2 scroll-reveal">News</div>
+			</div>
+		</div>
+	</div>
+	<!-- News -->
+	<div class="news-carousel card-carousel js_carousel_container scroll-reveal">
+		<div class="news-list card-list js_carousel_content">
+			<div class="news card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Bring a Buddy get free meal coupons for a month for the both of you.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="news card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Book for 3months and get free d-mart coupons worth Rs.899.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="news card fill-light js_carousel_item">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Book for 6months and get Ola Money for Rs.1899.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="news card fill-light js_carousel_item">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Title -->
+					<div class="title h4">Book for 11 months and get 1 month free.</div>
+					<!-- Timer -->
+					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<!-- Action -->
+					<div class="action row">
+						<!-- Phone Trap Trigger -->
+						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						</label>
+						<br>
+						<!-- Phone Trap form -->
+						<form class="js_phone_form" style="display: none">
+							<div class="columns small-12" style="position: relative">
+								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+								<div class="phone-trap minimal phone-number">
+									<div class="block prefix-group" style="position: relative">
+										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+										</select>
+										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+									</div>
+									<input class="phone block" type="text" name="phone-number">
+									<label class="submit block">
+										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+						</form>
+						<!-- OTP form -->
+						<form class="js_otp_form" style="display: none">
+							<div class="columns small-12">
+								<div class="otp-trap minimal">
+									<label class="block">
+										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+										<input class="otp block" type="text" name="otp">
+									</label>
+									<label class="submit block">
+										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+										<button class="button block">→</button>
+									</label>
+								</div>
+							</div>
+							<br>
+							<div class="columns small-12 clearfix hidden">
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroll-controls">
+			<div class="row">
+				<div class="container">
+					<div class="columns small-6">
+						<div class="scroll-button button fill-green-2 scroll-left unselectable js_pager" data-dir="left" tabindex="-1"><img src="media/glyph/32-leftarrow.svg?v=20190917"></div>
+					</div>
+					<div class="columns small-6 text-right">
+						<div class="scroll-button button fill-green-2 scroll-right unselectable js_pager" data-dir="right" tabindex="-1"><img src="media/glyph/32-rightarrow.svg?v=20190917"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End: News -->
+
+	<div class="container">
+		<div class="row">
 			<div class="columns small-10 small-offset-1">
-				<div class="title h0 text-light space-50-bottom scroll-reveal">the <svg class="inline-middle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 350" style="-webkit-filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)) drop-shadow(0px 2px 8px rgba(0,0,0,0.25)); filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)) drop-shadow(0px 2px 8px rgba(0,0,0,0.25));"><text style="opacity: 0;">Guesture</text><path fill="#FFF" d="M104.06 231.68c0 10.6-2.76 19.13-8.29 25.58-6.22 7.83-15.56 11.76-28 11.76-14.06 0-25.82-4.61-35.26-13.84l-28 28.35c16.13 15.68 37.92 23.51 65.33 23.51 23.74 0 42.98-7.03 57.74-21.09 14.06-13.83 21.09-31.69 21.08-53.59V59.15h-43.21V76.1c-11.54-12.67-26.17-19-43.92-19-18.21 0-32.62 5.3-43.21 15.91C6.1 85.21 0 108.95 0 144.21c0 35.5 6.1 59.24 18.32 71.22 10.6 10.61 24.89 15.91 42.86 15.91 4.61 0 8.99-.35 13.13-1.03v-39.07c-11.98-.23-20.28-5.19-24.88-14.86-3.01-6.69-4.49-17.41-4.49-32.16 0-14.74 1.49-25.58 4.49-32.5 4.6-9.44 12.9-14.16 24.88-14.16 11.99 0 20.29 4.72 24.89 14.16 3.23 6.92 4.84 17.76 4.84 32.5l.02 87.46zM449.41 185.68c-11.07 11.31-24.55 16.95-40.45 16.95-11.52 0-20.74-3.46-27.66-10.38-6.68-6.45-10.37-15.09-11.05-25.93h-.35v-1.73-1.03-31.47c.23-6.91 1.61-13.25 4.15-19.01 5.54-12.45 15.44-18.67 29.73-18.67 14.28 0 24.32 6.22 30.07 18.67 2.31 5.75 3.69 12.1 4.16 19.01h-39.42v30.77h83.32v-20.05c0-25.12-6.8-45.52-20.4-61.18-14.06-16.13-33.3-24.19-57.73-24.19-23.51 0-42.29 7.94-56.36 23.85-14.29 16.36-21.43 38.84-21.43 67.41 0 61.08 27.55 91.62 82.63 91.62 26.5 0 49.2-9.34 68.11-28.01l-27.32-26.63zM636.42 183.61c0 19.13-7.37 33.88-22.13 44.25-13.83 9.68-31.92 14.52-54.28 14.52-33.88 0-59.46-8.65-76.75-25.92l29.39-29.39c11.29 11.29 27.31 16.94 48.06 16.94 21.21 0 31.8-6.23 31.8-18.67 0-9.91-6.33-15.45-19.01-16.59l-28.35-2.77c-35.03-3.46-52.55-20.28-52.55-50.47 0-17.97 7.03-32.27 21.08-42.87 12.91-9.68 29.05-14.53 48.4-14.53 30.89 0 53.81 7.03 68.79 21.08l-27.66 28c-8.98-8.06-22.92-12.1-41.83-12.09-17.05 0-25.58 5.77-25.58 17.29 0 9.21 6.23 14.4 18.67 15.56l28.35 2.76c35.74 3.47 53.6 21.09 53.6 52.9z"/><path fill="#FFF" d="M702.44 240.3c-17.06 0-30.31-5.42-39.76-16.24-8.3-9.45-12.44-21.2-12.44-35.26V99.6h-19.02V65.37h19.02V12.14h44.93v53.23h31.81V99.6h-31.81v86.43c0 10.84 5.19 16.25 15.56 16.25h16.26v38.03l-24.55-.01zM846.94 240.3v-16.59c-11.75 12.45-26.73 18.67-44.95 18.67-17.74 0-31.92-5.3-42.52-15.9-12.22-12.22-18.33-29.27-18.33-51.17V60.19h44.94v108.89c0 11.29 3.23 19.83 9.69 25.59 5.3 4.84 11.99 7.25 20.05 7.25 8.3 0 15.1-2.41 20.4-7.26 6.45-5.77 9.68-14.3 9.68-25.59V60.18h44.94l.01 180.11-43.91.01zM1014.58 109.27c-7.15-7.15-15.09-10.71-23.85-10.71-7.62 0-14.18 2.65-19.71 7.95-6.22 6.22-9.33 14.63-9.33 25.23V240.3h-44.94l-.01-180.11h43.91v17.29c10.84-12.91 25.93-19.37 45.29-19.37 17.05 0 31.22 5.65 42.52 16.94l-33.88 34.22zM1152.17 185.66c-11.07 11.31-24.55 16.95-40.45 16.95-11.52 0-20.75-3.46-27.66-10.38-6.69-6.45-10.37-15.09-11.06-25.93h-.35v-1.73-1.03-31.47c.23-6.91 1.61-13.25 4.15-19.01 5.54-12.45 15.45-18.67 29.73-18.67 14.3 0 24.32 6.22 30.08 18.67 2.31 5.75 3.69 12.1 4.15 19.01h-39.41v30.77h83.32v-20.05c0-25.12-6.8-45.52-20.4-61.18-14.06-16.13-33.3-24.19-57.74-24.19-23.51 0-42.29 7.94-56.34 23.85-14.3 16.36-21.43 38.84-21.43 67.41 0 61.08 27.54 91.62 82.62 91.62 26.5 0 49.21-9.34 68.11-28.01l-27.32-26.63zM270.27 180.11v-16.59c-11.75 12.45-26.73 18.67-44.95 18.67-17.74 0-31.92-5.31-42.52-15.91-12.22-12.22-18.32-29.26-18.32-51.16V0h44.94v108.89c0 11.29 3.22 19.82 9.67 25.59 5.31 4.83 11.99 7.26 20.05 7.26 8.3 0 15.1-2.43 20.4-7.26 6.45-5.77 9.68-14.3 9.68-25.59V0h44.94l.01 180.11h-43.9z"/><path fill="#65BB87" d="M189.13 200.96h105.3c10.9 0 19.74 8.84 19.75 19.74V326c0 10.9-8.84 19.74-19.74 19.75h-105.3c-10.9 0-19.74-8.84-19.75-19.74v-105.3c-.01-10.91 8.83-19.75 19.74-19.75z"/></svg> story</div>
+				<div class="title h0 text-light space-100-top space-50-bottom scroll-reveal">the <svg class="inline-middle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 350" style="-webkit-filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)) drop-shadow(0px 2px 8px rgba(0,0,0,0.25)); filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.25)) drop-shadow(0px 2px 8px rgba(0,0,0,0.25));"><text style="opacity: 0;">Guesture</text><path fill="#FFF" d="M104.06 231.68c0 10.6-2.76 19.13-8.29 25.58-6.22 7.83-15.56 11.76-28 11.76-14.06 0-25.82-4.61-35.26-13.84l-28 28.35c16.13 15.68 37.92 23.51 65.33 23.51 23.74 0 42.98-7.03 57.74-21.09 14.06-13.83 21.09-31.69 21.08-53.59V59.15h-43.21V76.1c-11.54-12.67-26.17-19-43.92-19-18.21 0-32.62 5.3-43.21 15.91C6.1 85.21 0 108.95 0 144.21c0 35.5 6.1 59.24 18.32 71.22 10.6 10.61 24.89 15.91 42.86 15.91 4.61 0 8.99-.35 13.13-1.03v-39.07c-11.98-.23-20.28-5.19-24.88-14.86-3.01-6.69-4.49-17.41-4.49-32.16 0-14.74 1.49-25.58 4.49-32.5 4.6-9.44 12.9-14.16 24.88-14.16 11.99 0 20.29 4.72 24.89 14.16 3.23 6.92 4.84 17.76 4.84 32.5l.02 87.46zM449.41 185.68c-11.07 11.31-24.55 16.95-40.45 16.95-11.52 0-20.74-3.46-27.66-10.38-6.68-6.45-10.37-15.09-11.05-25.93h-.35v-1.73-1.03-31.47c.23-6.91 1.61-13.25 4.15-19.01 5.54-12.45 15.44-18.67 29.73-18.67 14.28 0 24.32 6.22 30.07 18.67 2.31 5.75 3.69 12.1 4.16 19.01h-39.42v30.77h83.32v-20.05c0-25.12-6.8-45.52-20.4-61.18-14.06-16.13-33.3-24.19-57.73-24.19-23.51 0-42.29 7.94-56.36 23.85-14.29 16.36-21.43 38.84-21.43 67.41 0 61.08 27.55 91.62 82.63 91.62 26.5 0 49.2-9.34 68.11-28.01l-27.32-26.63zM636.42 183.61c0 19.13-7.37 33.88-22.13 44.25-13.83 9.68-31.92 14.52-54.28 14.52-33.88 0-59.46-8.65-76.75-25.92l29.39-29.39c11.29 11.29 27.31 16.94 48.06 16.94 21.21 0 31.8-6.23 31.8-18.67 0-9.91-6.33-15.45-19.01-16.59l-28.35-2.77c-35.03-3.46-52.55-20.28-52.55-50.47 0-17.97 7.03-32.27 21.08-42.87 12.91-9.68 29.05-14.53 48.4-14.53 30.89 0 53.81 7.03 68.79 21.08l-27.66 28c-8.98-8.06-22.92-12.1-41.83-12.09-17.05 0-25.58 5.77-25.58 17.29 0 9.21 6.23 14.4 18.67 15.56l28.35 2.76c35.74 3.47 53.6 21.09 53.6 52.9z"/><path fill="#FFF" d="M702.44 240.3c-17.06 0-30.31-5.42-39.76-16.24-8.3-9.45-12.44-21.2-12.44-35.26V99.6h-19.02V65.37h19.02V12.14h44.93v53.23h31.81V99.6h-31.81v86.43c0 10.84 5.19 16.25 15.56 16.25h16.26v38.03l-24.55-.01zM846.94 240.3v-16.59c-11.75 12.45-26.73 18.67-44.95 18.67-17.74 0-31.92-5.3-42.52-15.9-12.22-12.22-18.33-29.27-18.33-51.17V60.19h44.94v108.89c0 11.29 3.23 19.83 9.69 25.59 5.3 4.84 11.99 7.25 20.05 7.25 8.3 0 15.1-2.41 20.4-7.26 6.45-5.77 9.68-14.3 9.68-25.59V60.18h44.94l.01 180.11-43.91.01zM1014.58 109.27c-7.15-7.15-15.09-10.71-23.85-10.71-7.62 0-14.18 2.65-19.71 7.95-6.22 6.22-9.33 14.63-9.33 25.23V240.3h-44.94l-.01-180.11h43.91v17.29c10.84-12.91 25.93-19.37 45.29-19.37 17.05 0 31.22 5.65 42.52 16.94l-33.88 34.22zM1152.17 185.66c-11.07 11.31-24.55 16.95-40.45 16.95-11.52 0-20.75-3.46-27.66-10.38-6.69-6.45-10.37-15.09-11.06-25.93h-.35v-1.73-1.03-31.47c.23-6.91 1.61-13.25 4.15-19.01 5.54-12.45 15.45-18.67 29.73-18.67 14.3 0 24.32 6.22 30.08 18.67 2.31 5.75 3.69 12.1 4.15 19.01h-39.41v30.77h83.32v-20.05c0-25.12-6.8-45.52-20.4-61.18-14.06-16.13-33.3-24.19-57.74-24.19-23.51 0-42.29 7.94-56.34 23.85-14.3 16.36-21.43 38.84-21.43 67.41 0 61.08 27.54 91.62 82.62 91.62 26.5 0 49.21-9.34 68.11-28.01l-27.32-26.63zM270.27 180.11v-16.59c-11.75 12.45-26.73 18.67-44.95 18.67-17.74 0-31.92-5.31-42.52-15.91-12.22-12.22-18.32-29.26-18.32-51.16V0h44.94v108.89c0 11.29 3.22 19.82 9.67 25.59 5.31 4.83 11.99 7.26 20.05 7.26 8.3 0 15.1-2.43 20.4-7.26 6.45-5.77 9.68-14.3 9.68-25.59V0h44.94l.01 180.11h-43.9z"/><path fill="#65BB87" d="M189.13 200.96h105.3c10.9 0 19.74 8.84 19.75 19.74V326c0 10.9-8.84 19.74-19.74 19.75h-105.3c-10.9 0-19.74-8.84-19.75-19.74v-105.3c-.01-10.91 8.83-19.75 19.74-19.75z"/></svg> story</div>
 			</div>
 			<div class="columns small-10 small-offset-1 large-7">
 				<div class="description p text-neutral-4 space-50-bottom space-50-right scroll-reveal">

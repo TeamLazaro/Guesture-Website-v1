@@ -243,6 +243,31 @@
 }
 
 
+/* -- Icon Lamp -- */
+.booking-section .pricing .icon-lamp {
+	width: 42px;
+	position: absolute;
+	z-index: 2;
+	bottom: -64px;
+	right: calc((100vw - var(--container-width) ) / 2);
+}
+.booking-section .pricing .icon-lamp svg {
+	width: 100%;
+	height: auto;
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.booking-section .pricing .icon-lamp {
+		width: 50px;
+	}
+}
+@media( min-width: 1480px ) {
+	.booking-section .pricing .icon-lamp {
+		width: 60px;
+		margin-right: 240px; /* delete when 4th pricing item has been added */
+	}
+}
 
 
 
@@ -274,127 +299,4 @@
 
 
 
-/* -- Deals -- */
 
-.booking-section .deals {
-	position: relative;
-}
-
-.booking-section .deals .deals-list {
-	position: relative;
-	display: block;
-	width: 100%;
-	white-space: nowrap;
-	overflow-x: auto;
-	overflow-y: visible;
-	-webkit-overflow-scrolling: touch;
-	padding: var(--space-min) calc( (100vw - var(--container-width))/2 ) var(--space-50);
-	scroll-snap-type: x mandatory;
-	font-size: 0;
-}
-
-.booking-section .deals .deals-list .deal {
-	display: inline-block;
-	vertical-align: top;
-	position: relative;
-	white-space: normal;
-	width: calc( 6 * var(--space-100) );
-	/*min-height: calc( (6 * var(--space-100) * 1.375 ) );*/
-	min-height: 500px;
-	padding: 15px;
-	scroll-snap-align: center;
-	font-size: 1.4rem;
-	box-shadow: 0px 0px 0px 2px var(--neutral-1);
-	color: var(--dark);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-.booking-section .deals .deals-list .deal.dark {
-	background-color: var(--dark);
-	color: var(--light);
-}
-
-.booking-section .deals .deals-list .deal.dark .button {
-	background-color: var(--green-2);
-}
-
-.booking-section .deals .deals-list .deal .thumbnail {
-	width: 100%;
-	padding-top: 100%;
-	border-radius: var(--space-min); 
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-.booking-section .deals .deals-list .deal .title {
-	height: 110px;
-	line-height: 1.25;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.booking-section .deals .deals-list .deal .info {
-	position: absolute;
-	z-index: 2;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: auto;
-	padding: 15px;
-}
-
-.booking-section .deals .deals-list .deal:first-child {
-	border-top-left-radius: var(--space-min);
-	border-bottom-left-radius: var(--space-min);
-}
-.booking-section .deals .deals-list .deal:last-child {
-	border-top-right-radius: var(--space-min);
-	border-bottom-right-radius: var(--space-min);
-}
-@media( min-width: 640px )  {
-	.booking-section .deals .deals-list .deal {
-		min-height: 520px;
-	}
-	.booking-section .deals .deals-list .deal .title {
-		height: 130px;
-	}
-}
-	
-@media( min-width: 1040px ) {
-	.booking-section .deals .deals-list .deal {
-		width: calc( 4 * var(--space-100) );
-		/*min-height: calc( (4 * var(--space-100) * 1.375 ) );*/
-		min-height: 570px;
-		padding: 15px;
-	}
-	.booking-section .deals .deals-list .deal .info {
-		padding: 20px;
-	}
-}
-@media( min-width: 1480px ) {
-
-	/* -- vvv Delete This Upon Adding the 4th Price Column -- */
-	/*.booking-section .deals { padding-left: var(--space-100); }*/
-	/* -- ^^^ -- */
-
-	.booking-section .deals .deals-list .deal {
-		width: calc( 3 * var(--space-100) );
-		/*min-height: calc( (3 * var(--space-100) * 1.375 ) );*/
-		min-height: 660px;
-	}
-
-	.booking-section .deals .deals-list .deal .title {
-		height: 175px;
-	}
-}
-
-/*
- * Scroll Controls
- */
-
-.booking-section .deals .scroll-controls {
-	top: 25%;
-}
