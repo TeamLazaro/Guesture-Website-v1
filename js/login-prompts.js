@@ -89,7 +89,11 @@ function onLogin () {
 			$( loginPrompt.triggerElement ).trigger( loginPrompt.triggerEvent );
 		} );
 	} );
-	__.user.isOnWebsite();
+	__.utils.getAnalyticsId()
+		.then( function ( deviceId ) {
+			__.user.hasDeviceId( deviceId );
+			__.user.isOnWebsite();
+		} )
 }
 
 
