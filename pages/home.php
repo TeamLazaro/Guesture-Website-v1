@@ -1386,236 +1386,52 @@
 	<!-- Event -->
 	<div class="event-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="event-list card-list js_carousel_content">
-			<div class="event card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
+			<div class="event card fill-light js_carousel_item">
 				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');"></div>
+				<div class="thumbnail" style="background-image: url( 'media/event/01.png<?php echo $ver ?>');"></div>
 				<div class="info">
+					<!-- Date -->
+					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">12</span><br>Dec</div>
+					<!-- Tag -->
+					<div class="inline tag label strong text-uppercase text-neutral-3">Sports</div>
 					<!-- Title -->
-					<div class="title h4">Bring a Buddy get free meal coupons for a month for the both of you.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="event card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Title -->
-					<div class="title h4">Book for 3months and get free d-mart coupons worth Rs.899.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
+					<div class="title h4">Inter-Corporate Football Tournament.</div>
 				</div>
 			</div>
 			<div class="event card fill-light js_carousel_item">
 				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');"></div>
+				<div class="thumbnail" style="background-image: url( 'media/event/02.png<?php echo $ver ?>');"></div>
 				<div class="info">
+					<!-- Date -->
+					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">18</span><br>Dec</div>
+					<!-- Tag -->
+					<div class="inline tag label strong text-uppercase text-neutral-3">Movies</div>
 					<!-- Title -->
-					<div class="title h4">Book for 6months and get Ola Money for Rs.1899.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
+					<div class="title h4">Star-wars movie marathon screening.</div>
 				</div>
 			</div>
 			<div class="event card fill-light js_carousel_item">
 				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');"></div>
+				<div class="thumbnail" style="background-image: url( 'media/event/03.png<?php echo $ver ?>');"></div>
 				<div class="info">
+					<!-- Date -->
+					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">22</span><br>Dec</div>
+					<!-- Tag -->
+					<div class="inline tag label strong text-uppercase text-neutral-3">Party</div>
 					<!-- Title -->
-					<div class="title h4">Book for 11 months and get 1 month free.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
+					<div class="title h4">Christmas dinner party.</div>
+				</div>
+			</div>
+			<div class="event card fill-light js_carousel_item">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/event/04.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Date -->
+					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">01</span><br>Jan</div>
+					<!-- Tag -->
+					<div class="inline tag label strong text-uppercase text-neutral-3">Party</div>
+					<!-- Title -->
+					<div class="title h4">New Year brunch and recovery lunch.</div>
 				</div>
 			</div>
 		</div>
@@ -1702,238 +1518,56 @@
 	<!-- News -->
 	<div class="news-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="news-list card-list js_carousel_content">
-			<div class="news card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
+			<a class="news card fill-light js_carousel_item" href="https://yourstory.com/smbstory/coliving-guesture-nestaway-zolostays-oyo-life-bengaluru" target="_blank">
 				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');"></div>
+				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/01.png<?php echo $ver ?>');"></div>
 				<div class="info">
+					<!-- Source -->
+					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-ys.png<?php echo $ver ?>"></div> Your Story</div>
 					<!-- Title -->
-					<div class="title h4">Bring a Buddy get free meal coupons for a month for the both of you.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
+					<div class="title h5">How Bengaluru-based Guesture is making Rs 10 Cr a year with its community-driven approach for co-living.</div>
 				</div>
-			</div>
-			<div class="news card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
+			</a>
+			<a class="news card fill-light js_carousel_item" href="https://www.thehindubusinessline.com/news/real-estate/guesture-targets-students-millennials-under-co-living-space-at-electronic-city-bengaluru/article29641492.ece" target="_blank">
 				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');"></div>
+				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/02.png<?php echo $ver ?>');"></div>
 				<div class="info">
+					<!-- Source -->
+					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-bi.png<?php echo $ver ?>"></div> The Hindu</div>
 					<!-- Title -->
-					<div class="title h4">Book for 3months and get free d-mart coupons worth Rs.899.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
+					<div class="title h5">Guesture targets students, millennials under co-living space at Electronic City, Bengaluru.</div>
 				</div>
-			</div>
-			<div class="news card fill-light js_carousel_item">
+			</a>
+			<a class="news card fill-light js_carousel_item" href="https://www.livemint.com/companies/start-ups/co-living-venture-guesture-in-talks-to-raise-50-million-11573446983624.html" target="_blank">
 				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');"></div>
+				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/03.png<?php echo $ver ?>');"></div>
 				<div class="info">
+					<!-- Source -->
+					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-lm.png<?php echo $ver ?>"></div> Live Mint</div>
 					<!-- Title -->
-					<div class="title h4">Book for 6months and get Ola Money for Rs.1899.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
+					<div class="title h5">Co-living venture Guesture in talks to raise $50 million.</div>
 				</div>
-			</div>
-			<div class="news card fill-light js_carousel_item">
+			</a>
+			<a class="news card fill-light js_carousel_item" href="https://content.magicbricks.com/property-news/industry-buzz/guesture-announces-2500-beds-to-accommodate-growing-demand-in-bengaluru/109066.html" target="_blank">
 				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');"></div>
+				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/04.png<?php echo $ver ?>');"></div>
 				<div class="info">
+					<!-- Source -->
+					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-mb.png<?php echo $ver ?>"></div> MagicBricks</div>
 					<!-- Title -->
-					<div class="title h4">Book for 11 months and get 1 month free.</div>
-					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
+					<div class="title h5">Guesture announces 2500 beds to accommodate growing demand in Bengaluru.</div>
 				</div>
-			</div>
+			</a>
+			<a class="news card fill-light js_carousel_item" href="https://economictimes.indiatimes.com/magazines/panache/students-and-young-professionals-are-escaping-peevish-landlords-and-taking-refuge-in-co-living-spaces/articleshow/68443388.cms?from=mdr" target="_blank">
+				<!-- Thumbnail -->
+				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/05.png<?php echo $ver ?>');"></div>
+				<div class="info">
+					<!-- Source -->
+					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-et.png<?php echo $ver ?>"></div> Economic Times</div>
+					<!-- Title -->
+					<div class="title h5">Co-living spaces are the next big trend among working millenials in Bengaluru.</div>
+				</div>
+			</a>
 		</div>
 		<div class="scroll-controls">
 			<div class="row">

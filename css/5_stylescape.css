@@ -1612,6 +1612,40 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	}
 }
 
+/* -- News Overwrite -- */
+.card-carousel .card-list .card.news .source {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.card-carousel .card-list .card.news {
+	min-height: 455px;
+}
+@media( min-width: 640px )  {
+	.card-carousel .card-list .card.news {
+		min-height: 475px;
+	}
+}
+	
+@media( min-width: 1040px ) {
+	.card-carousel .card-list .card.news {
+		min-height: 520px;
+	}
+}
+@media( min-width: 1480px ) {
+
+	.card-carousel .card-list .card.news {
+		min-height: 610px;
+	}
+}
+
+
+/* -- Event Overwrite -- */
+.card-carousel .card-list .card.event .date {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: var(--space-min);
+}
+
 /*
  * Card Carousel Scroll Controls
  */

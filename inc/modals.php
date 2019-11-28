@@ -59,6 +59,11 @@
 								<div class="h3 strong">The <span class="text-green-2">Buddy</span> Package</div>
 								<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@Alta Vista BLR</div>
 								<div class="h4 strong">For a monthly fee of <span class="text-green-2">₹11,200</span></div>
+
+								<label>
+									<span class="label block invisible">Book Now</span>
+									<button class="button fill-green">Book Now</button>
+								</label>
 								<div class="h4 strong space-25-top">Gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
 							</div>
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
