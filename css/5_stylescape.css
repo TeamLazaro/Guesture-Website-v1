@@ -1125,7 +1125,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	z-index: -1;
 	margin-right: 25px;
 }
-.sparkle.or-light:before {
+.sparkle.or-light .spark-1 {
 	content: '';
 	display: block;
 	width: 100px;
@@ -1147,7 +1147,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.or-light {
 		margin-right: 50px;
 	}
-	.sparkle.or-light:before {
+	.sparkle.or-light .spark-1 {
 		width: 150px;
 		height: 150px;
 		background-size: 150px 150px;
@@ -1161,7 +1161,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	z-index: -1;
 	margin-right: 25px;
 }
-.sparkle.or-number-light:before {
+.sparkle.or-number-light .spark-1 {
 	content: '';
 	display: block;
 	width: 90px;
@@ -1183,7 +1183,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.or-number-light {
 		margin-right: 50px;
 	}
-	.sparkle.or-number-light:before {
+	.sparkle.or-number-light .spark-1 {
 		width: 135px;
 		height: 180px;
 		background-size: 135px 180px;
@@ -1197,7 +1197,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	z-index: 1;
 	margin-right: 25px;
 }
-.sparkle.or-dark:before {
+.sparkle.or-dark .spark-1 {
 	content: '';
 	display: block;
 	width: 100px;
@@ -1219,7 +1219,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.or-dark {
 		margin-right: 50px;
 	}
-	.sparkle.or-dark:before {
+	.sparkle.or-dark .spark-1 {
 		width: 150px;
 		height: 150px;
 		background-size: 150px 150px;
@@ -1233,7 +1233,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	z-index: 1;
 	margin-right: 25px;
 }
-.sparkle.or-number-dark:before {
+.sparkle.or-number-dark .spark-1 {
 	content: '';
 	display: block;
 	width: 90px;
@@ -1255,7 +1255,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.or-number-dark {
 		margin-right: 50px;
 	}
-	.sparkle.or-number-dark:before {
+	.sparkle.or-number-dark .spark-1 {
 		width: 135px;
 		height: 180px;
 		background-size: 135px 180px;
@@ -1270,7 +1270,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		z-index: 1;
 		margin-left: 25px;
 	}
-	.sparkle.title-1-left:before {
+	.sparkle.title-1-left .spark-1 {
 		content: '';
 		display: block;
 		width: 50px;
@@ -1292,7 +1292,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.title-1-left {
 		margin-left: 50px;
 	}
-	.sparkle.title-1-left:before {
+	.sparkle.title-1-left .spark-1 {
 		left: 15px;
 		width: 75px;
 		height: 135px;
@@ -1308,7 +1308,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		z-index: 1;
 		margin-right: 25px;
 	}
-	.sparkle.title-1-right:after {
+	.sparkle.title-1-right .spark-2 {
 		content: '';
 		display: block;
 		width: 50px;
@@ -1330,7 +1330,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.title-1-right {
 		margin-right: 50px;
 	}
-	.sparkle.title-1-right:after {
+	.sparkle.title-1-right .spark-2 {
 		right: 15px;
 		width: 75px;
 		height: 135px;
@@ -1346,7 +1346,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		z-index: 1;
 		margin-left: 25px;
 	}
-	.sparkle.title-2-left:before {
+	.sparkle.title-2-left .spark-1 {
 		content: '';
 		display: block;
 		width: 50px;
@@ -1368,7 +1368,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.title-2-left {
 		margin-left: 50px;
 	}
-	.sparkle.title-2-left:before {
+	.sparkle.title-2-left .spark-1 {
 		left: 15px;
 		width: 75px;
 		height: 135px;
@@ -1384,7 +1384,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		z-index: 1;
 		margin-right: 25px;
 	}
-	.sparkle.title-2-right:after {
+	.sparkle.title-2-right .spark-2 {
 		content: '';
 		display: block;
 		width: 50px;
@@ -1406,7 +1406,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.title-2-right {
 		margin-right: 50px;
 	}
-	.sparkle.title-2-right:after {
+	.sparkle.title-2-right .spark-2 {
 		right: 15px;
 		width: 75px;
 		height: 135px;
@@ -1422,7 +1422,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		z-index: 1;
 		margin-left: 25px;
 	}
-	.sparkle.title-3-left:before {
+	.sparkle.title-3-left .spark-1 {
 		content: '';
 		display: block;
 		width: 50px;
@@ -1444,7 +1444,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.title-3-left {
 		margin-left: 50px;
 	}
-	.sparkle.title-3-left:before {
+	.sparkle.title-3-left .spark-1 {
 		left: 20px;
 		width: 75px;
 		height: 135px;
@@ -1460,7 +1460,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		z-index: 1;
 		margin-right: 15px;
 	}
-	.sparkle.title-3-right:after {
+	.sparkle.title-3-right .spark-2 {
 		content: '';
 		display: block;
 		width: 50px;
@@ -1482,7 +1482,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.sparkle.title-3-right {
 		margin-right: 25px;
 	}
-	.sparkle.title-3-right:after {
+	.sparkle.title-3-right .spark-2 {
 		right: 15px;
 		width: 75px;
 		height: 135px;
