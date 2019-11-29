@@ -332,7 +332,7 @@
 					</div>
 				</div>
 				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
-					<div class="h4 data strong text-dark text-uppercase js_daily_expense">₹726 Per Day</div>
+					<div class="h4 data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 strong text-dark text-uppercase">Ooops!</div>
 					<div class="label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 strong text-red text-uppercase">No Rooms Found</div>
@@ -441,7 +441,7 @@
 					</div>
 				</div>
 				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
-					<div class="h4 sparkle title-2-left title-2-right data strong text-uppercase js_daily_expense">₹726 Per Day</span></div>
+					<div class="h4 sparkle title-2-left title-2-right data strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span><span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right.svg'; ?></div>
 					<div class="h4 strong text-uppercase">Ooops!</div>
 					<div class="label strong text-uppercase opacity-50 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 strong text-uppercase text-yellow">No Rooms Found</div>
@@ -550,7 +550,7 @@
 					</div>
 				</div>
 				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1;">
-					<div class="h4 data strong text-uppercase js_daily_expense">₹726 Per Day</div>
+					<div class="h4 data strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 strong text-uppercase">Ooops!</div>
 					<div class="label strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 strong text-uppercase text-red">No Rooms Found</div>
@@ -621,7 +621,7 @@
 			<div class="checkin columns small-10 small-offset-1 space-100-top">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom scroll-reveal">Check-in</div>
 				<div class="h3 strong text-green-2 space-min-bottom scroll-reveal">10 Minute Check-in</div>
-				<div class="h4 text-neutral-3 scroll-reveal">Just carry <span class="strong text-green-2 sparkle title-3-left title-3-right scroll-reveal pop">any one<span class="spark-1"></span><span class="spark-2"></span></span> of these KYC documents for a quick check-in.</div>
+				<div class="h4 text-neutral-3 scroll-reveal">Just carry <span class="strong text-green-2 sparkle title-3-left title-3-right scroll-reveal pop">any one<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-3-left.svg.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-3-right.svg'; ?></span></span> of these KYC documents for a quick check-in.</div>
 			</div>
 			<div class="checkin columns small-10 small-offset-1 xlarge-9">
 				<div class="row space-min-top-bottom">
@@ -962,7 +962,7 @@
 						</div>
 					</form>
 				</div>
-				<a href="tel:+91-82877-70011" class="h3 strong inline scroll-reveal pop"><span class="sparkle or-light h5 strong text-green-2 text-uppercase">or<span class="spark-1"></span></span></span> Call us on <span class="sparkle or-number-light text-green-2 no-wrap">+91-828-7770011<span class="spark-1"></span></span></a>
+				<a href="tel:+91-82877-70011" class="h3 strong inline scroll-reveal pop"><span class="sparkle or-light h5 strong text-green-2 text-uppercase">or<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-light.svg'; ?></span></span> Call us on <span class="sparkle or-number-light text-green-2 no-wrap">+91-828-7770011<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-number-light.svg'; ?></span></span></a>
 			</div>
 		</div>
 	</div>
@@ -977,7 +977,7 @@
 		<div class="character scroll-reveal"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 medium-6 large-10">
-				<div class="h3 strong scroll-reveal"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right scroll-reveal pop">3 Day Trial<span class="spark-1"></span><span class="spark-2"></span></span><span class="opacity-50"> online today</span></div>
+				<div class="h3 strong scroll-reveal"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right scroll-reveal pop">3 Day Trial<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-1-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-1-right.svg'; ?></span></span><span class="opacity-50"> online today</span></div>
 				<div class="h4 space-25-bottom scroll-reveal">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
 				<div class="points">
 					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">3 days and 2 nights</div><br>
@@ -1204,7 +1204,7 @@
 		<div class="character scroll-reveal"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 xlarge-9 space-50-top-bottom">
-				<div class="h3 strong"><span class="opacity-50 scroll-reveal">Peace of mind for you and </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">your parents<span class="spark-1"></span><span class="spark-2"></span></span></div>
+				<div class="h3 strong"><span class="opacity-50 scroll-reveal">Peace of mind for you and </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">your parents<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right.svg'; ?></span></span></div>
 				<div class="h0 text-red space-25-bottom scroll-reveal">womens only block</div>
 				<div class="action row scroll-reveal">
 					<!-- Phone Trap Trigger -->
@@ -1497,7 +1497,7 @@
 					</div>
 				</div>
 				<div class="space-100-top">
-					<a href="tel:+91-82877-70011" class="h3 strong inline scroll-reveal pop"><span class="sparkle or-dark h5 strong text-yellow text-uppercase">or<span class="spark-1"></span></span> Call us on <span class="sparkle or-number-dark text-yellow no-wrap">+91-828-7770011<span class="spark-1"></span></span></a>
+					<a href="tel:+91-82877-70011" class="h3 strong inline scroll-reveal pop"><span class="sparkle or-dark h5 strong text-yellow text-uppercase">or<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-dark.svg'; ?></span></span> Call us on <span class="sparkle or-number-dark text-yellow no-wrap">+91-828-7770011<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-number-dark.svg'; ?></span></span></a>
 				</div>
 			</div>
 		</div>
