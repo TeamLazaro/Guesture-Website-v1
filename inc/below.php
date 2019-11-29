@@ -41,9 +41,23 @@
 	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
 	<script type="text/javascript" src="/js/pricing.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/countdown.js<?= $ver ?>"></script>
 
 	<!-- spirit web player -->
 	<script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
+
+	<!-- Countdown Timers -->
+	<script type="text/javascript">
+
+		$( function () {
+
+			$( ".js_countdown" ).each( function ( _i, el ) {
+				countdown( new Date( el.dataset.date ), el );
+			} )
+
+		} );
+
+	</script>
 
 	<!-- play animation -->
 	<script>

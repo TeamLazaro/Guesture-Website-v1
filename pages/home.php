@@ -661,7 +661,7 @@
 					<!-- Title -->
 					<div class="title h4">Bring a Buddy get free meal coupons for a month for the both of you.</div>
 					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<div class="timer label strong js_countdown" data-date="2019-11-30T18:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
 					<div class="action row">
 						<!-- Phone Trap Trigger -->
@@ -719,7 +719,7 @@
 					<!-- Title -->
 					<div class="title h4">Book for 3months and get free d-mart coupons worth Rs.899.</div>
 					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<div class="timer label strong js_countdown" data-date="2019-12-01T06:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
 					<div class="action row">
 						<!-- Phone Trap Trigger -->
@@ -777,7 +777,7 @@
 					<!-- Title -->
 					<div class="title h4">Book for 6months and get Ola Money for Rs.1899.</div>
 					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<div class="timer label strong js_countdown" data-date="2019-12-03T14:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
 					<div class="action row">
 						<!-- Phone Trap Trigger -->
@@ -835,7 +835,7 @@
 					<!-- Title -->
 					<div class="title h4">Book for 11 months and get 1 month free.</div>
 					<!-- Timer -->
-					<div class="timer label strong"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
+					<div class="timer label strong js_countdown" data-date="2019-12-04T18:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
 					<!-- Action -->
 					<div class="action row">
 						<!-- Phone Trap Trigger -->
