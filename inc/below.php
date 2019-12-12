@@ -118,53 +118,6 @@
 		echo getContent( '', 'arbitrary_code_body_bottom' );
 	?>
 
-	<!-- Lottie -->
-	<script type="text/javascript">
-
-		/*
-		 *
-		 * Score out
-		 *
-		 */
-		var scoreOut__AnimationData = <?php require __DIR__ . '/../media/sparkle/score-out/Score Out.json' ?>;
-
-		$( ".score-out" ).each( function ( _i, domEl ) {
-
-			var params = {
-				container: domEl,
-				renderer: "svg",
-				autoplay: false,
-				animationData: scoreOut__AnimationData
-			};
-
-			var animation = lottie.loadAnimation( params );
-			animation.play();
-
-		} );
-
-		/*
-		 *
-		 * Monthly Fee
-		 *
-		 */
-		var monthlyFee__AnimationData = <?php require __DIR__ . '/../media/sparkle/monthly-fee/Monthly Fee.json' ?>;
-
-		$( ".monthly-fee" ).each( function ( _i, domEl ) {
-
-			var params = {
-				container: domEl,
-				renderer: "svg",
-				autoplay: false,
-				animationData: monthlyFee__AnimationData
-			};
-
-			var animation = lottie.loadAnimation( params );
-			animation.play();
-
-		} );
-
-	</script>
-
 </body>
 
 </html>
