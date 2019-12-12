@@ -34,8 +34,11 @@ $( function ( $ ) {
 				$elementsToReveal[ _i ].offset().top
 					<
 				currentScrollTop + ( 0.85 * viewportHeight )
-			)
-				$elementsToReveal[ _i ].addClass( "reveal" );
+			) {
+				$elementsToReveal[ _i ]
+					.addClass( "reveal" )
+					.trigger( "reveal/post" )
+			}
 		}
 		$elementsToReveal = $elementsToReveal.filter( hasElementNotBeenRevealed );
 
