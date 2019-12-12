@@ -617,7 +617,7 @@ select { cursor: pointer; }
 .space-25-top-bottom { padding-top: var(--space-25); padding-bottom: var(--space-25); }
 .space-25-left-right { padding-left: var(--space-25); padding-right: var(--space-25); }
 
-.space-75-top { padding: var(--space-75); }
+.space-75 { padding: var(--space-75); }
 .space-75-top { padding-top: var(--space-75); }
 .space-75-bottom { padding-bottom: var(--space-75); }
 .space-75-left { padding-left: var(--space-75); }
