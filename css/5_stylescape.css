@@ -1685,7 +1685,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 
 .lottie-animation.score-out {
 	width: 120px;
-	transform: translate(-22px, 25px);
+	transform: translate(-4px, 25px);
 }
 
 .lottie-animation.monthly-fee {
@@ -1696,12 +1696,12 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 @media( min-width: 640px )  {
 	.lottie-animation.score-out {
 		width: 180px;
-		transform: translate(-305px, 37px);
+		transform: translate(2px, 37px);
 	}
 
 	.lottie-animation.monthly-fee {
 		width: 160px;
-		transform: translate(-200px, 25px);
+		transform: translate(100px, 28px);
 	}
 }
 @media( min-width: 1040px ) {
