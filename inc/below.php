@@ -42,6 +42,7 @@
 	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
 	<script type="text/javascript" src="/js/pricing.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/countdown.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/plugins/lottie/lottie-lite-v5.5.10.min.js"></script>
 
 	<!-- spirit web player -->
 	<script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
@@ -116,6 +117,53 @@
 		 */
 		echo getContent( '', 'arbitrary_code_body_bottom' );
 	?>
+
+	<!-- Lottie -->
+	<script type="text/javascript">
+
+		/*
+		 *
+		 * Score out
+		 *
+		 */
+		var scoreOut__AnimationData = <?php require __DIR__ . '/../media/sparkle/score-out/Score Out.json' ?>;
+
+		$( ".score-out" ).each( function ( _i, domEl ) {
+
+			var params = {
+				container: domEl,
+				renderer: "svg",
+				autoplay: false,
+				animationData: scoreOut__AnimationData
+			};
+
+			var animation = lottie.loadAnimation( params );
+			animation.play();
+
+		} );
+
+		/*
+		 *
+		 * Monthly Fee
+		 *
+		 */
+		var monthlyFee__AnimationData = <?php require __DIR__ . '/../media/sparkle/monthly-fee/Monthly Fee.json' ?>;
+
+		$( ".monthly-fee" ).each( function ( _i, domEl ) {
+
+			var params = {
+				container: domEl,
+				renderer: "svg",
+				autoplay: false,
+				animationData: monthlyFee__AnimationData
+			};
+
+			var animation = lottie.loadAnimation( params );
+			animation.play();
+
+		} );
+
+	</script>
 
 </body>
 

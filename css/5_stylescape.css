@@ -1659,3 +1659,71 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 .card-carousel .scroll-controls {
 	top: 25%;
 }
+
+
+
+/* -- Lottie Animation -- */
+
+.lottie-animation {
+	transform: translate3d( 0, 0, 0 );
+}
+
+.lottie-animation.score-out svg g g path {
+	stroke: #FFFFFF;
+}
+.lottie-animation.monthly-fee svg g g {
+	fill: #FFFFFF;
+}
+
+.lottie-animation.score-out,
+.lottie-animation.monthly-fee {
+	position: absolute;
+	z-index: 3;
+	right: 0;
+	bottom: 0;
+}
+
+.lottie-animation.score-out {
+	width: 120px;
+	transform: translate(-22px, 25px);
+}
+
+.lottie-animation.monthly-fee {
+	width: 100px;
+	transform: translate(20px, 5px);
+}
+
+@media( min-width: 640px )  {
+	.lottie-animation.score-out {
+		width: 180px;
+		transform: translate(-305px, 37px);
+	}
+
+	.lottie-animation.monthly-fee {
+		width: 160px;
+		transform: translate(-200px, 25px);
+	}
+}
+@media( min-width: 1040px ) {
+	.lottie-animation.score-out {
+		width: 180px;
+		transform: translate(50px, 37px);
+	}
+
+	.lottie-animation.monthly-fee {
+		width: 160px;
+		transform: translate(108px, 10px);
+	}
+
+}
+@media( min-width: 1480px ) {
+	.lottie-animation.score-out {
+		width: 240px;
+		transform: translate(67px, 50px);
+	}
+
+	.lottie-animation.monthly-fee {
+		width: 220px;
+		transform: translate(150px, 15px);
+	}
+}
