@@ -633,7 +633,7 @@
 			<div class="checkin columns small-10 small-offset-1 space-100-top">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom scroll-reveal">Check-in</div>
 				<div class="h3 strong text-green-2 space-min-bottom scroll-reveal">10 Minute Check-in</div>
-				<div class="h4 text-neutral-3 scroll-reveal">Just carry <span class="strong text-green-2 sparkle title-3-left title-3-right scroll-reveal pop">any one<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-3-left.svg.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-3-right.svg'; ?></span></span> of these KYC documents for a quick check-in.</div>
+				<div class="h4 text-neutral-3 scroll-reveal">Just carry <span class="strong text-green-2 sparkle title-3-left title-3-right scroll-reveal pop">any one<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-3-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-3-right.svg'; ?></span></span> of these KYC documents for a quick check-in.</div>
 			</div>
 			<div class="checkin columns small-10 small-offset-1 xlarge-9">
 				<div class="row space-min-top-bottom">
