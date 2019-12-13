@@ -11,7 +11,7 @@ require_once __DIR__ . '/lazaro.php';
 /*
  * A version number for versioning assets to invalidate the browser cache
  */
-$ver = '?v=20181126';
+$ver = '?v=20191213';
 
 // Pull some data from the request
 $urlSlug = $_GET[ '_slug' ] ?? null;
