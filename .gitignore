@@ -7,3 +7,6 @@
 
 # the data directory
 /data
+
+# Weird Networked Drive Artifact
+.smb*
