@@ -46,7 +46,7 @@
 	<script type="text/javascript" src="/plugins/lottie/lottie-lite-v5.5.10.min.js"></script>
 
 	<!-- spirit web player -->
-	<script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
+	<script src="https://unpkg.com/spiritjs/dist/spirit.min.js"></script>
 
 	<!-- Countdown Timers -->
 	<script type="text/javascript">
