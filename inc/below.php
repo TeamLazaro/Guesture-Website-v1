@@ -37,7 +37,7 @@
 	<script type="text/javascript" src="/js/forms.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/login-prompts.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
-	<script type="text/javascript" src="/js/pages/home.js"></script>
+	<script type="text/javascript" src="/js/pages/home.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/plugins/lottie/lottie-lite-v5.5.10.min.js"></script>
 	<script type="text/javascript" src="/js/modules/scroll-reveal.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js<?= $ver ?>"></script>
