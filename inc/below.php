@@ -38,12 +38,12 @@
 	<script type="text/javascript" src="/js/login-prompts.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/pages/home.js"></script>
+	<script type="text/javascript" src="/plugins/lottie/lottie-lite-v5.5.10.min.js"></script>
 	<script type="text/javascript" src="/js/modules/scroll-reveal.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
 	<script type="text/javascript" src="/js/pricing.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/countdown.js<?= $ver ?>"></script>
-	<script type="text/javascript" src="/plugins/lottie/lottie-lite-v5.5.10.min.js"></script>
 
 	<!-- spirit web player -->
 	<script src="https://unpkg.com/spiritjs/dist/spirit.min.js"></script>
