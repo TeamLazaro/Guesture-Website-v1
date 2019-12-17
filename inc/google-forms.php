@@ -96,3 +96,25 @@ function submitPersonIngestion ( $data ) {
 	return $response;
 
 }
+
+function submitPersonActivity ( $data ) {
+
+	$endpoint = 'https://docs.google.com/forms/d/e/'
+			. '1FAIpQLSeOQkcY00L86KoLL96uxEUsyWZfqkNqs-izsBCvD2o1xdw2YQ/formResponse';
+	$requestBody = [
+		'entry.1192185748' => $data[ 'when' ],
+		'entry.1792821482' => $data[ 'id' ],
+		'entry.487995029' => $data[ 'phoneNumber' ],
+		'entry.1605323075' => $data[ 'verified' ],
+		'entry.1025227529' => $data[ 'sourceMedium' ],
+		'entry.1771467168' => $data[ 'sourcePoint' ],
+		'entry.1911175480' => $data[ 'interests' ],
+		'entry.433341220' => $data[ 'duration' ],
+		'entry.2105119295' => $data[ 'callRecording' ]
+	];
+
+	$response = getAPIResponse( $endpoint, 'POST', $requestBody );
+
+	return $response;
+
+}
