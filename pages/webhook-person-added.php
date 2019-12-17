@@ -61,7 +61,7 @@ $data = [
 	'interests' => $interests,
 	'callRecording' => $input->recordingURL ?? ''
 ];
-GoogleForms\submit( $data );
+GoogleForms\submitPersonIngestion( $data );
 // $spreadsheet->addRow( $data );
 
 

@@ -76,7 +76,7 @@ function getAPIResponse ( $endpoint, $method, $data = [ ] ) {
  * Submit a Google Form
  *
  */
-function submit ( $data ) {
+function submitPersonIngestion ( $data ) {
 
 	$endpoint = 'https://docs.google.com/forms/d/e/'
 			. '1FAIpQLSeM5CrEc3x6HkDt7XF8x8ol8nff7OrOQwmGDZ_1zI_TwmoNXw/formResponse';
