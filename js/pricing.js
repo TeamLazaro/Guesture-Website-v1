@@ -96,6 +96,10 @@ $( function () {
 	LivingSituation.prototype.renderComputedDetails = function () {
 		this.$el.find( ".js_daily_expense" ).text( this.perDay );
 		this.$el.find( ".js_monthly_expense" ).text( this.monthlyFee );
+		if ( this.perDay === "" || this.monthlyFee === "" )
+			this.$el.find( ".js_no_data" ).removeClass( "hidden" );
+		else
+			this.$el.find( ".js_no_data" ).addClass( "hidden" );
 		this.$el.find( ".js_image" ).attr( "src", "media/pricing/rooms/" + this.photo );
 	};
 

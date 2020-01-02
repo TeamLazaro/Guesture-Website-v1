@@ -158,17 +158,6 @@
 	margin-top: -2px;
 }
 
-.booking-section .pricing .pricing-list .price .action .data + *,
-.booking-section .pricing .pricing-list .price .action .data + * + * + * {
-	display: none;
-}
-
-.booking-section .pricing .pricing-list .price .action .data:empty,
-.booking-section .pricing .pricing-list .price .action .data:empty + * + * { display: none; }
-
-.booking-section .pricing .pricing-list .price .action .data:empty + * { display: block; }
-.booking-section .pricing .pricing-list .price .action .data:empty + * + * + * { display: block; }
-
 @media( min-width: 640px )  {
 	.booking-section .pricing .pricing-list .price {
 		margin-top: 90px
