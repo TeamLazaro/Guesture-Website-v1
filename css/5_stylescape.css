@@ -1269,7 +1269,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 
 /* -- title-1-left */
-.sparkle.title-1-left svg { display: none; }
+.sparkle.title-1-left .spark-1 { display: none; }
 
 @media( min-width: 1040px ) {
 	.sparkle.title-1-left {
@@ -1309,7 +1309,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 
 /* -- title-1-right */
-.sparkle.title-1-right svg { display: none; }
+.sparkle.title-1-right .spark-2 { display: none; }
 @media( min-width: 1040px ) {
 	.sparkle.title-1-right {
 		display: inline-block;
@@ -1348,7 +1348,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 
 /* -- title-2-left */
-.sparkle.title-2-left svg { display: none; }
+.sparkle.title-2-left .spark-1 { display: none; }
 @media( min-width: 1040px ) {
 	.sparkle.title-2-left {
 		display: inline-block;
@@ -1387,7 +1387,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 
 /* -- title-2-right */
-.sparkle.title-2-right svg { display: none; }
+.sparkle.title-2-right .spark-2 { display: none; }
 @media( min-width: 1040px ) {
 	.sparkle.title-2-right {
 		display: inline-block;
@@ -1426,7 +1426,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 
 /* -- title-3-left */
-.sparkle.title-3-left svg { display: none; }
+.sparkle.title-3-left .spark-1 { display: none; }
 @media( min-width: 1040px ) {
 	.sparkle.title-3-left {
 		display: inline-block;
@@ -1465,7 +1465,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 
 /* -- title-3-right */
-.sparkle.title-3-right svg { display: none; }
+.sparkle.title-3-right .spark-2 { display: none; }
 @media( min-width: 1040px ) {
 	.sparkle.title-3-right {
 		display: inline-block;
