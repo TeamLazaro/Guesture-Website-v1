@@ -337,12 +337,12 @@
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
+				<div class="action text-center space-25-top-bottom js_modal_trigger no-pointer cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
 					<div class="h4 action-title data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 action-title-error strong text-dark text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 action-sub-title-error strong text-red text-uppercase">No Rooms Found</div>
-					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
+					<div class="included hidden label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
@@ -446,12 +446,12 @@
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
+				<div class="action text-center space-25-top-bottom js_modal_trigger no-pointer cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
 					<div class="h4 action-title data sparkle title-2-left title-2-right strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span><span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right.svg'; ?></span></div>
 					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-uppercase opacity-50 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 action-sub-title-error strong text-uppercase text-yellow">No Rooms Found</div>
-					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--light) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></div>
+					<div class="included hidden label inline strong text-uppercase" style="border-bottom: 1.5px var(--light) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
@@ -555,12 +555,12 @@
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1;">
+				<div class="action text-center space-25-top-bottom js_modal_trigger no-pointer cursor-pointer" data-mod-id="what-is-included" tabindex="-1;">
 					<div class="h4 action-title data strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 action-sub-title-error strong text-uppercase text-red">No Rooms Found</div>
-					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
+					<div class="included hidden label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
@@ -652,13 +652,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
+			<div class="deal-title hidden columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
 				<div class="h2 text-green-2 scroll-reveal">Deals</div>
 			</div>
 		</div>
 	</div>
 	<!-- Deal -->
-	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal">
+	<div class="deal-carousel hidden card-carousel js_carousel_container scroll-reveal">
 		<div class="deal-list card-list js_carousel_content">
 			<div class="deal card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
 				<!-- Thumbnail -->
@@ -1384,13 +1384,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
+			<div class="deal-title hidden columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
 				<div class="h2 text-green-2 scroll-reveal">Events</div>
 			</div>
 		</div>
 	</div>
 	<!-- Event -->
-	<div class="event-carousel card-carousel js_carousel_container scroll-reveal">
+	<div class="event-carousel hidden card-carousel js_carousel_container scroll-reveal">
 		<div class="event-list card-list js_carousel_content">
 			<div class="event card fill-light js_carousel_item">
 				<!-- Thumbnail -->
