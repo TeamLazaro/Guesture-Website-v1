@@ -136,7 +136,7 @@
 	overflow: hidden;
 	font-size: 0;
 	line-height: 0;
-	background-color: var(--green-1);
+	background-color: var(--dark);
 }
 .booking-section .pricing .pricing-list .price .thumbnail img {
 	filter: grayscale(0.5) brightness(1.25) blur(0px);
