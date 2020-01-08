@@ -139,8 +139,8 @@
 	background-color: var(--green-1);
 }
 .booking-section .pricing .pricing-list .price .thumbnail img {
-	filter: grayscale(0.5) brightness(1.25);
-	/*mix-blend-mode: multiply;*/
+	filter: grayscale(0.5) brightness(1.25) blur(0px);
+	transition: filter .3s;
 }
 
 .booking-section .pricing .pricing-list .price .config {
