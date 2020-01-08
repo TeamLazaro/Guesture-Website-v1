@@ -338,8 +338,7 @@
 					</div>
 				</div>
 				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
-					<div class="h4 data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
-					<div class="h6 strong text-red text-uppercase hidden js_no_data">No Rooms Found</div>
+					<div class="h4 action-title data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 action-title-error strong text-dark text-uppercase js_no_data">Ooops!</div>
 					<div class="action-sub-title label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 action-sub-title-error strong text-red text-uppercase js_no_data">No Rooms Found</div>
