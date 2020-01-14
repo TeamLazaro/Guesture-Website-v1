@@ -282,7 +282,10 @@
 			<div class="price fill-light js_carousel_item qpid_login_site js_solo_section scroll-reveal">
 				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
-				<div class="thumbnail"><img class="js_image" src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>"></div>
+				<div class="thumbnail">
+					<iframe class="panorama js_panorama" src="http://139.59.39.166/media/lazaro-office-3d-tour/index.htm" frameborder="0"></iframe>
+					<img class="js_image" src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>">
+				</div>
 				<div class="intro space-min">
 					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 2 or 3 Bedroom Suite.</div>
 					<div class="description h6 text-green-2">Preferred by Managers living alone in Bangalore, away from their family.</div>
@@ -391,7 +394,10 @@
 			<div class="price fill-green-2 js_carousel_item qpid_login_site js_buddy_section scroll-reveal" style="--td: .25s; background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);">
 				<div class="character"><img class="block" src="media/characters/pricing/buddy-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Buddy</div>
-				<div class="thumbnail"><img class="js_image" src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>"></div>
+				<div class="thumbnail">
+					<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
+					<img class="js_image" src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>">
+				</div>
 				<div class="intro space-min">
 					<div class="heading h5 strong opacity-50 space-min-top">Twin Sharing room in a 2 or 3 Bedroom Suite.</div>
 					<div class="description h6">Preferred by corporate professionals living alone in Bangalore.</div>
@@ -500,7 +506,10 @@
 			<div class="price fill-light js_carousel_item qpid_login_site js_trio_section scroll-reveal" style="--td: .5s">
 				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
-				<div class="thumbnail"><img class="js_image" src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>"></div>
+				<div class="thumbnail">
+					<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
+					<img class="js_image" src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>">
+				</div>
 				<div class="intro space-min">
 					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 2 or 3 Bedroom Suite.</div>
 					<div class="description h6 text-green-2">Preferred by Students, Interns and Trainees living alone in Bangalore.</div>

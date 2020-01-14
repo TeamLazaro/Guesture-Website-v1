@@ -137,8 +137,31 @@
 	font-size: 0;
 	line-height: 0;
 	background-color: var(--dark);
+	height: auto;
+	padding-bottom: 100%;
 }
+
+.booking-section .pricing .pricing-list .price .thumbnail iframe.panorama {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.booking-section .pricing .pricing-list .price .thumbnail iframe.panorama[src=""] {
+	display: none;
+}
+
 .booking-section .pricing .pricing-list .price .thumbnail img {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%,-50%);
 	filter: grayscale(0.5) brightness(1.25) blur(0px);
 	transition: filter .3s;
 }
