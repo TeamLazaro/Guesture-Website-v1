@@ -4,6 +4,7 @@
  * This is a sample page you can copy and use as boilerplate for any new page.
  *
  */
+$pageTitle = "Privacy Policy";
 require_once __DIR__ . '/../inc/above.php';
 
 // Page-specific preparatory code goes here.
@@ -89,7 +90,7 @@ require_once __DIR__ . '/../inc/above.php';
 				<p>Company Name & Address</p>
 				<p>Email: </p>
 				<p>Ph: </p>
-	
+
 			</div>
 		</div>
 	</div>

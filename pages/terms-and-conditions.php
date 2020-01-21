@@ -4,6 +4,7 @@
  * This is a sample page you can copy and use as boilerplate for any new page.
  *
  */
+$pageTitle = "Terms and Conditions";
 require_once __DIR__ . '/../inc/above.php';
 
 // Page-specific preparatory code goes here.
@@ -29,7 +30,7 @@ require_once __DIR__ . '/../inc/above.php';
 		<div class="row">
 			<div class="columns small-12 medium-10 medium-offset-1 xlarge-8 xlarge-offset-2 space-min">
 				<p><strong>Disclaimer:</strong> Please read and edit the TERMS AND CONDITIONS Policy given below as per your /website’s requirement. Don’t use or apply these as is basis on your website.</p>
-				
+
 				<h3>Terms and Conditions</h3>
 
 				<p><strong>Your website may use the Terms and Conditions given below.</strong></p>
@@ -46,7 +47,7 @@ require_once __DIR__ . '/../inc/above.php';
 				<h5>ACCEPTABLE WEBSITE USE  </h5>
 
 				<p><strong>(A) Security Rules </strong></p>
-				
+
 				<p>Visitors are prohibited from violating or attempting to violate the security of the Web site, including, without limitation, (1) accessing data not intended for such user or logging into a server or account which the user is not authorised to access, (2) attempting to probe, scan or test the vulnerability of a system or network or to breach security or authentication measures without proper authorisation, (3) attempting to interfere with service to any user, host or network, including, without limitation, via means of submitting a virus or "Trojan horse" to the Website, overloading, "flooding", "mail bombing" or "crashing", or (4) sending unsolicited electronic mail, including promotions and/or advertising of products or services. Violations of system or network security may result in civil or criminal liability. The business and / or its associate entities will have the right to investigate occurrences that they suspect as involving such violations and will have the right to involve, and cooperate with, law enforcement authorities in prosecuting users who are involved in such violations.</p>
 
 				 <p><strong>(B) General Rules </strong></p>
@@ -55,7 +56,7 @@ require_once __DIR__ . '/../inc/above.php';
 
 				<h5>INDEMNITY  </h5>
 
-				<p>The User unilaterally agree to indemnify and hold harmless, without objection, the Company, its officers, directors, employees and agents from and against any claims, actions and/or demands and/or liabilities and/or losses and/or damages whatsoever arising from or resulting from their use of …………………………..com or their breach of the terms.</p> 
+				<p>The User unilaterally agree to indemnify and hold harmless, without objection, the Company, its officers, directors, employees and agents from and against any claims, actions and/or demands and/or liabilities and/or losses and/or damages whatsoever arising from or resulting from their use of …………………………..com or their breach of the terms.</p>
 
 				<h5>LIABILITY</h5>
 

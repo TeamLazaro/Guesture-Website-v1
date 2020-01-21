@@ -4,6 +4,7 @@
  * This is a sample page you can copy and use as boilerplate for any new page.
  *
  */
+$pageTitle = "Refund and Cancellation";
 require_once __DIR__ . '/../inc/above.php';
 
 // Page-specific preparatory code goes here.
@@ -49,7 +50,7 @@ require_once __DIR__ . '/../inc/above.php';
 				<p>In case any client is not completely satisfied with our products we can provide a refund.</p>
 
 				<p>  If paid by credit card, refunds will be issued to the original credit card provided at the time of purchase and in case of payment gateway name payments refund will be made to the same account.</p>
-	
+
 			</div>
 		</div>
 	</div>
