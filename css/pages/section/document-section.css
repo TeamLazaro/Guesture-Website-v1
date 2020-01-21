@@ -1,0 +1,72 @@
+/*
+ * Document Section
+ */
+
+.document-section p {
+	display: block;
+	padding-bottom: 1rem;
+}
+
+.document-section h1, 
+.document-section h2, 
+.document-section h3, 
+.document-section h4, 
+.document-section h5, 
+.document-section h6 {
+	font-family: fira-sans, 'Arial Black', Arial, sans-serif;
+	line-height: 1.125;
+	font-weight: 800;
+	display: block;
+	padding-top: 2rem;
+	padding-bottom: 1rem;
+}
+
+.document-section h1 { font-size: 4.2rem; }
+.document-section h2 { font-size: 3.2rem; }
+.document-section h3 { font-size: 2.6rem; }
+.document-section h4 { font-size: 2.0rem; }
+.document-section h5 { font-size: 1.6rem; }
+.document-section h6 { font-size: 1.4rem; }
+.document-section p 	{ font-size: 1.4rem; }
+.document-section label { font-size: 1.1rem; }
+.document-section small { font-size: 0.9rem; }
+
+@media( min-width: 640px )  {
+	.document-section h1 { font-size: 8.4rem; }
+	.document-section h2 { font-size: 6.0rem; }
+	.document-section h3 { font-size: 3.6rem; }
+	.document-section h4 { font-size: 2.4rem; }
+	.document-section h5 { font-size: 1.8rem; }
+	.document-section h6 { font-size: 1.4rem; }
+	.document-section p 	{ font-size: 1.4rem; }
+	.document-section label { font-size: 1.1rem; }
+	.document-section small { font-size: 0.9rem; }
+}
+
+@media( min-width: 1040px ) {
+	.document-section h1 { font-size: 9.6rem; }
+	.document-section h2 { font-size: 6.0rem; }
+	.document-section h3 { font-size: 3.6rem; }
+	.document-section h4 { font-size: 2.4rem; }
+	.document-section h5 { font-size: 1.8rem; }
+	.document-section h6 { font-size: 1.5rem; }
+	.document-section p 	{ font-size: 1.5rem; }
+	.document-section label { font-size: 1.2rem; }
+	.document-section small { font-size: 1.0rem; }
+}
+
+@media( min-width: 1480px ) {
+	.document-section h1 { font-size: 12.0rem; }
+	.document-section h2 { font-size: 8.4rem;  }
+	.document-section h3 { font-size: 4.8rem;  }
+	.document-section h4 { font-size: 3.2rem;  }
+	.document-section h5 { font-size: 2.4rem;  }
+	.document-section h6 { font-size: 1.7rem;  }
+	.document-section p 	{ font-size: 1.7rem;  }
+	.document-section label { font-size: 1.4rem; }
+	.document-section small { font-size: 1.2rem; }
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

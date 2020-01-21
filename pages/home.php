@@ -1618,6 +1618,10 @@
 					18th B Main Road, 5th Block, Rajajinagar,<br>
 					Bangalore — 560010.
 				</div>
+				<div class="h6 text-green-2 text-uppercase strong opacity-50 space-25-top scroll-reveal">Quick Links :</div>
+				<a target="_blank" href="/privacy-policy" class="label text-neutral-4 scroll-reveal" style="border-bottom: solid 1px var(--green-2); margin-top: 5px;">Privacy Policy</a><br>
+				<a target="_blank" href="/terms-and-conditions" class="label text-neutral-4 scroll-reveal" style="border-bottom: solid 1px var(--green-2); margin-top: 5px;">Terms and Conditions</a><br>
+				<a target="_blank" href="/refund-and-cancellation" class="label text-neutral-4 scroll-reveal" style="border-bottom: solid 1px var(--green-2); margin-top: 5px;">Refund and Cancellation</a><br>
 			</div>
 		</div>
 	</div>
