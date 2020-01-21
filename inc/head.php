@@ -33,7 +33,10 @@ else
 // $siteUrl = getSiteUrl();
 $siteTitle = getContent( 'Guesture', 'site_title' );
 $pageUrl = $siteUrl . $urlPath;
-$pageTitle = getCurrentPageTitle( $links, $baseURL, $siteTitle );
+if ( empty( $pageTitle ) )
+	$pageTitle = getCurrentPageTitle( $links, $baseURL, $siteTitle );
+else
+	$pageTitle = $pageTitle . ' | ' . $siteTitle;
 
 ?>
 
