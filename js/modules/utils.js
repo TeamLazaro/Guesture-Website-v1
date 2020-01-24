@@ -18,6 +18,31 @@ function waitFor ( seconds ) {
 
 /*
  *
+ * Handle error / exception response helper
+ *
+ */
+function getErrorResponse ( jqXHR, textStatus, e ) {
+	var code = -1;
+	var message;
+	if ( jqXHR.responseJSON ) {
+		code = jqXHR.responseJSON.code || jqXHR.responseJSON.statusCode;
+		message = jqXHR.responseJSON.message;
+	}
+	else if ( typeof e == "object" ) {
+		message = e.stack;
+	}
+	else {
+		message = jqXHR.responseText;
+	}
+	var error = new Error( message );
+	error.code = code;
+	return error;
+}
+
+
+
+/*
+ *
  * Return a debounced version of a given function
  *
  */
