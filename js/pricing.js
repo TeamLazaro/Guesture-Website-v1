@@ -213,9 +213,6 @@ $( function () {
 		$placesNearTo.on( "change", function ( event ) {
 			// Get the location
 			var location = $placesNearTo.val();
-			var _location = $placesNearTo.find( ":selected" ).text();
-			console.log( _location )
-
 			// Broadcast the change of location
 			$placesNearTo.trigger( "location/change", { location: location } );
 		} );
@@ -253,10 +250,6 @@ $( function () {
 			$( ".js_workplaces[ data-name = '" + workplaceSection[ 0 ] + "' ]" ).removeClass( "hidden" );
 
 		} );
-
-		// $( document ).trigger( "location/change", {
-		// 	location: locationOptions[ 0 ][ 1 ]
-		// } );
 
 	}
 
