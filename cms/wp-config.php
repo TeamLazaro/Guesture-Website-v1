@@ -18,6 +18,9 @@
  * @package WordPress
  */
 
+define( 'WP_HOME', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) );
+define( 'WP_SITEURL', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) . '/cms' );
+
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'guesture');
