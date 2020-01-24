@@ -22,7 +22,14 @@ $( function () {
 		};
 	}();
 
-	XLSX_CALC.import_functions( window.spreadsheetFormulae );
+	/*
+	 * Returns a (stringified) <option> element
+	 */
+	function createSelectOption ( value, label ) {
+		if ( typeof label != "string" )
+			label = value;
+		return "<option value=\"" + value + "\">" + label + "</option>";
+	}
 
 	// Four types of living setups
 	function LivingSituation ( type ) {
@@ -32,9 +39,11 @@ $( function () {
 		// this.costCalculator = { Sheets: { numbers: costCalculators[ type ] } };
 		var _this = this;
 		this.$el.on( "change", ".js_attribute", function ( event ) {
+			// Extract the key-value pair whose value changed
 			var $attribute = $( event.target );
 			var name = $attribute.data( "name" );
 			var value = $attribute.val();
+			// A change in location has to reflect everywhere on the page, not just on the pricing engine
 			if ( name == "location" ) {
 				event.preventDefault();
 				_this.$el.trigger( "location/change", {
@@ -42,16 +51,24 @@ $( function () {
 				} );
 				return;
 			}
+			// Reflect the new value in memory
 			_this[ name ] = value;
+			// Reflect the new value in the spreadsheet's in-memory representation
 			_this.numbers.Sheets[ _this.type ][ _this.sheetCoordinates[ name ] ].v = value;
+			// Re-compute the values
 			_this.computeDetails();
 		} );
 
+		// A dedicated handler for when the location changes
 		$( document ).on( "location/change", function ( event, data ) {
 			var location = data.location;
+			// Set the location value on the location input element
 			_this.$el.find( ".js_location" ).val( location );
+			// Reflect the new value in memory
 			_this.location = location;
+			// Reflect the new value in the spreadsheet's in-memory representation
 			_this.numbers.Sheets[ _this.type ][ _this.sheetCoordinates.location ].v = location;
+			// Re-compute the values
 			_this.computeDetails();
 		} );
 	}
@@ -103,12 +120,6 @@ $( function () {
 		this.$el.find( ".js_image" ).attr( "src", "media/pricing/rooms/" + this.photo );
 	};
 
-	function createSelectOption ( value, label ) {
-		if ( typeof label != "string" )
-			label = value;
-		return "<option value=\"" + value + "\">" + label + "</option>";
-	}
-
 	/*
 	 * Fetch and returns the spreadsheet data structure
 	 */
@@ -127,7 +138,7 @@ $( function () {
 				resolve( response );
 			} );
 			ajaxRequest.fail( function ( jqXHR, textStatus, e ) {
-				var errorResponse = __CUPID.utils.getErrorResponse( jqXHR, textStatus, e );
+				var errorResponse = getErrorResponse( jqXHR, textStatus, e );
 				reject( errorResponse );
 			} );
 		} );
@@ -142,7 +153,9 @@ $( function () {
 			var keyCell = sheet[ "A" + _r ];
 			if ( ! keyCell )
 				continue;
-			if ( keyCell.v.indexOf( "_" ) === 0 )	// internal field
+			// ignore fields beginning with an "_"
+			// 	they are for internal use
+			if ( keyCell.v.indexOf( "_" ) === 0 )
 				continue;
 			var keyName = keyCell.v.toLowerCase().split( /\s+/ ).map( function ( part ) {
 				return part[ 0 ].toUpperCase() + part.slice( 1 );
@@ -170,6 +183,7 @@ $( function () {
 			for ( var _k in livingSituationsData[ type ] )
 				livingSituation[ _k ] = livingSituationsData[ type ][ _k ];
 
+			// REDO: Optimization: Should probably remove this
 			livingSituation.numbers = { Sheets: { SETTINGS: numbers.SETTINGS } };
 			livingSituation.numbers.Sheets[ type ] = numbers[ type ];
 			// Set the default values from the markup and then compute
@@ -177,11 +191,13 @@ $( function () {
 			livingSituation.$el.find( ".js_attribute" ).each( function ( _i, el ) {
 				var $attribute = $( el );
 				var name = $attribute.data( "name" );
+				// REDO: This is confusing. Are we pulling the initial value from the markup?
 				var value = $attribute.val();
 				var coordinateOnSheet = livingSituation.sheetCoordinates[ name ];
 				livingSituation[ name ] = value;
 				livingSituation.numbers.Sheets[ type ][ coordinateOnSheet ].v = value;
 			} );
+			// REDO: Have to relegate this bit to the spreadsheet somehow
 			if ( type == "trio" ) {
 				livingSituation.$el.find( ".js_location" ).val( "Dwellington - BLR" );
 				livingSituation.location = "Dwellington - BLR";
@@ -198,6 +214,7 @@ $( function () {
 
 	function setupNearbyPlaces ( numbers ) {
 
+		// REDO: This bit needs to be done properly
 		var locationOptions = Object.entries( numbers.SETTINGS.locations );
 
 		// Initialize the locations in the Nearby Places section
@@ -253,10 +270,18 @@ $( function () {
 
 	}
 
+
+	/*
+	 *
+	 * Main execution point
+	 *
+	 */
+	// 1. Import custom spreadsheet functions
+	XLSX_CALC.import_functions( window.spreadsheetFormulae );
+
 	// Okay, now go fetch them numbers!
 	getNumbers()
 		.then( setupPricingSection )
 		.then( setupNearbyPlaces );
 
 } );
-
