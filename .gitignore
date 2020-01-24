@@ -9,7 +9,7 @@
 /data
 
 # the cms directory
-/cms
+# /cms
 
 # Weird Networked Drive Artifact
 .smb*
