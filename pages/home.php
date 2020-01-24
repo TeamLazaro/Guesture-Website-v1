@@ -283,6 +283,7 @@
 				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
 				<div class="thumbnail">
+					<iframe class="panorama js_panorama" src="http://139.59.39.166/media/lazaro-office-3d-tour/index.htm" frameborder="0"></iframe>
 					<img class="js_image" src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>">
 				</div>
 				<div class="intro space-min">
@@ -339,12 +340,12 @@
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger no-pointer cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
+				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
 					<div class="h4 action-title data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 action-title-error strong text-dark text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 action-sub-title-error strong text-red text-uppercase">No Rooms Found</div>
-					<div class="included hidden label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
+					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
@@ -394,6 +395,7 @@
 				<div class="character"><img class="block" src="media/characters/pricing/buddy-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Buddy</div>
 				<div class="thumbnail">
+					<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					<img class="js_image" src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>">
 				</div>
 				<div class="intro space-min">
@@ -450,12 +452,12 @@
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger no-pointer cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
+				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1">
 					<div class="h4 action-title data sparkle title-2-left title-2-right strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span><span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right.svg'; ?></span></div>
 					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-uppercase opacity-50 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 action-sub-title-error strong text-uppercase text-yellow">No Rooms Found</div>
-					<div class="included hidden label inline strong text-uppercase" style="border-bottom: 1.5px var(--light) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></div>
+					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--light) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
@@ -505,6 +507,7 @@
 				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
 				<div class="thumbnail">
+					<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					<img class="js_image" src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>">
 				</div>
 				<div class="intro space-min">
@@ -561,12 +564,12 @@
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger no-pointer cursor-pointer" data-mod-id="what-is-included" tabindex="-1;">
+				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" tabindex="-1;">
 					<div class="h4 action-title data strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
 					<div class="h6 action-sub-title-error strong text-uppercase text-red">No Rooms Found</div>
-					<div class="included hidden label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
+					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
