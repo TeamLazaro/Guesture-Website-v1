@@ -187,6 +187,7 @@
 }
 
 .booking-section .pricing .pricing-list .price.invalid {}
+.booking-section .pricing .pricing-list .price.invalid .thumbnail .panorama-container,
 .booking-section .pricing .pricing-list .price.invalid .thumbnail img {
 	filter: grayscale(0.5) brightness(1.25) blur(20px);
 }
