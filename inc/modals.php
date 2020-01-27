@@ -56,15 +56,15 @@
 					<div class="columns small-12 fill-light" style="border-radius: 10px; overflow: hidden;">
 						<div class="row space-50-top space-min-bottom">
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
-								<div class="h3 strong">The <span class="text-green-2">Buddy</span> Package</div>
-								<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@Alta Vista BLR</div>
-								<div class="h4 strong">For a monthly fee of <span class="text-green-2">₹11,200</span></div>
+								<div class="h3 strong">The <span class="text-green-2 js_name">Buddy</span> Package</div>
+								<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@<span class="js_location">Alta Vista BLR</span></div>
+								<div class="h4 strong">For a monthly fee of <span class="text-green-2 js_monthly_expense">₹11,200</span></div>
 
 								<label>
 									<span class="label block invisible">Book Now</span>
 									<button class="button fill-green">Book Now</button>
 								</label>
-								<div class="h4 strong space-25-top">Gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
+								<div class="h4 strong space-25-top js_summary space-25-bottom">Gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
 								<div class="virtual-tour-container fill-dark">
 									<iframe class="virtual-tour js_virtual_tour" src="http://139.59.39.166/media/lazaro-office-3d-tour/index.htm" frameborder="0"></iframe>
 								</div>
@@ -72,7 +72,7 @@
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
 								<div class="h4 strong space-25-top-bottom text-green-2">What is in your room?</div>
 							</div>
-							<div class="columns small-10 small-offset-1 large-8 xlarge-7 column-wrap">
+							<div class="columns small-10 small-offset-1 large-8 xlarge-7 column-wrap js_room">
 								<span class="block space-min-bottom">
 									<div class="p">2 Beds with mattress, pillow, 2 sets of linen</div>
 									<div class="p">2 Private Cupboards</div>
@@ -100,7 +100,7 @@
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
 								<div class="h4 strong space-25-top-bottom text-green-2">What is in your suite?</div>
 							</div>
-							<div class="columns small-10 small-offset-1 large-8 xlarge-7 column-wrap">
+							<div class="columns small-10 small-offset-1 large-8 xlarge-7 column-wrap js_suite">
 								<span class="block space-min-bottom">
 									<div class="p">The suite is a 1800sft 3BHK with a living room, dining room, kitchen and utility area. The suite is furnished.</div>
 								</span>
@@ -145,7 +145,7 @@
 							</div>
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
 								<div class="h4 strong space-25-top-bottom text-green-2">Services that are included?</div>
-								<span class="block space-min-bottom">
+								<span class="block space-min-bottom js_services">
 									<div class="p">DTH </div>
 									<div class="p">High Speed Internet</div>
 									<div class="p">Wifi</div>
@@ -159,7 +159,7 @@
 						<div class="row fill-dark space-min-top space-50-bottom" style="background: linear-gradient(15deg, var(--dark) 20%, var(--neutral-4) 100%);">
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
 								<div class="h4 strong space-25-top-bottom">Optional Add-on Services</div>
-								<span class="block space-min-bottom">
+								<span class="block space-min-bottom js_addons">
 									<div class="h5">2 meals a day - <span class="text-green-2">Monthly Fee of ₹2,300</span></div>
 									<div class="h5">Weekly Laundry - <span class="text-green-2">Monthly Fee of ₹1,200</span></div>
 								</span>
