@@ -18,6 +18,10 @@ $( function () {
 		var $modalTrigger = $( event.target ).closest( ".js_modal_trigger" );
 		var modalId = $modalTrigger.data( "modId" );
 
+		// Trigger pre-opening hooks with the modal id
+		$( document ).trigger( "modal/open/pre", { id: modalId, trigger: $modalTrigger } );
+		$( document ).trigger( "modal/open/pre/" + modalId, { id: modalId, trigger: $modalTrigger } );
+
 		$( ".js_modal_box" ).fadeIn( 350 );	// Fade in the modal box
 		$( document.body ).addClass( "modal-open" );	// Freeze the page layer
 		// Show the modal's content
@@ -25,9 +29,9 @@ $( function () {
 			.filter( "[ data-mod-id = '" + modalId + "' ]" )
 			.addClass( "active" );
 
-		// Trigger hooks with the modal id
-		$( document ).trigger( "modal/open", { id: modalId } );
-		$( document ).trigger( "modal/open/" + modalId, { id: modalId } );
+		// Trigger post-opening hooks with the modal id
+		$( document ).trigger( "modal/open/post", { id: modalId, trigger: $modalTrigger } );
+		$( document ).trigger( "modal/open/post/" + modalId, { id: modalId, trigger: $modalTrigger } );
 
 	} );
 
