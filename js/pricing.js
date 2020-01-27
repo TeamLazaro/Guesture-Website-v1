@@ -36,6 +36,8 @@ $( function () {
 		this.type = type;
 		this.cost
 		this.$el = $( ".js_" + type + "_section" );
+		this.numbers
+		this.sheetCoordinates
 		// this.costCalculator = { Sheets: { numbers: costCalculators[ type ] } };
 		var _this = this;
 		this.$el.on( "change", ".js_attribute", function ( event ) {
@@ -80,10 +82,18 @@ $( function () {
 		this.perDay = sheet[ this.sheetCoordinates.perDay ].v;
 		this.monthlyFee = sheet[ this.sheetCoordinates.monthlyFee ].v;
 		this.photo = sheet[ this.sheetCoordinates.photo ].v;
+		this.panorama = sheet[ this.sheetCoordinates.panorama ].v;
+		this.virtualTour = sheet[ this.sheetCoordinates.virtualTour ].v;
+		this.summary = sheet[ this.sheetCoordinates.summary ].v;
+		this.room = sheet[ this.sheetCoordinates.room ].v;
+		this.suite = sheet[ this.sheetCoordinates.suite ].v;
+		this.services = sheet[ this.sheetCoordinates.services ].v;
+		this[ "add-ons" ] = sheet[ this.sheetCoordinates[ "add-ons" ] ].v;
 		this.renderComputedDetails();
 	};
 	LivingSituation.prototype.render = function () {
 		this.$el.find( ".js_image" ).attr( "media/pricing/rooms/" + this.photo );
+		this.$el.find( ".js_panorama" ).attr( "src", this.panorama );
 		this.$el.find( ".js_balcony" ).html(
 			this.balconyOptions.map( createSelectOption ).join( "" )
 		);
@@ -113,6 +123,7 @@ $( function () {
 	LivingSituation.prototype.renderComputedDetails = function () {
 		this.$el.find( ".js_daily_expense" ).text( this.perDay );
 		this.$el.find( ".js_monthly_expense" ).text( this.monthlyFee );
+		this.$el.find( ".js_panorama" ).attr( "src", this.panorama );
 		if ( this.perDay === "" || this.monthlyFee === "" )
 			this.$el.addClass( "invalid" );
 		else
@@ -206,9 +217,11 @@ $( function () {
 			}
 
 			livingSituation.computeDetails();
+
+			livingSituations[ type ] = livingSituation;
 		}
 
-		return numbers;
+		return livingSituations;
 
 	}
 
@@ -273,6 +286,38 @@ $( function () {
 
 	/*
 	 *
+	 * Populating the modal with information on the package that was clicked
+	 *
+	 */
+	var $modal = $( "[ data-mod-id = 'what-is-included' ]" );
+	var modalFields = {
+		$name: $modal.find( ".js_name" ),
+		$monthlyExpense: $modal.find( ".js_monthly_expense" ),
+		$location: $modal.find( ".js_location" ),
+		$summary: $modal.find( ".js_summary" ),
+		$virtualTour: $modal.find( ".js_virtual_tour" ),
+		$room: $modal.find( ".js_room" ),
+		$suite: $modal.find( ".js_suite" ),
+		$services: $modal.find( ".js_services" ),
+		$addOns: $modal.find( ".js_addons" )
+	};
+	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
+		var packageName = $( data.trigger ).data( "package" );
+		var package = livingSituations[ packageName ];
+		modalFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
+		modalFields.$monthlyExpense.text( package.perDay );
+		modalFields.$location.text( package.location );
+		modalFields.$summary.text( package.summary );
+		modalFields.$virtualTour.attr( "src", package.virtualTour );
+		modalFields.$room.html( package.room.replace( /\n/g, "<br>" ) );
+		modalFields.$suite.html( package.suite.replace( /\n/g, "<br>" ) );
+		modalFields.$services.html( package.services.replace( /\n/g, "<br>" ) );
+		modalFields.$addOns.html( package[ "add-ons" ].replace( /\n/g, "<br>" ) );
+	} );
+
+
+	/*
+	 *
 	 * Main execution point
 	 *
 	 */
@@ -280,8 +325,13 @@ $( function () {
 	XLSX_CALC.import_functions( window.spreadsheetFormulae );
 
 	// Okay, now go fetch them numbers!
+	var livingSituations;
 	getNumbers()
-		.then( setupPricingSection )
-		.then( setupNearbyPlaces );
+		.then( function ( numbers ) {
+			livingSituations = setupPricingSection( numbers );
+			setupNearbyPlaces( numbers );
+		} )
+		// .then( setupPricingSection )
+		// .then( setupNearbyPlaces )
 
 } );
