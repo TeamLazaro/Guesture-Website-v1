@@ -331,7 +331,5 @@ $( function () {
 			livingSituations = setupPricingSection( numbers );
 			setupNearbyPlaces( numbers );
 		} )
-		// .then( setupPricingSection )
-		// .then( setupNearbyPlaces )
 
 } );
