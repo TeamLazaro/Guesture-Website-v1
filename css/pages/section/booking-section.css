@@ -162,8 +162,8 @@
 	left: 50%;
 	width: 100%;
 	transform: translate(-50%,-50%);
-	filter: grayscale(0.5) brightness(1.25) blur(0px);
-	transition: filter .3s;
+	/*filter: grayscale(0.5) brightness(1.25) blur(0px);*/
+	/*transition: filter .3s;*/
 }
 
 .booking-section .pricing .pricing-list .price .config {
@@ -189,7 +189,7 @@
 .booking-section .pricing .pricing-list .price.invalid {}
 .booking-section .pricing .pricing-list .price.invalid .thumbnail .panorama-container,
 .booking-section .pricing .pricing-list .price.invalid .thumbnail img {
-	filter: grayscale(0.5) brightness(1.25) blur(20px);
+	/*filter: grayscale(0.5) brightness(1.25) blur(20px);*/
 }
 
 .booking-section .pricing .pricing-list .price.invalid .action .action-title,
