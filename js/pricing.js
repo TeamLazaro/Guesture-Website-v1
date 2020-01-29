@@ -203,10 +203,15 @@ $( function () {
 				var $attribute = $( el );
 				var name = $attribute.data( "name" );
 				// REDO: This is confusing. Are we pulling the initial value from the markup?
-				var value = $attribute.val();
+				// var value = $attribute.val();
+				// var coordinateOnSheet = livingSituation.sheetCoordinates[ name ];
+				// livingSituation[ name ] = value;
+				// livingSituation.numbers.Sheets[ type ][ coordinateOnSheet ].v = value;
+
 				var coordinateOnSheet = livingSituation.sheetCoordinates[ name ];
+				var value = livingSituation.numbers.Sheets[ type ][ coordinateOnSheet ].v;
 				livingSituation[ name ] = value;
-				livingSituation.numbers.Sheets[ type ][ coordinateOnSheet ].v = value;
+				$attribute.val( value );
 			} );
 			// REDO: Have to relegate this bit to the spreadsheet somehow
 			if ( type == "trio" ) {
