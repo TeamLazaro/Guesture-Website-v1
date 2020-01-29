@@ -21,6 +21,7 @@ require_once __DIR__ . '/../inc/above.php';
 			<div class="columns small-12">
 				<div class="h3 space-50-top space-min-bottom">Um, what happened to the sample?</div>
 				<div class="h5"><?php echo getContent( 'Not sure.', 'about_the_sample', $pageId ) ?></div>
+				<pre><?= $post->post_content ?></pre>
 			</div>
 		</div>
 	</div>
