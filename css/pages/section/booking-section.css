@@ -192,6 +192,14 @@
 	/*filter: grayscale(0.5) brightness(1.25) blur(20px);*/
 }
 
+.booking-section .pricing .pricing-list .price.invalid .action {
+	pointer-events: none;
+}
+
+.booking-section .pricing .pricing-list .price.invalid .action .included {
+	opacity: 0;
+}
+
 .booking-section .pricing .pricing-list .price.invalid .action .action-title,
 .booking-section .pricing .pricing-list .price.invalid .action .action-sub-title {
 	display: none;
