@@ -280,10 +280,10 @@
 	<div class="pricing js_carousel_container">
 		<div class="pricing-list js_carousel_content">
 			<div class="price fill-light js_carousel_item qpid_login_site js_solo_section scroll-reveal">
-				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
+				<div class="character" oncontextmenu="return false;"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
 				<div class="thumbnail">
-					<div class="panorama-container">
+					<div class="panorama-container" oncontextmenu="return false;">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					</div>
 					<img class="js_image" src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>">
@@ -394,10 +394,10 @@
 				</form>
 			</div>
 			<div class="price fill-green-2 js_carousel_item qpid_login_site js_buddy_section scroll-reveal" style="--td: .25s; background: linear-gradient(45deg, var(--green-2) 60%, var(--yellow) 100%);">
-				<div class="character"><img class="block" src="media/characters/pricing/buddy-1.png<?php echo $ver ?>"></div>
+				<div class="character" oncontextmenu="return false;"><img class="block" src="media/characters/pricing/buddy-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Buddy</div>
 				<div class="thumbnail">
-					<div class="panorama-container">
+					<div class="panorama-container" oncontextmenu="return false;">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					</div>
 					<img class="js_image" src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>">
@@ -508,10 +508,10 @@
 				</form>
 			</div>
 			<div class="price fill-light js_carousel_item qpid_login_site js_trio_section scroll-reveal" style="--td: .5s">
-				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
+				<div class="character" oncontextmenu="return false;"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
 				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
 				<div class="thumbnail">
-					<div class="panorama-container">
+					<div class="panorama-container" oncontextmenu="return false;">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					</div>
 					<img class="js_image" src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>">
@@ -667,13 +667,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="deal-title hidden columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
+			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
 				<div class="h2 text-green-2 scroll-reveal">Deals</div>
 			</div>
 		</div>
 	</div>
 	<!-- Deal -->
-	<div class="deal-carousel hidden card-carousel js_carousel_container scroll-reveal">
+	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="deal-list card-list js_carousel_content">
 			<div class="deal card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
 				<!-- Thumbnail -->
@@ -1399,13 +1399,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="deal-title hidden columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
+			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
 				<div class="h2 text-green-2 scroll-reveal">Events</div>
 			</div>
 		</div>
 	</div>
 	<!-- Event -->
-	<div class="event-carousel hidden card-carousel js_carousel_container scroll-reveal">
+	<div class="event-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="event-list card-list js_carousel_content">
 			<div class="event card fill-light js_carousel_item">
 				<!-- Thumbnail -->
