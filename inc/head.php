@@ -1,43 +1,5 @@
 <?php
 
-/*
- * Get all the links on the site
- */
-$defaultLinks = require __DIR__ . '/default-nav-links.php';
-$links = getContent( $defaultLinks, 'pages' );
-
-/*
- * Figure out the base URL
- */
-$urlPath = strstr( $_SERVER[ 'REQUEST_URI' ], '?', true );
-if ( ! $urlPath )
-	$urlPath = $_SERVER[ 'REQUEST_URI' ];
-$urlFragments = preg_split( '/\//', $urlPath );
-	// Pull out the first non-empty fragment
-$calculatedBaseSlug = '';
-$inferredBaseSlug = $_GET[ '_slug' ] ?? '';
-foreach ( $urlFragments as $fragment ) {
-	if ( ! empty( $fragment ) ) {
-		$calculatedBaseSlug = $fragment;
-		break;
-	}
-}
-if ( $inferredBaseSlug == $calculatedBaseSlug )
-	$baseURL = '';
-else
-	$baseURL = '/' . $calculatedBaseSlug . '/';
-
-/*
- * Get the title and URL of the website and current page
- */
-// $siteUrl = getSiteUrl();
-$siteTitle = getContent( 'Guesture', 'site_title' );
-$pageUrl = $siteUrl . $urlPath;
-if ( empty( $pageTitle ) )
-	$pageTitle = getCurrentPageTitle( $links, $baseURL, $siteTitle );
-else
-	$pageTitle = $pageTitle . ' | ' . $siteTitle;
-
 ?>
 
 <head>
