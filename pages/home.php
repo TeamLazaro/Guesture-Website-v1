@@ -15,6 +15,13 @@ if ( cmsIsEnabled() ) {
 	unset( $deal );
 }
 
+$events = getPostsOf( 'events' );
+if ( cmsIsEnabled() ) {
+	foreach ( $events as &$event )
+		$event[ 'permalink' ] = get_permalink( $event[ 'ID' ] );
+	unset( $event );
+}
+
 ?>
 
 
@@ -1244,54 +1251,23 @@ if ( cmsIsEnabled() ) {
 	<!-- Event -->
 	<div class="event-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="event-list card-list js_carousel_content">
-			<div class="event card fill-light js_carousel_item">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/event/01.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Date -->
-					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">12</span><br>Dec</div>
-					<!-- Tag -->
-					<div class="inline tag label strong text-uppercase text-neutral-3">Sports</div>
-					<!-- Title -->
-					<div class="title h4">Inter-Corporate Football Tournament.</div>
+			<?php foreach ( $events as $event ) : ?>
+				<div class="event card fill-light js_carousel_item">
+					<!-- Thumbnail -->
+					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $event[ 'ID' ] ) ?>' );"></div>
+					<div class="info">
+						<!-- Date -->
+						<?php
+							$expiryDate = date_create( getContent( '', 'expiry_date', $deal[ 'ID' ] ) );
+						?>
+						<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;"><?= $expiryDate->format( 'd' ) ?></span><br><?= $expiryDate->format( 'M' ) ?></div>
+						<!-- Tag -->
+						<div class="inline tag label strong text-uppercase text-neutral-3"><?= getContent( '', 'tag', $event[ 'ID' ] ) ?></div>
+						<!-- Title -->
+						<div class="title h4"><?= $event[ 'post_title' ] ?></div>
+					</div>
 				</div>
-			</div>
-			<div class="event card fill-light js_carousel_item">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/event/02.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Date -->
-					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">18</span><br>Dec</div>
-					<!-- Tag -->
-					<div class="inline tag label strong text-uppercase text-neutral-3">Movies</div>
-					<!-- Title -->
-					<div class="title h4">Star-wars movie marathon screening.</div>
-				</div>
-			</div>
-			<div class="event card fill-light js_carousel_item">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/event/03.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Date -->
-					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">22</span><br>Dec</div>
-					<!-- Tag -->
-					<div class="inline tag label strong text-uppercase text-neutral-3">Party</div>
-					<!-- Title -->
-					<div class="title h4">Christmas dinner party.</div>
-				</div>
-			</div>
-			<div class="event card fill-light js_carousel_item">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/event/04.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Date -->
-					<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;">01</span><br>Jan</div>
-					<!-- Tag -->
-					<div class="inline tag label strong text-uppercase text-neutral-3">Party</div>
-					<!-- Title -->
-					<div class="title h4">New Year brunch and recovery lunch.</div>
-				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
 		<div class="scroll-controls">
 			<div class="row">
