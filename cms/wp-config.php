@@ -18,6 +18,10 @@
  * @package WordPress
  */
 
+if ( ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) !== 'guesture.wip.lazaro.in' )
+	if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/cms/wp-content/uploads/' ) !== false )
+		return header( 'Location: http://guesture.wip.lazaro.in' . $_SERVER[ 'REQUEST_URI' ], true, 302 );
+
 define( 'WP_HOME', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) );
 define( 'WP_SITEURL', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) . '/cms' );
 
