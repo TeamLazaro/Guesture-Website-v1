@@ -1,15 +1,21 @@
 <?php
 /*
  *
- * This is a sample page you can copy and use as boilerplate for any new page.
+ * This is template for the Home page
  *
  */
+require_once __DIR__ . '/../inc/above.php';
 
-// Page-specific preparatory code goes here.
+
+
+$deals = getPostsOf( 'deals' );
+if ( cmsIsEnabled() ) {
+	foreach ( $deals as &$deal )
+		$deal[ 'permalink' ] = get_permalink( $deal[ 'ID' ] );
+	unset( $deal );
+}
 
 ?>
-
-<?php require_once __DIR__ . '/../inc/above.php'; ?>
 
 
 
@@ -675,238 +681,69 @@
 	<!-- Deal -->
 	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="deal-list card-list js_carousel_content">
-			<div class="deal card fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--green-1) 30%, var(--yellow) 100%);">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/buddy.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Title -->
-					<div class="title h4">Bring a Buddy get free meal coupons for a month for the both of you.</div>
-					<!-- Timer -->
-					<div class="timer label strong js_countdown" data-date="2019-11-30T18:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
+			<?php foreach ( $deals as $deal ) : ?>
+				<div class="deal card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
+					<!-- Thumbnail -->
+					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $deal[ 'ID' ] ) ?>');"></div>
+					<div class="info">
+						<!-- Title -->
+						<div class="title h4"><?= $deal[ 'post_title' ] ?></div>
+						<!-- Timer -->
+						<?php
+							$expiryDate = date_create( getContent( '', 'expiry_date', $deal[ 'ID' ] ) );
+						?>
+						<div class="timer label strong js_countdown" data-date="<?= $expiryDate->format( 'Y-m-d' ) . 'T' . $expiryDate->format( 'H:i:s.v' ) . 'Z' ?>"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: <?= getIntervalString( getContent( '', 'expiry_date', $deal[ 'ID' ] ) ) ?></div>
+						<!-- Action -->
+						<div class="action row">
+							<!-- Phone Trap Trigger -->
+							<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+								<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+								<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+							</label>
 							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
+							<!-- Phone Trap form -->
+							<form class="js_phone_form" style="display: none">
+								<div class="columns small-12" style="position: relative">
+									<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
+									<div class="phone-trap minimal phone-number">
+										<div class="block prefix-group" style="position: relative">
+											<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+												<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+											</select>
+											<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+										</div>
+										<input class="phone block" type="text" name="phone-number">
+										<label class="submit block">
+											<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
+											<button class="button block">→</button>
+										</label>
+									</div>
+								</div>
+							</form>
+							<!-- OTP form -->
+							<form class="js_otp_form" style="display: none">
+								<div class="columns small-12">
+									<div class="otp-trap minimal">
+										<label class="block">
+											<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
+											<input class="otp block" type="text" name="otp">
+										</label>
+										<label class="submit block">
+											<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
+											<button class="button block">→</button>
+										</label>
+									</div>
+								</div>
+								<br>
+								<div class="columns small-12 clearfix hidden">
+									<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+									<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="deal card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/dmart.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Title -->
-					<div class="title h4">Book for 3months and get free d-mart coupons worth Rs.899.</div>
-					<!-- Timer -->
-					<div class="timer label strong js_countdown" data-date="2019-12-01T06:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="deal card fill-light js_carousel_item">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/ola.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Title -->
-					<div class="title h4">Book for 6months and get Ola Money for Rs.1899.</div>
-					<!-- Timer -->
-					<div class="timer label strong js_countdown" data-date="2019-12-03T14:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="deal card fill-light js_carousel_item">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/deals/stay.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Title -->
-					<div class="title h4">Book for 11 months and get 1 month free.</div>
-					<!-- Timer -->
-					<div class="timer label strong js_countdown" data-date="2019-12-04T18:30:00.000Z"><span class="h6 inline-middle">⚡</span>Flash Deal Ends: 2ds 16h 43m <span class="text-red">53s</span></div>
-					<!-- Action -->
-					<div class="action row">
-						<!-- Phone Trap Trigger -->
-						<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
-							<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-							<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
-						</label>
-						<br>
-						<!-- Phone Trap form -->
-						<form class="js_phone_form" style="display: none">
-							<div class="columns small-12" style="position: relative">
-								<label><span class="label inline text-neutral-2 text-uppercase">Mobile Number</span></label>
-								<div class="phone-trap minimal phone-number">
-									<div class="block prefix-group" style="position: relative">
-										<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
-											<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
-										</select>
-										<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
-									</div>
-									<input class="phone block" type="text" name="phone-number">
-									<label class="submit block">
-										<span class="hidden label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-						</form>
-						<!-- OTP form -->
-						<form class="js_otp_form" style="display: none">
-							<div class="columns small-12">
-								<div class="otp-trap minimal">
-									<label class="block">
-										<span class="label inline text-neutral-2 text-uppercase">Enter the OTP</span>
-										<input class="otp block" type="text" name="otp">
-									</label>
-									<label class="submit block">
-										<span class="invisible label inline text-neutral-2 text-uppercase">Submit</span>
-										<button class="button block">→</button>
-									</label>
-								</div>
-							</div>
-							<br>
-							<div class="columns small-12 clearfix hidden">
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-								<div class="label strong text-neutral-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
 		<div class="scroll-controls">
 			<div class="row">
