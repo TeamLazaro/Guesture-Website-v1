@@ -696,7 +696,7 @@ if ( cmsIsEnabled() ) {
 	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="deal-list card-list js_carousel_content">
 			<?php foreach ( $deals as $deal ) : ?>
-				<div class="deal card dark fill-light js_carousel_item" style="background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);">
+				<div class="deal card <?= getContent( false, 'dark_card', $deal[ 'ID' ] ) === true ? 'dark' : '' ?> fill-light js_carousel_item">
 					<!-- Thumbnail -->
 					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $deal[ 'ID' ] ) ?>');"></div>
 					<div class="info">
