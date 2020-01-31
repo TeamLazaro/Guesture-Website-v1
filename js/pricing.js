@@ -301,6 +301,7 @@ $( function () {
 		$monthlyExpense: $modal.find( ".js_monthly_expense" ),
 		$location: $modal.find( ".js_location" ),
 		$summary: $modal.find( ".js_summary" ),
+		$virtualTourContainer: $modal.find( ".js_virtual_tour_container" ),
 		$virtualTour: $modal.find( ".js_virtual_tour" ),
 		$room: $modal.find( ".js_room" ),
 		$suite: $modal.find( ".js_suite" ),
@@ -315,6 +316,10 @@ $( function () {
 		modalFields.$location.text( package.location );
 		modalFields.$summary.text( package.summary );
 		modalFields.$virtualTour.attr( "src", package.virtualTour );
+		if ( package.virtualTour )
+			modalFields.$virtualTourContainer.removeClass( "hidden" );
+		else
+			modalFields.$virtualTourContainer.addClass( "hidden" );
 		modalFields.$room.html( package.room.replace( /\n/g, "<br>" ) );
 		modalFields.$suite.html( package.suite.replace( /\n/g, "<br>" ) );
 		modalFields.$services.html( package.services.replace( /\n/g, "<br>" ) );

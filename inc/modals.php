@@ -65,7 +65,7 @@
 									<button class="button fill-green">Book Now</button>
 								</label>
 								<div class="h4 strong space-25-top js_summary space-25-bottom">Gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
-								<div class="virtual-tour-container fill-dark">
+								<div class="virtual-tour-container fill-dark js_virtual_tour_container">
 									<iframe class="virtual-tour js_virtual_tour" src="http://139.59.39.166/media/lazaro-office-3d-tour/index.htm" frameborder="0"></iframe>
 								</div>
 							</div>
