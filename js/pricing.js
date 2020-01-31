@@ -129,7 +129,7 @@ $( function () {
 		else
 			this.$el.removeClass( "invalid" );
 		// this.$el.find( ".js_image" ).attr( "src", "media/pricing/rooms/" + this.photo );
-		this.$el.find( ".js_image" ).attr( "src", "http://guesture-embed.wip.lazaro.in/photo/" + this.photo );
+		this.$el.find( ".js_image" ).attr( "src", "/media/user/photo/" + this.photo );
 	};
 
 	/*
