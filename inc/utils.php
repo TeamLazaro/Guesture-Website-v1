@@ -130,7 +130,7 @@ function getContent ( $fallback, $field, $context = null ) {
 	foreach ( $contexts as $currentContext ) {
 		$content = get_field( $fieldParts[ 0 ], $currentContext );
 		// If no content was found, search in underlying native post object
-		if ( empty( $content ) ) {
+		if ( empty( $content ) and ! empty( $thePost ) ) {
 			if ( $currentContext and ( ! is_string( $currentContext ) ) )
 				$content = $thePost->{$fieldParts[ 0 ]};
 			if ( empty( $content ) )
