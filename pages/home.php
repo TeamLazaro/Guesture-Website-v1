@@ -686,14 +686,14 @@ if ( cmsIsEnabled() ) {
 				<div class="h6 strong text-uppercase scroll-reveal">Full KYC Policy ›</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row <?php if ( empty( $deals ) ) echo 'hidden' ?>">
 			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
 				<div class="h2 text-green-2 scroll-reveal">Deals</div>
 			</div>
 		</div>
 	</div>
 	<!-- Deal -->
-	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal">
+	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal <?php if ( empty( $deals ) ) echo 'hidden' ?>">
 		<div class="deal-list card-list js_carousel_content">
 			<?php foreach ( $deals as $deal ) : ?>
 				<div class="deal card <?= getContent( false, 'dark_card', $deal[ 'ID' ] ) === true ? 'dark' : '' ?> fill-light js_carousel_item">
@@ -1249,14 +1249,14 @@ if ( cmsIsEnabled() ) {
 				<div class="h6">Guesture is a unique approach to solving the problem of the high cost of living in cities, without compromising on comfort and safety. Coliving at Guesture gives you shared living spaces with the same level of amenities as service apartments, but optimized resources, hence lower costs.</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row <?php if ( empty( $events ) ) echo 'hidden' ?>">
 			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-100-top space-min-bottom">
 				<div class="h2 text-green-2 scroll-reveal">Events</div>
 			</div>
 		</div>
 	</div>
 	<!-- Event -->
-	<div class="event-carousel card-carousel js_carousel_container scroll-reveal">
+	<div class="event-carousel card-carousel js_carousel_container scroll-reveal <?php if ( empty( $events ) ) echo 'hidden' ?>">
 		<div class="event-list card-list js_carousel_content">
 			<?php foreach ( $events as $event ) : ?>
 				<a class="event card fill-light js_carousel_item" href="<?= $event[ 'permalink' ] ?>">
@@ -1349,7 +1349,7 @@ if ( cmsIsEnabled() ) {
 
 <!-- About Section -->
 <section class="about-section space-150-top-bottom">
-	<div class="container">
+	<div class="container <?php if ( empty( $news ) ) echo 'hidden' ?>">
 		<div class="row">
 			<div class="deal-title columns small-10 small-offset-1 xlarge-9 space-min-bottom">
 				<div class="h2 text-green-2 scroll-reveal">News</div>
@@ -1357,7 +1357,7 @@ if ( cmsIsEnabled() ) {
 		</div>
 	</div>
 	<!-- News -->
-	<div class="news-carousel card-carousel js_carousel_container scroll-reveal">
+	<div class="news-carousel card-carousel js_carousel_container scroll-reveal <?php if ( empty( $news ) ) echo 'hidden' ?>">
 		<div class="news-list card-list js_carousel_content">
 			<?php foreach ( $news as $newsPiece ) : ?>
 				<a class="news card fill-light js_carousel_item" href="<?= getContent( '', 'source_link', $newsPiece[ 'ID' ] ) ?>" target="_blank">
