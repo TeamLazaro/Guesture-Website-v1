@@ -31,7 +31,7 @@ require_once __DIR__ . '/../inc/above.php';
 			<div class="columns small-12 medium-10 medium-offset-1 xlarge-8 xlarge-offset-2 space-min">
 				<h3>Terms and Conditions</h3>
 
-				<p>The terms "We" / "Us" / "Our"/”Company” individually and collectively refer to Irina Hospitality Pvt Ltd and the terms "Visitor” ”User” refer to the users.</p>
+				<p>The terms "We"/"Us"/"Our"/”Company” individually and collectively refer to Irina Hospitality Pvt Ltd and the terms "Visitor” ”User” refer to the users.</p>
 
 				 <p>This page states the Terms and Conditions under which you (Visitor) may visit this website (“Website”). Please read this page carefully. If you do not accept the Terms and Conditions stated here, we would request you to exit this site. The business, any of its business divisions and / or its subsidiaries, associate companies or subsidiaries to subsidiaries or such other investment companies (in India or abroad) reserve their respective rights to revise these Terms and Conditions at any time by updating this posting. You should visit this page periodically to re-appraise yourself of the Terms and Conditions, because they are binding on all users of this Website.</p>
 
