@@ -29,11 +29,9 @@ require_once __DIR__ . '/../inc/above.php';
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 medium-10 medium-offset-1 xlarge-8 xlarge-offset-2 space-min">
-				<p><strong>Disclaimer:</strong> Please read and edit the Refund & Cancellation Policy given below as per your /website’s requirement. Don’t use or apply these as is basis on your website.</p>
-
 				<h3>Refund and Cancellation Policy</h3>
 				 
-				<p>Our focus is complete customer satisfaction. In the event, if you are displeased with the services provided, we will refund back the money, provided the reasons are genuine and proved after investigation. Please read the fine prints of each deal before buying it, it provides all the details about the services or the product you purchase.  </p>
+				<p>Our focus is complete customer satisfaction. In the event, if you are displeased with the services provided, we will refund back the money, provided the reasons are genuine and proved after investigation. Please read the fine prints of each deal before buying it, it provides all the details about the services or the product you purchase.</p>
 
 				<p>In case of dissatisfaction from our services, clients have the liberty to cancel their projects and request a refund from us. Our Policy for the cancellation and refund will be as follows:</p>
 
@@ -41,11 +39,11 @@ require_once __DIR__ . '/../inc/above.php';
 
 				<p>For Cancellations please contact the us via contact us link.</p>
 
-				<p>  Requests received later than ____business days prior to the end of the current service period will be treated as cancellation of services for the next service period.  </p>
+				<p>  If a confirmed booking is canceled within 48 hours and up to 12 hours before the check-in, cancellation charges are levied at 25 per cent of the booking amount subject to the minimum flat rate mentioned.</p>
 
 				<h5>Refund Policy  </h5>
 
-				<p>We will try our best to create the suitable design concepts for our clients.  </p>
+				<p>We will try our best to create the suitable design concepts for our clients.</p>
 
 				<p>In case any client is not completely satisfied with our products we can provide a refund.</p>
 

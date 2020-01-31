@@ -29,17 +29,13 @@ require_once __DIR__ . '/../inc/above.php';
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 medium-10 medium-offset-1 xlarge-8 xlarge-offset-2 space-min">
-				<p><strong>Disclaimer:</strong> Please read and edit the Privacy Policy given below as per your /website’s requirement. Don’t use or apply these as is basis on your website.</p>
-
 				<h3>Privacy Policy</h3>
 
-				<p><strong>Your website may use the Privacy Policy given below:</strong></p>
-
-				<p>The terms "We" / "Us" / "Our"/”Company” individually and collectively refer to ………………………..and the terms "You" /"Your" / "Yourself" refer to the users.</p>
+				<p>The terms "We"/"Us"/"Our"/"Company" individually and collectively refer to Irina Hospitality Pvt Ltd and the terms "You"/"Your"/"Yourself" refer to the users.</p>
 
 				<p>This Privacy Policy is an electronic record in the form of an electronic contract formed under the information Technology Act, 2000 and the rules made thereunder and the amended provisions pertaining to electronic documents / records in various statutes as amended by the information Technology Act, 2000. This Privacy Policy does not require any physical, electronic or digital signature.</p>
 
-				<p>This Privacy Policy is a legally binding document between you and ……………………….. (both terms defined below). The terms of this Privacy Policy will be effective upon your acceptance of the same (directly or indirectly in electronic form, by clicking on the I accept tab or by use of the website or by other means) and will govern the relationship between you and ………………………. for your use of the website “<strong>Website</strong>” (defined below).</p>
+				<p>This Privacy Policy is a legally binding document between you and Irina Hospitality Pvt Ltd (both terms defined below). The terms of this Privacy Policy will be effective upon your acceptance of the same (directly or indirectly in electronic form, by clicking on the I accept tab or by use of the website or by other means) and will govern the relationship between you and Irina Hospitality Pvt Ltd for your use of the website “<strong>Website</strong>” (defined below).</p>
 
 				<p>This document is published and shall be construed in accordance with the provisions of the Information Technology (reasonable security practices and procedures and sensitive personal data of information) rules, 2011 under Information Technology Act, 2000; that require publishing of the Privacy Policy for collection, use, storage and transfer of sensitive personal data or information.</p>
 
@@ -49,11 +45,11 @@ require_once __DIR__ . '/../inc/above.php';
 
 				<h5>USER INFORMATION</h5>
 
-				<p>To avail certain services on our Websites, users are required to provide certain information for the registration process namely: - a) your name, b) email address, c) sex, d) age, e) PIN code, f) credit card or debit card details g) medical records and history h) sexual orientation, i) biometric information, j) password etc., and / or your occupation, interests, and the like. The Information as supplied by the users enables us to improve our sites and provide you the most user-friendly experience.  </p>
+				<p>To avail certain services on our Websites, users are required to provide certain information for the registration process namely: - a) your name, b) email address, c) sex, d) age, e) PIN code, f) credit card or debit card details g) medical records and history h) sexual orientation, i) biometric information, j) password etc., and / or your occupation, interests, and the like. The Information as supplied by the users enables us to improve our sites and provide you the most user-friendly experience.</p>
 
-				<p>All required information is service dependent and we may use the above said user information to, maintain, protect, and improve its services (including advertising services) and for developing new services  .</p>
+				<p>All required information is service dependent and we may use the above said user information to, maintain, protect, and improve its services (including advertising services) and for developing new services.</p>
 
-				<p>Such information will not be considered as sensitive if it is freely available and accessible in the public domain or is furnished under the Right to Information Act, 2005 or any other law for the time being in force.  </p>
+				<p>Such information will not be considered as sensitive if it is freely available and accessible in the public domain or is furnished under the Right to Information Act, 2005 or any other law for the time being in force.</p>
 
 				<h5>COOKIES </h5>
 
@@ -63,19 +59,19 @@ require_once __DIR__ . '/../inc/above.php';
 
 				<h5>LINKS TO THE OTHER SITES </h5>
 
-				<p>Our policy discloses the privacy practices for our own web site only. Our site provides links to other websites also that are beyond our control. We shall in no way be responsible in way for your use of such sites.<strong>5.</strong></p>
+				<p>Our policy discloses the privacy practices for our own web site only. Our site provides links to other websites also that are beyond our control. We shall in no way be responsible in way for your use of such sites.</p>
 
 				<h5>INFORMATION SHARING </h5>
 
-				<p>We shares the sensitive personal information to any third party without obtaining the prior consent of the user in the following limited circumstances:  </p>
+				<p>We don’t shares the sensitive personal information to any third party without obtaining the prior consent of the user in the following limited circumstances:</p>
 
-				<p><strong>(a)</strong> When it is requested or required by law or by any court or governmental agency or authority to disclose, for the purpose of verification of identity, or for the prevention, detection, investigation including cyber incidents, or for prosecution and punishment of offences. These disclosures are made in good faith and belief that such disclosure is reasonably necessary for enforcing these Terms; for complying with the applicable laws and regulations.</p>
+				<p><strong>(a)</strong> When it is requested or required by law or by any court or governmental agency or authority to disclose, for the purpose of verification of identity, or for the prevention, detection, investigation including cyber incidents, or for prosecution and punishment of offenses. These disclosures are made in good faith and belief that such disclosure is reasonably necessary for enforcing these Terms; for complying with the applicable laws and regulations.</p>
 
 				<p>  <strong>(b)</strong> We proposes to share such information within its group companies and officers and employees of such group companies for the purpose of processing personal information on its behalf. We also ensure that these recipients of such information agree to process such information based on our instructions and in compliance with this Privacy Policy and any other appropriate confidentiality and security measures.  </p>
 
 				<h5>INFORMATION SECURITY </h5>
 
-				<p>We take appropriate security measures to protect against unauthorized access to or unauthorized alteration, disclosure or destruction of data. These include internal reviews of our data collection, storage and processing practices and security measures, including appropriate encryption and physical security measures to guard against unauthorized access to systems where we store personal data.  </p>
+				<p>We take appropriate security measures to protect against unauthorized access to or unauthorized alteration, disclosure or destruction of data. These include internal reviews of our data collection, storage and processing practices and security measures, including appropriate encryption and physical security measures to guard against unauthorized access to systems where we store personal data.</p>
 
 				<p>All information gathered on our Website is securely stored within our controlled database. The database is stored on servers secured behind a firewall; access to the servers is password-protected and is strictly limited. However, as effective as our security measures are, no security system is impenetrable. We cannot guarantee the security of our database, nor can we guarantee that information you supply will not be intercepted while being transmitted to us over the Internet. And, of course, any information you include in a posting to the discussion areas is available to anyone with Internet access.</p>
 
@@ -83,13 +79,12 @@ require_once __DIR__ . '/../inc/above.php';
 
 				<h5>Grievance Redressal </h5>
 
-				<p>Redressal Mechanism: Any complaints, abuse or concerns with regards to content and or comment or breach of these terms shall be immediately informed to the designated Grievance Officer as mentioned below via in writing or through email signed with the electronic signature to …………………………….. ("Grievance Officer").</p>
+				<p>Redressal Mechanism: Any complaints, abuse or concerns with regards to content and or comment or breach of these terms shall be immediately informed to the designated Grievance Officer as mentioned below via in writing or through email signed with the electronic signature to <strong>reach@guesture.in</strong> ("Grievance Officer").</p>
 
-				<p>  Mr. …………………………. <strong>(Grievance Officer) </strong></p>
-				<p><strong>www………………………………..com </strong></p>
-				<p>Company Name & Address</p>
-				<p>Email: </p>
-				<p>Ph: </p>
+				<p><strong>www.guesture.in</strong></p>
+				<p>Irina Hospitality Pvt Ltd</p>
+				<p>Old No 1097 New No 58 18th B Main <br>
+				5th Block Rajajinagar Bengaluru-560010</p>
 
 			</div>
 		</div>
