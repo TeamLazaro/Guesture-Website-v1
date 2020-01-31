@@ -22,6 +22,13 @@ if ( cmsIsEnabled() ) {
 	unset( $event );
 }
 
+$news = getPostsOf( 'news' );
+if ( cmsIsEnabled() ) {
+	foreach ( $news as &$newsPiece )
+		$newsPiece[ 'permalink' ] = get_permalink( $newsPiece[ 'ID' ] );
+	unset( $newsPiece );
+}
+
 ?>
 
 
@@ -1352,56 +1359,18 @@ if ( cmsIsEnabled() ) {
 	<!-- News -->
 	<div class="news-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="news-list card-list js_carousel_content">
-			<a class="news card fill-light js_carousel_item" href="https://yourstory.com/smbstory/coliving-guesture-nestaway-zolostays-oyo-life-bengaluru" target="_blank">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/01.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Source -->
-					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-ys.png<?php echo $ver ?>"></div> Your Story</div>
-					<!-- Title -->
-					<div class="title h5">How Bengaluru-based Guesture is making Rs 10 Cr a year with its community-driven approach for co-living.</div>
-				</div>
-			</a>
-			<a class="news card fill-light js_carousel_item" href="https://www.thehindubusinessline.com/news/real-estate/guesture-targets-students-millennials-under-co-living-space-at-electronic-city-bengaluru/article29641492.ece" target="_blank">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/02.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Source -->
-					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-bi.png<?php echo $ver ?>"></div> The Hindu</div>
-					<!-- Title -->
-					<div class="title h5">Guesture targets students, millennials under co-living space at Electronic City, Bengaluru.</div>
-				</div>
-			</a>
-			<a class="news card fill-light js_carousel_item" href="https://www.livemint.com/companies/start-ups/co-living-venture-guesture-in-talks-to-raise-50-million-11573446983624.html" target="_blank">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/03.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Source -->
-					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-lm.png<?php echo $ver ?>"></div> Live Mint</div>
-					<!-- Title -->
-					<div class="title h5">Co-living venture Guesture in talks to raise $50 million.</div>
-				</div>
-			</a>
-			<a class="news card fill-light js_carousel_item" href="https://content.magicbricks.com/property-news/industry-buzz/guesture-announces-2500-beds-to-accommodate-growing-demand-in-bengaluru/109066.html" target="_blank">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/04.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Source -->
-					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-mb.png<?php echo $ver ?>"></div> MagicBricks</div>
-					<!-- Title -->
-					<div class="title h5">Guesture announces 2500 beds to accommodate growing demand in Bengaluru.</div>
-				</div>
-			</a>
-			<a class="news card fill-light js_carousel_item" href="https://economictimes.indiatimes.com/magazines/panache/students-and-young-professionals-are-escaping-peevish-landlords-and-taking-refuge-in-co-living-spaces/articleshow/68443388.cms?from=mdr" target="_blank">
-				<!-- Thumbnail -->
-				<div class="thumbnail" style="background-image: url( 'media/news/thumbnail/05.png<?php echo $ver ?>');"></div>
-				<div class="info">
-					<!-- Source -->
-					<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="media/news/icon/icon-et.png<?php echo $ver ?>"></div> Economic Times</div>
-					<!-- Title -->
-					<div class="title h5">Co-living spaces are the next big trend among working millenials in Bengaluru.</div>
-				</div>
-			</a>
+			<?php foreach ( $news as $newsPiece ) : ?>
+				<a class="news card fill-light js_carousel_item" href="<?= getContent( '', 'source_link', $newsPiece[ 'ID' ] ) ?>" target="_blank">
+					<!-- Thumbnail -->
+					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $newsPiece[ 'ID' ] ) ?>' );"></div>
+					<div class="info">
+						<!-- Source -->
+						<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="<?= getContent( '', 'source_favicon -> url', $newsPiece[ 'ID' ] ) ?>"></div> <?= getContent( '', 'source_name', $newsPiece[ 'ID' ] ) ?></div>
+						<!-- Title -->
+						<div class="title h5"><?= $newsPiece[ 'post_title' ] ?></div>
+					</div>
+				</a>
+			<?php endforeach; ?>
 		</div>
 		<div class="scroll-controls">
 			<div class="row">
