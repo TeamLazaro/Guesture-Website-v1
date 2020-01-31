@@ -1252,7 +1252,7 @@ if ( cmsIsEnabled() ) {
 	<div class="event-carousel card-carousel js_carousel_container scroll-reveal">
 		<div class="event-list card-list js_carousel_content">
 			<?php foreach ( $events as $event ) : ?>
-				<div class="event card fill-light js_carousel_item">
+				<a class="event card fill-light js_carousel_item" href="<?= $event[ 'permalink' ] ?>">
 					<!-- Thumbnail -->
 					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $event[ 'ID' ] ) ?>' );"></div>
 					<div class="info">
@@ -1266,7 +1266,7 @@ if ( cmsIsEnabled() ) {
 						<!-- Title -->
 						<div class="title h4"><?= $event[ 'post_title' ] ?></div>
 					</div>
-				</div>
+				</a>
 			<?php endforeach; ?>
 		</div>
 		<div class="scroll-controls">
