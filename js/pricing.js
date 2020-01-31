@@ -295,7 +295,7 @@ $( function () {
 	 * Populating the modal with information on the package that was clicked
 	 *
 	 */
-	var $modal = $( "[ data-mod-id = 'what-is-included' ]" );
+	var $modal = $( ".js_modal_box_content[ data-mod-id = 'what-is-included' ]" );
 	var modalFields = {
 		$name: $modal.find( ".js_name" ),
 		$monthlyExpense: $modal.find( ".js_monthly_expense" ),
