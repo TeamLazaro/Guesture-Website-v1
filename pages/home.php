@@ -1265,9 +1265,9 @@ if ( cmsIsEnabled() ) {
 					<div class="info">
 						<!-- Date -->
 						<?php
-							$expiryDate = date_create( getContent( '', 'expiry_date', $deal[ 'ID' ] ) );
+							$eventDate = date_create( getContent( '', 'date', $event[ 'ID' ] ) );
 						?>
-						<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;"><?= $expiryDate->format( 'd' ) ?></span><br><?= $expiryDate->format( 'M' ) ?></div>
+						<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;"><?= $eventDate->format( 'd' ) ?></span><br><?= $eventDate->format( 'M' ) ?></div>
 						<!-- Tag -->
 						<div class="inline tag label strong text-uppercase text-neutral-3"><?= getContent( '', 'tag', $event[ 'ID' ] ) ?></div>
 						<!-- Title -->
