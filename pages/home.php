@@ -15,7 +15,11 @@ if ( cmsIsEnabled() ) {
 	unset( $deal );
 }
 
-$events = getPostsOf( 'events' );
+$events = getPostsOf( 'events', [
+	'orderBy' => 'meta_value',
+	'metaKey' => 'date',
+	'order' => 'ASC'
+] );
 if ( cmsIsEnabled() ) {
 	foreach ( $events as &$event )
 		$event[ 'permalink' ] = get_permalink( $event[ 'ID' ] );
