@@ -310,7 +310,7 @@ if ( cmsIsEnabled() ) {
 					<div class="panorama-container">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					</div>
-					<img class="js_image" src="media/pricing/rooms/av-solo.jpg<?php echo $ver ?>">
+					<img class="js_image">
 				</div>
 				<div class="intro space-min">
 					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 2 or 3 Bedroom Suite.</div>
@@ -424,7 +424,7 @@ if ( cmsIsEnabled() ) {
 					<div class="panorama-container">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					</div>
-					<img class="js_image" src="media/pricing/rooms/av-buddy.jpg<?php echo $ver ?>">
+					<img class="js_image">
 				</div>
 				<div class="intro space-min">
 					<div class="heading h5 strong opacity-50 space-min-top">Twin Sharing room in a 2 or 3 Bedroom Suite.</div>
@@ -538,7 +538,7 @@ if ( cmsIsEnabled() ) {
 					<div class="panorama-container">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
 					</div>
-					<img class="js_image" src="media/pricing/rooms/av-trio.jpg<?php echo $ver ?>">
+					<img class="js_image">
 				</div>
 				<div class="intro space-min">
 					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 2 or 3 Bedroom Suite.</div>
