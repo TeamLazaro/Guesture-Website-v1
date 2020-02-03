@@ -379,7 +379,7 @@ if ( cmsIsEnabled() ) {
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
-					<div class="columns small-12 _medium-6" style="position: relative">
+					<div class="columns small-12 _medium-6 space-min-bottom" style="position: relative">
 						<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 						<div class="phone-trap minimal phone-number">
 							<div class="block prefix-group" style="position: relative">
@@ -411,7 +411,7 @@ if ( cmsIsEnabled() ) {
 						</div>
 					</div>
 					<br>
-					<div class="columns small-12 large-6 clearfix hidden">
+					<div class="columns small-12 clearfix">
 						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 					</div>
@@ -493,7 +493,7 @@ if ( cmsIsEnabled() ) {
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
-					<div class="columns small-12 _medium-6" style="position: relative">
+					<div class="columns small-12 _medium-6 space-min-bottom" style="position: relative">
 						<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 						<div class="phone-trap minimal phone-number">
 							<div class="block prefix-group" style="position: relative">
@@ -525,7 +525,7 @@ if ( cmsIsEnabled() ) {
 						</div>
 					</div>
 					<br>
-					<div class="columns small-12 large-6 clearfix hidden">
+					<div class="columns small-12 clearfix">
 						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 					</div>
@@ -607,7 +607,7 @@ if ( cmsIsEnabled() ) {
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
-					<div class="columns small-12 _medium-6" style="position: relative">
+					<div class="columns small-12 _medium-6 space-min-bottom" style="position: relative">
 						<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 						<div class="phone-trap minimal phone-number">
 							<div class="block prefix-group" style="position: relative">
@@ -639,7 +639,7 @@ if ( cmsIsEnabled() ) {
 						</div>
 					</div>
 					<br>
-					<div class="columns small-12 large-6 clearfix hidden">
+					<div class="columns small-12 clearfix">
 						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 						<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 					</div>
@@ -714,7 +714,7 @@ if ( cmsIsEnabled() ) {
 						<!-- Action -->
 						<div class="action row">
 							<!-- Phone Trap Trigger -->
-							<label class="phone-trap-trigger columns small-12 js_login_trigger_region">
+							<label class="phone-trap-trigger columns small-12 js_login_trigger_region space-min-bottom">
 								<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
 								<button class="button block js_get_deal" id="deal<?= $index + 1 ?>" data-deal="<?= $deal[ 'post_title' ] ?>" data-c="deal">Get Deal</button>
 							</label>
@@ -793,7 +793,7 @@ if ( cmsIsEnabled() ) {
 							</label>
 						</div>
 						<br>
-						<div class="form-row columns small-12 large-6 clearfix hidden">
+						<div class="columns small-12 clearfix">
 							<div class="label strong text-green-2 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 							<div class="label strong text-green-2 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 						</div>
@@ -867,7 +867,7 @@ if ( cmsIsEnabled() ) {
 							</div>
 						</div>
 						<br>
-						<div class="columns small-12 large-6 clearfix hidden">
+						<div class="columns small-12 clearfix">
 							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 						</div>
@@ -1084,7 +1084,7 @@ if ( cmsIsEnabled() ) {
 							</div>
 						</div>
 						<br>
-						<div class="columns small-12 large-6 clearfix hidden">
+						<div class="columns small-12 clearfix">
 							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 						</div>

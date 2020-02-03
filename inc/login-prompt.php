@@ -2,7 +2,7 @@
 ?>
 <!-- Phone Trap form -->
 <form class="js_phone_form" style="display: none">
-	<div class="columns small-12 _medium-6" style="position: relative">
+	<div class="columns small-12 _medium-6 space-min-bottom" style="position: relative">
 		<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
 		<div class="phone-trap minimal phone-number">
 			<div class="block prefix-group" style="position: relative">
@@ -34,7 +34,7 @@
 		</div>
 	</div>
 	<br>
-	<div class="columns small-12 large-6 clearfix hidden">
+	<div class="columns small-12 clearfix">
 		<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
 		<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 	</div>

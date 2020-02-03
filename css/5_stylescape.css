@@ -1534,7 +1534,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	white-space: normal;
 	width: calc( 6 * var(--space-100) );
 	/*min-height: calc( (6 * var(--space-100) * 1.375 ) );*/
-	min-height: 500px;
+	min-height: 510px;
 	padding: 15px;
 	scroll-snap-align: center;
 	font-size: 1.4rem;
@@ -1590,7 +1590,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 }
 @media( min-width: 640px )  {
 	.card-carousel .card-list .card {
-		min-height: 520px;
+		min-height: 530px;
 	}
 	.card-carousel .card-list .card .title {
 		height: 130px;
@@ -1601,7 +1601,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.card-carousel .card-list .card {
 		width: calc( 4 * var(--space-100) );
 		/*min-height: calc( (4 * var(--space-100) * 1.375 ) );*/
-		min-height: 570px;
+		min-height: 580px;
 		padding: 15px;
 	}
 	.card-carousel .card-list .card .info {
@@ -1617,7 +1617,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 	.card-carousel .card-list .card {
 		width: calc( 3 * var(--space-100) );
 		/*min-height: calc( (3 * var(--space-100) * 1.375 ) );*/
-		min-height: 660px;
+		min-height: 670px;
 	}
 
 	.card-carousel .card-list .card .title {
