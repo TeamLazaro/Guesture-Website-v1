@@ -242,7 +242,7 @@ $( document ).on( "click", ".js_book_womens_block", function ( event ) {
  * Pricing Section
  * -------------------------------|
  */
-$( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio", function ( event ) {
+$( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_book_from_modal", function ( event ) {
 	var $button = $( event.target );
 	$button.prop( "disabled", true );
 	$button.text( "We'll call you shortly." );

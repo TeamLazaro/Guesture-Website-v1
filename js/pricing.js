@@ -297,6 +297,7 @@ $( function () {
 	 */
 	var $modal = $( ".js_modal_box_content[ data-mod-id = 'what-is-included' ]" );
 	var modalFields = {
+		$bookNow: $modal.find( ".js_book_from_modal" ),
 		$name: $modal.find( ".js_name" ),
 		$monthlyExpense: $modal.find( ".js_monthly_expense" ),
 		$location: $modal.find( ".js_location" ),
@@ -311,6 +312,15 @@ $( function () {
 	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
 		var packageName = $( data.trigger ).data( "package" );
 		var package = livingSituations[ packageName ];
+
+		// Prepare the "Book Now" button
+		modalFields.$bookNow.data( "product", packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
+		modalFields.$bookNow.data( "c", "pricing-modal-book-" + packageName );
+		modalFields.$bookNow.text( modalFields.$bookNow.data( "initial-text" ) );
+		modalFields.$bookNow.prop( "disabled", false );
+		loginPrompts.whatsIncluded.$phoneForm.hide();
+		loginPrompts.whatsIncluded.$OTPForm.hide();
+
 		modalFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
 		modalFields.$monthlyExpense.text( package.perDay );
 		modalFields.$location.text( package.location );

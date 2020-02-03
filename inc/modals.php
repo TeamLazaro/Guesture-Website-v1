@@ -55,14 +55,14 @@
 				<div class="row what-is-included">
 					<div class="columns small-12 fill-light" style="border-radius: 10px; overflow: hidden;">
 						<div class="row space-50-top space-min-bottom">
-							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
+							<div class="columns small-10 small-offset-1 large-8 xlarge-7 qpid_login_site">
 								<div class="h3 strong">The <span class="text-green-2 js_name">Buddy</span> Package</div>
 								<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@<span class="js_location">Alta Vista BLR</span></div>
 								<div class="h4 strong">For a monthly fee of <span class="text-green-2 js_monthly_expense">₹11,200</span></div>
 
-								<label>
+								<label class="js_login_trigger_region">
 									<span class="label block invisible">Book Now</span>
-									<button class="button fill-green">Book Now</button>
+									<button class="button fill-green js_book_from_modal" data-initial-text="Book Now" data-product="" data-c="">Book Now</button>
 								</label>
 								<div class="row">
 									<div class="columns small-12 medium-6 large-4 xlarge-3"><?php require __DIR__ . '/login-prompt.php'; ?></div>
