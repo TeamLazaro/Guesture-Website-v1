@@ -228,7 +228,7 @@ $( document ).on( "submit", ".js_contact_form", function ( event ) {
 $( document ).on( "click", ".js_book_womens_block", function ( event ) {
 	var $button = $( event.target );
 	$button.prop( "disabled", true );
-	$button.text( "We'll contact you soon!" );
+	$button.text( "We'll call you shortly." );
 
 	__.user.isInterestedIn( "Womens-only Block" );
 	__.user.update();
@@ -245,7 +245,7 @@ $( document ).on( "click", ".js_book_womens_block", function ( event ) {
 $( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio", function ( event ) {
 	var $button = $( event.target );
 	$button.prop( "disabled", true );
-	$button.text( "A request has been made." );
+	$button.text( "We'll call you shortly." );
 
 	var product = $button.data( "product" );
 	__.user.isInterestedIn( product );
