@@ -1263,7 +1263,7 @@ if ( cmsIsEnabled() ) {
 	<div class="event-carousel card-carousel js_carousel_container scroll-reveal <?php if ( empty( $events ) ) echo 'hidden' ?>">
 		<div class="event-list card-list js_carousel_content">
 			<?php foreach ( $events as $event ) : ?>
-				<a class="event card fill-light js_carousel_item" href="<?= $event[ 'permalink' ] ?>">
+				<a class="event card fill-light js_carousel_item" target="_blank" href="<?= $event[ 'permalink' ] ?>">
 					<!-- Thumbnail -->
 					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $event[ 'ID' ] ) ?>' );"></div>
 					<div class="info">

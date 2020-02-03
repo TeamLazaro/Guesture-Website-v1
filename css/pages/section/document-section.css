@@ -67,6 +67,18 @@
 	.document-section small { font-size: 1.2rem; }
 }
 
+
+/* -- Document Header -- */
+
+.document-header .thumbnail {
+	width: 100%;
+	padding-top: 100%;
+	border-radius: var(--space-min); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {}
 @media( min-width: 1480px ) {}
