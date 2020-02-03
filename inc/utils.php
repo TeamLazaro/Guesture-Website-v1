@@ -57,19 +57,32 @@ function setupVars () {
  * Get all posts of a certain type
  *
  */
-function getPostsOf ( $type, $limit = -1, $exclude = [ ] ) {
+function getPostsOf ( $type, $options = [ ] ) {
 
-	$limit = $limit ?: -1;
+	$limit = $options[ 'limit' ] ?? -1;
+	$order = $options[ 'order' ] ?? 'DESC';
+	$orderBy = $options[ 'orderBy' ] ?? 'date';
+
+	$postStatus = null;
+	if ( empty( $options[ 'postStatus' ] ) )
+		$postStatus = $type === 'attachment' ? 'inherit' : 'publish';
+	else
+		$postStatus = $options[ 'postStatus' ];
+
+	$exclude = $options[ 'exclude' ] ?? [ ];
 	if ( ! is_array( $exclude ) )
 		if ( is_int( $exclude ) )
 			$exclude = [ $exclude ];
 
+	$metaKey = $options[ 'metaKey' ] ?? '';
+
 	$posts = get_posts( [
 	    'post_type' => $type,
-	    'post_status' => 'publish',
+	    'post_status' => $postStatus,
 	    'numberposts' => $limit,
-	    // 'order' => 'ASC'
-	    'orderby' => 'date',
+	    'orderby' => $orderBy,
+	    'meta_key' => $metaKey,
+	    'order' => $order,
 	    'exclude' => $exclude
 	] );
 
