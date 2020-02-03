@@ -251,3 +251,21 @@ $( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio", funct
 	__.user.isInterestedIn( product );
 	__.user.update();
 } );
+
+
+
+
+/*
+ * -------------------------------\
+ * Deals
+ * -------------------------------|
+ */
+$( document ).on( "click", ".js_get_deal", function ( event ) {
+	var $button = $( event.target );
+	$button.prop( "disabled", true );
+	$button.text( "We'll call you shortly." );
+
+	var deal = "Deal: " + $button.data( "deal" );
+	__.user.isInterestedIn( deal );
+	__.user.update();
+} );

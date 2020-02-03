@@ -697,10 +697,10 @@ if ( cmsIsEnabled() ) {
 		</div>
 	</div>
 	<!-- Deal -->
-	<div class="deal-carousel card-carousel js_carousel_container scroll-reveal <?php if ( empty( $deals ) ) echo 'hidden' ?>">
+	<div class="deal-carousel card-carousel js_carousel_container js_deals scroll-reveal <?php if ( empty( $deals ) ) echo 'hidden' ?>">
 		<div class="deal-list card-list js_carousel_content">
-			<?php foreach ( $deals as $deal ) : ?>
-				<div class="deal card <?= getContent( false, 'dark_card', $deal[ 'ID' ] ) === true ? 'dark' : '' ?> fill-light js_carousel_item">
+			<?php foreach ( $deals as $index => $deal ) : ?>
+				<div class="deal card <?= getContent( false, 'dark_card', $deal[ 'ID' ] ) === true ? 'dark' : '' ?> fill-light js_carousel_item js_deal qpid_login_site">
 					<!-- Thumbnail -->
 					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $deal[ 'ID' ] ) ?>');"></div>
 					<div class="info">
