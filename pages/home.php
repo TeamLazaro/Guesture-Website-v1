@@ -21,8 +21,28 @@ $events = getPostsOf( 'events', [
 	'order' => 'DESC'
 ] );
 if ( cmsIsEnabled() ) {
-	foreach ( $events as &$event )
+	$now = date_create();
+	foreach ( $events as &$event ) {
 		$event[ 'permalink' ] = get_permalink( $event[ 'ID' ] );
+		$event[ 'date' ] = date_create( getContent( '', 'date', $event[ 'ID' ] ) );
+
+		$difference = $now->diff( $event[ 'date' ] );
+		$eventIsBeforeNow = $difference->invert ? true : false;
+		// $differenceInDays = (int) $difference->format( '%R%a' );
+		$differenceInDays = ( $eventIsBeforeNow ? -1 : 1 ) * $difference->d;
+		if ( $differenceInDays < 0 )
+			$event[ 'isBeforeToday' ] = true;
+		else if ( $differenceInDays === 0 ) {
+			if (
+				(int) $now->format( 'd' ) !== (int) $event[ 'date' ]->format( 'd' )
+					and
+				$eventIsBeforeNow
+			)
+				$event[ 'isBeforeToday' ] = true;
+		}
+		else
+			$event[ 'isBeforeToday' ] = false;
+	}
 	unset( $event );
 }
 
@@ -1224,15 +1244,11 @@ if ( cmsIsEnabled() ) {
 	<div class="event-carousel card-carousel js_carousel_container scroll-reveal <?php if ( empty( $events ) ) echo 'hidden' ?>">
 		<div class="event-list card-list js_carousel_content">
 			<?php foreach ( $events as $event ) : ?>
-				<a class="event card fill-light js_carousel_item" target="_blank" href="<?= getContent( $event[ 'permalink' ], 'external_page_link', $event[ 'ID' ] ) ?>">
+				<a class="event card fill-light <?php if ( $event[ 'isBeforeToday' ] ) echo 'opacity-50' ?> js_carousel_item" target="_blank" href="<?= getContent( $event[ 'permalink' ], 'external_page_link', $event[ 'ID' ] ) ?>">
 					<!-- Thumbnail -->
 					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $event[ 'ID' ] ) ?>' );"></div>
 					<div class="info">
-						<!-- Date -->
-						<?php
-							$eventDate = date_create( getContent( '', 'date', $event[ 'ID' ] ) );
-						?>
-						<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;"><?= $eventDate->format( 'd' ) ?></span><br><?= $eventDate->format( 'M' ) ?></div>
+						<div class="inline date h5 text-uppercase"><span class="h3 inline" style="line-height: 0.7;"><?= $event[ 'date' ]->format( 'd' ) ?></span><br><?= $event[ 'date' ]->format( 'M' ) ?></div>
 						<!-- Tag -->
 						<div class="inline tag label strong text-uppercase text-neutral-3"><?= getContent( '', 'tag', $event[ 'ID' ] ) ?></div>
 						<!-- Title -->
