@@ -18,7 +18,7 @@ if ( cmsIsEnabled() ) {
 $events = getPostsOf( 'events', [
 	'orderBy' => 'meta_value',
 	'metaKey' => 'date',
-	'order' => 'ASC'
+	'order' => 'DESC'
 ] );
 if ( cmsIsEnabled() ) {
 	foreach ( $events as &$event )
