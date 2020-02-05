@@ -10,9 +10,9 @@
 RewriteEngine On
 
 # Certain *static* pages need to first be augmented with some code
-RewriteRule ^/?(user/media/.+/.+/index.htm) pages/augment-static-page.php?path=$1&with=no-right-click [NC,QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^/?(media/user/.+/.+/index.htm) http://guesture.wip.lazaro.in/$1 [NC,QSA,R=302,L]
+RewriteRule ^/?(user/.*) http://guesture.wip.lazaro.in/$1 [NC,QSA,R=302,L]
+RewriteRule ^/?(user/media/.+/.+/index.htm) pages/augment-static-page.php?path=$1&with=no-right-click [NC,QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
