@@ -1341,7 +1341,7 @@ if ( cmsIsEnabled() ) {
 	<div class="news-carousel card-carousel js_carousel_container scroll-reveal <?php if ( empty( $news ) ) echo 'hidden' ?>">
 		<div class="news-list card-list js_carousel_content">
 			<?php foreach ( $news as $newsPiece ) : ?>
-				<a class="news card fill-light js_carousel_item" href="<?= getContent( '', 'source_link', $newsPiece[ 'ID' ] ) ?>" target="_blank">
+				<a class="news card fill-light js_carousel_item" href="<?= getContent( $newsPiece[ 'permalink' ], 'source_link', $newsPiece[ 'ID' ] ) ?>" target="_blank">
 					<!-- Thumbnail -->
 					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $newsPiece[ 'ID' ] ) ?>' );"></div>
 					<div class="info">
