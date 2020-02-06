@@ -818,6 +818,93 @@ select { cursor: pointer; }
 	}
 }
 
+/* -- Modal Carousel -- */
+
+.carousel.modal-carousel {}
+
+.carousel.modal-carousel:before,
+.carousel.modal-carousel:after { display: none; }
+
+.carousel.modal-carousel .carousel-list {
+	padding: 0 var(--space-50) var(--space-25);
+}
+
+.carousel.modal-carousel .carousel-list .carousel-list-item {
+	width: calc( 4 * var(--space-100) );
+	padding: 0 5px;
+}
+
+.carousel.modal-carousel .carousel-list .carousel-list-item .image {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 0;
+	padding-bottom: 64.25%;
+	border: solid 1px var(--neutral-1);
+	border-radius: var(--space-min);
+	overflow: hidden;
+	background-color: var(--neutral-1);
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.carousel.modal-carousel .carousel-list .carousel-list-item .image .caption {
+	position: absolute;
+	z-index: 2;
+	display: inline-block;
+	color: var(--light);
+	text-shadow: 0 0 5px rgba(0,0,0,0.5);
+	bottom: var(--space-min);
+	left: 50%;
+	transform: translateX(-50%);
+	line-height: 1;
+	padding: 3px 5px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 5px;
+}
+
+.carousel.modal-carousel .scroll-controls {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.carousel.modal-carousel .scroll-controls .scroll-left {
+	transform: translateX( calc( var(--space-50) - 50% ) );
+}
+
+.carousel.modal-carousel .scroll-controls .scroll-right {
+	transform: translateX( calc( 50% - var(--space-50) ) );
+}
+
+@media( min-width: 640px )  {
+	.carousel.modal-carousel .carousel-list {
+		padding: 0 var(--space-100) var(--space-25);
+	}
+
+	.carousel.modal-carousel .carousel-list .carousel-list-item {
+		width: calc( 5 * var(--space-100) );
+	}
+
+	.carousel.modal-carousel .scroll-controls .scroll-left {
+		transform: translateX( calc( var(--space-100) - 50% ) );
+	}
+
+	.carousel.modal-carousel .scroll-controls .scroll-right {
+		transform: translateX( calc( 50% - var(--space-100) ) );
+	}
+}
+@media( min-width: 1040px ) {
+	.carousel.modal-carousel .carousel-list .carousel-list-item {
+		width: calc( 4 * var(--space-100) );
+	}
+}
+@media( min-width: 1480px ) {
+	.carousel.modal-carousel .carousel-list .carousel-list-item {
+		width: calc( 3 * var(--space-100) );
+	}
+}
 
 
 

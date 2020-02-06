@@ -54,7 +54,7 @@
 			<div class="container">
 				<div class="row what-is-included">
 					<div class="columns small-12 fill-light" style="border-radius: 10px; overflow: hidden;">
-						<div class="row space-50-top space-min-bottom">
+						<div class="row space-50-top space-25-bottom">
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7 qpid_login_site">
 								<div class="h3 strong">The <span class="text-green-2 js_name">Buddy</span> Package</div>
 								<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@<span class="js_location">Alta Vista BLR</span></div>
@@ -75,97 +75,82 @@
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
 								<div class="h4 strong space-25-top-bottom text-green-2">What is in your room?</div>
 							</div>
-							<div class="columns small-10 small-offset-1 large-8 xlarge-7 column-wrap js_room">
-								<span class="block space-min-bottom">
-									<div class="p">2 Beds with mattress, pillow, 2 sets of linen</div>
-									<div class="p">2 Private Cupboards</div>
-									<div class="p">Curtains</div>
-									<div class="p">Trash Bin</div>
-								</span>
-								<span class="block space-min-bottom">
-									<div class="p strong text-uppercase">Attached Bathroom</div>
-									<div class="p">- Geyser</div>
-									<div class="p">- Shower Cubicle</div>
-									<div class="p">- Hand Shower</div>
-									<div class="p">- Vanity Basin</div>
-									<div class="p">- Western Toilet </div>
-									<div class="p">- Bathroom Faucet</div>
-									<div class="p">- Towel Rack</div>
-									<div class="p">- Soap Stand</div>
-									<div class="p">- Wall Mounted Mirror</div>
-									<div class="p">- Bathroom Essentials (Bucket & Mug)</div>
-									<div class="p">- Door Mat</div>
-								</span>
-								<span class="block space-min-bottom">
-									<div class="p strong text-uppercase">Attached Balcony </div>
+							<div class="p columns small-10 small-offset-1 large-8 xlarge-7 column-wrap js_room">
+								<span class="p block space-min-bottom js_room">
+									<!-- Inset Formated Text -->
 								</span>
 							</div>
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
 								<div class="h4 strong space-25-top-bottom text-green-2">What is in your suite?</div>
 							</div>
-							<div class="columns small-10 small-offset-1 large-8 xlarge-7 column-wrap js_suite">
-								<span class="block space-min-bottom">
-									<div class="p">The suite is a 1800sft 3BHK with a living room, dining room, kitchen and utility area. The suite is furnished.</div>
-								</span>
-								<span class="block space-min-bottom">
-									<div class="p strong text-uppercase">Living Room</div>
-									<div class="p">Sofa with Centre Table </div>
-									<div class="p">TV with Stand</div>
-									<div class="p">Wall Paintings</div>
-									<div class="p">Curtains</div>
-									<div class="p">Lights</div>
-									<div class="p">Fans</div>
-									<div class="p">Door Mat</div>
-									<div class="p">Wall Clock</div>
-								</span>
-								<span class="block space-min-bottom">
-									<div class="p strong text-uppercase">Dining Room</div>
-									<div class="p">Dining / Work Table </div>
-									<div class="p">6 Chairs</div>
-									<div class="p">Curtains</div>
-									<div class="p">Lights </div>
-									<div class="p">Fans</div>
-								</span>
-								<span class="block space-min-bottom">
-									<div class="p strong text-uppercase">Kitchen</div>
-									<div class="p">Refrigerator</div>
-									<div class="p">Microwave Oven</div>
-									<div class="p">Induction Stove</div>
-									<div class="p">Gas Stove</div>
-									<div class="p">Sandwich Toaster</div>
-									<div class="p">Water Purifier</div>
-									<div class="p">Electric Cooker</div>
-									<div class="p">Kitchen Utensils</div>
-									<div class="p">Electric Kettle</div>
-									<div class="p">Electric Waste Disposal Churner </div>
-								</span>
-								<span class="block space-min-bottom">
-									<div class="p strong text-uppercase">Utility</div>
-									<div class="p">Washing Machine</div>
-									<div class="p">Electric Clothes Dryer</div>
-									<div class="p">Trash Bin</div>
+							<div class="p columns small-10 small-offset-1 large-8 xlarge-7 column-wrap js_suite">
+								<span class="p block space-min-bottom js_suite">
+									<!-- Inset Formated Text -->
 								</span>
 							</div>
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
 								<div class="h4 strong space-25-top-bottom text-green-2">Services that are included?</div>
-								<span class="block space-min-bottom js_services">
-									<div class="p">DTH </div>
-									<div class="p">High Speed Internet</div>
-									<div class="p">Wifi</div>
-									<div class="p">Housekeeping</div>
-									<div class="p">Water Supply</div>
-									<div class="p">Electricity Supply </div>
-									<div class="p">24/7 Power Backup</div>
+								<span class="p block space-min-bottom js_services">
+									<!-- Inset Formated Text -->
 								</span>
 							</div>
 						</div>
-						<div class="row fill-dark space-min-top space-50-bottom" style="background: linear-gradient(15deg, var(--dark) 20%, var(--neutral-4) 100%);">
+						<div class="row fill-dark space-25-top-bottom" style="background: linear-gradient(15deg, var(--dark) 20%, var(--neutral-4) 100%);">
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
-								<div class="h4 strong space-25-top-bottom">Optional Add-on Services</div>
-								<span class="block space-min-bottom js_addons">
-									<div class="h5">2 meals a day - <span class="text-green-2">Monthly Fee of ₹2,300</span></div>
-									<div class="h5">Weekly Laundry - <span class="text-green-2">Monthly Fee of ₹1,200</span></div>
+								<div class="h4 strong space-25-bottom">Optional Add-on Services</div>
+								<span class="h5 block js_addons">
+									<!-- Inset Formated Text -->
 								</span>
+							</div>
+						</div>
+						<div class="row space-25-top space-min-bottom">
+							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
+								<div class="h4 strong text-green-2">The <span class="text-dark no-wrap">@Alta Vista - BLR</span> Campus.</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="carousel modal-carousel js_carousel_container">
+								<div class="carousel-list js_carousel_content">
+									<div class="carousel-list-item js_carousel_item">
+										<div class="image" style="background-image: url( 'media/sliding-gallery/5K8A6686.jpg' )"><span class="label caption">Balcony</span></div>
+									</div>
+									<div class="carousel-list-item js_carousel_item">
+										<div class="image" style="background-image: url( 'media/sliding-gallery/5K8A6988.jpg' )"><span class="label caption">Entrance</span></div>
+									</div>
+									<div class="carousel-list-item js_carousel_item">
+										<div class="image" style="background-image: url( 'media/sliding-gallery/5K8A6647.jpg' )"><span class="label caption">Bedroom</span></div>
+									</div>
+									<div class="carousel-list-item js_carousel_item">
+										<div class="image" style="background-image: url( 'media/sliding-gallery/5K8A6541.jpg' )"><span class="label caption">Living Room</span></div>
+									</div>
+								</div>
+								<div class="scroll-controls">
+									<div class="row">
+										<div class="container">
+											<div class="columns small-6">
+												<div class="scroll-button button fill-green-2 scroll-left unselectable js_pager" data-dir="left" tabindex="-1"><img src="media/glyph/32-leftarrow.svg?v=20190917"></div>
+											</div>
+											<div class="columns small-6 text-right">
+												<div class="scroll-button button fill-green-2 scroll-right unselectable js_pager" data-dir="right" tabindex="-1"><img src="media/glyph/32-rightarrow.svg?v=20190917"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row space-min-top space-50-bottom">
+							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
+								<span class="p block space-min-bottom">
+									<!-- Inset Formated Text -->
+									<b>Address :</b>
+									<br>
+									Shanders Alta Vista, Veer Sandra, Electronic City,
+									<br>
+									Bengaluru, Karnataka 560100.
+								</span>
+								<div class="space-25-top space-min-bottom">
+									<a href="https://goo.gl/maps/awWKyDwRoEPzcg8t9" target="_blank" class="h6 strong inline-middle"><img class="inline-middle" src="media/glyph/24-maps.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
+								</div>
 							</div>
 						</div>
 					</div>
