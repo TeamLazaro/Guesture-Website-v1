@@ -850,7 +850,7 @@ select { cursor: pointer; }
     background-size: cover;
 }
 
-.carousel.modal-carousel .carousel-list .carousel-list-item .image .caption {
+.carousel.modal-carousel .carousel-list .carousel-list-item .image .caption:not(:empty) {
 	position: absolute;
 	z-index: 2;
 	display: inline-block;
