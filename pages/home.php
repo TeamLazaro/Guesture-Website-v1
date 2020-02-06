@@ -1346,7 +1346,7 @@ if ( cmsIsEnabled() ) {
 					<div class="thumbnail" style="background-image: url( '<?= getContent( '', 'thumbnail -> sizes -> medium', $newsPiece[ 'ID' ] ) ?>' );"></div>
 					<div class="info">
 						<!-- Source -->
-						<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="<?= getContent( '/media/favicon/favicon-16x16.png', 'source_favicon -> url', $newsPiece[ 'ID' ] ) ?>"></div> <?= getContent( '', 'source_name', $newsPiece[ 'ID' ] ) ?></div>
+						<div class="source label strong text-uppercase space-min-bottom"><div class="favicon inline-middle" style="margin-right: 5px;"><img src="<?= getContent( '/media/favicon/favicon-16x16.png', 'source_favicon -> url', $newsPiece[ 'ID' ] ) ?>"></div> <?= getContent( 'Guesture News', 'source_name', $newsPiece[ 'ID' ] ) ?></div>
 						<!-- Title -->
 						<div class="title h5"><?= $newsPiece[ 'post_title' ] ?></div>
 					</div>
