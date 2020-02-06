@@ -105,12 +105,12 @@
 						</div>
 						<div class="row space-25-top space-min-bottom">
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
-								<div class="h4 strong text-green-2">The <span class="text-dark no-wrap">@Alta Vista - BLR</span> Campus.</div>
+								<div class="h4 strong text-green-2">The <span class="text-dark no-wrap">@</span><span class="text-dark no-wrap js_location">Alta Vista - BLR</span> Campus.</div>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row js_location_images_container">
 							<div class="carousel modal-carousel js_carousel_container">
-								<div class="carousel-list js_carousel_content">
+								<div class="carousel-list js_location_images js_carousel_content">
 									<div class="carousel-list-item js_carousel_item">
 										<div class="image" style="background-image: url( 'media/sliding-gallery/5K8A6686.jpg' )"><span class="label caption">Balcony</span></div>
 									</div>
@@ -140,16 +140,18 @@
 						</div>
 						<div class="row space-min-top space-50-bottom">
 							<div class="columns small-10 small-offset-1 large-8 xlarge-7">
-								<span class="p block space-min-bottom">
+								<div class="p block space-min-bottom">
 									<!-- Inset Formated Text -->
 									<b>Address :</b>
-									<br>
-									Shanders Alta Vista, Veer Sandra, Electronic City,
-									<br>
-									Bengaluru, Karnataka 560100.
-								</span>
+									<span class="js_location_address">
+										<br>
+										Shanders Alta Vista, Veer Sandra, Electronic City,
+										<br>
+										Bengaluru, Karnataka 560100.
+									</span>
+								</div>
 								<div class="space-25-top space-min-bottom">
-									<a href="https://goo.gl/maps/awWKyDwRoEPzcg8t9" target="_blank" class="h6 strong inline-middle"><img class="inline-middle" src="media/glyph/24-maps.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
+									<a href="https://goo.gl/maps/awWKyDwRoEPzcg8t9" target="_blank" class="h6 strong inline-middle js_location_google_maps"><img class="inline-middle" src="media/glyph/24-maps.svg<?php echo $ver ?>" style="margin-right: 5px;"> Open in Google Maps</a>
 								</div>
 							</div>
 						</div>

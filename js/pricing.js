@@ -307,7 +307,11 @@ $( function () {
 		$room: $modal.find( ".js_room" ),
 		$suite: $modal.find( ".js_suite" ),
 		$services: $modal.find( ".js_services" ),
-		$addOns: $modal.find( ".js_addons" )
+		$addOns: $modal.find( ".js_addons" ),
+		$locationImagesContainer: $modal.find( ".js_location_images_container" ),
+		$locationImages: $modal.find( ".js_location_images" ),
+		$locationAddress: $modal.find( ".js_location_address" ),
+		$locationGoogleMaps: $modal.find( ".js_location_google_maps" )
 	};
 	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
 		var packageName = $( data.trigger ).data( "package" );
@@ -334,6 +338,30 @@ $( function () {
 		modalFields.$suite.html( package.suite.replace( /\n/g, "<br>" ) );
 		modalFields.$services.html( package.services.replace( /\n/g, "<br>" ) );
 		modalFields.$addOns.html( package[ "add-ons" ].replace( /\n/g, "<br>" ) );
+		var locationImagesMarkup = package.locationImages.trim()
+			.split( "\n" )
+			.filter( function ( image ) {
+				return image;
+			} )
+			.map( function ( image ) {
+				var parts = image.split( " ~ " );
+				return {
+					url: parts[ 1 ] || parts[ 0 ],
+					caption: parts[ 1 ] ? parts[ 0 ] : ""
+				}
+			} )
+			.reduce( function ( markup, image ) {
+				return markup + `<div class="carousel-list-item js_carousel_item">
+					<div class="image" style="background-image: url( '${ image.url }' )"><span class="label caption">${ image.caption }</span></div>
+				</div>`
+			}, "" )
+		modalFields.$locationImages.html( locationImagesMarkup );
+		if ( ! locationImagesMarkup )
+			modalFields.$locationImagesContainer.addClass( "hidden" );
+		else
+			modalFields.$locationImagesContainer.removeClass( "hidden" );
+		modalFields.$locationAddress.html( package.locationAddress );
+		modalFields.$locationGoogleMaps.attr( "href", package.locationGoogleMaps );
 	} );
 
 
