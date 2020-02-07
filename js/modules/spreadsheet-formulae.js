@@ -247,6 +247,15 @@
 			return errors.error;
 	};
 
+	// This is re-implementation of the VLOOKUP function that's pre-packaged with XLSX-CALC
+	formulae.VLOOKUP = function ( key, matrix, return_index ) {
+		var _i = 0;
+		for ( _i = 0; _i < matrix.length; _i += 1 )
+			if ( matrix[ _i ][ 0 ] == key )
+				return matrix[ _i ][ return_index - 1 ];
+		return errors.na;
+	}
+
 	formulae.CHOOSE = function () {
 		if ( arguments.length < 2 )
 			return errors.na;
