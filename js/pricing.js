@@ -360,7 +360,7 @@ $( function () {
 			modalFields.$locationImagesContainer.addClass( "hidden" );
 		else
 			modalFields.$locationImagesContainer.removeClass( "hidden" );
-		modalFields.$locationAddress.html( package.locationAddress );
+		modalFields.$locationAddress.html( package.locationAddress.split( "\n" ).join( "<br>" ) );
 		modalFields.$locationGoogleMaps.attr( "href", package.locationGoogleMaps );
 	} );
 
