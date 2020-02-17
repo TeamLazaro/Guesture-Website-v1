@@ -226,9 +226,12 @@ function pageIsStatic () {
  * Get the current post that the url is refering to
  *
  */
-function getCurrentPost ( $slug, $type = 'post' ) {
+function getCurrentPost ( $slug, $type = null ) {
 	if ( cmsIsEnabled() )
-		return get_page_by_path( $slug, OBJECT, $type );
+		if ( ! empty( $type ) )
+			return get_page_by_path( $slug, OBJECT, $type );
+		else
+			return get_page_by_path( $slug, OBJECT, 'post' ) ?: get_page_by_path( $slug, OBJECT, 'page' );
 	else
 		return [ ];
 }
