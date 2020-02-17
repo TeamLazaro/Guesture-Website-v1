@@ -261,14 +261,14 @@ if ( cmsIsEnabled() ) {
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-siemens.svg<?php echo $ver ?>"></div>
 					<div class="info">
-						<div class="h4 strong">20min</div>
+						<div class="h4 strong">12min</div>
 						<div class="h6 strong text-neutral-2">to Siemens</div>
 					</div>
 				</div>
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-tata.svg<?php echo $ver ?>"></div>
 					<div class="info">
-						<div class="h4 strong">20min</div>
+						<div class="h4 strong">6min</div>
 						<div class="h6 strong text-neutral-2">to Tata Consultancy Services</div>
 					</div>
 				</div>
@@ -277,14 +277,14 @@ if ( cmsIsEnabled() ) {
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-techmahindra.svg<?php echo $ver ?>"></div>
 					<div class="info">
-						<div class="h4 strong">20min</div>
+						<div class="h4 strong">10min</div>
 						<div class="h6 strong text-neutral-2">to Tech Mahindra</div>
 					</div>
 				</div>
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-infosys.svg<?php echo $ver ?>"></div>
 					<div class="info">
-						<div class="h4 strong">22min</div>
+						<div class="h4 strong">12min</div>
 						<div class="h6 strong text-neutral-2">to Infosys Campus</div>
 					</div>
 				</div>
@@ -293,14 +293,14 @@ if ( cmsIsEnabled() ) {
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-biocon.svg<?php echo $ver ?>"></div>
 					<div class="info">
-						<div class="h4 strong">29min</div>
+						<div class="h4 strong">10min</div>
 						<div class="h6 strong text-neutral-2">to BioCon</div>
 					</div>
 				</div>
 				<div class="workplace">
 					<div class="image"><img class="block" src="media/icons/icon-ge.svg<?php echo $ver ?>"></div>
 					<div class="info">
-						<div class="h4 strong">28min</div>
+						<div class="h4 strong">15min</div>
 						<div class="h6 strong text-neutral-2">to GE Intelligent Platforms</div>
 					</div>
 				</div>
