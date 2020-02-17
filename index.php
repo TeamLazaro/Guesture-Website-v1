@@ -15,7 +15,7 @@ $requestPath = trim(
 	strstr( $_SERVER[ 'REQUEST_URI' ], '?', true ) ?: $_SERVER[ 'REQUEST_URI' ],
 	'/'
 );
-$postType = 'page';
+$postType = null;
 $urlSlug = '';
 
 
