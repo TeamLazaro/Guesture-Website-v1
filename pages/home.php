@@ -361,25 +361,25 @@ if ( cmsIsEnabled() ) {
 							<option>Alta Vista - BLR</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">View</div>
 						<select class="minimal inline js_attribute js_view" data-name="view">
 							<option>Not Particular</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">A/C</div>
 						<select class="minimal inline js_attribute js_ac" data-name="a/c">
 							<option>Non A/C Room</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">Smoking</div>
 						<select class="minimal inline js_attribute js_smoking" data-name="smoking">
 							<option>Not Particular</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">Diet</div>
 						<select class="minimal inline js_attribute js_diet" data-name="diet">
 							<option>Not Particular</option>
@@ -475,25 +475,25 @@ if ( cmsIsEnabled() ) {
 							<option>Alta Vista - BLR</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong opacity-50 inline">View</div>
 						<select class="minimal dark inline js_attribute js_view" data-name="view">
 							<option>Not Particular</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong opacity-50 inline">A/C</div>
 						<select class="minimal dark inline js_attribute js_ac" data-name="a/c">
 							<option>Non A/C Room</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong opacity-50 inline">Smoking</div>
 						<select class="minimal dark inline js_attribute js_smoking" data-name="smoking">
 							<option>Not Particular</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong opacity-50 inline">Diet</div>
 						<select class="minimal dark inline js_attribute js_diet" data-name="diet">
 							<option>Not Particular</option>
@@ -589,25 +589,25 @@ if ( cmsIsEnabled() ) {
 							<option>Alta Vista - BLR</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">View</div>
 						<select class="minimal inline js_attribute js_view" data-name="view">
 							<option>Not Particular</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">A/C</div>
 						<select class="minimal inline js_attribute js_ac" data-name="a/c">
 							<option>Non A/C Room</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">Smoking</div>
 						<select class="minimal inline js_attribute js_smoking" data-name="smoking">
 							<option>Not Particular</option>
 						</select>
 					</div>
-					<div class="flex">
+					<div class="flex hidden">
 						<div class="h4 strong text-green-2 opacity-50 inline">Diet</div>
 						<select class="minimal inline js_attribute js_diet" data-name="diet">
 							<option>Not Particular</option>
