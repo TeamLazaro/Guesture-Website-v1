@@ -17,6 +17,8 @@ $requestPath = trim(
 );
 $postType = null;
 $urlSlug = '';
+// Does this route have a dedicated template?
+$hasDedicatedTemplate = false;
 
 
 
@@ -27,6 +29,7 @@ $urlSlug = '';
  */
 // Home page
 if ( $requestPath === '' ) {
+	$hasDedicatedTemplate = true;
 	$urlSlug = 'home';
 	$_GET[ '_slug' ] = 'home';
 	return require_once $homePage;
@@ -35,6 +38,7 @@ if ( $requestPath === '' ) {
 // Every other page
 $filename = $documentRoot . '/pages/' . $requestPath . '.php';
 if ( file_exists( $filename ) ) {
+	$hasDedicatedTemplate = true;
 	// Set a query param
 	$urlSlug = $requestPath;
 	$_GET[ '_slug' ] = $requestPath;
@@ -47,5 +51,8 @@ else if ( count( explode( '/', $requestPath ) ) === 2 ) {
 	$filename = $documentRoot . '/pages/' . $postType . '.php';
 	return require_once $filename;
 }
-else
-	return header( 'Location: /', true, 302 );
+else {
+	$urlSlug = $requestPath;
+	$filename = $documentRoot . '/pages/default.php';
+	return require_once $filename;
+}
