@@ -1635,6 +1635,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 .card-carousel .card-list .card.dark {
 	background-color: var(--dark);
 	color: var(--light);
+	background-image: linear-gradient(45deg, var(--dark) 30%, var(--neutral-5) 100%);
 }
 
 .card-carousel .card-list .card.dark .button {
@@ -1644,7 +1645,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 .card-carousel .card-list .card .thumbnail {
 	width: 100%;
 	padding-top: 100%;
-	border-radius: var(--space-min); 
+	border-radius: var(--space-min);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -1683,7 +1684,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		height: 130px;
 	}
 }
-	
+
 @media( min-width: 1040px ) {
 	.card-carousel .card-list .card {
 		width: calc( 4 * var(--space-100) );
@@ -1725,7 +1726,7 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 		min-height: 475px;
 	}
 }
-	
+
 @media( min-width: 1040px ) {
 	.card-carousel .card-list .card.news {
 		min-height: 520px;

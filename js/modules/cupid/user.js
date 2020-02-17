@@ -295,6 +295,12 @@ Person.prototype.requestOTP = function requestOTP ( product ) {
 				reject( { code: 1, message: "The phone number you've provided is not valid. Please try again." } );
 				return;
 			}
+			// the message reads: "Insufficient Account Balance"
+			else if ( /(insufficient|account|balance)/.test( responseErrorMessage ) ) {
+				beaconDistress( "2Factor: Balance needs to be topped up." );
+				resolve( response );
+				return;
+			}
 			else {
 				reject( { code: 1, message: responseErrorMessage } );
 				return;
