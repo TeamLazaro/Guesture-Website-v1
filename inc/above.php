@@ -57,10 +57,11 @@ if ( cmsIsEnabled() ) {
 $siteTitle = getContent( '', 'page_title', $urlSlug ) ?: getContent( 'Guesture', 'page_title' );
 $pageUrl = $siteUrl . $requestPath;
 
+// Build the Page Title ( if an explicit one is set, use that )
 if ( cmsIsEnabled() and ! empty( $thePost ) )
-	$pageTitle = $thePost->post_title . ' | ' . $siteTitle;
+	$pageTitle = ( $pageTitle ?? $thePost->post_title ) . ' | ' . $siteTitle;
 else
-	$pageTitle = $siteTitle;
+	$pageTitle = empty( $pageTitle ) ? $siteTitle : ( $pageTitle . ' | ' . $siteTitle );
 
 
 // Get the page's image for SEO and other related purposes
