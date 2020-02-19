@@ -58,22 +58,22 @@ define( 'DB_FILE', 'cms.db.sqlite' );
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'guesture');
+define( 'DB_NAME', CMS_DB_NAME );
 
 /** MySQL database username */
-define('DB_USER', 'remotelazaro');
+define( 'DB_USER', CMS_DB_USER );
 
 /** MySQL database password */
-define('DB_PASSWORD', 't34m,l4z4r0,2');
+define( 'DB_PASSWORD', CMS_DB_PASSWORD );
 
 /** MySQL hostname */
-define('DB_HOST', '139.59.39.166');
+define( 'DB_HOST', CMS_DB_HOST );
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+define( 'DB_COLLATE', 'utf8mb4_unicode_ci' );
 
 /**
  * Authentication Unique Keys and Salts.
