@@ -9,9 +9,11 @@
 
 RewriteEngine On
 
-# Certain *static* pages need to first be augmented with some code
+# If the content assets is not present locally, fetch it from "the remote server"
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^/?(content/.*) http://guesture.wip.lazaro.in/$1 [NC,QSA,R=302,L]
+RewriteRule ^/?(content/.*) server/forward-to-remote-server.php [NC,QSA,L]
+
+# Certain *static* pages (in the content folder) need to first be augmented with some code
 RewriteRule ^/?(content/media/.+/.+/index.htm) pages/augment-static-page.php?path=$1&with=no-right-click [NC,QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
