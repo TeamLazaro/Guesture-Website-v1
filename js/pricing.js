@@ -93,7 +93,7 @@ $( function () {
 	};
 	LivingSituation.prototype.render = function () {
 		this.$el.find( ".js_image" ).attr( "media/pricing/rooms/" + this.photo );
-		this.$el.find( ".js_panorama" ).attr( "src", this.panorama );
+		this.$el.find( ".js_panorama" ).attr( "src", this.panorama || "/media/favicon/favicon.ico" );
 		this.$el.find( ".js_balcony" ).html(
 			this.balconyOptions.map( createSelectOption ).join( "" )
 		);
@@ -123,7 +123,7 @@ $( function () {
 	LivingSituation.prototype.renderComputedDetails = function () {
 		this.$el.find( ".js_daily_expense" ).text( this.perDay );
 		this.$el.find( ".js_monthly_expense" ).text( this.monthlyFee );
-		this.$el.find( ".js_panorama" ).attr( "src", this.panorama );
+		this.$el.find( ".js_panorama" ).attr( "src", this.panorama || "/media/favicon/favicon.ico" );
 		if ( this.perDay === "" || this.monthlyFee === "" )
 			this.$el.addClass( "invalid" );
 		else
@@ -329,7 +329,7 @@ $( function () {
 		modalFields.$monthlyExpense.text( package.perDay );
 		modalFields.$location.text( package.location );
 		modalFields.$summary.text( package.summary );
-		modalFields.$virtualTour.attr( "src", package.virtualTour );
+		modalFields.$virtualTour.attr( "src", package.virtualTour || "/media/favicon/favicon.ico" );
 		if ( package.virtualTour )
 			modalFields.$virtualTourContainer.removeClass( "hidden" );
 		else
