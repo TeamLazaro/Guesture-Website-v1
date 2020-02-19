@@ -350,7 +350,7 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 					<div class="flex">
-						<div class="h4 strong text-green-2 opacity-50 inline">Live</div>
+						<div class="h4 strong text-green-2 opacity-50 inline">Duration</div>
 						<select class="minimal inline js_attribute js_duration" data-name="duration">
 							<option>3 Months</option>
 						</select>
@@ -464,7 +464,7 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 					<div class="flex">
-						<div class="h4 strong opacity-50 inline">Live</div>
+						<div class="h4 strong opacity-50 inline">Duration</div>
 						<select class="minimal dark inline js_attribute js_duration" data-name="duration">
 							<option>3 Months</option>
 						</select>
@@ -578,7 +578,7 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 					<div class="flex">
-						<div class="h4 strong text-green-2 opacity-50 inline">Live</div>
+						<div class="h4 strong text-green-2 opacity-50 inline">Duration</div>
 						<select class="minimal inline js_attribute js_duration" data-name="duration">
 							<option>3 Months</option>
 						</select>
@@ -971,7 +971,7 @@ if ( cmsIsEnabled() ) {
 				</div>
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6519.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6793.jpg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/av-solo-B.jpg' )">
 				</div>
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6875.jpg' )">
 				</div>
@@ -987,7 +987,7 @@ if ( cmsIsEnabled() ) {
 				</div>
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6988.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6647.jpg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7057.jpg' )">
 				</div>
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6541.jpg' )">
 				</div>
@@ -1003,7 +1003,7 @@ if ( cmsIsEnabled() ) {
 			<div class="track js_track">
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6838.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6772.jpg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6880.jpg' )">
 				</div>
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7102.jpg' )">
 				</div>
@@ -1011,7 +1011,7 @@ if ( cmsIsEnabled() ) {
 				</div>
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A7493.jpg' )">
 				</div>
-				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A4978.jpg' )">
+				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/dw-buddy-B.jpg' )">
 				</div>
 				<div class="image bg-image" style="background-image: url( 'media/sliding-gallery/5K8A6581.jpg' )">
 				</div>
