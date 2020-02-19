@@ -137,7 +137,7 @@ $( function () {
 	 */
 	function getNumbers () {
 
-		var url = "/data/numbers.json" + "?t=" + ( new Date() ).getTime();
+		var url = "/content/data/numbers.json" + "?t=" + ( new Date() ).getTime();
 
 		var ajaxRequest = $.ajax( {
 			url: url,
