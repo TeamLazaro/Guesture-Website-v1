@@ -18,12 +18,43 @@
  * @package WordPress
  */
 
-if ( ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) !== 'guesture.wip.lazaro.in' )
-	if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/cms/wp-content/uploads/' ) !== false )
-		return header( 'Location: http://guesture.wip.lazaro.in' . $_SERVER[ 'REQUEST_URI' ], true, 302 );
+/**
+ * Project configuration
+ *
+ * Pull the configuration file from the project root
+ */
+require_once __DIR__ . '/../conf.php';
 
+/**
+ * Routing
+ *
+ */
+// Fetch media files from the WIP server
+if ( CMS_FETCH_MEDIA_REMOTELY )
+	if ( ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) !== CMS_REMOTE_ADDRESS )
+		if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/cms/wp-content/uploads/' ) !== false )
+			return header( 'Location: http://' . CMS_REMOTE_ADDRESS . $_SERVER[ 'REQUEST_URI' ], true, 302 );
+
+
+
+/**
+ * WordPress Locations (Frontend and Backend)
+ *
+ * Set it such that it is contextual to the domain that the site is hosted behind
+ */
 define( 'WP_HOME', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) );
 define( 'WP_SITEURL', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) . '/cms' );
+
+
+
+/**
+ * Database
+ *
+ */
+// SQLite
+define( 'USE_MYSQL', ! CMS_USE_SQLITE );
+define( 'DB_DIR', $_SERVER[ 'DOCUMENT_ROOT' ] . '/data/' );
+define( 'DB_FILE', 'cms.db.sqlite' );
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
@@ -71,30 +102,34 @@ define('NONCE_SALT',       'SzD-+R<V/g#OY`Tdvp7/Ux|c(2ZOH$Ls^w>YvTD9HvGe6W0aZu*^
  */
 $table_prefix = 'wp_';
 
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
+ */
+define( 'WP_DEBUG', CMS_DEBUG_MODE );
+define( 'WP_DEBUG_LOG', CMS_DEBUG_LOG_TO_FILE );
+define( 'WP_DEBUG_DISPLAY', CMS_DEBUG_LOG_TO_FRONTEND );
+ini_set( 'display_errors', CMS_DEBUG_LOG_TO_FRONTEND ? '1' : '0' );
 
 /**
- * Debug Logging
+ * WordPress Updates
+ *
  */
-define( 'WP_DEBUG', true );
-define( 'WP_DEBUG_LOG', true );
-/**
- * Disable auto-updates
- */
-define( 'WP_AUTO_UPDATE_CORE', false );
-/**
- * Database
- */
-// SQLite
-define( 'USE_MYSQL', true );
-define( 'DB_DIR', $_SERVER[ 'DOCUMENT_ROOT' ] . '/data/' );
-define( 'DB_FILE', 'cms.db.sqlite' );
+define( 'WP_AUTO_UPDATE_CORE', CMS_AUTO_UPDATE );
 
-
-/* That's all, stop editing! Happy blogging. */
+/* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if ( ! defined( 'ABSPATH' ) )
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 
 /** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once( ABSPATH . 'wp-settings.php' );
