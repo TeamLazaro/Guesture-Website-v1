@@ -2,6 +2,13 @@
 # the .DS_Store files everywhere
 .DS_Store
 
+# the configuration file
+/conf.php
+/conf.development.php
+/conf.staging.php
+/conf.wip.php
+/conf.production.php
+
 # the media directory
 /media
 
