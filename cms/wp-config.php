@@ -125,6 +125,13 @@ ini_set( 'display_errors', CMS_DEBUG_LOG_TO_FRONTEND ? '1' : '0' );
  */
 define( 'WP_AUTO_UPDATE_CORE', CMS_AUTO_UPDATE );
 
+/**
+ * Media and Uploads
+ *
+ */
+define( 'UPLOADS', '../content/media/cms' );	# this one is relative to `ABSPATH`
+
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
