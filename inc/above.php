@@ -3,7 +3,8 @@
 // Get utility functions
 require_once __DIR__ . '/utils.php';
 // Include WordPress for Content Management
-initWordPress();
+if ( CMS_ENABLED )
+	initWordPress();
 
 /* -- Lazaro disclaimer and footer -- */
 require_once __DIR__ . '/lazaro.php';
