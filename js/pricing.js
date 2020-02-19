@@ -129,7 +129,7 @@ $( function () {
 		else
 			this.$el.removeClass( "invalid" );
 		// this.$el.find( ".js_image" ).attr( "src", "media/pricing/rooms/" + this.photo );
-		this.$el.find( ".js_image" ).attr( "src", "/user/media/photo/" + this.photo );
+		this.$el.find( ".js_image" ).attr( "src", "/content/media/photo/" + this.photo );
 	};
 
 	/*

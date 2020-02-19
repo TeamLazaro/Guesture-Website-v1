@@ -15,8 +15,8 @@
 # the data directory
 /data
 
-# the user directory
-/user
+# the content directory
+/content
 
 # the cms directory
 # /cms

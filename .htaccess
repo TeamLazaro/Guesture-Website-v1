@@ -11,8 +11,8 @@ RewriteEngine On
 
 # Certain *static* pages need to first be augmented with some code
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^/?(user/.*) http://guesture.wip.lazaro.in/$1 [NC,QSA,R=302,L]
-RewriteRule ^/?(user/media/.+/.+/index.htm) pages/augment-static-page.php?path=$1&with=no-right-click [NC,QSA,L]
+RewriteRule ^/?(content/.*) http://guesture.wip.lazaro.in/$1 [NC,QSA,R=302,L]
+RewriteRule ^/?(content/media/.+/.+/index.htm) pages/augment-static-page.php?path=$1&with=no-right-click [NC,QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
