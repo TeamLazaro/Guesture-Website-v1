@@ -14,7 +14,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^/?(content/.*) server/forward-to-remote-server.php [NC,QSA,L]
 
 # Certain *static* pages (in the content folder) need to first be augmented with some code
-RewriteRule ^/?(content/media/.+/.+/index.htm) pages/augment-static-page.php?path=$1&with=no-right-click [NC,QSA,L]
+RewriteRule ^/?(content/media/.+/.+/index.htm) pages/augment-static-page.php?path=$1&with[]=no-right-click&with[]=google-tag-manager [NC,QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
