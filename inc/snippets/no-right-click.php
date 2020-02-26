@@ -1,5 +1,3 @@
-<?php
-?>
 <script type="text/javascript">
 	document.addEventListener( "contextmenu", function ( event ) {
 		event.preventDefault();
