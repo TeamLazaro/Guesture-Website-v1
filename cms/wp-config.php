@@ -25,15 +25,24 @@
  */
 require_once __DIR__ . '/../conf.php';
 
+
+if ( HTTPS_SUPPORT )
+	$httpProtocol = 'https';
+else
+	$httpProtocol = 'http';
+
+$hostName = $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ];
+
+
 /**
  * Routing
  *
  */
 // Fetch media files from the WIP server
 if ( CMS_FETCH_MEDIA_REMOTELY )
-	if ( ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) !== CMS_REMOTE_ADDRESS )
+	if ( $hostName !== CMS_REMOTE_ADDRESS )
 		if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/cms/wp-content/uploads/' ) !== false )
-			return header( 'Location: http://' . CMS_REMOTE_ADDRESS . $_SERVER[ 'REQUEST_URI' ], true, 302 );
+			return header( 'Location: ' . $httpProtocol . '://' . CMS_REMOTE_ADDRESS . $_SERVER[ 'REQUEST_URI' ], true, 302 );
 
 
 
@@ -42,8 +51,8 @@ if ( CMS_FETCH_MEDIA_REMOTELY )
  *
  * Set it such that it is contextual to the domain that the site is hosted behind
  */
-define( 'WP_HOME', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) );
-define( 'WP_SITEURL', 'http://' . ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) . '/cms' );
+define( 'WP_HOME', $httpProtocol . '://' . $hostName );
+define( 'WP_SITEURL', $httpProtocol . '://' . $hostName . '/cms' );
 
 
 
@@ -129,7 +138,7 @@ define( 'WP_AUTO_UPDATE_CORE', CMS_AUTO_UPDATE );
  * Media and Uploads
  *
  */
-define( 'UPLOADS', '../content/media/cms' );	# this one is relative to `ABSPATH`
+define( 'UPLOADS', '../content/cms' );	# this one is relative to `ABSPATH`
 
 
 /* That's all, stop editing! Happy publishing. */

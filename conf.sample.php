@@ -8,6 +8,12 @@
  */
 
 /**
+ * General
+ *
+ */
+const HTTPS_SUPPORT = false;
+
+/**
  * Content Management System (CMS)
  *
  */
