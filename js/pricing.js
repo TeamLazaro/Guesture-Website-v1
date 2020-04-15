@@ -300,6 +300,7 @@ $( function () {
 		$bookNow: $modal.find( ".js_book_from_modal" ),
 		$name: $modal.find( ".js_name" ),
 		$monthlyExpense: $modal.find( ".js_monthly_expense" ),
+		$monthlyFee: $modal.find( ".js_monthly_fee" ),
 		$location: $modal.find( ".js_location" ),
 		$summary: $modal.find( ".js_summary" ),
 		$virtualTourContainer: $modal.find( ".js_virtual_tour_container" ),
@@ -327,6 +328,7 @@ $( function () {
 
 		modalFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
 		modalFields.$monthlyExpense.text( package.perDay );
+		modalFields.$monthlyFee.text( package.monthlyFee );
 		modalFields.$location.text( package.location );
 		modalFields.$summary.text( package.summary );
 		modalFields.$virtualTour.attr( "src", package.virtualTour );
