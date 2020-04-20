@@ -295,51 +295,51 @@ $( function () {
 	 * Populating the modal with information on the package that was clicked
 	 *
 	 */
-	var $modal = $( ".js_modal_box_content[ data-mod-id = 'what-is-included' ]" );
-	var modalFields = {
-		$bookNow: $modal.find( ".js_book_from_modal" ),
-		$name: $modal.find( ".js_name" ),
-		$monthlyExpense: $modal.find( ".js_monthly_expense" ),
-		$monthlyFee: $modal.find( ".js_monthly_fee" ),
-		$location: $modal.find( ".js_location" ),
-		$summary: $modal.find( ".js_summary" ),
-		$virtualTourContainer: $modal.find( ".js_virtual_tour_container" ),
-		$virtualTour: $modal.find( ".js_virtual_tour" ),
-		$room: $modal.find( ".js_room" ),
-		$suite: $modal.find( ".js_suite" ),
-		$services: $modal.find( ".js_services" ),
-		$addOns: $modal.find( ".js_addons" ),
-		$locationImagesContainer: $modal.find( ".js_location_images_container" ),
-		$locationImages: $modal.find( ".js_location_images" ),
-		$locationAddress: $modal.find( ".js_location_address" ),
-		$locationGoogleMaps: $modal.find( ".js_location_google_maps" )
+	var $whatIsIncludedSection = $( ".js_section_what_is_included" );
+	var whatIsIncludedFields = {
+		$bookNow: $whatIsIncludedSection.find( ".js_book_from_modal" ),
+		$name: $whatIsIncludedSection.find( ".js_name" ),
+		$monthlyExpense: $whatIsIncludedSection.find( ".js_monthly_expense" ),
+		$monthlyFee: $whatIsIncludedSection.find( ".js_monthly_fee" ),
+		$location: $whatIsIncludedSection.find( ".js_location" ),
+		$summary: $whatIsIncludedSection.find( ".js_summary" ),
+		$virtualTourContainer: $whatIsIncludedSection.find( ".js_virtual_tour_container" ),
+		$virtualTour: $whatIsIncludedSection.find( ".js_virtual_tour" ),
+		$room: $whatIsIncludedSection.find( ".js_room" ),
+		$suite: $whatIsIncludedSection.find( ".js_suite" ),
+		$services: $whatIsIncludedSection.find( ".js_services" ),
+		$addOns: $whatIsIncludedSection.find( ".js_addons" ),
+		$locationImagesContainer: $whatIsIncludedSection.find( ".js_location_images_container" ),
+		$locationImages: $whatIsIncludedSection.find( ".js_location_images" ),
+		$locationAddress: $whatIsIncludedSection.find( ".js_location_address" ),
+		$locationGoogleMaps: $whatIsIncludedSection.find( ".js_location_google_maps" )
 	};
 	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
 		var packageName = $( data.trigger ).data( "package" );
 		var package = livingSituations[ packageName ];
 
 		// Prepare the "Book Now" button
-		modalFields.$bookNow.data( "product", packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
-		modalFields.$bookNow.data( "c", "pricing-modal-book-" + packageName );
-		modalFields.$bookNow.text( modalFields.$bookNow.data( "initial-text" ) );
-		modalFields.$bookNow.prop( "disabled", false );
+		whatIsIncludedFields.$bookNow.data( "product", packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
+		whatIsIncludedFields.$bookNow.data( "c", "pricing-modal-book-" + packageName );
+		whatIsIncludedFields.$bookNow.text( whatIsIncludedFields.$bookNow.data( "initial-text" ) );
+		whatIsIncludedFields.$bookNow.prop( "disabled", false );
 		loginPrompts.whatsIncluded.$phoneForm.hide();
 		loginPrompts.whatsIncluded.$OTPForm.hide();
 
-		modalFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
-		modalFields.$monthlyExpense.text( package.perDay );
-		modalFields.$monthlyFee.text( package.monthlyFee );
-		modalFields.$location.text( package.location );
-		modalFields.$summary.text( package.summary );
-		modalFields.$virtualTour.attr( "src", package.virtualTour );
+		whatIsIncludedFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
+		whatIsIncludedFields.$monthlyExpense.text( package.perDay );
+		whatIsIncludedFields.$monthlyFee.text( package.monthlyFee );
+		whatIsIncludedFields.$location.text( package.location );
+		whatIsIncludedFields.$summary.text( package.summary );
+		whatIsIncludedFields.$virtualTour.attr( "src", package.virtualTour );
 		if ( package.virtualTour )
-			modalFields.$virtualTourContainer.removeClass( "hidden" );
+			whatIsIncludedFields.$virtualTourContainer.removeClass( "hidden" );
 		else
-			modalFields.$virtualTourContainer.addClass( "hidden" );
-		modalFields.$room.html( package.room.replace( /\n/g, "<br>" ) );
-		modalFields.$suite.html( package.suite.replace( /\n/g, "<br>" ) );
-		modalFields.$services.html( package.services.replace( /\n/g, "<br>" ) );
-		modalFields.$addOns.html( package[ "add-ons" ].replace( /\n/g, "<br>" ) );
+			whatIsIncludedFields.$virtualTourContainer.addClass( "hidden" );
+		whatIsIncludedFields.$room.html( package.room.replace( /\n/g, "<br>" ) );
+		whatIsIncludedFields.$suite.html( package.suite.replace( /\n/g, "<br>" ) );
+		whatIsIncludedFields.$services.html( package.services.replace( /\n/g, "<br>" ) );
+		whatIsIncludedFields.$addOns.html( package[ "add-ons" ].replace( /\n/g, "<br>" ) );
 		var locationImagesMarkup = package.locationImages.trim()
 			.split( "\n" )
 			.filter( function ( image ) {
@@ -357,13 +357,14 @@ $( function () {
 					<div class="image" style="background-image: url( '${ image.url }' )"><span class="label caption">${ image.caption }</span></div>
 				</div>`
 			}, "" )
-		modalFields.$locationImages.html( locationImagesMarkup );
+		whatIsIncludedFields.$locationImages.html( locationImagesMarkup );
 		if ( ! locationImagesMarkup )
-			modalFields.$locationImagesContainer.addClass( "hidden" );
+			whatIsIncludedFields.$locationImagesContainer.addClass( "hidden" );
 		else
-			modalFields.$locationImagesContainer.removeClass( "hidden" );
-		modalFields.$locationAddress.html( package.locationAddress.split( "\n" ).join( "<br>" ) );
-		modalFields.$locationGoogleMaps.attr( "href", package.locationGoogleMaps );
+			whatIsIncludedFields.$locationImagesContainer.removeClass( "hidden" );
+		whatIsIncludedFields.$locationAddress.html( package.locationAddress.split( "\n" ).join( "<br>" ) );
+		whatIsIncludedFields.$locationGoogleMaps.attr( "href", package.locationGoogleMaps );
+	}
 	} );
 
 

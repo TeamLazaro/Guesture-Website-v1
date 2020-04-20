@@ -50,7 +50,7 @@
 				}
 			}
 		</style>
-		<div class="modal-box-content js_modal_box_content" data-mod-id="what-is-included">
+		<div class="modal-box-content js_modal_box_content js_section_what_is_included" data-mod-id="what-is-included">
 			<div class="container">
 				<div class="row what-is-included">
 					<div class="columns small-12 fill-light" style="border-radius: 10px; overflow: hidden;">
