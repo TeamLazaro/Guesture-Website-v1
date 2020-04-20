@@ -1,8 +1,16 @@
+
 /*
  *	Sliding Gallery
  */
+$( function () {
+
+
+
+
 
 var $gallery = $( ".js_sliding_gallery" );
+if ( ! $gallery.length )
+	return;
 var $tracks = $gallery.find( ".js_track" );
 
 $( window ).on( "scroll", function ( event ) {
@@ -25,5 +33,11 @@ $( window ).on( "scroll", function ( event ) {
 		offset = offset * ( scrollY - galleryPositionY ) * ( imageWidth / window.innerHeight );
 		el.style.transform = "translateX( " + offset + "px )";
 	} );
+
+} );
+
+
+
+
 
 } );
