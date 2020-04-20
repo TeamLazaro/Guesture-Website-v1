@@ -1,6 +1,8 @@
 
 $( function () {
 
+	window.__BFS = window.__BFS || { };
+
 	/*
 	 * Convert a number to it alphabetical reprentation
 	 */
@@ -53,12 +55,13 @@ $( function () {
 				} );
 				return;
 			}
-			// Reflect the new value in memory
-			_this[ name ] = value;
-			// Reflect the new value in the spreadsheet's in-memory representation
-			_this.numbers.Sheets[ _this.type ][ _this.sheetCoordinates[ name ] ].v = value;
+
+			_this.setField( name, value );
+
 			// Re-compute the values
 			_this.computeDetails();
+			// Re-render the newly computed values
+			_this.renderComputedDetails();
 		} );
 
 		// A dedicated handler for when the location changes
@@ -66,14 +69,25 @@ $( function () {
 			var location = data.location;
 			// Set the location value on the location input element
 			_this.$el.find( ".js_location" ).val( location );
-			// Reflect the new value in memory
-			_this.location = location;
-			// Reflect the new value in the spreadsheet's in-memory representation
-			_this.numbers.Sheets[ _this.type ][ _this.sheetCoordinates.location ].v = location;
+
+			_this.setField( "location", location );
+
 			// Re-compute the values
 			_this.computeDetails();
+			// Re-render the newly computed values
+			_this.renderComputedDetails();
 		} );
 	}
+
+	// Update the given field with the given value
+	LivingSituation.prototype.setField = function ( name, value ) {
+		if ( ! this.sheetCoordinates[ name ] )
+			return;
+		// Reflect the new value in memory
+		this[ name ] = value;
+		// Reflect the new value in the spreadsheet's in-memory representation
+		this.numbers.Sheets[ this.type ][ this.sheetCoordinates[ name ] ].v = value;
+	};
 
 	LivingSituation.prototype.computeDetails = function ( ) {
 		XLSX_CALC( this.numbers );
@@ -89,7 +103,6 @@ $( function () {
 		this.suite = sheet[ this.sheetCoordinates.suite ].v;
 		this.services = sheet[ this.sheetCoordinates.services ].v;
 		this[ "add-ons" ] = sheet[ this.sheetCoordinates[ "add-ons" ] ].v;
-		this.renderComputedDetails();
 	};
 	LivingSituation.prototype.render = function () {
 		this.$el.find( ".js_image" ).attr( "media/pricing/rooms/" + this.photo );
@@ -223,6 +236,8 @@ $( function () {
 			}
 
 			livingSituation.computeDetails();
+			// Re-render the newly computed values
+			livingSituation.renderComputedDetails();
 
 			livingSituations[ type ] = livingSituation;
 		}
@@ -235,6 +250,9 @@ $( function () {
 
 		// REDO: This bit needs to be done properly
 		var locationOptions = Object.entries( numbers.SETTINGS.locations );
+
+		if ( ! $( ".js_places_near_to" ).length )
+			return;
 
 		// Initialize the locations in the Nearby Places section
 		$( ".js_places_near_to" ).html( locationOptions.map( function ( location ) {
@@ -314,8 +332,7 @@ $( function () {
 		$locationAddress: $whatIsIncludedSection.find( ".js_location_address" ),
 		$locationGoogleMaps: $whatIsIncludedSection.find( ".js_location_google_maps" )
 	};
-	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
-		var packageName = $( data.trigger ).data( "package" );
+	function setContentOnWhatIsIncludedSection ( packageName ) {
 		var package = livingSituations[ packageName ];
 
 		// Prepare the "Book Now" button
@@ -365,6 +382,10 @@ $( function () {
 		whatIsIncludedFields.$locationAddress.html( package.locationAddress.split( "\n" ).join( "<br>" ) );
 		whatIsIncludedFields.$locationGoogleMaps.attr( "href", package.locationGoogleMaps );
 	}
+	window.__BFS.setContentOnWhatIsIncludedSection = setContentOnWhatIsIncludedSection;
+	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
+		var packageName = $( data.trigger ).data( "package" );
+		setContentOnWhatIsIncludedSection( packageName );
 	} );
 
 
@@ -378,10 +399,12 @@ $( function () {
 
 	// Okay, now go fetch them numbers!
 	var livingSituations;
-	getNumbers()
+	window.__BFS.fetchPricingInformation = getNumbers()
 		.then( function ( numbers ) {
 			livingSituations = setupPricingSection( numbers );
+			window.__BFS.livingSituations = livingSituations;
 			setupNearbyPlaces( numbers );
+			return numbers;
 		} )
 
 } );
