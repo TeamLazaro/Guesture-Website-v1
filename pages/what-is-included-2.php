@@ -49,7 +49,7 @@ $configuration = $_GET;
 						</label>
 						<label class="inline-bottom">
 							<span class="label block invisible">Book Now</span>
-							<a href="/" class="button fill-green">Calculate Price</a>
+							<a href="/#pricing" target="_blank" class="button fill-green">Calculate Price</a>
 						</label>
 
 						<div class="row">

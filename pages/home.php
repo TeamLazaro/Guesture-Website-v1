@@ -321,7 +321,7 @@ if ( cmsIsEnabled() ) {
 	</div>
 	<!-- End: Workplaces -->
 	<!-- Pricing -->
-	<div class="pricing js_carousel_container">
+	<div id="pricing" class="pricing js_carousel_container">
 		<div class="pricing-list js_carousel_content">
 			<div class="price fill-light js_carousel_item qpid_login_site js_solo_section scroll-reveal">
 				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
