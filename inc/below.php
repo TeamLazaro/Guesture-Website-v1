@@ -108,6 +108,60 @@
 
 	</script>
 
+
+	<script type="text/javascript">
+		/*
+		 *
+		 * Render the accommodation details
+		 *
+		 */
+
+		window.__BFS = window.__BFS || { };
+		$( function () {
+
+			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
+
+			// Once the pricing data has been fetched and prepped
+			window.__BFS.fetchPricingInformation.then( function () {
+
+				var accomodationSelection = window.__BFS.accomodationSelection;
+				var accomodationType = accomodationSelection.type;
+				var livingSituation = window.__BFS.livingSituations[ accomodationType ];
+				// Set the accommodation settings
+				for ( var key in accomodationSelection )
+					livingSituation.setField( key, accomodationSelection[ key ] );
+
+				// Compute the details
+				livingSituation.computeDetails();
+				// Render the content
+				window.__BFS.setContentOnWhatIsIncludedSection( accomodationType );
+			} );
+
+		} );
+
+
+		/*
+		 *
+		 * Tell to Cupid that the user dropped by
+		 *
+		 */
+		$( function () {
+
+			var user = __CUPID.utils.getUser();
+			if ( user ) {
+				setTimeout( function () {
+					__CUPID.utils.getAnalyticsId()
+						.then( function ( deviceId ) {
+							user.hasDeviceId( deviceId );
+							user.isOnWebsite();
+						} )
+				}, 1500 );
+			}
+
+		} );
+
+	</script>
+
 	<!-- Other Modules -->
 	<?php // require __DIR__ . '/inc/can-user-hover.php' ?>
 

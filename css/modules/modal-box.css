@@ -60,14 +60,14 @@
 }
 
 
-.modal-box .modal-box-content .virtual-tour-container {
+.what-is-included .virtual-tour-container {
 	position: relative;
 	padding-bottom: 75%;
 	border-radius: var(--space-min);
     overflow: hidden;
 }
 
-.modal-box .modal-box-content .virtual-tour-container iframe {
+.what-is-included .virtual-tour-container iframe {
 	position: absolute;
 	z-index: 1;
 	top: 0;
