@@ -94,6 +94,8 @@
 
 
 	<script type="text/javascript">
+
+		<?php if ( $urlSlug === 'what-is-included' ) : ?>
 		/*
 		 *
 		 * Render the accommodation details
@@ -120,6 +122,8 @@
 			} );
 
 		} );
+
+		<?php endif; ?>
 
 
 		/*
