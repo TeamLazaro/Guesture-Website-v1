@@ -27,6 +27,9 @@
 
 
 	<!-- JS Modules -->
+	<script type="text/javascript">
+		window.__BFS = window.__BFS || { };
+	</script>
 	<script type="text/javascript" src="/js/modules/utils.js<?= $ver ?>"></script>
 	<!-- <script type="text/javascript" src="/js/modules/device-charge.js"></script> -->
 	<script type="text/javascript" src="/js/modules/video_embed.js<?= $ver ?>"></script>
@@ -115,8 +118,6 @@
 		 * Render the accommodation details
 		 *
 		 */
-
-		window.__BFS = window.__BFS || { };
 		$( function () {
 
 			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
