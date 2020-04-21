@@ -41,7 +41,7 @@ $hostName = $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ];
 // Fetch media files from the WIP server
 if ( CMS_FETCH_MEDIA_REMOTELY )
 	if ( $hostName !== CMS_REMOTE_ADDRESS )
-		if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/cms/wp-content/uploads/' ) !== false )
+		if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/content/cms/' ) !== false )
 			return header( 'Location: ' . $httpProtocol . '://' . CMS_REMOTE_ADDRESS . $_SERVER[ 'REQUEST_URI' ], true, 302 );
 
 
