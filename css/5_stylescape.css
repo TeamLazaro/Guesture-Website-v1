@@ -302,6 +302,10 @@ button:focus,
 		font-size: 1.6rem;
 		line-height: var(--space-75);
 	}
+	
+	.button img {
+		margin-bottom: -3px;
+	}
 
 	.button-large img {
 		pointer-events: none;
@@ -329,6 +333,10 @@ button:focus,
 		height: var(--space-75);
 		font-size: 2.4rem;
 		line-height: var(--space-75);
+	}
+	
+	.button img {
+		margin-bottom: -2px;
 	}
 
 	.button-large img {
