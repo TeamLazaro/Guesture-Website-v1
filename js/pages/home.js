@@ -2,6 +2,20 @@
 $( function () {
 
 	/*
+	 *
+	 * Populate the "What's Included" modal when it is opened.
+	 *
+	 */
+	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
+		var packageName = $( data.trigger ).data( "package" );
+		setContentOnWhatIsIncludedSection( packageName );
+	} );
+
+
+
+
+
+	/*
 	 * -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-
 	 *  The animations
 	 * -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-

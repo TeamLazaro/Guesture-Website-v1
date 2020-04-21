@@ -383,10 +383,6 @@ $( function () {
 		whatIsIncludedFields.$locationGoogleMaps.attr( "href", package.locationGoogleMaps );
 	}
 	window.__BFS.setContentOnWhatIsIncludedSection = setContentOnWhatIsIncludedSection;
-	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
-		var packageName = $( data.trigger ).data( "package" );
-		setContentOnWhatIsIncludedSection( packageName );
-	} );
 
 
 	/*
