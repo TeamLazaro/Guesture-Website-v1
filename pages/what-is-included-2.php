@@ -36,6 +36,11 @@ $configuration = $_GET;
 <!-- Modal Content : What is Included -->
 <style type="text/css">
 	.what-is-included {}
+
+	.what-is-included .link-share { font-size: 0; white-space: nowrap; }
+	.what-is-included .link-share .share {border-top-right-radius: 0; border-bottom-right-radius: 0; }
+	.what-is-included .link-share .url { border-top-left-radius: 0; border-bottom-left-radius: 0; padding: 0 5px; }
+
 	@media( min-width: 1040px ) {
 		.what-is-included .column-wrap {
 			columns: 2;
@@ -53,10 +58,16 @@ $configuration = $_GET;
 						<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@<span class="js_location">Alta Vista BLR</span></div>
 						<div class="h4 strong">For a fee of <span class="text-green-2 js_monthly_expense">₹11,200</span> <span class="js_monthly_fee"></span></div>
 
-						<label class="js_login_trigger_region">
+						<label class="js_login_trigger_region inline-bottom space-25-right">
 							<span class="label block invisible">Book Now</span>
 							<button class="button fill-green js_book_from_modal" data-initial-text="Book Now" data-product="" data-c="">Book Now</button>
 						</label>
+						<span class="link-share inline-bottom">
+							<label class="label block invisible">Share</label>
+							<button class="button share inline-middle">Share</button>
+							<input type="text" class="url inline-middle" value="http://localhost/what-is-included-2?type=buddy&balcony=none&bathroom=Attached&duration=1%20to%2059%20Days&location=Alta%20Vista%20-%20BLR">
+						</span>
+
 						<div class="row">
 							<div class="columns small-12 medium-6 large-4 xlarge-3"><?php require __DIR__ . '/../inc/login-prompt.php'; ?></div>
 						</div>
