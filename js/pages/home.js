@@ -3,12 +3,43 @@ $( function () {
 
 	/*
 	 *
-	 * Populate the "What's Included" modal when it is opened.
+	 * When opening the "What's Included" modal, do the following,
+	 * 	1. Populate the "What's Included" modal when it is opened
+	 *	2. Pause the **global** section-level engagement interval check
+	 *	3. Check the engagement over here
 	 *
 	 */
+	var sectionEngagementTimer;
 	$( document ).on( "modal/open/pre/what-is-included", function ( event, data ) {
+		// Populate the "What's Included" modal when it is opened
 		var packageName = $( data.trigger ).data( "package" );
-		setContentOnWhatIsIncludedSection( packageName );
+		window.__BFS.setContentOnWhatIsIncludedSection( packageName );
+
+		// Pause the **global** section-level engagement interval check
+		window.__BFS.engagementIntervalCheck.stop();
+
+		// Check the engagement over here
+		sectionEngagementTimer = setTimeout( function () {
+			window.__BFS.gtmPushToDataLayer( {
+				event: "section-view",
+				currentSectionId: "what-is-included",
+				currentSectionName: "What is Included"
+			} );
+		}, 4000 );
+	} );
+	/*
+	 *
+	 * When opening the "What's Included" modal, do the following,
+	 *	1. Re-start the section-level engagement interval check
+	 *	2. Disable the section engagement timer
+	 *
+	 */
+	$( document ).on( "modal/close/what-is-included", function () {
+		// Re-start the section-level engagement interval check
+		window.__BFS.engagementIntervalCheck.start();
+		// Disable the section engagement timer
+		clearTimeout( sectionEngagementTimer );
+		sectionEngagementTimer = null;
 	} );
 
 
