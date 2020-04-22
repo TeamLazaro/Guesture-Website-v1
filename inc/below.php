@@ -29,6 +29,11 @@
 	<!-- JS Modules -->
 	<script type="text/javascript">
 		window.__BFS = window.__BFS || { };
+
+		// Check and establish support for features
+		window.__BFS.support = window.__BFS.support || { };
+		window.__BFS.support.webShare = navigator.share ? true : false;
+
 	</script>
 	<script type="text/javascript" src="/js/modules/utils.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/navigation.js<?= $ver ?>"></script>
