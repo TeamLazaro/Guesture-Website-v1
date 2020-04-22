@@ -3,10 +3,61 @@ $( function () {
 
 	/*
 	 *
+	 * The "What's Included" URL Share/Copy feature
+	 *
+	 */
+	var $whatsIncludedURLInput = $( "input.js_what_is_included_copy_url" );
+	var $whatsIncludedURLCopyButton = $( ".js_what_is_included_copy_url:not(input)" );
+	var $whatsIncludedURLShareButton = $( ".js_what_is_included_url_share" );
+
+	if ( window.__BFS.support.webShare )
+		$whatsIncludedURLCopyButton.addClass( "hidden" );
+	else
+		$whatsIncludedURLShareButton.addClass( "hidden" );
+
+	// If the "Share" button is clicked
+	$whatsIncludedURLShareButton.on( "click", function ( event ) {
+
+		navigator.share( {
+			title: "What's Included | Guesture",
+			text: $whatsIncludedURLInput.data( "text" ),
+			url: $whatsIncludedURLInput.val()
+		} )
+		.catch( function () {
+			$whatsIncludedURLInput.select();
+			try {
+				document.execCommand( "copy" );
+			}
+			catch ( e ) {}
+		} );
+
+	} );
+
+	// If the "Copy" button or the URL input is clicked
+	$( ".js_what_is_included_copy_url" ).on( "click", function ( event ) {
+		$whatsIncludedURLInput.select();
+		try {
+			document.execCommand( "copy" );
+			$whatsIncludedURLCopyButton.find( "span" ).text( "Copied" );
+			waitFor( 1.5 ).then( function () {
+				$whatsIncludedURLCopyButton.find( "span" ).text( "Copy" );
+			} );
+		}
+		catch ( e ) {}
+	} );
+
+
+
+
+
+
+	/*
+	 *
 	 * When opening the "What's Included" modal, do the following,
 	 * 	1. Populate the "What's Included" modal when it is opened
 	 *	2. Pause the **global** section-level engagement interval check
 	 *	3. Check the engagement over here
+	 *	4. Update the share URL
 	 *
 	 */
 	var sectionEngagementTimer;
@@ -26,6 +77,25 @@ $( function () {
 				currentSectionName: "What is Included"
 			} );
 		}, 4000 );
+
+		// Update the share URL
+		var package = window.__BFS.livingSituations[ packageName ];
+		var accommodationData = {
+			type: package.type,
+			balcony: package.balcony,
+			bathroom: package.bathroom,
+			duration: package.duration,
+			location: package.location
+		};
+		var accommodationDataQueryParameter = btoa( JSON.stringify( accommodationData ) );
+		var url = window.location.origin + "/what-is-included?q=" + accommodationDataQueryParameter;
+		var linkText = "The " + ( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) ) + " Package";
+		linkText += "\n@" + package.location;
+		linkText += "\nFor a fee of " + package.perDay + " " + package.monthlyFee;
+		$( ".js_what_is_included_copy_url" )
+			.val( url )
+			.data( "text", linkText )
+
 	} );
 	/*
 	 *

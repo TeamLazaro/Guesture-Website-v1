@@ -71,8 +71,9 @@
 								</label>
 								<span class="link-share inline-bottom">
 									<label class="label block invisible">Share</label>
-									<button class="button share inline-middle">Share <img src="media/glyph/icon-share.svg<?php echo $ver ?>"></button>
-									<input type="text" class="url inline-middle" value="http://localhost/what-is-included-2?type=buddy&balcony=none&bathroom=Attached&duration=1%20to%2059%20Days&location=Alta%20Vista%20-%20BLR">
+									<button class="button share inline-middle js_what_is_included_url_share"><span>Share</span> <img src="media/glyph/icon-share.svg<?php echo $ver ?>"></button>
+									<button class="button share inline-middle js_what_is_included_copy_url"><span>Copy</span> <img src="media/glyph/icon-clipboard.svg<?php echo $ver ?>"></button>
+									<input type="text" class="url inline-middle js_what_is_included_copy_url" readonly>
 								</span>
 
 								<div class="row">
