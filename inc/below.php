@@ -97,6 +97,13 @@
 	<script type="text/javascript">
 
 		<?php if ( $urlSlug === 'what-is-included' ) : ?>
+
+		function displayErrorMessage () {
+			$( ".js_error_content" ).fadeIn( 400, function () {
+				$( ".js_loading_indicator" ).fadeOut();
+			} );
+		}
+
 		/*
 		 *
 		 * Render the accommodation details
@@ -110,8 +117,10 @@
 			window.__BFS.fetchPricingInformation.then( function () {
 
 				var accomodationSelection = window.__BFS.accomodationSelection;
-				var accomodationType = accomodationSelection.type;
+				var accomodationType = accomodationSelection.type.toLowerCase();
 				var livingSituation = window.__BFS.livingSituations[ accomodationType ];
+				if ( ! livingSituation )
+					throw new Error;
 				// Set the accommodation settings
 				for ( var key in accomodationSelection )
 					livingSituation.setField( key, accomodationSelection[ key ] );
@@ -120,7 +129,21 @@
 				livingSituation.computeDetails();
 				// Render the content
 				window.__BFS.setContentOnWhatIsIncludedSection( accomodationType );
-			} );
+
+				// Fade in the content
+				setTimeout( function () {
+					// If there's an error, show the error message
+					if ( livingSituation.monthlyFee.trim() ) {
+						$( ".js_main_content" ).fadeIn( 400, function () {
+							$( ".js_loading_indicator" ).fadeOut();
+						} );
+					}
+					// Else, show the main content
+					else
+						displayErrorMessage();
+				}, 300 );
+			} )
+			.catch( displayErrorMessage )
 
 		} );
 

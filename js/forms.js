@@ -241,8 +241,10 @@ $( document ).on( "click", ".js_book_womens_block", function ( event ) {
  * -------------------------------\
  * Pricing Section
  * -------------------------------|
+ *
+ * NOTE: This even includes the "Book Now" button on the "What's Included" page
  */
-$( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_book_from_modal", function ( event ) {
+$( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_book_pricing, .js_book_from_modal", function ( event ) {
 	var $button = $( event.target );
 	$button.prop( "disabled", true );
 	$button.text( "We'll call you shortly." );
