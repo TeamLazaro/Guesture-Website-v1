@@ -83,6 +83,10 @@ $( function () {
 	LivingSituation.prototype.setField = function ( name, value ) {
 		if ( ! this.sheetCoordinates[ name ] )
 			return;
+		// If the provided value is not a valid one
+		if ( this[ name + "Options" ] )
+			if ( ! this[ name + "Options" ].includes( value ) )
+				throw new Error;
 		// Reflect the new value in memory
 		this[ name ] = value;
 		// Reflect the new value in the spreadsheet's in-memory representation
