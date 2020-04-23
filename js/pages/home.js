@@ -55,9 +55,10 @@ $( function () {
 	 *
 	 * When opening the "What's Included" modal, do the following,
 	 * 	1. Populate the "What's Included" modal when it is opened
-	 *	2. Pause the **global** section-level engagement interval check
-	 *	3. Check the engagement over here
-	 *	4. Update the share URL
+	 * 	2. Set the data-attributes for the "Book Now" button
+	 *	3. Pause the **global** section-level engagement interval check
+	 *	4. Check the engagement over here
+	 *	5. Update the share URL
 	 *
 	 */
 	var sectionEngagementTimer;
@@ -65,6 +66,11 @@ $( function () {
 		// Populate the "What's Included" modal when it is opened
 		var packageName = $( data.trigger ).data( "package" );
 		window.__BFS.setContentOnWhatIsIncludedSection( packageName );
+
+		// Set the data-attributes for the "Book Now" button
+		$( ".js_book_from_modal" )
+			.data( "product", packageName )
+			.data( "c", "pricing-book-" + packageName.toLowerCase() )
 
 		// Pause the **global** section-level engagement interval check
 		window.__BFS.engagementIntervalCheck.stop();
