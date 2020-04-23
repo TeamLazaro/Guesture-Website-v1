@@ -44,15 +44,25 @@
 	<script type="text/javascript" src="/js/modules/cupid/utils.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/cupid/user.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/forms.js<?= $ver ?>"></script>
-	<script type="text/javascript" src="/js/login-prompts.js<?= $ver ?>"></script>
+	<script type="text/javascript" src="/js/modules/login-prompts.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
-	<script type="text/javascript" src="/js/pages/home.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/plugins/lottie/lottie-lite-v5.5.10.min.js"></script>
 	<script type="text/javascript" src="/js/modules/scroll-reveal.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
 	<script type="text/javascript" src="/js/pricing.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/countdown.js<?= $ver ?>"></script>
+
+	<?php if ( $urlSlug === 'what-is-included' ) : ?>
+		<script type="text/javascript" src="/js/pages/what-is-included/login-prompts.js<?= $ver ?>"></script>
+		<script type="text/javascript">
+			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
+		</script>
+		<script type="text/javascript" src="/js/pages/what-is-included/what-is-included.js<?= $ver ?>"></script>
+	<?php else : ?>
+		<script type="text/javascript" src="/js/pages/home/login-prompts.js<?= $ver ?>"></script>
+		<script type="text/javascript" src="/js/pages/home/home.js<?= $ver ?>"></script>
+	<?php endif; ?>
 
 	<!-- spirit web player -->
 	<script src="https://unpkg.com/spiritjs/dist/spirit.min.js"></script>
@@ -100,60 +110,6 @@
 
 
 	<script type="text/javascript">
-
-		<?php if ( $urlSlug === 'what-is-included' ) : ?>
-
-		function displayErrorMessage () {
-			$( ".js_error_content" ).fadeIn( 400, function () {
-				$( ".js_loading_indicator" ).fadeOut();
-			} );
-		}
-
-		/*
-		 *
-		 * Render the accommodation details
-		 *
-		 */
-		$( function () {
-
-			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
-
-			// Once the pricing data has been fetched and prepped
-			window.__BFS.fetchPricingInformation.then( function () {
-
-				var accomodationSelection = window.__BFS.accomodationSelection;
-				var accomodationType = accomodationSelection.type.toLowerCase();
-				var livingSituation = window.__BFS.livingSituations[ accomodationType ];
-				if ( ! livingSituation )
-					throw new Error;
-				// Set the accommodation settings
-				for ( var key in accomodationSelection )
-					livingSituation.setField( key, accomodationSelection[ key ] );
-
-				// Compute the details
-				livingSituation.computeDetails();
-				// Render the content
-				window.__BFS.setContentOnWhatIsIncludedSection( accomodationType );
-
-				// Fade in the content
-				setTimeout( function () {
-					// If there's an error, show the error message
-					if ( livingSituation.monthlyFee.trim() ) {
-						$( ".js_main_content" ).fadeIn( 400, function () {
-							$( ".js_loading_indicator" ).fadeOut();
-						} );
-					}
-					// Else, show the main content
-					else
-						displayErrorMessage();
-				}, 300 );
-			} )
-			.catch( displayErrorMessage )
-
-		} );
-
-		<?php endif; ?>
-
 
 		/*
 		 *
