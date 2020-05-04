@@ -51,6 +51,7 @@ var thingsToDoOnEveryInterval = function () {
 	var previousScrollTop;
 	var $currentSection;
 	var currentSectionName;
+		var currentSectionId;
 	var previousSectionName;
 	var sectionScrollTop;
 	var $currentNavItem;
