@@ -94,7 +94,7 @@ var thingsToDoOnEveryInterval = function () {
 		 * If the previous and the current section are the same, then add time
 		 * Else, reset the "time spent on a section" counter
 		 */
-		if ( currentSectionName == previousSectionName ) {
+		if ( currentSectionId && currentSectionName == previousSectionName ) {
 			timeSpentOnASection += intervalToCheckForEngagement
 			if ( timeSpentOnASection >= thresholdTimeForEngagement ) {
 				if ( currentSectionName != lastRecordedSection ) {
