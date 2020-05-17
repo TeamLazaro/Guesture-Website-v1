@@ -55,7 +55,7 @@ if ( cmsIsEnabled() ) {
 
 
 // Construct the page's title ( for use in the title tag )
-$siteTitle = getContent( '', 'page_title', $urlSlug ) ?: getContent( 'Guesture', 'page_title' );
+$siteTitle = getContent( 'Guesture', 'site_title' );
 $pageUrl = $siteUrl . $requestPath;
 
 // Build the Page Title ( if an explicit one is set, use that )
