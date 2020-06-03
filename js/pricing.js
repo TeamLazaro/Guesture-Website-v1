@@ -346,6 +346,8 @@ $( function () {
 		whatIsIncludedFields.$bookNow.prop( "disabled", false );
 		loginPrompts.whatsIncluded.$phoneForm.hide();
 		loginPrompts.whatsIncluded.$OTPForm.hide();
+		// Un-hide the "Book Now" button region
+		whatIsIncludedFields.$bookNow.closest( ".js_login_trigger_region" ).show();
 
 		whatIsIncludedFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
 		whatIsIncludedFields.$monthlyExpense.text( package.perDay );
