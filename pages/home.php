@@ -829,7 +829,7 @@ if ( cmsIsEnabled() ) {
 
 
 <!-- Trial : Trap Section -->
-<section class="trial--trap-section fill-green-2 js_trial_section qpid_login_site" data-section="Trial" data-section-id="trial">
+<section id="trial" class="trial--trap-section fill-green-2 js_trial_section qpid_login_site" data-section="Trial" data-section-id="trial">
 	<div class="container">
 		<div class="character scroll-reveal"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
