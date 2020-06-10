@@ -3,6 +3,16 @@ $( function () {
 
 	window.__BFS = window.__BFS || { };
 
+	function getUnitInfoURL ( package ) {
+		return window.location.origin + "/what-is-included?q=" + package.toString();
+	}
+	window.__BFS.getUnitInfoURL = getUnitInfoURL;
+
+	function getUnitBookingURL ( package ) {
+		return window.location.origin + "/booking?q=" + package.toString();
+	}
+	window.__BFS.getUnitBookingURL = getUnitBookingURL;
+
 	/*
 	 * Convert a number to it alphabetical reprentation
 	 */
@@ -78,6 +88,23 @@ $( function () {
 			_this.renderComputedDetails();
 		} );
 	}
+
+	// Update the given field with the given value
+	LivingSituation.prototype.toString = function toString () {
+		var data = {
+			type: this.type,
+			balcony: this.balcony,
+			bathroom: this.bathroom,
+			duration: this.duration,
+			location: this.location
+		};
+		if ( this.fromDateString )
+			data.fromDateString = this.fromDateString;
+		if ( this.toDateString )
+			data.toDateString = this.toDateString;
+		var queryParameterString = btoa( JSON.stringify( data ) );
+		return queryParameterString;
+	};
 
 	// Update the given field with the given value
 	LivingSituation.prototype.setField = function ( name, value ) {

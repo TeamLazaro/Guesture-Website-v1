@@ -86,15 +86,7 @@ $( function () {
 
 		// Update the share URL
 		var package = window.__BFS.livingSituations[ packageName ];
-		var accommodationData = {
-			type: package.type,
-			balcony: package.balcony,
-			bathroom: package.bathroom,
-			duration: package.duration,
-			location: package.location
-		};
-		var accommodationDataQueryParameter = btoa( JSON.stringify( accommodationData ) );
-		var url = window.location.origin + "/what-is-included?q=" + accommodationDataQueryParameter;
+		var url = window.__BFS.getUnitInfoURL( package );
 		var linkText = "The " + ( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) ) + " Package";
 		linkText += "\n@" + package.location;
 		linkText += "\nFor a fee of " + package.perDay + " " + package.monthlyFee;

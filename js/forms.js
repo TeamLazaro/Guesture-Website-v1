@@ -241,17 +241,32 @@ $( document ).on( "click", ".js_book_womens_block", function ( event ) {
  * -------------------------------\
  * Pricing Section
  * -------------------------------|
- *
- * NOTE: This even includes the "Book Now" button on the "What's Included" page
  */
-$( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_book_pricing, .js_book_from_modal", function ( event ) {
+$( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_book_from_modal", function ( event ) {
 	var $button = $( event.target );
 	$button.prop( "disabled", true );
-	$button.text( "We'll call you shortly." );
 
 	var product = $button.data( "product" );
 	__.user.isInterestedIn( product );
 	__.user.update();
+
+	setTimeout( function () {
+		var package = window.__BFS.livingSituations[ product.toLowerCase() ];
+		var url = window.__BFS.getUnitBookingURL( package );
+		window.location.href = url;
+	}, 1000 )
+} );
+// The "Book Now" button on the "Booking" page
+$( document ).on( "click", ".js_book_a_unit", function ( event ) {
+	var $button = $( event.target );
+
+	var product = $button.data( "product" );
+	__.user.isInterestedIn( product );
+	__.user.update();
+
+	$( ".js_pre_booking_form" ).slideUp( 500, function () {
+		$( ".js_booking_form" ).slideDown( 500 );
+	} );
 } );
 
 

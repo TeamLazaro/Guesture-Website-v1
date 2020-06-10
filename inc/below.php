@@ -50,6 +50,7 @@
 	<script type="text/javascript" src="/js/modules/scroll-reveal.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/spreadsheet-formulae.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/plugins/xlsx-calc/xlsx-calc-v0.6.2.min.js"></script>
+	<script type="text/javascript" src="/plugins/datepicker/datepicker-v5.14.2.min.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/pricing.js<?= $ver ?>"></script>
 	<script type="text/javascript" src="/js/modules/countdown.js<?= $ver ?>"></script>
 
@@ -59,6 +60,13 @@
 			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
 		</script>
 		<script type="text/javascript" src="/js/pages/what-is-included/what-is-included.js<?= $ver ?>"></script>
+	<?php elseif ( $urlSlug === 'booking' or $urlSlug === 'payment-confirmation' ) : ?>
+		<script type="text/javascript">
+			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
+		</script>
+		<script type="text/javascript" src="/js/pages/what-is-included/login-prompts.js<?= $ver ?>"></script>
+		<script type="text/javascript" src="/js/pages/what-is-included/what-is-included.js<?= $ver ?>"></script>
+		<script type="text/javascript" src="/js/pages/booking/booking.js<?= $ver ?>"></script>
 	<?php else : ?>
 		<script type="text/javascript" src="/js/pages/home/login-prompts.js<?= $ver ?>"></script>
 		<script type="text/javascript" src="/js/pages/home/home.js<?= $ver ?>"></script>

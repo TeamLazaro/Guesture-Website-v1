@@ -30,7 +30,7 @@ $( function () {
 		window.__BFS.setContentOnWhatIsIncludedSection( accomodationType );
 
 		// Set the data-attributes for the "Book Now" button
-		$( ".js_book" )
+		$( ".js_book_a_unit" )
 			.data( "product", accomodationSelection.type )
 			.data( "c", "pricing-book-" + accomodationType )
 

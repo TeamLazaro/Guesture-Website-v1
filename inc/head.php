@@ -126,6 +126,9 @@
 	<!-- Slick Carousel -->
 	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css<?php echo $ver ?>"/>
 	<link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css<?php echo $ver ?>"/>
+	<?php if ( $urlSlug === 'booking' or $urlSlug === 'payment-confirmation' ) : ?>
+		<link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker-v5.14.2.min.css<?php echo $ver ?>"/>
+	<?php endif; ?>
 
 	<!--
 	*
@@ -153,5 +156,35 @@ ARB
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WN3Z6CT');
 	</script>
 	<!-- End Google Tag Manager -->
+
+	<style type="text/css">
+
+		.what-is-included .date-input-container {
+			position: relative;
+		}
+		.what-is-included .date-input-container select {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			visibility: hidden;
+		}
+		.what-is-included .date-input-container input {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			-ms-appearance: none;
+			appearance: none;
+		}
+		.what-is-included .date-input-container input:invalid + select {
+			visibility: visible;
+		}
+
+		.qs-datepicker-container {
+			font-size: 0.9em !important;
+		}
+
+	</style>
 
 </head>

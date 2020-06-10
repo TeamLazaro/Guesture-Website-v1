@@ -11,8 +11,8 @@ var loginPrompts = { };
  * What's Included section
  */
 // NOTE: This is referenced in `pricing.js`
-loginPrompts.whatsIncluded = new __.LoginPrompt( "What's Included", $( ".js_section_what_is_included .js_main_content .qpid_login_site" ) );
-loginPrompts.whatsIncluded.triggerFlowOn( "click", ".js_book_pricing" );
+loginPrompts.whatsIncluded = new __.LoginPrompt( "What's Included", $( ".js_section_what_is_included_and_booking .js_main_content .qpid_login_site" ) );
+loginPrompts.whatsIncluded.triggerFlowOn( "click", ".js_book_a_unit" );
 // Skip the phone form because it is already integrated with the contact form
 loginPrompts.whatsIncluded.on( "requirePhone", function ( event ) {
 	var $loginTrigger = this.$site.find( ".js_login_trigger_region" );
