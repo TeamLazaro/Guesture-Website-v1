@@ -135,7 +135,7 @@ require_once __DIR__ . '/../inc/above.php';
 								<div class="form-row columns small-12 medium-6">
 									<label class="inline-bottom space-min-right">
 										<span class="label block invisible">Make Payment with PayTM</span>
-										<button class="button fill-green" type="submit" data-initial-text="Make Payment with PayTM" data-disabled-text="Book Now" data-unavailable-text="Unavailable">Make Payment with PayTM</button>
+										<button class="button fill-green" type="submit" data-initial-text="Make Payment with PayTM" data-disabled-text="Book Now" data-checking-text="Checking Availability..." data-unavailable-text="Unavailable" data-processing-text="Processing Payment...">Make Payment with PayTM</button>
 									</label>
 								</div>
 								<div class="form-row columns small-12 medium-6">

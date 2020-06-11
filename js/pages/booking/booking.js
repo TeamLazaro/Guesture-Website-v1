@@ -29,87 +29,78 @@ function checkAvailability ( unitDetails, fromDate, duration ) {
 	var fromDateString = getDateString( fromDate );
 	var toDateString = getDateString( toDate );
 
-	// var apiEndpoint = __.settings.cupidApiEndpoint;
+	var apiEndpoint = "/server/api/unit-availability.php";
 
-	var data = {
-		orderId: "0015",
-		stayPackage: "solo",
-		property: "av",
-		hasBalcony: 0,
-		hasBathRoom: 0,
-		mobileNumber: "7760118668",
-		emailAddress: "adi@lazaro.in",
-		fullName: "adi",
-		gender: 1,
-		selectedLocation: null,
-		selectedPackage: null,
-		selectedAmenities: null,
-		checkInDate: fromDateString,
-		checkOutDate: toDateString,
-		stayDuration: 3,
-		stayDurationUnit: 1
-	};
+	var data = unitDetails;
+	data.duration = duration;
+	data.fromDateString = fromDateString;
+	data.toDateString = toDateString;
 
 	if ( fromDateString === "19/06/2020" )
 		return Promise.resolve( { success: true } );
 	else if ( fromDateString === "27/06/2020" )
 		return Promise.resolve( { success: false } );
 
-	let unitIsAvailable = Math.round( Math.random() );
-	if ( unitIsAvailable )
-		return Promise.resolve( { success: true } );
-	else
-		return Promise.resolve( { success: false } );
+	// let unitIsAvailable = Math.round( Math.random() );
+	// if ( unitIsAvailable )
+	// 	return Promise.resolve( { success: true } );
+	// else
+	// 	return Promise.resolve( { success: false } );
 
-	// var ajaxRequest = $.ajax( {
-	// 	url: apiEndpoint,
-	// 	method: "POST",
-	// 	data: data,
-	// 	contentType: "application/json",
-	// 	dataType: "json",
-	// 	// xhrFields: {
-	// 	// 	withCredentials: true
-	// 	// }
-	// } );
+	var ajaxRequest = $.ajax( {
+		url: apiEndpoint,
+		method: "POST",
+		data: data
+		// contentType: "application/json",
+		// dataType: "json",
+		// xhrFields: {
+		// 	withCredentials: true
+		// }
+	} );
 
-	// return new Promise( function ( resolve, reject ) {
-	// 	ajaxRequest.done( function ( response ) {
-	// 		resolve( response );
-	// 	} );
-	// 	ajaxRequest.fail( function ( jqXHR, textStatus, e ) {
-	// 		var errorResponse = utils.getErrorResponse( jqXHR, textStatus, e );
-	// 		reject( errorResponse );
-	// 	} );
-	// } );
+	return new Promise( function ( resolve, reject ) {
+		ajaxRequest.done( function ( response ) {
+			resolve( response );
+		} );
+		ajaxRequest.fail( function ( jqXHR, textStatus, e ) {
+			var errorResponse = utils.getErrorResponse( jqXHR, textStatus, e );
+			reject( errorResponse );
+		} );
+	} );
 
 }
 
 function checkAvailabilityHandler ( livingSituation, date ) {
-	var unitDetails = { };
 
-	if ( livingSituation.location.toLowerCase() === "dwellington - blr" )
-		unitDetails.property = "av";
-	else if ( livingSituation.location.toLowerCase() === "alta vista - blr" )
-		unitDetails.property = "dw";
+	var unitDetails = {
+		type: livingSituation.type,
+		location: livingSituation.location,
+		balcony: livingSituation.balcony,
+		bathroom: livingSituation.bathroom
+	};
 
 	var durationInMonths = parseInt( livingSituation.duration, 10 );
 
-	var toDate = new Date( date.getTime() + durationInMonths * 30 * 24 * 60 * 60 * 1000 );
-	var toDateString = getDateString( toDate );
-	// livingSituation.$el.find( ".js_booking_to option" ).text( toDateString );
+	// Disable the date picker
+	$( ".js_booking_from_date" ).prop( "disabled", true );
+	// Disable the "Book Now" button
+	var $bookNowButton = $( ".js_booking_form [ type = 'submit' ]" );
+	disableForm( $bookNowButton.closest( "form" ), $bookNowButton.data( "checkingText" ) );
 
 	return checkAvailability( unitDetails, date, durationInMonths )
 		.then( function ( response ) {
+			// Re-enable the form
+			enableForm( $bookNowButton.closest( "form" ) );
 			// Disable / Enable the "Book Now" button
-			var $bookNowButton = $( ".js_booking_form [ type = 'submit' ]" );
 			if ( response.success ) {
 				livingSituation.fromDateString = getDateString( date );
 				window.__BFS.bookingFromDate = livingSituation.fromDateString;
+				var toDate = new Date( date.getTime() + durationInMonths * 30 * 24 * 60 * 60 * 1000 );
 				livingSituation.toDateString = getDateString( toDate );
 				$bookNowButton
 					.prop( "disabled", false )
 					.text( $bookNowButton.data( "initialText" ) )
-					.css( { backgroundColor: "" } )
+					// .css( { backgroundColor: "" } )
 			}
 			else {
 				livingSituation.fromDateString = null;
@@ -118,11 +109,12 @@ function checkAvailabilityHandler ( livingSituation, date ) {
 				$bookNowButton
 					.prop( "disabled", true )
 					.text( $bookNowButton.data( "unavailableText" ) )
-					.css( { backgroundColor: "var(--neutral-5)" } )
+					// .css( { backgroundColor: "var(--neutral-5)" } )
 			}
 		} )
 		.catch( function () {
-
+			// Re-enable the date picker
+			$( ".js_booking_from_date" ).prop( "disabled", false );
 		} )
 }
 
@@ -160,6 +152,10 @@ $( function () {
 						.css( { backgroundColor: "" } )
 					return;
 				}
+				setTimeout( function () {
+					instance.hide();
+					instance.el.blur();
+				}, 100 );
 				checkAvailabilityHandler( livingSituation, date );
 			},
 		} );
@@ -210,7 +206,8 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 	// /* -----
 	//  * Disable the form
 	//  ----- */
-	disableForm( $form, "Sending....." );
+	var $submitButton = $form.find( "[ type = 'submit' ]" );
+	disableForm( $form, $submitButton.data( "processingText" ) );
 
 
 	// /* -----
@@ -236,7 +233,7 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 		}, "" );
 		message = "Please provide valid information for the following fields:" + message;
 		alert( message );
-		enableForm( $form, "Contact" );
+		enableForm( $form, $submitButton.data( "initialText" ) );
 		return;
 	}
 	// Reflect back sanitized values to the form
@@ -263,11 +260,6 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 	//  ----- */
 	// __.user.update();
 
-	// /* -----
-	//  * Give feedback to the user
-	//  ----- */
-	$form.find( "[ type = 'submit' ]" ).text( "Processing Payment..." );
-
 
 	/*
 	 * Initiate the payment flow
@@ -282,9 +274,6 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 	};
 	getPaymentTransactionParameters( transactionData )
 		.then( makeSynchronousPOSTRequest )
-		// .then( function ( parameters ) {
-		// 	console.log( parameters )
-		// } )
 
 } );
 
