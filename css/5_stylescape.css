@@ -47,6 +47,8 @@
 	--green-3 : #197D85;
 	--green-4 : #164A58;
 
+	--paytm-blue : #00b9f5;
+
 	--container-width: 300px;
 	--space-min : 10px;
 	--space-100 : calc(var(--container-width)/6);
@@ -398,6 +400,13 @@ select:focus {
 	/*box-shadow: 0px 2px 6px rgba(20,20,10,0.5);*/
 }
 
+/* -- Reset Webkit Date Icons -- */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
 select { cursor: pointer; }
 
 .form-row:focus-within span.label {
@@ -541,6 +550,9 @@ select { cursor: pointer; }
 .fill-green-4 {
 	color: var(--light);
 	background-color: var(--green-4); }
+.fill-paytm-blue {
+	color: var(--light);
+	background-color: var(--paytm-blue); }
 
 
 
@@ -582,6 +594,8 @@ select { cursor: pointer; }
  	color: var(--green-3); }
  .text-green-4 {
  	color: var(--green-4); }
+ .text-paytm-blue {
+ 	color: var(--paytm-blue); }
 
 
 
@@ -1087,6 +1101,8 @@ select.minimal.dark {
 
 input.name,
 input.email,
+select.date,
+input.date,
 input.phone {
 	position: relative;
 	padding-right: var(--space-50);
@@ -1096,6 +1112,8 @@ input.phone {
 }
 input.name { background-image: url('../../../media/glyph/input-name.svg'); }
 input.email { background-image: url('../../../media/glyph/input-email.svg'); }
+select.date,
+input.date { background-image: url('../../../media/glyph/input-date.svg'); }
 input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 
 @media( min-width: 640px )  {
@@ -1122,14 +1140,123 @@ input.phone { background-image: url('../../../media/glyph/input-phone.svg'); }
 
 	input.name,
 	input.email,
+	select.date,
+	input.date,
 	input.phone {
 		background-size: var(--space-50) 32px;
 	}
 }
 
 
+/* Pricing Options */
+.price-options {}
+.price-options .price-option {
+	position: relative;
+}
+
+.price-options .price-option .radio:before {
+	position: relative;
+	display: inline-block;
+	vertical-align: baseline;
+	content: '';
+	width: 12px;
+	height: 12px;
+	margin-right: 2px;
+	border: solid 2px var(--neutral-3);
+	border-radius: 100%;
+}
+
+.price-options .price-option input:checked ~ .radio:after {
+	position: absolute;
+	display: inline-block;
+	left: 3px;
+	top: 7px;
+	content: '';
+	width: 6px;
+	height: 6px;
+	background-color: var(--green-2);
+	border-radius: 100%;
+}
+
+.price-options .price-option .fine-print {
+	padding-top: 5px;
+	display: none;
+	position: relative;
+}
+
+.price-options .price-option .fine-print .print:before {
+	content: '\2022';
+	position: absolute;
+	left: 20px;
+}
+
+.price-options .price-option input:checked ~ .fine-print {
+	display: block;
+	padding-left: 30px;
+}
+
+@media( min-width: 640px )  {
+	.price-options .price-option .radio:before {
+		width: 14px;
+		height: 14px;
+		margin-right: 2px;
+	}
+	.price-options .price-option input:checked ~ .radio:after {
+		width: 8px;
+		height: 8px;
+	}
+}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {
+	.price-options .price-option .radio:before {
+		width: 18px;
+		height: 18px;
+		margin-right: 3px;
+		border-width: 3px;
+	}
+	.price-options .price-option input:checked ~ .radio:after {
+		left: 4px;
+		top: 10px;
+		width: 10px;
+		height: 10px;
+	}
+
+	.price-options .price-option .fine-print .print:before {
+		left: 25px;
+	}
+
+	.price-options .price-option input:checked ~ .fine-print {
+		padding-left: 40px;
+	}
+}
 
 
+/* PayTM Payment Button */
+button.fill-paytm-blue img.paytm-logo {
+	pointer-events: none;
+	width: 52px;
+	display: inline-block;
+	margin-bottom: -3px;
+	margin-left: 3px;
+}
+
+button.fill-paytm-blue:disabled {
+	background-color: var(--neutral-3);
+	cursor: not-allowed;
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	button.fill-paytm-blue img.paytm-logo {
+		width: 62px;
+		margin-bottom: -4px;
+	}
+}
+@media( min-width: 1480px ) {
+	button.fill-paytm-blue img.paytm-logo {
+		width: 70px;
+	}
+}
 
 
 /* -- Phone Trap -- */
