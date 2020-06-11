@@ -127,6 +127,9 @@ $( function () {
 		var accomodationType = accomodationSelection.type.toLowerCase();
 		var livingSituation = window.__BFS.livingSituations[ accomodationType ];
 
+		var $fromDate = $( ".js_booking_from_date" );
+		var fromDate__Previous = $fromDate.val();
+
 		/*
 		 *
 		 * Form Date Picker
@@ -143,8 +146,11 @@ $( function () {
 				input.value = formattedDateString;
 			},
 			onSelect: function ( instance, date ) {
-				if ( ! ( date instanceof Date ) ) {
+				if ( ! ( date instanceof Date ) )
 					instance.el.value = "";
+			},
+			onHide: function ( instance ) {
+				if ( ! ( instance.dateSelected instanceof Date ) ) {
 					var $bookNowButton = $( ".js_booking_form [ type = 'submit' ]" );
 					$bookNowButton
 						.prop( "disabled", true )
@@ -152,12 +158,11 @@ $( function () {
 						.css( { backgroundColor: "" } )
 					return;
 				}
-				setTimeout( function () {
-					instance.hide();
-					instance.el.blur();
-				}, 100 );
-				checkAvailabilityHandler( livingSituation, date );
-			},
+				if ( fromDate__Previous === instance.el.value )
+					return;
+				checkAvailabilityHandler( livingSituation, instance.dateSelected );
+				fromDate__Previous = instance.el.value;
+			}
 		} );
 
 
@@ -166,9 +171,11 @@ $( function () {
 		 * When the "From" date is selected (on the browser native date picker)
 		 *
 		 */
-		$( document ).on( "input", ".js_booking_from_date", function ( event ) {
+		$fromDate.on( "blur", function ( event ) {
 			var dateString = event.target.value;
 			if ( dateString.trim() === "" )
+				return;
+			if ( fromDate__Previous === dateString )
 				return;
 
 			var dateParts = dateString.split( /\D/ );
@@ -177,7 +184,9 @@ $( function () {
 			// Manually set the date on the date widget and initiate the selection flow
 			fromDatePicker.setDate( date );
 			fromDatePicker.hide();
-			fromDatePicker.onSelect( fromDatePicker, date );
+			fromDatePicker.onHide( fromDatePicker );
+
+			fromDate__Previous = dateString;
 		} );
 
 
