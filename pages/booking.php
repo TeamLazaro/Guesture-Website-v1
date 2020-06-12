@@ -191,14 +191,16 @@ require_once __DIR__ . '/../inc/above.php';
 						<!-- Post Transaction messaging -->
 						<?php if ( $transactionOccurred ) : ?>
 							<?php if ( empty( $errors ) ) : ?>
-								<div class="h3 space-50-top strong">Your payment was successful. You will receive a call from our team shortly.</div>
+								<div class="h3 text-green-2 space-50-top strong">Payment Successful!</div>
+								<div class="h5 text-green-2 strong">Thank You. You will receive a call from our team shortly.</div>
 							<?php else : ?>
-								<div class="h3 space-50-top strong">Something wen't wrong with the payment. Kindly contact us.</div>
+								<div class="h3 text-red space-50-top strong">Payment Failed!</div>
+								<div class="h5 text-red strong">Something went wrong with the payment. Please call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--red) solid;">+91-828-7770011</a>.</div>
 							<?php endif; ?>
 						<?php endif; ?>
 
 
-						<div class="h4 strong space-25-top js_summary space-25-bottom">Gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
+						<div class="h4 strong space-25-top js_summary space-25-bottom">This option gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
 						<div class="virtual-tour-container fill-dark js_virtual_tour_container">
 							<iframe class="virtual-tour js_virtual_tour" data-default-src="/media/favicon/favicon.ico" src="/media/favicon/favicon.ico" frameborder="0" data-hj-allow-iframe=""></iframe>
 						</div>

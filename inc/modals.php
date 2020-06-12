@@ -79,7 +79,7 @@
 								<div class="row">
 									<div class="columns small-12 medium-6 large-4 xlarge-3"><?php require __DIR__ . '/login-prompt.php'; ?></div>
 								</div>
-								<div class="h4 strong space-25-top js_summary space-25-bottom">Gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
+								<div class="h4 strong space-25-top js_summary space-25-bottom">This option gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
 								<div class="virtual-tour-container fill-dark js_virtual_tour_container">
 									<iframe class="virtual-tour js_virtual_tour" data-default-src="/media/favicon/favicon.ico" src="/media/favicon/favicon.ico" frameborder="0"></iframe>
 								</div>
