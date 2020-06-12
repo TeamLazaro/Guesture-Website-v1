@@ -1245,6 +1245,11 @@ button.fill-paytm-blue:disabled {
 	cursor: not-allowed;
 }
 
+button.fill-paytm-blue.error {
+	background-color: var(--red);
+	cursor: not-allowed;
+}
+
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {
 	button.fill-paytm-blue img.paytm-logo {

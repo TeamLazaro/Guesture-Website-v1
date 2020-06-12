@@ -111,7 +111,7 @@ require_once __DIR__ . '/../inc/above.php';
 							<div class="price-options row space-50-top">
 								<div class="form-row columns small-12">
 									<label class="price-option cursor-pointer block space-min-bottom">
-										<input class="visuallyhidden" type="radio" name="payment" value="booking-fee">
+										<input class="visuallyhidden" type="radio" name="payment" value="booking-fee" checked>
 										<span class="radio"></span>
 										<span class="h5 strong text-green-2">Pay ₹4999 Booking Fee</span>
 										<div class="fine-print">
@@ -168,7 +168,13 @@ require_once __DIR__ . '/../inc/above.php';
 								<div class="form-row columns small-12 medium-6">
 									<label>
 										<span class="label invisible">Make Payment with PayTM</span>
-										<button class="button block fill-paytm-blue" type="submit" data-initial-text="Make Payment with PayTM" data-disabled-text="Book Now" data-checking-text="Checking Availability..." data-unavailable-text="Unavailable" data-processing-text="Processing Payment...">Pay ₹1199 <img class="paytm-logo" src="media/logo-paytm-light.svg<?php echo $ver ?>"></button>
+										<button class="button block fill-paytm-blue" type="submit">
+											<span class="_hidden" data-value="initial">Pay ₹1199 <img class="paytm-logo" src="media/logo-paytm-light.svg<?php echo $ver ?>"></span>
+											<span class="hidden" data-value="disabled">Book Now</span>
+											<span class="hidden" data-value="checking">Checking Availability...</span>
+											<span class="hidden" data-value="unavailable">Unavailable</span>
+											<span class="hidden" data-value="unavailable">Processing Payment...</span>
+										</button>
 									</label>
 								</div>
 								<div class="form-row columns small-12 medium-6 medium-offset-6 space-25-left">
