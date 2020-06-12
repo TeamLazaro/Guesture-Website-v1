@@ -110,13 +110,24 @@ require_once __DIR__ . '/../inc/above.php';
 						<?php if ( ! $transactionOccurred ) : ?>
 							<div class="price-options row space-50-top">
 								<div class="form-row columns small-12">
+									<!-- <div class="h6 text-neutral-3 text-uppercase space-min-bottom">Payment Options:</div> -->
+									<label class="price-option cursor-pointer block space-min-bottom">
+										<input class="visuallyhidden" type="radio" name="payment" value="3day-trial">
+										<span class="radio"></span>
+										<span class="h5 strong text-green-2">3 Day Trial for ₹1199</span>
+										<div class="fine-print">
+											<div class="label print">Just bring your bag, stay with us for 3 days and 2 night.</div>
+											<div class="label print">100% money back guarantee*</div>
+											<div class="label print">If you are not satisfied *within 36 hours of check-in we will refund your money.</div>
+										</div>
+									</label>
 									<label class="price-option cursor-pointer block space-min-bottom">
 										<input class="visuallyhidden" type="radio" name="payment" value="booking-fee">
 										<span class="radio"></span>
 										<span class="h5 strong text-green-2">Pay ₹4999 Booking Fee</span>
 										<div class="fine-print">
 											<div class="label print">The Booking Fee ensures your reservation is made.</div>
-											<div class="label print">At the time of check-in you will need to pay a 2 month security deposit.</div>
+											<div class="label print">At the time of check-in you will need to pay 2 month security deposit.</div>
 											<div class="label print">The ₹4999 Booking Fee is fully adjustable against this security deposit payment.</div>
 										</div>
 									</label>
@@ -125,18 +136,8 @@ require_once __DIR__ . '/../inc/above.php';
 										<span class="radio"></span>
 										<span class="h5 strong text-green-2">Pay 2 Months Security Deposit</span>
 										<div class="fine-print">
-											<div class="label print">Before you check-in, we collect a 2 months security deposit.</div>
+											<div class="label print">Before you check-in, we collect a 2 months security deposit. </div>
 											<div class="label print">The Security Deposit is fully refundable when you check-out.</div>
-										</div>
-									</label>
-									<label class="price-option cursor-pointer block space-min-bottom">
-										<input class="visuallyhidden" type="radio" name="payment" value="3day-trial">
-										<span class="radio"></span>
-										<span class="h5 strong text-green-2">Or Pay ₹1199 for a 3 Day Trial</span>
-										<div class="fine-print">
-											<div class="label print">Just bring your bag, stay with us for 3 days and 2 nights.</div>
-											<div class="label print">100% money back guarantee*</div>
-											<div class="label print">If you are not satisfied *within 36 hours of check-in we will refund your money.</div>
 										</div>
 									</label>
 								</div>
