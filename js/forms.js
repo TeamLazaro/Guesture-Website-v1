@@ -244,17 +244,18 @@ $( document ).on( "click", ".js_book_womens_block", function ( event ) {
  */
 $( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_book_from_modal", function ( event ) {
 	var $button = $( event.target );
-	$button.prop( "disabled", true );
 
 	var product = $button.data( "product" );
 	__.user.isInterestedIn( product );
 	__.user.update();
 
+	$button.addClass( "fill-paytm-blue no-pointer" );
+	$button.text( "Make Payment" );
 	setTimeout( function () {
 		var package = window.__BFS.livingSituations[ product.toLowerCase() ];
 		var url = window.__BFS.getUnitBookingURL( package );
 		window.location.href = url;
-	}, 1000 )
+	}, 500 );
 } );
 // The "Book Now" button on the "Booking" page
 $( document ).on( "click", ".js_book_a_unit", function ( event ) {

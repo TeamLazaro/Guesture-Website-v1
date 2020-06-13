@@ -19,7 +19,7 @@ require_once __DIR__ . '/../conf.php';
  * If this route is being navigated to post-transaction
  *
  */
-if ( ! empty( $_POST ) ) {
+if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'POST' and ! empty( $_POST ) ) {
 
 
 	/*
@@ -78,7 +78,10 @@ if ( ! empty( $_POST ) ) {
 	 * Data Validation
 	 *
 	 */
-	$transactionErrors = [ ];
+	$transaction = [
+		'occurred' => true,
+		'errors' => [ ]
+	];
 
 	// Is the request tampered with?
 		// i.e. checksum hash does not match
@@ -96,11 +99,31 @@ if ( ! empty( $_POST ) ) {
 	if ( $paytmParams[ 'RESPCODE' ] !== '01' or $paytmParams[ 'STATUS' ] !== 'TXN_SUCCESS' )
 		$transactionErrors[ 'transactionUnsuccessful' ] = true;
 
+	if ( ! empty( $transactionErrors ) ) {
+		$bookingDetails = [
+			'orderId' => '',
+			'type' => '',
+			'location' => '',
+			'hasBalcony' => '',
+			'hasBathroom' => '',
+			'phoneNumber' => '',
+			'emailAddress' => '',
+			'name' => '',
+			'unitId' => '',
+			'fromDate' => '',
+			'toDate' => ''
+		];
+		// Guesture::makeBooking( $bookingDetails );
+	}
 
-	$transactionOccurred = true;
-	require_once __DIR__ . '/booking.php';
+	$transactionString = base64_encode( json_encode( $transaction ) );
+	$redirectURL = '/payment-confirmation' . '?q=' . $_GET[ 'q' ] . '&t=' . $transactionString;
+	return header( 'Location: ' . $redirectURL, true, 302 );
 
 }
-else {
-
+else if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'GET' ) {
+	$transaction = json_decode( base64_decode( $_GET[ 't' ] ), true );
+	$transactionOccurred = $transaction[ 'occurred' ];
+	$transactionErrors = $transaction[ 'errors' ];
+	require_once __DIR__ . '/booking.php';
 }

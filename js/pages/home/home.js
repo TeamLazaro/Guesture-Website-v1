@@ -86,7 +86,7 @@ $( function () {
 
 		// Update the share URL
 		var package = window.__BFS.livingSituations[ packageName ];
-		var url = window.__BFS.getUnitInfoURL( package );
+		var url = window.__BFS.getUnitBookingURL( package );
 		var linkText = "The " + ( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) ) + " Package";
 		linkText += "\n@" + package.location;
 		linkText += "\nFor a fee of " + package.perDay + " " + package.monthlyFee;

@@ -36,7 +36,7 @@ try {
 catch ( \Exception $e ) {}
 
 // $timestamp = $_GET[ 'timestamp' ];
-$stayFromDate = $_GET[ 'date' ] ?? '';
+// $stayFromDate = $_GET[ 'fromDate' ] ?? '';
 
 
 $pageTitle = "Booking";
@@ -108,89 +108,82 @@ require_once __DIR__ . '/../inc/above.php';
 
 						<!-- Booking Form -->
 						<?php if ( ! $transactionOccurred ) : ?>
-							<div class="price-options row space-50-top">
-								<div class="form-row columns small-12">
-									<label class="price-option cursor-pointer block space-min-bottom">
-										<input class="visuallyhidden" type="radio" name="payment" value="booking-fee" checked>
-										<span class="radio"></span>
-										<span class="h5 strong text-green-2">Pay ₹4999 Booking Fee</span>
-										<div class="fine-print">
-											<div class="label print">The Booking Fee ensures your reservation is made.</div>
-											<div class="label print">At the time of check-in you will need to pay a 2 month security deposit.</div>
-											<div class="label print">The ₹4999 Booking Fee is fully adjustable against this security deposit payment.</div>
-										</div>
-									</label>
-									<label class="price-option cursor-pointer block space-min-bottom">
-										<input class="visuallyhidden" type="radio" name="payment" value="security-deposit">
-										<span class="radio"></span>
-										<span class="h5 strong text-green-2">Pay 2 Months Security Deposit</span>
-										<div class="fine-print">
-											<div class="label print">Before you check-in, we collect a 2 months security deposit.</div>
-											<div class="label print">The Security Deposit is fully refundable when you check-out.</div>
-										</div>
-									</label>
-									<label class="price-option cursor-pointer block space-min-bottom">
-										<input class="visuallyhidden" type="radio" name="payment" value="3day-trial">
-										<span class="radio"></span>
-										<span class="h5 strong text-green-2">Or Pay ₹1199 for a 3 Day Trial</span>
-										<div class="fine-print">
-											<div class="label print">Just bring your bag, stay with us for 3 days and 2 nights.</div>
-											<div class="label print">100% money back guarantee*</div>
-											<div class="label print">If you are not satisfied *within 36 hours of check-in we will refund your money.</div>
-										</div>
-									</label>
+							<form class="booking-form js_booking_form" <?php if ( empty( $cupidUser ) ) : ?>style="display: none"<?php endif; ?>>
+								<div class="price-options row space-50-top js_price_options">
+									<div class="form-row columns small-12">
+										<label class="price-option cursor-pointer block space-min-bottom" data-type="booking">
+											<input class="visuallyhidden" type="radio" name="payment" value="booking-fee" data-amount="4999">
+											<span class="radio"></span>
+											<span class="h5 strong text-green-2">Pay ₹4999 Booking Fee</span>
+											<div class="fine-print">
+												<div class="label print">The Booking Fee ensures your reservation is made.</div>
+												<div class="label print">At the time of check-in you will need to pay a 2 month security deposit.</div>
+												<div class="label print">The ₹4999 Booking Fee is fully adjustable against this security deposit payment.</div>
+											</div>
+										</label>
+										<label class="price-option cursor-pointer block space-min-bottom" data-type="deposit">
+											<input class="visuallyhidden" type="radio" name="payment" value="security-deposit" data-amount="">
+											<span class="radio"></span>
+											<span class="h5 strong text-green-2">Pay 2 Months Security Deposit <span class="js_amount"></span></span>
+											<div class="fine-print">
+												<div class="label print">Before you check-in, we collect a 2 months security deposit.</div>
+												<div class="label print">The Security Deposit is fully refundable when you check-out.</div>
+											</div>
+										</label>
+										<label class="price-option cursor-pointer block space-min-bottom" data-type="trial">
+											<input class="visuallyhidden" type="radio" name="payment" value="3day-trial" data-amount="1199">
+											<span class="radio"></span>
+											<span class="h5 strong text-green-2">Or Pay ₹1199 for a 3 Day Trial</span>
+											<div class="fine-print">
+												<div class="label print">Just bring your bag, stay with us for 3 days and 2 nights.</div>
+												<div class="label print">100% money back guarantee*</div>
+												<div class="label print">If you are not satisfied *within 36 hours of check-in we will refund your money.</div>
+											</div>
+										</label>
+									</div>
 								</div>
-							</div>
-							<form class="row space-50-top space-50-bottom booking-form js_booking_form" <?php if ( empty( $cupidUser ) ) : ?>style="display: none"<?php endif; ?>>
-								<div class="form-row columns small-12 medium-6">
-									<label>
-										<span class="label inline text-neutral-3 text-uppercase">Full Name</span>
-										<input class="name block" type="text" name="name">
-									</label>
-								</div>
-								<div class="form-row columns small-12 medium-6">
-									<label>
-										<span class="label inline text-neutral-3 text-uppercase">Email Id</span>
-										<input class="email block" type="text" name="email-address">
-									</label>
-								</div>
-								<div class="form-row columns small-12 medium-6">
-									<label>
-										<span class="label inline text-neutral-3 text-uppercase">Starting From</span>
-										<div class="date-input-container">
-											<input class="date block js_booking_from_date" type="date" pattern="[0-9\-\/]+" value="" required>
-											<select class="block date">
-												<option>Select a Date</option>
-											</select>
-										</div>
-									</label>
-								</div>
-								<div class="form-row columns small-12 medium-6">
-									<label>
-										<span class="label invisible">Make Payment with PayTM</span>
-										<button class="button block fill-paytm-blue" type="submit">
-											<span class="_hidden" data-value="initial">Pay ₹1199 <img class="paytm-logo" src="media/logo-paytm-light.svg<?php echo $ver ?>"></span>
-											<span class="hidden" data-value="disabled">Book Now</span>
-											<span class="hidden" data-value="checking">Checking Availability...</span>
-											<span class="hidden" data-value="unavailable">Unavailable</span>
-											<span class="hidden" data-value="unavailable">Processing Payment...</span>
-										</button>
-									</label>
-								</div>
-								<div class="form-row columns small-12 medium-6 medium-offset-6 space-25-left">
-									<!-- <label class="inline-bottom"> -->
-										<!-- <span class="label block invisible">Or, Recalculate Price</span> -->
+								<div class="row space-50-top space-50-bottom">
+									<div class="form-row columns small-12 medium-6">
+										<label>
+											<span class="label inline text-neutral-3 text-uppercase">Full Name</span>
+											<input class="name block" type="text" name="name" required>
+										</label>
+									</div>
+									<div class="form-row columns small-12 medium-6">
+										<label>
+											<span class="label inline text-neutral-3 text-uppercase">Email Id</span>
+											<input class="email block" type="text" name="email-address" required>
+										</label>
+									</div>
+									<div class="form-row columns small-12 medium-6">
+										<label>
+											<span class="label inline text-neutral-3 text-uppercase">Starting From</span>
+											<div class="date-input-container">
+												<input class="date block js_booking_from_date" type="date" pattern="[0-9\-\/]+" value="" required>
+											</div>
+										</label>
+									</div>
+									<div class="form-row columns small-12 medium-6">
+										<label>
+											<span class="label invisible">Make Payment with PayTM</span>
+											<button class="button block fill-paytm-blue" type="submit" data-state="initial">
+												<span class="initial">Pay ₹<span class="js_booking_amount"></span> <img class="paytm-logo" src="media/logo-paytm-light.svg<?php echo $ver ?>"></span>
+												<span class="checking">Checking Availability...</span>
+												<span class="processing">Processing Payment...</span>
+											</button>
+										</label>
+									</div>
+									<div class="form-row columns small-12 medium-6 medium-offset-6 space-25-left">
 										<a href="/#pricing" target="_blank" class="label strong underline text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">Or, Recalculate Price</a>
-									<!-- </label> -->
+									</div>
 								</div>
 							</form>
-
 						<?php endif; ?>
 
 
 						<!-- Post Transaction messaging -->
 						<?php if ( $transactionOccurred ) : ?>
-							<?php if ( empty( $errors ) ) : ?>
+							<?php if ( empty( $transactionErrors ) ) : ?>
 								<div class="h3 text-green-2 space-50-top strong">Payment Successful!</div>
 								<div class="h5 text-green-2 strong">Thank You. You will receive a call from our team shortly.</div>
 							<?php else : ?>

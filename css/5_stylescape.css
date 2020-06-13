@@ -1240,13 +1240,14 @@ button.fill-paytm-blue img.paytm-logo {
 	margin-left: 3px;
 }
 
+button.fill-paytm-blue > span {
+	display: none;
+}
+button.fill-paytm-blue[ data-state = "initial" ] .initial { display: inline; }
+button.fill-paytm-blue[ data-state = "checking" ] .checking { display: inline; }
+button.fill-paytm-blue[ data-state = "processing" ] .processing { display: inline; }
 button.fill-paytm-blue:disabled {
 	background-color: var(--neutral-3);
-	cursor: not-allowed;
-}
-
-button.fill-paytm-blue.error {
-	background-color: var(--red);
 	cursor: not-allowed;
 }
 

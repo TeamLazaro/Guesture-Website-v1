@@ -26,6 +26,7 @@ require_once __DIR__ . '/paytm-checksum.php';
 $customerPhoneNumber = $_POST[ 'phoneNumber' ];
 $customerEmail = $_POST[ 'emailAddress' ];
 $fromDate = $_POST[ 'fromDate' ];
+$toDate = $_POST[ 'toDate' ];
 $unitInfoString = $_POST[ 'unitInfoString' ];
 $transactionAmount = $_POST[ 'amount' ];
 
@@ -51,7 +52,8 @@ else
 	$httpProtocol = 'http';
 
 // $_SERVER[ 'HTTP_REFERER' ]
-$callbackURL = $httpProtocol . '://' . $hostName . '/payment-confirmation' . '?q=' . $unitInfoString . '&date=' . $fromDate;
+$callbackURL = $httpProtocol . '://' . $hostName . '/payment-confirmation' . '?q=' . $unitInfoString;
+// $callbackURL = $httpProtocol . '://' . $hostName . '/payment-confirmation' . '?q=' . $unitInfoString . '&fromDate=' . $fromDate . '&toDate=' . $toDate;
 
 
 

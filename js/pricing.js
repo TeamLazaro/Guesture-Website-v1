@@ -3,11 +3,6 @@ $( function () {
 
 	window.__BFS = window.__BFS || { };
 
-	function getUnitInfoURL ( package ) {
-		return window.location.origin + "/what-is-included?q=" + package.toString();
-	}
-	window.__BFS.getUnitInfoURL = getUnitInfoURL;
-
 	function getUnitBookingURL ( package ) {
 		return window.location.origin + "/booking?q=" + package.toString();
 	}

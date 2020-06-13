@@ -67,8 +67,7 @@ class Guesture {
 			'checkInDate' => $data[ 'fromDate' ],
 			'checkOutDate' => $data[ 'toDate' ],
 			'stayDuration' => $data[ 'duration' ],
-			'stayDurationUnit' => 1,
-			'success' => true
+			'stayDurationUnit' => 1
 		];
 
 		$responseBody = self::httpRequest( $endpoint, 'POST', $requestBody );
@@ -80,6 +79,41 @@ class Guesture {
 			'success' => $responseBody[ 'success' ],
 			'inventoryId' => $responseBody[ 'inventory' ][ 'id' ]
 		];
+
+	}
+
+
+
+	/*
+	 *
+	 * ----- Creates a customer record with the given data
+	 *
+	 */
+	public static function makeBooking ( $data ) {
+
+		$endpoint = self::$apiUrl . 'guest-jini/booking/create-booking';
+
+		$requestBody = [
+			'orderId' => $data[ 'orderId' ],
+			'stayPackage' => $data[ 'type' ],
+			'property' => $data[ 'location' ],
+			'hasBalcony' => $data[ 'hasBalcony' ],
+			'hasBathRoom' => $data[ 'hasBathroom' ],	// Yes, the capital 'R' in the field name is important
+			'mobileNumber' => $data[ 'phoneNumber' ],
+			'emailAddress' => $data[ 'emailAddress' ],
+			'fullName' => $data[ 'name' ],
+			'gender' => null,
+			'selectedInventory' => $data[ 'unitId' ],
+			'checkInDate' => $data[ 'fromDate' ],
+			'checkOutDate' => $data[ 'toDate' ]
+		];
+
+		$responseBody = self::httpRequest( $endpoint, 'POST', $requestBody );
+
+		if ( empty( $responseBody ) )
+			return [ 'success' => false ];
+
+		return $requestBody;
 
 	}
 
