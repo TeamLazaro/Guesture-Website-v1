@@ -156,7 +156,7 @@ if ( cmsIsEnabled() ) {
 
 
 <!-- Booking Section -->
-<section class="booking-section space-150-top-bottom" data-section="Booking" data-section-id="booking">
+<section id="booking" class="booking-section space-150-top-bottom" data-section="Booking" data-section-id="booking">
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-10 small-offset-1 js_location_selector_container">
@@ -679,6 +679,7 @@ if ( cmsIsEnabled() ) {
 			</div>
 		</div>
 		<div class="icon-lamp" style="opacity: 0;"><?php include __DIR__ . '/../media/icons/icon-lamp.svg'; ?></div>
+		<div class="irina-label block small text-center text-neutral-3 text-uppercase scroll-reveal" style="--td: .25s;">Guesture is a brand of Irina Hospitality PVT LTD</div>
 	</div>
 	<!-- End: Pricing -->
 	<div class="container">
@@ -846,7 +847,13 @@ if ( cmsIsEnabled() ) {
 				<div class="h0 text-green-2 space-25-top">₹1199</div>
 			</div>
 			<div class="columns small-10 small-offset-1 scroll-reveal">
-				<div class="action row">
+				<div>
+					<label class="columns small-12 medium-6 large-4">
+						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+						<a class="button block" href="#pricing">Book Now</a>
+					</label>
+				</div>
+				<div class="action row hidden">
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
@@ -1387,6 +1394,7 @@ if ( cmsIsEnabled() ) {
 					18th B Main Road, 5th Block, Rajajinagar,<br>
 					Bangalore — 560010.
 				</div>
+				<div class="small text-neutral-5 text-uppercase strong space-min-top scroll-reveal">Guesture is a brand of Irina Hospitality PVT LTD</div>
 				<div class="h6 text-green-2 text-uppercase strong opacity-50 space-25-top scroll-reveal">Quick Links :</div>
 				<a target="_blank" href="/privacy-policy" class="label text-neutral-4 scroll-reveal" style="border-bottom: solid 1px var(--green-2); margin-top: 5px;">Privacy Policy</a><br>
 				<a target="_blank" href="/terms-and-conditions" class="label text-neutral-4 scroll-reveal" style="border-bottom: solid 1px var(--green-2); margin-top: 5px;">Terms and Conditions</a><br>

@@ -310,7 +310,17 @@
 	}
 }
 
-
+/* -- Irina Label -- */
+.booking-section .pricing .irina-label {
+	margin-top: -9px;
+	line-height: 1;
+	font-size: 9px;
+}
+@media( min-width: 1480px ) {
+	.booking-section .pricing .irina-label {
+		transform: translateX(-120px); /* delete when 4th pricing item has been added */
+	}
+}
 
 
 

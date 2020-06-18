@@ -165,12 +165,13 @@ require_once __DIR__ . '/../inc/above.php';
 									</div>
 									<div class="form-row columns small-12 medium-6">
 										<label>
-											<span class="label invisible">Make Payment with PayTM</span>
+											<span class="label inline text-neutral-3 text-uppercase invisible">Make Payment with PayTM</span>
 											<button class="button block fill-paytm-blue" type="submit" data-state="initial">
 												<span class="initial">Pay ₹<span class="js_booking_amount"></span> <img class="paytm-logo" src="media/logo-paytm-light.svg<?php echo $ver ?>"></span>
 												<span class="checking">Checking Availability...</span>
 												<span class="processing">Processing Payment...</span>
 											</button>
+											<div class="small text-neutral-3 text-uppercase text-center" style="font-size: 8px; margin-top: 5px;">'Paid Towards Guesture - Irina Hospitality PVT LTD'</div>
 										</label>
 									</div>
 									<div class="form-row columns small-12 medium-6 medium-offset-6 space-25-left">
@@ -184,8 +185,9 @@ require_once __DIR__ . '/../inc/above.php';
 						<!-- Post Transaction messaging -->
 						<?php if ( $transactionOccurred ) : ?>
 							<?php if ( empty( $transactionErrors ) ) : ?>
-								<div class="h3 text-green-2 space-50-top strong">Payment Successful!</div>
-								<div class="h5 text-green-2 strong">Thank You. You will receive a call from our team shortly.</div>
+								<div class="label text-uppercase text-dark space-50-top strong">Transaction ID: 15924677618431</div>
+								<div class="h3 text-green-2 strong">Payment Successful!</div>
+								<div class="h5 text-green-2 strong">You will receive a call from our team shortly. Or call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--green-2) solid;">+91-828-7770011</a>.</div>
 							<?php else : ?>
 								<div class="h3 text-red space-50-top strong">Payment Failed!</div>
 								<div class="h5 text-red strong">Something went wrong with the payment. Please call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--red) solid;">+91-828-7770011</a>.</div>
