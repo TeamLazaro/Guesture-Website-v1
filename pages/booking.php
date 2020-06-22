@@ -185,9 +185,8 @@ require_once __DIR__ . '/../inc/above.php';
 						<!-- Post Transaction messaging -->
 						<?php if ( $transactionOccurred ) : ?>
 							<?php if ( empty( $transactionErrors ) ) : ?>
-								<div class="label text-uppercase text-dark space-50-top strong">Transaction ID: 15924677618431</div>
-								<div class="h3 text-green-2 strong">Payment Successful!</div>
-								<div class="h5 text-green-2 strong">You will receive a call from our team shortly. Or call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--green-2) solid;">+91-828-7770011</a>.</div>
+								<div class="h3 text-green-2 strong space-50-top">Payment Successful!</div>
+								<div class="h5 text-green-2 strong">For any further assistance call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--green-2) solid;">+91-828-7770011</a>, with your transaction ID: <span class="h5 text-dark strong">15924677618431</span></div>
 							<?php else : ?>
 								<div class="h3 text-red space-50-top strong">Payment Failed!</div>
 								<div class="h5 text-red strong">Something went wrong with the payment. Please call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--red) solid;">+91-828-7770011</a>.</div>
