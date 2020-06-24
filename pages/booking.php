@@ -112,7 +112,7 @@ require_once __DIR__ . '/../inc/above.php';
 								<div class="price-options row space-50-top js_price_options">
 									<div class="form-row columns small-12">
 										<label class="price-option cursor-pointer block space-min-bottom" data-type="booking">
-											<input class="visuallyhidden" type="radio" name="payment" value="booking-fee" data-amount="4999">
+											<input class="visuallyhidden" type="radio" name="payment" value="booking-fee" data-amount="4999" data-desc="Booking Fee">
 											<span class="radio"></span>
 											<span class="h5 strong text-green-2">Pay ₹4999 Booking Fee</span>
 											<div class="fine-print">
@@ -122,7 +122,7 @@ require_once __DIR__ . '/../inc/above.php';
 											</div>
 										</label>
 										<label class="price-option cursor-pointer block space-min-bottom" data-type="deposit">
-											<input class="visuallyhidden" type="radio" name="payment" value="security-deposit" data-amount="">
+											<input class="visuallyhidden" type="radio" name="payment" value="security-deposit" data-amount="" data-desc="Security Deposit">
 											<span class="radio"></span>
 											<span class="h5 strong text-green-2">Pay 2 Months Security Deposit <span class="js_amount"></span></span>
 											<div class="fine-print">
@@ -131,7 +131,7 @@ require_once __DIR__ . '/../inc/above.php';
 											</div>
 										</label>
 										<label class="price-option cursor-pointer block space-min-bottom" data-type="trial">
-											<input class="visuallyhidden" type="radio" name="payment" value="3day-trial" data-amount="1199">
+											<input class="visuallyhidden" type="radio" name="payment" value="3day-trial" data-amount="1199" data-desc="Trial">
 											<span class="radio"></span>
 											<span class="h5 strong text-green-2">Or Pay ₹1199 for a 3 Day Trial</span>
 											<div class="fine-print">
@@ -186,7 +186,7 @@ require_once __DIR__ . '/../inc/above.php';
 						<?php if ( $transactionOccurred ) : ?>
 							<?php if ( empty( $transactionErrors ) ) : ?>
 								<div class="h3 text-green-2 strong space-50-top">Payment Successful!</div>
-								<div class="h5 text-green-2 strong">For any further assistance call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--green-2) solid;">+91-828-7770011</a>, with your transaction ID: <span class="h5 text-dark strong">15924677618431</span></div>
+								<div class="h5 text-green-2 strong">For any further assistance call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--green-2) solid;">+91-828-7770011</a>, with your transaction ID: <span class="h5 text-dark strong"><?= $transactionId ?></span></div>
 							<?php else : ?>
 								<div class="h3 text-red space-50-top strong">Payment Failed!</div>
 								<div class="h5 text-red strong">Something went wrong with the payment. Please call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--red) solid;">+91-828-7770011</a>.</div>

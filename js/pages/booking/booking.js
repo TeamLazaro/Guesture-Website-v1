@@ -90,8 +90,8 @@ $( document ).on( "change", ".js_price_options input", function ( event ) {
 	var $option = $( event.target );
 	$option.attr( "checked", true );
 	var amount = $option.data( "amount" );
-	// var description;
-	setPayment( amount );
+	var description = $option.data( "desc" );
+	setPayment( amount, description );
 
 } );
 
@@ -110,6 +110,19 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 	event.preventDefault();
 
 	var $form = $( event.target );
+
+
+
+	/*
+	 * ----- Re-run/simulate the inputting of all the form fields
+	 *
+	 * This is so that all the data that is processed and stored in JS memory is ensured to be there.
+	 * This will not be case when the page is navigated to via the back/forward buttons.
+	 *
+	 */
+	$( ".js_price_options input:checked" ).trigger( "change" );
+	$( ".js_booking_from_date" ).trigger( "blur" );
+
 
 
 	// /* -----
@@ -169,20 +182,26 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 	// /* -----
 	//  * Update the person's information
 	//  ----- */
-	// __.user.update();
+	__.user.update();
 
 
 	/*
 	 * Initiate the payment flow
 	 */
+	var unitDetails = JSON.parse( window.atob( ( new URLSearchParams( location.search ) ).get( "q" ) ) );
+	unitDetails.id = window.__BFS.unitId;
+	var booking = {
+		description: window.__BFS.bookingDescription,
+		unit: unitDetails,
+		amount: window.__BFS.bookingAmount,
+		fromDate: window.__BFS.bookingFromDate,
+		toDate: window.__BFS.bookingToDate
+	};
 	var transactionData = {
 		phoneNumber: __.user.phoneNumber,
 		name: __.user.name,
 		emailAddress: __.user.emailAddress,
-		amount: window.__BFS.bookingAmount,
-		fromDate: window.__BFS.bookingFromDate,
-		toDate: window.__BFS.bookingToDate,
-		unitInfoString: ( new URLSearchParams( location.search ) ).get( "q" )
+		booking: booking
 	};
 	getPaymentTransactionParameters( transactionData )
 		.then( makeSynchronousPOSTRequest )
@@ -339,6 +358,7 @@ function checkAvailabilityHandler ( livingSituation, date ) {
 				var toDate = new Date( date.getTime() + durationInMonths * 30 * 24 * 60 * 60 * 1000 );
 				livingSituation.toDateString = getDateString( toDate );
 				window.__BFS.bookingToDate = livingSituation.toDateString;
+				window.__BFS.unitId = response.inventoryId;
 			}
 			else {
 				livingSituation.fromDateString = null;
@@ -349,6 +369,7 @@ function checkAvailabilityHandler ( livingSituation, date ) {
 				window.__BFS.fromDatePicker.setDate();
 				window.__BFS.fromDatePicker.onHide( window.__BFS.fromDatePicker );
 				window.__BFS.fromDate__Previous = "";
+				window.__BFS.unitId = null;
 			}
 		} )
 		.catch( function () {
@@ -360,7 +381,7 @@ function checkAvailabilityHandler ( livingSituation, date ) {
 function setPayment ( amount, description ) {
 
 	window.__BFS.bookingAmount = amount;
-	// window.__BFS.bookingDescription = description;
+	window.__BFS.bookingDescription = description;
 	$( ".js_booking_amount" ).text( amount );
 
 }

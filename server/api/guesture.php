@@ -97,8 +97,8 @@ class Guesture {
 			'orderId' => $data[ 'orderId' ],
 			'stayPackage' => $data[ 'type' ],
 			'property' => $data[ 'location' ],
-			'hasBalcony' => $data[ 'hasBalcony' ],
-			'hasBathRoom' => $data[ 'hasBathroom' ],	// Yes, the capital 'R' in the field name is important
+			'hasBalcony' => $data[ 'hasBalcony' ] ? 1 : 0,
+			'hasBathRoom' => $data[ 'hasBathroom' ] ? 1 : 0,	// Yes, the capital 'R' in the field name is important
 			'mobileNumber' => $data[ 'phoneNumber' ],
 			'emailAddress' => $data[ 'emailAddress' ],
 			'fullName' => $data[ 'name' ],

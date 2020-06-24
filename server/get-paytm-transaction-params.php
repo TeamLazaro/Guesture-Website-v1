@@ -23,12 +23,10 @@ require_once __DIR__ . '/paytm-checksum.php';
  * Extract data from input
  *
  */
+$customerName = $_POST[ 'name' ];
 $customerPhoneNumber = $_POST[ 'phoneNumber' ];
-$customerEmail = $_POST[ 'emailAddress' ];
-$fromDate = $_POST[ 'fromDate' ];
-$toDate = $_POST[ 'toDate' ];
-$unitInfoString = $_POST[ 'unitInfoString' ];
-$transactionAmount = $_POST[ 'amount' ];
+$customerEmailAddress = $_POST[ 'emailAddress' ];
+$booking = $_POST[ 'booking' ];
 
 
 
@@ -43,17 +41,33 @@ function microtimeString () {
 }
 
 $orderId = microtimeString();
-$customerId = substr( preg_replace( '/[^a-zA-Z0-9]/', '', PaytmChecksum::generateSignature( [ 'phoneNumber' => $customerPhoneNumber ], PAYTM_MERCHANT_KEY ) ), 0, 9 );
-// $callbackURL = $_POST[ 'callbackURL' ] . '?orderId=' . $orderId;
+$customerId = substr(
+	preg_replace(
+		'/[^a-zA-Z0-9]/',
+		'',
+		PaytmChecksum::generateSignature( [ 'phoneNumber' => $customerPhoneNumber ], PAYTM_MERCHANT_KEY )
+	),
+	0,
+	41
+);
+
 $hostName = $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ];
 if ( HTTPS_SUPPORT )
 	$httpProtocol = 'https';
 else
 	$httpProtocol = 'http';
 
-// $_SERVER[ 'HTTP_REFERER' ]
-$callbackURL = $httpProtocol . '://' . $hostName . '/payment-confirmation' . '?q=' . $unitInfoString;
-// $callbackURL = $httpProtocol . '://' . $hostName . '/payment-confirmation' . '?q=' . $unitInfoString . '&fromDate=' . $fromDate . '&toDate=' . $toDate;
+$transactionAmount = $booking[ 'amount' ];
+
+$unitInfoString = base64_encode( json_encode( $booking[ 'unit' ] ) );
+$transactionMetaString = base64_encode( json_encode(
+	array_merge( $booking, [
+		'customerName' => $customerName,
+		'customerPhoneNumber' => $customerPhoneNumber,
+		'customerEmailAddress' => $customerEmailAddress
+	] )
+) );
+$callbackURL = $httpProtocol . '://' . $hostName . '/booking-confirmation' . '?q=' . $unitInfoString . '&t=' . $transactionMetaString;
 
 
 
@@ -86,7 +100,7 @@ $paytmParams = [
 	'MOBILE_NO' => $customerPhoneNumber,
 
 	/* customer's email */
-	'EMAIL' => $customerEmail,
+	'EMAIL' => $customerEmailAddress,
 
 	/**
 	 * Amount in INR that is payble by customer

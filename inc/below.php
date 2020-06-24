@@ -60,7 +60,7 @@
 			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
 		</script>
 		<script type="text/javascript" src="/js/pages/what-is-included/what-is-included.js<?= $ver ?>"></script>
-	<?php elseif ( $urlSlug === 'booking' or $urlSlug === 'payment-confirmation' ) : ?>
+	<?php elseif ( $urlSlug === 'booking' or $urlSlug === 'booking-confirmation' ) : ?>
 		<script type="text/javascript">
 			window.__BFS.accomodationSelection = <?= json_encode( $configuration ) ?>;
 		</script>

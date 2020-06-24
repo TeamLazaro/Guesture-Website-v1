@@ -21,7 +21,6 @@ require_once __DIR__ . '/../conf.php';
  */
 if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'POST' and ! empty( $_POST ) ) {
 
-
 	/*
 	 *
 	 * Sample callback request from PayTM
@@ -51,6 +50,8 @@ if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'POST' and ! empty( $_POST )
 	 *
 	 */
 	require_once __DIR__ . '/../server/paytm-checksum.php';
+	require_once __DIR__ . '/../server/api/guesture.php';
+	require_once __DIR__ . '/../server/api/cupid.php';
 
 
 
@@ -80,44 +81,63 @@ if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'POST' and ! empty( $_POST )
 	 */
 	$transaction = [
 		'occurred' => true,
-		'errors' => [ ]
+		'errors' => [ ],
+		'id' => $_POST[ 'TXNID' ]
 	];
 
 	// Is the request tampered with?
 		// i.e. checksum hash does not match
 	$verifySignature = PaytmChecksum::verifySignature( $paytmParams, PAYTM_MERCHANT_KEY, $paytmChecksum );
 	if ( ! $verifySignature )
-		$transactionErrors[ 'paymentTampered' ] = true;
+		$transaction[ 'errors' ][ 'paymentTampered' ] = true;
 
 	// Is the merchant id correct?
 	if ( $paytmParams[ 'MID' ] !== PAYTM_MERCHANT_ID )
-		$transactionErrors[ 'merchantIncorrect' ] = true;
+		$transaction[ 'errors' ][ 'merchantIncorrect' ] = true;
 
 	// Was the transaction successful?
 		// Response code is not `01`
 		// Status is not `TXN_SUCCESS`
 	if ( $paytmParams[ 'RESPCODE' ] !== '01' or $paytmParams[ 'STATUS' ] !== 'TXN_SUCCESS' )
-		$transactionErrors[ 'transactionUnsuccessful' ] = true;
+		$transaction[ 'errors' ][ 'transactionUnsuccessful' ] = true;
 
-	if ( ! empty( $transactionErrors ) ) {
+	// Get the transaction meta (i.e. booking) information
+	$transactionMeta = json_decode( base64_decode( $_GET[ 't' ] ), true );
+
+	if ( empty( $transaction[ 'errors' ] ) ) {
 		$bookingDetails = [
-			'orderId' => '',
-			'type' => '',
-			'location' => '',
-			'hasBalcony' => '',
-			'hasBathroom' => '',
-			'phoneNumber' => '',
-			'emailAddress' => '',
-			'name' => '',
-			'unitId' => '',
-			'fromDate' => '',
-			'toDate' => ''
+			'orderId' => $_POST[ 'ORDERID' ],
+			'type' => $transactionMeta[ 'unit' ][ 'type' ],
+			'location' => $transactionMeta[ 'unit' ][ 'location' ],
+			'hasBalcony' => strtolower( $transactionMeta[ 'unit' ][ 'balcony' ] ) !== 'none',
+			'hasBathroom' => strtolower( $transactionMeta[ 'unit' ][ 'bathroom' ] ) !== 'attached',
+			'phoneNumber' => substr( $transactionMeta[ 'customerPhoneNumber' ], 1 ),
+			'emailAddress' => $transactionMeta[ 'customerEmailAddress' ],
+			'name' => $transactionMeta[ 'customerName' ],
+			'unitId' => $transactionMeta[ 'unit' ][ 'id' ] ?? '',
+			'fromDate' => $transactionMeta[ 'fromDate' ],
+			'toDate' => $transactionMeta[ 'toDate' ]
 		];
-		// Guesture::makeBooking( $bookingDetails );
+		Guesture::makeBooking( $bookingDetails );
+
+		$purchase = [
+			'client' => 'guesture',
+			'phoneNumber' => $transactionMeta[ 'customerPhoneNumber' ],
+			'description' => $transactionMeta[ 'description' ],
+			'amount' => $transactionMeta[ 'amount' ],
+			'provider' => 'PayTM',
+			'purchaseData' => [
+				'unit' => $transactionMeta[ 'unit' ],
+				'fromDate' => $transactionMeta[ 'fromDate' ],
+				'toDate' => $transactionMeta[ 'toDate' ],
+				'transaction' => $_POST
+			]
+		];
+		Cupid::recordPurchase( $purchase );
 	}
 
 	$transactionString = base64_encode( json_encode( $transaction ) );
-	$redirectURL = '/payment-confirmation' . '?q=' . $_GET[ 'q' ] . '&t=' . $transactionString;
+	$redirectURL = '/booking-confirmation' . '?q=' . $_GET[ 'q' ] . '&t=' . $transactionString;
 	return header( 'Location: ' . $redirectURL, true, 302 );
 
 }
@@ -125,5 +145,6 @@ else if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'GET' ) {
 	$transaction = json_decode( base64_decode( $_GET[ 't' ] ), true );
 	$transactionOccurred = $transaction[ 'occurred' ];
 	$transactionErrors = $transaction[ 'errors' ];
+	$transactionId = $transaction[ 'id' ];
 	require_once __DIR__ . '/booking.php';
 }

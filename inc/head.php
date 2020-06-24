@@ -126,7 +126,7 @@
 	<!-- Slick Carousel -->
 	<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css<?php echo $ver ?>"/>
 	<link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css<?php echo $ver ?>"/>
-	<?php if ( $urlSlug === 'booking' or $urlSlug === 'payment-confirmation' ) : ?>
+	<?php if ( $urlSlug === 'booking' or $urlSlug === 'booking-confirmation' ) : ?>
 		<link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker-v5.14.2.min.css<?php echo $ver ?>"/>
 	<?php endif; ?>
 
