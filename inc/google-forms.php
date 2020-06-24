@@ -118,3 +118,29 @@ function submitPersonActivity ( $data ) {
 	return $response;
 
 }
+
+function submitPersonPurchase ( $data ) {
+
+	$endpoint = 'https://docs.google.com/forms/d/e/'
+			. '1FAIpQLScIOj-fmquBAXipWHWW8NEy9BQ3qn09wh8szLHZeRaqpuDXQg/formResponse';
+	$requestBody = [
+		'entry.2078232423' => $data[ 'when' ],
+		'entry.594013154' => $data[ 'personId' ],
+		'entry.500434197' => $data[ 'personPhoneNumber' ],
+		'entry.38316906' => $data[ 'personVerified' ],
+		'entry.379033297' => $data[ 'description' ],
+		'entry.1442681041' => $data[ 'amount' ],
+		'entry.2078985342' => $data[ 'stayFrom' ],
+		'entry.526025384' => $data[ 'stayDuration' ],
+		'entry.1366885942' => $data[ 'unitLocation' ],
+		'entry.1627245782' => $data[ 'unitType' ],
+		'entry.1578199473' => $data[ 'unitHasBalcony' ],
+		'entry.2097722283' => $data[ 'unitHasBathroom' ],
+		'entry.2063332519' => $data[ 'unitInventoryId' ]
+	];
+
+	$response = getAPIResponse( $endpoint, 'POST', $requestBody );
+
+	return $response;
+
+}
