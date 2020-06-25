@@ -121,6 +121,8 @@ $( function () {
 		// Pull out the values
 		this.perDay = sheet[ this.sheetCoordinates.perDay ].v;
 		this.monthlyFee = sheet[ this.sheetCoordinates.monthlyFee ].v;
+		this.amountPerMonth = sheet[ this.sheetCoordinates.rackRate ].v;	// confusing, I know
+		this.monthlyFeeFormatted = sheet[ this.sheetCoordinates.monthlyFeeFormatted ].v;
 		this.photo = sheet[ this.sheetCoordinates.photo ].v;
 		this.panorama = sheet[ this.sheetCoordinates.panorama ].v;
 		this.virtualTour = sheet[ this.sheetCoordinates.virtualTour ].v;
@@ -372,7 +374,7 @@ $( function () {
 		whatIsIncludedFields.$bookNow.closest( ".js_login_trigger_region" ).show();
 
 		whatIsIncludedFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
-		whatIsIncludedFields.$monthlyExpense.text( package.perDay );
+		whatIsIncludedFields.$monthlyExpense.text( package.monthlyFeeFormatted );
 		whatIsIncludedFields.$monthlyFee.text( package.monthlyFee );
 		whatIsIncludedFields.$location.text( package.location );
 		whatIsIncludedFields.$summary.text( package.summary );

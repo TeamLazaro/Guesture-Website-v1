@@ -13,7 +13,7 @@ $( function () {
 		 * Set up the details for the various payment options
 		 *
 		 */
-		var monthlyExpenseAmount = parseInt( livingSituation.perDay.replace( /[^\d]/g, "" ), 10 );
+		var monthlyExpenseAmount = livingSituation.amountPerMonth;
 		var securityDepositAmount = monthlyExpenseAmount * 2;
 		var securityDepositAmountFormatted = formatNumberToIndianRupee( securityDepositAmount, { symbol: true } );
 		$( ".js_price_options [ data-type = 'deposit' ] .js_amount" ).text( "(" + securityDepositAmountFormatted + ")" )
