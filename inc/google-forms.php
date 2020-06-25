@@ -136,7 +136,9 @@ function submitPersonPurchase ( $data ) {
 		'entry.1627245782' => $data[ 'unitType' ],
 		'entry.1578199473' => $data[ 'unitHasBalcony' ],
 		'entry.2097722283' => $data[ 'unitHasBathroom' ],
-		'entry.2063332519' => $data[ 'unitInventoryId' ]
+		'entry.2063332519' => $data[ 'unitInventoryId' ],
+		'entry.1234351717' => $data[ 'orderId' ],
+		'entry.256998851' => $data[ 'paytmTransactionId' ]
 	];
 
 	$response = getAPIResponse( $endpoint, 'POST', $requestBody );

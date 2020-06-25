@@ -186,7 +186,7 @@ require_once __DIR__ . '/../inc/above.php';
 						<?php if ( $transactionOccurred ) : ?>
 							<?php if ( empty( $transactionErrors ) ) : ?>
 								<div class="h3 text-green-2 strong space-50-top">Payment Successful!</div>
-								<div class="h5 text-green-2 strong">For any further assistance call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--green-2) solid;">+91-828-7770011</a>, with your transaction ID: <span class="h5 text-dark strong"><?= $transactionId ?></span></div>
+								<div class="h5 text-green-2 strong">For any further assistance call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--green-2) solid;">+91-828-7770011</a>, with your order ID: <span class="h5 text-dark strong"><?= $orderId ?></span></div>
 							<?php else : ?>
 								<div class="h3 text-red space-50-top strong">Payment Failed!</div>
 								<div class="h5 text-red strong">Something went wrong with the payment. Please call us on <a href="tel:+91-828-7770011" style="border-bottom: 2px var(--red) solid;">+91-828-7770011</a>.</div>

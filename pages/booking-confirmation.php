@@ -82,7 +82,7 @@ if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'POST' and ! empty( $_POST )
 	$transaction = [
 		'occurred' => true,
 		'errors' => [ ],
-		'id' => $_POST[ 'TXNID' ]
+		'orderId' => $_POST[ 'ORDERID' ]
 	];
 
 	// Is the request tampered with?
@@ -145,6 +145,6 @@ else if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'GET' ) {
 	$transaction = json_decode( base64_decode( $_GET[ 't' ] ), true );
 	$transactionOccurred = $transaction[ 'occurred' ];
 	$transactionErrors = $transaction[ 'errors' ];
-	$transactionId = $transaction[ 'id' ];
+	$orderId = $transaction[ 'orderId' ];
 	require_once __DIR__ . '/booking.php';
 }

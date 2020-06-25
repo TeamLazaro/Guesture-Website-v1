@@ -64,6 +64,8 @@ $unitType = $input[ 'transactionDetails' ][ 'unit' ][ 'type' ];
 $unitHasBalcony = $input[ 'transactionDetails' ][ 'unit' ][ 'balcony' ];
 $unitHasBathroom = $input[ 'transactionDetails' ][ 'unit' ][ 'bathroom' ];
 $unitInventoryId = $input[ 'transactionDetails' ][ 'unit' ][ 'id' ];
+$orderId = $input[ 'transactionDetails' ][ 'transaction' ][ 'ORDERID' ];
+$paytmTransactionId = $input[ 'transactionDetails' ][ 'transaction' ][ 'TXNID' ];
 
 
 
@@ -84,7 +86,9 @@ $data = [
 	'unitType' => $unitType,
 	'unitHasBalcony' => $unitHasBalcony,
 	'unitHasBathroom' => $unitHasBathroom,
-	'unitInventoryId' => $unitInventoryId
+	'unitInventoryId' => $unitInventoryId,
+	'orderId' => $orderId,
+	'paytmTransactionId' => $paytmTransactionId
 ];
 GoogleForms\submitPersonPurchase( $data );
 
