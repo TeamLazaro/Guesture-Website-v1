@@ -74,21 +74,6 @@ require_once __DIR__ . '/../inc/above.php';
 						<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@<span class="js_location">Alta Vista BLR</span></div>
 						<div class="h4 strong">For a fee of <span class="text-green-2 js_monthly_expense">₹11,200</span> <span class="js_monthly_fee"></span></div>
 						<div class="h4 strong">For <?= $configuration[ 'duration' ] ?>.</div>
-						<!-- Inline date picker -->
-<!-- 						<div class="h4 strong">
-							<span>For <?= $configuration[ 'duration' ] ?>, starting from</span>
-							<?php if ( $transactionOccurred ) : ?>
-								<span><?= $stayFromDate ?></span>
-							<?php else : ?>
-								<span class="_form-row _columns _small-12 _medium-6 date-input-container">
-									<input class="minimal inline js_booking_from_date" type="date" pattern="[0-9\-\/]+" value="" required>
-									<select class="minimal inline" style="background-color: var(--light)">
-										<option>Select date of stay</option>
-									</select>
-								</span>
-							<?php endif; ?>
-						</div>
- -->
 						<?php if ( ! $transactionOccurred and empty( $cupidUser ) ) : ?>
 							<div class="js_pre_booking_form">
 								<label class="js_login_trigger_region inline-bottom space-min-right">
