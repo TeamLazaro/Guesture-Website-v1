@@ -89,7 +89,7 @@ $( function () {
 		var url = window.__BFS.getUnitBookingURL( package );
 		var linkText = "The " + ( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) ) + " Package";
 		linkText += "\n@" + package.location;
-		linkText += "\nFor a fee of " + package.perDay + " " + package.monthlyFee;
+		linkText += "\nFor a fee of " + package.amountBasedOnConfiguration + " " + package.monthlyFee;
 		$( ".js_what_is_included_copy_url" )
 			.val( url )
 			.data( "text", linkText )

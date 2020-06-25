@@ -119,7 +119,7 @@ $( function () {
 		XLSX_CALC( this.numbers );
 		var sheet = this.numbers.Sheets[ this.type ];
 		// Pull out the values
-		this.perDay = sheet[ this.sheetCoordinates.perDay ].v;
+		this.amountBasedOnConfiguration = sheet[ this.sheetCoordinates.perDay ].v;
 		this.monthlyFee = sheet[ this.sheetCoordinates.monthlyFee ].v;
 		this.amountPerMonth = sheet[ this.sheetCoordinates.rackRate ].v;	// confusing, I know
 		this.monthlyFeeFormatted = sheet[ this.sheetCoordinates.monthlyFeeFormatted ].v;
@@ -162,10 +162,10 @@ $( function () {
 		this.renderComputedDetails();
 	};
 	LivingSituation.prototype.renderComputedDetails = function () {
-		this.$el.find( ".js_daily_expense" ).text( this.perDay );
+		this.$el.find( ".js_daily_expense" ).text( this.amountBasedOnConfiguration );
 		this.$el.find( ".js_monthly_expense" ).text( this.monthlyFee );
 		this.$el.find( ".js_panorama" ).attr( "src", this.panorama );
-		if ( this.perDay === "" || this.monthlyFee === "" )
+		if ( this.amountBasedOnConfiguration === "" || this.monthlyFee === "" )
 			this.$el.addClass( "invalid" );
 		else
 			this.$el.removeClass( "invalid" );
