@@ -2,7 +2,9 @@
  * Booking Section
  */
 
-.booking-section {}
+.booking-section {
+	position: relative;
+}
 
 @media( max-width: 639px )  {
 	.booking-section .intro select.minimal {
@@ -312,7 +314,11 @@
 
 /* -- Irina Label -- */
 .booking-section .pricing .irina-label {
-	margin-top: -9px;
+	position: absolute;
+	left: 0;
+	bottom: -40px;
+	width: 100%;
+	height: auto;
 	line-height: 1;
 	font-size: 9px;
 }
