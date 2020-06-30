@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../conf.php';
 
 class Guesture {
 
-	public static $apiUrl = 'http://guestureapi.olive-suite.com/';
+	public static $apiUrl = GUESTURE_API_ENDPOINT;
 
 
 
