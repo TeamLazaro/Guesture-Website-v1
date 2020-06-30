@@ -16,6 +16,28 @@ require_once __DIR__ . '/../conf.php';
 
 /*
  *
+ * This route is navigated to via a GET request when the "Go Back" link on PayTM's payment gateway is clicked, AND when the user is explicitly redirected to this route post-payment
+ *
+ */
+if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'GET' ) {
+ 	// If this route is being navigated to through the "Go Back" link on PayTM's payment gateway, or directly for whatever reason
+ 	if ( empty( $_GET[ 't' ] ) ) {
+		$redirectURL = '/booking?q=' . $_GET[ 'q' ];
+		return header( 'Location: ' . $redirectURL, true, 302 );
+		exit;
+ 	}
+ 	// Else if the route is being navigatedg to post-transaction
+ 	else {
+		$transaction = json_decode( base64_decode( $_GET[ 't' ] ), true );
+		$transactionOccurred = $transaction[ 'occurred' ];
+		$transactionErrors = $transaction[ 'errors' ];
+		$orderId = $transaction[ 'orderId' ];
+		require_once __DIR__ . '/booking.php';
+ 	}
+}
+
+/*
+ *
  * If this route is being navigated to post-transaction
  *
  */
@@ -139,12 +161,6 @@ if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'POST' and ! empty( $_POST )
 	$transactionString = base64_encode( json_encode( $transaction ) );
 	$redirectURL = '/booking-confirmation' . '?q=' . $_GET[ 'q' ] . '&t=' . $transactionString;
 	return header( 'Location: ' . $redirectURL, true, 302 );
+	exit;
 
-}
-else if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'GET' ) {
-	$transaction = json_decode( base64_decode( $_GET[ 't' ] ), true );
-	$transactionOccurred = $transaction[ 'occurred' ];
-	$transactionErrors = $transaction[ 'errors' ];
-	$orderId = $transaction[ 'orderId' ];
-	require_once __DIR__ . '/booking.php';
 }
