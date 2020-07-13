@@ -10,7 +10,7 @@ $( function () {
 
 		/*
 		 *
-		 * Set up the details for the various payment options
+		 * Auto-select and set the details on the various payment options
 		 *
 		 */
 		var monthlyExpenseAmount = livingSituation.amountPerMonth;
@@ -18,7 +18,10 @@ $( function () {
 		var securityDepositAmountFormatted = formatNumberToIndianRupee( securityDepositAmount, { symbol: true } );
 		$( ".js_price_options [ data-type = 'deposit' ] .js_amount" ).text( "(" + securityDepositAmountFormatted + ")" )
 		$( ".js_price_options [ data-type = 'deposit' ] input" ).data( "amount", securityDepositAmount );
-		$( ".js_price_options [ data-type = 'booking' ] input" ).trigger( "change" );
+		if ( __BFS.accomodationSelection.duration.toLowerCase().includes( "trial" ) )
+			$( ".js_price_options [ data-type = 'trial' ] input" ).trigger( "change" );
+		else
+			$( ".js_price_options [ data-type = 'booking' ] input" ).trigger( "change" );
 
 
 		var $fromDate = $( ".js_booking_from_date" );
@@ -88,7 +91,15 @@ $( function () {
 $( document ).on( "change", ".js_price_options input", function ( event ) {
 
 	var $option = $( event.target );
+
+	// Check the radio input (happens automatically, but still)
 	$option.attr( "checked", true );
+
+	// Reset the date field
+	if ( window.__BFS.fromDatePicker )
+		window.__BFS.fromDatePicker.setDate();
+
+	// Get out the information represented by this option
 	var amount = $option.data( "amount" );
 	var description = $option.data( "desc" );
 	setPayment( amount, description );
@@ -275,6 +286,18 @@ function formatNumberToIndianRupee ( number, options ) {
 }
 
 
+
+/*
+ *
+ * Pretend to check availability for a given unit
+ *
+ */
+function pretendToCheckAvailability () {
+	return waitFor( 2.7 );
+}
+
+
+
 /*
  *
  * Check availability for given unit and time frame
@@ -282,7 +305,7 @@ function formatNumberToIndianRupee ( number, options ) {
  */
 function checkAvailability ( unitDetails, fromDate, duration ) {
 
-	var toDate = new Date( fromDate.getTime() + ( duration * 24 * 60 * 60 * 1000 ) );
+	var toDate = new Date( fromDate.getTime() + ( duration.inDays * 24 * 60 * 60 * 1000 ) );
 
 	var fromDateString = getDateString( fromDate );
 	var toDateString = getDateString( toDate );
@@ -290,7 +313,8 @@ function checkAvailability ( unitDetails, fromDate, duration ) {
 	var apiEndpoint = "/server/api/unit-availability.php";
 
 	var data = unitDetails;
-	data.duration = duration;
+	data.durationUnit = duration.unit;
+	data.durationAmount = duration.amount;
 	data.fromDateString = fromDateString;
 	data.toDateString = toDateString;
 
@@ -330,15 +354,12 @@ function checkAvailability ( unitDetails, fromDate, duration ) {
 
 function checkAvailabilityHandler ( livingSituation, date ) {
 
-	var unitDetails = {
-		type: livingSituation.type,
-		location: livingSituation.location,
-		balcony: livingSituation.balcony,
-		bathroom: livingSituation.bathroom
-	};
+	var durationInWords = livingSituation.duration.toLowerCase();
+	var pricingOption = window.__BFS.bookingDescription.toLowerCase();
 
-	var durationInMonths = parseInt( livingSituation.duration, 10 );
-
+	/*
+	 * ----- Disable the form
+	 */
 	// Disable the date picker
 	$( ".js_booking_from_date" ).prop( "disabled", true );
 	// Disable the "Book Now" button
@@ -346,7 +367,47 @@ function checkAvailabilityHandler ( livingSituation, date ) {
 	disableForm( $bookNowButton.closest( "form" ) );
 	$bookNowButton.attr( "data-state", "checking" );
 
-	return checkAvailability( unitDetails, date, durationInMonths )
+
+	/*
+	 * ----- (Pretend to) check for unit availability IF the "3-day trial" option was selected
+	 */
+	if ( pricingOption.includes( "trial" ) ) {
+		return pretendToCheckAvailability()
+				.then( function () {
+					enableForm( $bookNowButton.closest( "form" ) );
+					$bookNowButton.attr( "data-state", "initial" );
+				} )
+	}
+
+	var unitDetails = {
+		type: livingSituation.type,
+		location: livingSituation.location,
+		balcony: livingSituation.balcony,
+		bathroom: livingSituation.bathroom
+	};
+
+	var durationAmount;
+	var durationUnit;
+	var durationInSeconds;
+	if ( livingSituation.duration.toLowerCase === "3 day trial" ) {
+		durationAmount = 3;
+		durationUnit = "days"
+		durationInSeconds = durationAmount * 24 * 60 * 60;
+	}
+	else {
+		durationAmount = parseInt( livingSituation.duration, 10 );;
+		durationUnit = "months"
+		durationInSeconds = durationAmount * 30 * 24 * 60 * 60;
+	}
+
+	// FOR NOW: We're hard-coding the duration amount
+	var hardcodedDuration = {
+		unit: "months",
+		amount: 2,
+		inDays: 60
+	};
+
+	return checkAvailability( unitDetails, date, hardcodedDuration )
 		.then( function ( response ) {
 			// Re-enable the form
 			enableForm( $bookNowButton.closest( "form" ) );
@@ -355,7 +416,7 @@ function checkAvailabilityHandler ( livingSituation, date ) {
 			if ( response.success ) {
 				livingSituation.fromDateString = getDateString( date );
 				window.__BFS.bookingFromDate = livingSituation.fromDateString;
-				var toDate = new Date( date.getTime() + durationInMonths * 30 * 24 * 60 * 60 * 1000 );
+				var toDate = new Date( date.getTime() + durationInSeconds * 1000 );
 				livingSituation.toDateString = getDateString( toDate );
 				window.__BFS.bookingToDate = livingSituation.toDateString;
 				window.__BFS.unitId = response.inventoryId;
@@ -416,7 +477,7 @@ function getPaymentTransactionParameters ( data ) {
 
 
 function makeSynchronousPOSTRequest ( parameters ) {
-	var formMarkup = "<form method=\"POST\" action=\"https://securegw-stage.paytm.in/order/process\" name=\"post_form\">";
+	var formMarkup = "<form method=\"POST\" action=\"" + window.__BFS.payTMGatewayURL + "\" name=\"post_form\">";
 	var key;
 	for ( key in parameters )
 		formMarkup += "<input type=\"hidden\" name=\"" + key + "\" value=\"" + parameters[ key ] + "\">";

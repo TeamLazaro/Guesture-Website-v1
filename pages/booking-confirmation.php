@@ -127,20 +127,22 @@ if ( strtoupper( $_SERVER[ 'REQUEST_METHOD' ] ) === 'POST' and ! empty( $_POST )
 	$transactionMeta = json_decode( base64_decode( $_GET[ 't' ] ), true );
 
 	if ( empty( $transaction[ 'errors' ] ) ) {
-		$bookingDetails = [
-			'orderId' => $_POST[ 'ORDERID' ],
-			'type' => $transactionMeta[ 'unit' ][ 'type' ],
-			'location' => $transactionMeta[ 'unit' ][ 'location' ],
-			'hasBalcony' => strtolower( $transactionMeta[ 'unit' ][ 'balcony' ] ) !== 'none',
-			'hasBathroom' => strtolower( $transactionMeta[ 'unit' ][ 'bathroom' ] ) !== 'attached',
-			'phoneNumber' => substr( $transactionMeta[ 'customerPhoneNumber' ], 1 ),
-			'emailAddress' => $transactionMeta[ 'customerEmailAddress' ],
-			'name' => $transactionMeta[ 'customerName' ],
-			'unitId' => $transactionMeta[ 'unit' ][ 'id' ] ?? '',
-			'fromDate' => $transactionMeta[ 'fromDate' ],
-			'toDate' => $transactionMeta[ 'toDate' ]
-		];
-		Guesture::makeBooking( $bookingDetails );
+		if ( strpos( $transactionMeta[ 'unit' ][ 'duration' ], 'trial' ) === false ) {
+			$bookingDetails = [
+				'orderId' => $_POST[ 'ORDERID' ],
+				'type' => $transactionMeta[ 'unit' ][ 'type' ],
+				'location' => $transactionMeta[ 'unit' ][ 'location' ],
+				'hasBalcony' => strtolower( $transactionMeta[ 'unit' ][ 'balcony' ] ) !== 'none',
+				'hasBathroom' => strtolower( $transactionMeta[ 'unit' ][ 'bathroom' ] ) !== 'attached',
+				'phoneNumber' => substr( $transactionMeta[ 'customerPhoneNumber' ], 1 ),
+				'emailAddress' => $transactionMeta[ 'customerEmailAddress' ],
+				'name' => $transactionMeta[ 'customerName' ],
+				'unitId' => $transactionMeta[ 'unit' ][ 'id' ] ?? '',
+				'fromDate' => $transactionMeta[ 'fromDate' ],
+				'toDate' => $transactionMeta[ 'toDate' ]
+			];
+			Guesture::makeBooking( $bookingDetails );
+		}
 
 		$purchase = [
 			'client' => 'guesture',
