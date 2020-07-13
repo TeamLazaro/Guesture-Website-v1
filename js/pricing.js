@@ -123,6 +123,7 @@ $( function () {
 		this.monthlyFee = sheet[ this.sheetCoordinates.monthlyFee ].v;
 		this.amountPerMonth = sheet[ this.sheetCoordinates.rackRate ].v;	// confusing, I know
 		this.monthlyFeeFormatted = sheet[ this.sheetCoordinates.monthlyFeeFormatted ].v;
+		this.monthlyFeeStatement = sheet[ this.sheetCoordinates.feeSentence ].v;
 		this.photo = sheet[ this.sheetCoordinates.photo ].v;
 		this.panorama = sheet[ this.sheetCoordinates.panorama ].v;
 		this.virtualTour = sheet[ this.sheetCoordinates.virtualTour ].v;
@@ -346,7 +347,7 @@ $( function () {
 		$bookNow: $whatIsIncludedSection.find( ".js_book_from_modal" ),
 		$name: $whatIsIncludedSection.find( ".js_name" ),
 		$monthlyExpense: $whatIsIncludedSection.find( ".js_monthly_expense" ),
-		$monthlyFee: $whatIsIncludedSection.find( ".js_monthly_fee" ),
+		$monthlyFeeStatement: $whatIsIncludedSection.find( ".js_monthly_fee_statement" ),
 		$location: $whatIsIncludedSection.find( ".js_location" ),
 		$summary: $whatIsIncludedSection.find( ".js_summary" ),
 		$virtualTourContainer: $whatIsIncludedSection.find( ".js_virtual_tour_container" ),
@@ -375,7 +376,7 @@ $( function () {
 
 		whatIsIncludedFields.$name.text( packageName[ 0 ].toUpperCase() + packageName.slice( 1 ) );
 		whatIsIncludedFields.$monthlyExpense.text( package.monthlyFeeFormatted );
-		whatIsIncludedFields.$monthlyFee.text( package.monthlyFee );
+		whatIsIncludedFields.$monthlyFeeStatement.html( package.monthlyFeeStatement );
 		whatIsIncludedFields.$location.text( package.location );
 		whatIsIncludedFields.$summary.text( package.summary );
 		whatIsIncludedFields.$virtualTour.attr( "src", package.virtualTour );

@@ -72,8 +72,8 @@ require_once __DIR__ . '/../inc/above.php';
 					<div class="columns small-10 small-offset-1 large-8 xlarge-7 qpid_login_site">
 						<div class="h3 strong">The <span class="text-green-2 js_name">Buddy</span> Package</div>
 						<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@<span class="js_location">Alta Vista BLR</span></div>
-						<div class="h4 strong">For a fee of <span class="text-green-2 js_monthly_expense">₹11,200</span> <span class="js_monthly_fee"></span></div>
 						<div class="h4 strong">For <?= $configuration[ 'duration' ] ?>.</div>
+						<div class="h4 strong js_monthly_fee_statement"></div>
 						<?php if ( ! $transactionOccurred and empty( $cupidUser ) ) : ?>
 							<div class="js_pre_booking_form">
 								<label class="js_login_trigger_region inline-bottom space-min-right">
