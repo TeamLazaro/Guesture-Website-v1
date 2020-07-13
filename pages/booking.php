@@ -116,7 +116,7 @@ require_once __DIR__ . '/../inc/above.php';
 											</div>
 										</label>
 										<label class="price-option cursor-pointer block space-min-bottom" data-type="trial">
-											<input class="visuallyhidden" type="radio" name="payment" value="3day-trial" data-amount="1199" data-desc="Trial">
+											<input class="visuallyhidden" type="radio" name="payment" value="3-day-trial" data-amount="1199" data-desc="Trial">
 											<span class="radio"></span>
 											<span class="h5 strong text-green-2">Or Pay ₹1199 for a 3 Day Trial</span>
 											<div class="fine-print">
