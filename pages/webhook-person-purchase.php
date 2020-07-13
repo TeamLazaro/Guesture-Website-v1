@@ -18,6 +18,15 @@ set_time_limit( 0 );
 
 
 /* ------------------------------- \
+ * Response Pre-Preparation
+ \-------------------------------- */
+# Set Headers
+header_remove( 'X-Powered-By' );
+header( 'Content-Type: application/json' );
+
+
+
+/* ------------------------------- \
  * Request Parsing
  \-------------------------------- */
 # Get JSON as a string
@@ -26,12 +35,30 @@ $json = file_get_contents( 'php://input' );
 $error = null;
 try {
 	$input = json_decode( $json, true );
+	if ( empty( $input ) )
+		throw new \Exception( "No data provided." );
+
 	$event = $input[ 'event' ];
 	$input = $input[ 'data' ];
 }
 catch ( \Exception $e ) {
 	$error = $e->getMessage();
 }
+if ( ! empty( $error ) ) {
+	echo json_encode( [
+		'code' => 400,
+		'message' => 'Data not provided'
+	] );
+	exit;
+}
+
+
+
+/* ------------------------------------- \
+ * Exceptions
+ \-------------------------------------- */
+if ( ! empty( $input[ 'phoneNumber' ] ) and $input[ 'phoneNumber' ] === '+917760118668' )
+	exit;
 
 
 
