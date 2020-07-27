@@ -386,16 +386,17 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="solo" tabindex="-1">
+				<!-- <div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="solo" tabindex="-1"> -->
+				<div class="action text-center space-25-top-bottom">
 					<div class="h4 action-title data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 action-title-error strong text-dark text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
 					<div class="label action-sub-title-error strong text-red text-uppercase">No Rooms Found</div>
-					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
+					<!-- <div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div> -->
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_solo" data-product="Solo" data-c="pricing-book-solo">Book Now</button>
+					<button class="button block fill-green-2 js_book_solo" data-product="Solo" data-c="pricing-book-solo">What is Included</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -500,16 +501,17 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="buddy" tabindex="-1">
+				<!-- <div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="buddy" tabindex="-1"> -->
+				<div class="action text-center space-25-top-bottom">
 					<div class="h4 action-title data sparkle title-2-left title-2-right strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span><span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right.svg'; ?></span></div>
 					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-uppercase opacity-50 js_monthly_expense">₹21800 Per Month</div>
 					<div class="label action-sub-title-error strong text-uppercase text-yellow">No Rooms Found</div>
-					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--light) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></div>
+					<!-- <div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--light) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-light.svg<?php echo $ver ?>"></div> -->
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block js_book_buddy" data-product="Buddy" data-c="pricing-book-buddy">Book Now</button>
+					<button class="button block js_book_buddy" data-product="Buddy" data-c="pricing-book-buddy">What is Included</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -614,16 +616,17 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 				</div>
-				<div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="trio" tabindex="-1;">
+				<!-- <div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="trio" tabindex="-1;"> -->
+				<div class="action text-center space-25-top-bottom">
 					<div class="h4 action-title data strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
 					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
 					<div class="action-sub-title label strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
 					<div class="label action-sub-title-error strong text-uppercase text-red">No Rooms Found</div>
-					<div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div>
+					<!-- <div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div> -->
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_trio" data-product="Trio" data-c="pricing-book-trio">Book Now</button>
+					<button class="button block fill-green-2 js_book_trio" data-product="Trio" data-c="pricing-book-trio">What is Included</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
