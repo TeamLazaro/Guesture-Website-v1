@@ -407,16 +407,12 @@ loginPrompts.soloRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( person.verification && person.verification.isVerified ) {
-						__.user = person;
-						loginPrompt.$phoneForm.slideUp( 300, function () {
-							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-								loginPrompt.trigger( "login", person );
-							} );
+					__.user = person;
+					loginPrompt.$phoneForm.slideUp( 300, function () {
+						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+							loginPrompt.trigger( "login", person );
 						} );
-					}
-					else
-						throw person;
+					} );
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
@@ -424,7 +420,8 @@ loginPrompts.soloRoom.on( "phoneSubmit", function ( event ) {
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
-							loginPrompt.trigger( "requireOTP" );
+							__.user = __.tempUser;
+							loginPrompt.trigger( "login" );
 						} )
 						.catch( function () {
 							loginPrompt.trigger( "phoneError" );
@@ -433,29 +430,29 @@ loginPrompts.soloRoom.on( "phoneSubmit", function ( event ) {
 		} );
 
 } );
-// When the phone number is to be submitted
-loginPrompts.soloRoom.on( "requireOTP", function ( event, phoneNumber ) {
-	var loginPrompt = this;
-	disableForm( loginPrompt.$phoneForm );
-	__.tempUser.requestOTP( loginPrompt.context )
-		.then( function ( otpSessionId ) {
-			__.tempUser.otpSessionId = otpSessionId;
-			// Show OTP form, after hiding the phone form
-			loginPrompt.$phoneForm.slideUp( 500, function () {
-				loginPrompt.$OTPForm.slideDown();
-			} );
-		} )
-		.catch( function ( e ) {
-			alert( e.message );
-			enableForm( loginPrompt.$phoneForm );
-		} )
-} );
-// When the OTP is required
-loginPrompts.soloRoom.on( "OTPSubmit", onOTPSubmit );
-loginPrompts.soloRoom.on( "OTPError", function ( e ) {
-	alert( e.message );
-} );
-loginPrompts.soloRoom.on( "OTPVerified", onOTPVerified );
+// // When the phone number is to be submitted
+// loginPrompts.soloRoom.on( "requireOTP", function ( event, phoneNumber ) {
+// 	var loginPrompt = this;
+// 	disableForm( loginPrompt.$phoneForm );
+// 	__.tempUser.requestOTP( loginPrompt.context )
+// 		.then( function ( otpSessionId ) {
+// 			__.tempUser.otpSessionId = otpSessionId;
+// 			// Show OTP form, after hiding the phone form
+// 			loginPrompt.$phoneForm.slideUp( 500, function () {
+// 				loginPrompt.$OTPForm.slideDown();
+// 			} );
+// 		} )
+// 		.catch( function ( e ) {
+// 			alert( e.message );
+// 			enableForm( loginPrompt.$phoneForm );
+// 		} )
+// } );
+// // When the OTP is required
+// loginPrompts.soloRoom.on( "OTPSubmit", onOTPSubmit );
+// loginPrompts.soloRoom.on( "OTPError", function ( e ) {
+// 	alert( e.message );
+// } );
+// loginPrompts.soloRoom.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.soloRoom.on( "login", onLogin );
 
@@ -510,16 +507,12 @@ loginPrompts.buddyRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( person.verification && person.verification.isVerified ) {
-						__.user = person;
-						loginPrompt.$phoneForm.slideUp( 300, function () {
-							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-								loginPrompt.trigger( "login", person );
-							} );
+					__.user = person;
+					loginPrompt.$phoneForm.slideUp( 300, function () {
+						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+							loginPrompt.trigger( "login", person );
 						} );
-					}
-					else
-						throw person;
+					} );
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
@@ -527,7 +520,8 @@ loginPrompts.buddyRoom.on( "phoneSubmit", function ( event ) {
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
-							loginPrompt.trigger( "requireOTP" );
+							__.user = __.tempUser;
+							loginPrompt.trigger( "login" );
 						} )
 						.catch( function () {
 							loginPrompt.trigger( "phoneError" );
@@ -536,29 +530,29 @@ loginPrompts.buddyRoom.on( "phoneSubmit", function ( event ) {
 		} );
 
 } );
-// When the phone number is to be submitted
-loginPrompts.buddyRoom.on( "requireOTP", function ( event, phoneNumber ) {
-	var loginPrompt = this;
-	disableForm( loginPrompt.$phoneForm );
-	__.tempUser.requestOTP( loginPrompt.context )
-		.then( function ( otpSessionId ) {
-			__.tempUser.otpSessionId = otpSessionId;
-			// Show OTP form, after hiding the phone form
-			loginPrompt.$phoneForm.slideUp( 500, function () {
-				loginPrompt.$OTPForm.slideDown();
-			} );
-		} )
-		.catch( function ( e ) {
-			alert( e.message );
-			enableForm( loginPrompt.$phoneForm );
-		} )
-} );
-// When the OTP is required
-loginPrompts.buddyRoom.on( "OTPSubmit", onOTPSubmit );
-loginPrompts.buddyRoom.on( "OTPError", function ( e ) {
-	alert( e.message );
-} );
-loginPrompts.buddyRoom.on( "OTPVerified", onOTPVerified );
+// // When the phone number is to be submitted
+// loginPrompts.buddyRoom.on( "requireOTP", function ( event, phoneNumber ) {
+// 	var loginPrompt = this;
+// 	disableForm( loginPrompt.$phoneForm );
+// 	__.tempUser.requestOTP( loginPrompt.context )
+// 		.then( function ( otpSessionId ) {
+// 			__.tempUser.otpSessionId = otpSessionId;
+// 			// Show OTP form, after hiding the phone form
+// 			loginPrompt.$phoneForm.slideUp( 500, function () {
+// 				loginPrompt.$OTPForm.slideDown();
+// 			} );
+// 		} )
+// 		.catch( function ( e ) {
+// 			alert( e.message );
+// 			enableForm( loginPrompt.$phoneForm );
+// 		} )
+// } );
+// // When the OTP is required
+// loginPrompts.buddyRoom.on( "OTPSubmit", onOTPSubmit );
+// loginPrompts.buddyRoom.on( "OTPError", function ( e ) {
+// 	alert( e.message );
+// } );
+// loginPrompts.buddyRoom.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.buddyRoom.on( "login", onLogin );
 
@@ -613,16 +607,12 @@ loginPrompts.trioRoom.on( "phoneSubmit", function ( event ) {
 			return __.tempUser.getFromDB()
 				// If the person exists, log in
 				.then( function ( person ) {
-					if ( person.verification && person.verification.isVerified ) {
-						__.user = person;
-						loginPrompt.$phoneForm.slideUp( 300, function () {
-							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
-								loginPrompt.trigger( "login", person );
-							} );
+					__.user = person;
+					loginPrompt.$phoneForm.slideUp( 300, function () {
+						$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+							loginPrompt.trigger( "login", person );
 						} );
-					}
-					else
-						throw person;
+					} );
 				} )
 				// If the person don't exist, add the person, and send an OTP
 				.catch( function ( person ) {
@@ -630,7 +620,8 @@ loginPrompts.trioRoom.on( "phoneSubmit", function ( event ) {
 						trackConversion( loginPrompt );
 					return __.tempUser.add()
 						.then( function () {
-							loginPrompt.trigger( "requireOTP" );
+							__.user = __.tempUser;
+							loginPrompt.trigger( "login" );
 						} )
 						.catch( function () {
 							loginPrompt.trigger( "phoneError" );
@@ -639,29 +630,29 @@ loginPrompts.trioRoom.on( "phoneSubmit", function ( event ) {
 		} );
 
 } );
-// When the phone number is to be submitted
-loginPrompts.trioRoom.on( "requireOTP", function ( event, phoneNumber ) {
-	var loginPrompt = this;
-	disableForm( loginPrompt.$phoneForm );
-	__.tempUser.requestOTP( loginPrompt.context )
-		.then( function ( otpSessionId ) {
-			__.tempUser.otpSessionId = otpSessionId;
-			// Show OTP form, after hiding the phone form
-			loginPrompt.$phoneForm.slideUp( 500, function () {
-				loginPrompt.$OTPForm.slideDown();
-			} );
-		} )
-		.catch( function ( e ) {
-			alert( e.message );
-			enableForm( loginPrompt.$phoneForm );
-		} )
-} );
-// When the OTP is required
-loginPrompts.trioRoom.on( "OTPSubmit", onOTPSubmit );
-loginPrompts.trioRoom.on( "OTPError", function ( e ) {
-	alert( e.message );
-} );
-loginPrompts.trioRoom.on( "OTPVerified", onOTPVerified );
+// // When the phone number is to be submitted
+// loginPrompts.trioRoom.on( "requireOTP", function ( event, phoneNumber ) {
+// 	var loginPrompt = this;
+// 	disableForm( loginPrompt.$phoneForm );
+// 	__.tempUser.requestOTP( loginPrompt.context )
+// 		.then( function ( otpSessionId ) {
+// 			__.tempUser.otpSessionId = otpSessionId;
+// 			// Show OTP form, after hiding the phone form
+// 			loginPrompt.$phoneForm.slideUp( 500, function () {
+// 				loginPrompt.$OTPForm.slideDown();
+// 			} );
+// 		} )
+// 		.catch( function ( e ) {
+// 			alert( e.message );
+// 			enableForm( loginPrompt.$phoneForm );
+// 		} )
+// } );
+// // When the OTP is required
+// loginPrompts.trioRoom.on( "OTPSubmit", onOTPSubmit );
+// loginPrompts.trioRoom.on( "OTPError", function ( e ) {
+// 	alert( e.message );
+// } );
+// loginPrompts.trioRoom.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.trioRoom.on( "login", onLogin );
 
