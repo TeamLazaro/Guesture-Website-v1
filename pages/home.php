@@ -344,9 +344,9 @@ if ( cmsIsEnabled() ) {
 	<!-- Pricing -->
 	<div id="pricing" class="pricing js_carousel_container">
 		<div class="pricing-list js_carousel_content">
-			<div class="price fill-light js_carousel_item qpid_login_site js_solo_section scroll-reveal">
-				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
-				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
+			<div class="price fill-light js_carousel_item qpid_login_site js_trio_section scroll-reveal">
+				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
+				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
 				<div class="thumbnail">
 					<div class="panorama-container">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
@@ -354,8 +354,8 @@ if ( cmsIsEnabled() ) {
 					<img class="js_image">
 				</div>
 				<div class="intro space-min">
-					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 2 or 3 Bedroom Suite.</div>
-					<div class="description h6 text-green-2">Preferred by Managers living alone in Bangalore, away from their family.</div>
+					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 2 or 3 Bedroom Suite.</div>
+					<div class="description h6 text-green-2">Preferred by Students, Interns and Trainees living alone in Bangalore.</div>
 				</div>
 				<div class="config space-min">
 					<div class="flex">
@@ -407,17 +407,17 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 				</div>
-				<!-- <div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="solo" tabindex="-1"> -->
+				<!-- <div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="trio" tabindex="-1;"> -->
 				<div class="action text-center space-25-top-bottom">
-					<div class="h4 action-title data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
-					<div class="h4 action-title-error strong text-dark text-uppercase">Ooops!</div>
-					<div class="action-sub-title label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
-					<div class="label action-sub-title-error strong text-red text-uppercase">No Rooms Found</div>
+					<div class="h4 action-title data strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
+					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
+					<div class="action-sub-title label strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
+					<div class="label action-sub-title-error strong text-uppercase text-red">No Rooms Found</div>
 					<!-- <div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div> -->
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_solo" data-product="Solo" data-c="pricing-book-solo">What is Included</button>
+					<button class="button block fill-green-2 js_book_trio" data-product="Trio" data-c="pricing-book-trio">What is Included</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -574,9 +574,9 @@ if ( cmsIsEnabled() ) {
 					</div>
 				</form>
 			</div>
-			<div class="price fill-light js_carousel_item qpid_login_site js_trio_section scroll-reveal" style="--td: .5s">
-				<div class="character"><img class="block" src="media/characters/pricing/trio-1.png<?php echo $ver ?>"></div>
-				<div class="title block h3 strong text-light text-uppercase text-center">Trio</div>
+			<div class="price fill-light js_carousel_item qpid_login_site js_solo_section scroll-reveal" style="--td: .5s">
+				<div class="character"><img class="block" src="media/characters/pricing/solo-1.png<?php echo $ver ?>"></div>
+				<div class="title block h3 strong text-light text-uppercase text-center">Solo</div>
 				<div class="thumbnail">
 					<div class="panorama-container">
 						<iframe class="panorama js_panorama" src="" frameborder="0"></iframe>
@@ -584,8 +584,8 @@ if ( cmsIsEnabled() ) {
 					<img class="js_image">
 				</div>
 				<div class="intro space-min">
-					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 2 or 3 Bedroom Suite.</div>
-					<div class="description h6 text-green-2">Preferred by Students, Interns and Trainees living alone in Bangalore.</div>
+					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 2 or 3 Bedroom Suite.</div>
+					<div class="description h6 text-green-2">Preferred by Managers living alone in Bangalore, away from their family.</div>
 				</div>
 				<div class="config space-min">
 					<div class="flex">
@@ -637,17 +637,17 @@ if ( cmsIsEnabled() ) {
 						</select>
 					</div>
 				</div>
-				<!-- <div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="trio" tabindex="-1;"> -->
+				<!-- <div class="action text-center space-25-top-bottom js_modal_trigger cursor-pointer" data-mod-id="what-is-included" data-package="solo" tabindex="-1"> -->
 				<div class="action text-center space-25-top-bottom">
-					<div class="h4 action-title data strong text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
-					<div class="h4 action-title-error strong text-uppercase">Ooops!</div>
-					<div class="action-sub-title label strong text-uppercase text-neutral-3 js_monthly_expense">₹21800 Per Month</div>
-					<div class="label action-sub-title-error strong text-uppercase text-red">No Rooms Found</div>
+					<div class="h4 action-title data strong text-dark text-uppercase"><span class="js_daily_expense">₹726 Per Day</span></div>
+					<div class="h4 action-title-error strong text-dark text-uppercase">Ooops!</div>
+					<div class="action-sub-title label strong text-neutral-3 text-uppercase js_monthly_expense">₹21800 Per Month</div>
+					<div class="label action-sub-title-error strong text-red text-uppercase">No Rooms Found</div>
 					<!-- <div class="included label inline strong text-uppercase" style="border-bottom: 1.5px var(--dark) solid;">What is included <img class="inline-top" width="14px" src="media/glyph/question-dark.svg<?php echo $ver ?>"></div> -->
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_trio" data-product="Trio" data-c="pricing-book-trio">What is Included</button>
+					<button class="button block fill-green-2 js_book_solo" data-product="Solo" data-c="pricing-book-solo">What is Included</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
