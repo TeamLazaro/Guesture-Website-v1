@@ -23,6 +23,3 @@
 
 # Weird Networked Drive Artifact
 .smb*
-
-# Guesture API key
-/server/api/guesture-api-conf.php

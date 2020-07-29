@@ -14,7 +14,7 @@ class Guesture {
 	public static function getAccessToken () {
 
 		// Pull the token from the cache
-		require_once __DIR__ . '/guesture-api-conf.php';
+		require_once __DIR__ . '/../../content/data/guesture-api-conf.php';
 		$accessToken = GUESTURE_OAUTH_ACCESS_TOKEN;
 		$expiresAt = GUESTURE_OAUTH_ACCESS_TOKEN_EXPIRES_AT;
 
@@ -70,7 +70,7 @@ class Guesture {
 						. PHP_EOL
 						. 'const GUESTURE_OAUTH_ACCESS_TOKEN_EXPIRES_AT = ' . $expiresAt . ';'
 						. PHP_EOL;
-		file_put_contents( __DIR__ . '/guesture-api-conf.php', $credentialsFileContent );
+		file_put_contents( __DIR__ . '/../../content/data/guesture-api-conf.php', $credentialsFileContent );
 	}
 
 
