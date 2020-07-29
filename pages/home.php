@@ -177,7 +177,7 @@ if ( cmsIsEnabled() ) {
 
 
 <!-- Booking Section -->
-<section id="booking" class="booking-section space-150-top-bottom" data-section="Booking" data-section-id="booking">
+<section id="booking" class="booking-section space-150-top-bottom" data-section="Pricing Engine" data-section-id="pricing-engine"><?php // NOTE: 29/07/2020: The section descriptors say "Pricing Engine" because there's already a physical "Booking" page now ?>
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-10 small-offset-1 js_location_selector_container">
