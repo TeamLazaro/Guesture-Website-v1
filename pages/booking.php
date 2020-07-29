@@ -74,7 +74,7 @@ require_once __DIR__ . '/../inc/above.php';
 						<div class="h2 strong space-min-bottom text-green-2" style="margin-left: calc(var(--space-25) * -1); line-height: 1;">@<span class="js_location">Alta Vista BLR</span></div>
 						<div class="h4 strong js_monthly_fee_statement"></div>
 						<?php if ( ! $transactionOccurred and empty( $cupidUser ) ) : ?>
-							<div class="js_pre_booking_form">
+							<div class="js_pre_booking_form" style="display: none">
 								<label class="js_login_trigger_region inline-bottom space-min-right">
 									<span class="label block invisible">Book Now</span>
 									<button class="button fill-green js_book_a_unit" data-initial-text="Book Now" data-product="" data-c="">Book Now</button>
@@ -92,7 +92,8 @@ require_once __DIR__ . '/../inc/above.php';
 
 						<!-- Booking Form -->
 						<?php if ( ! $transactionOccurred ) : ?>
-							<form class="booking-form js_booking_form" <?php if ( empty( $cupidUser ) ) : ?>style="display: none"<?php endif; ?>>
+							<form class="booking-form js_booking_form">
+							<!-- <form class="booking-form js_booking_form" <?php if ( empty( $cupidUser ) ) : ?>style="display: none"<?php endif; ?>> -->
 								<div class="price-options row space-50-top js_price_options">
 									<div class="form-row columns small-12">
 										<label class="price-option cursor-pointer block space-min-bottom" data-type="booking">
@@ -145,6 +146,47 @@ require_once __DIR__ . '/../inc/above.php';
 											<div class="date-input-container">
 												<input class="date block js_booking_from_date" type="date" pattern="[0-9\-\/]+" value="" required>
 											</div>
+										</label>
+									</div>
+									<div class="form-row columns small-12 medium-6">
+										<style type="text/css">
+											.phone-number-field {
+												display: flex;
+												margin-top: 3px;
+												flex-wrap: wrap;
+											}
+											.phone-number-field .phone-prefix {
+												position: relative;
+												/*width: 15%;*/
+												min-width: 45px;
+												max-width: 60px;
+											}
+											.phone-number-field .phone-prefix input {
+												width: 100%;
+												padding: 0;
+												background-color: transparent;
+												color: var(--black);
+												border-right: none;
+												border-top-right-radius: 0;
+												border-bottom-right-radius: 0;
+												box-shadow: none;
+												pointer-events: none;
+											}
+											.phone-number-field .phone {
+												flex-grow: 1;
+												border-top-left-radius: 0;
+												border-bottom-left-radius: 0;
+											}
+										</style>
+										<label class="phone-number-field">
+											<span class="label inline text-neutral-3 text-uppercase" style="flex-basis: 100%">Phone Number</span>
+											<div class="phone-prefix _prefix-group">
+												<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+													<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+												</select>
+												<input class="_prefix js_phone_country_code_label button" value="+91" type="text" readonly>
+											</div>
+											<input class="phone" type="text" name="phone-number" required>
 										</label>
 									</div>
 									<div class="form-row columns small-12 medium-6">

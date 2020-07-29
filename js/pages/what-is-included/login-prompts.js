@@ -110,3 +110,75 @@ loginPrompts.whatsIncluded.on( "OTPError", function ( e ) {
 loginPrompts.whatsIncluded.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
 loginPrompts.whatsIncluded.on( "login", onLogin );
+
+
+
+
+
+
+
+
+/*
+ * Booking Form section
+ */
+loginPrompts.bookingForm = new __.LoginPrompt( "Booking Form", $( ".js_booking_form" ) );
+loginPrompts.bookingForm.conversionSlug = "booking-form";
+// loginPrompts.bookingForm.triggerFlowOn( "click", ".js_book_a_unit" );
+loginPrompts.bookingForm.on( "phoneSubmit", function ( event ) {
+	var loginPrompt = this;
+	var $form = $( event.target ).closest( "form" );
+
+	// Pull data from the form
+	var formData;
+	try {
+		formData = getFormData( $form, {
+			phoneNumber: { type: "phone number", $: ".js_phone_country_code, [ name = 'phone-number' ]" }
+		} );
+	}
+	catch ( e ) {
+		// Reflect back sanitized values to the form
+		setFormData( $form, e );
+		// Report the message
+		alert( "Please provide a phone number." );
+		return;
+	}
+
+	// Reflect back sanitized values to the form
+	setFormData( $form, formData );
+
+	// Get the relevant data
+	var phoneNumber = formData[ 0 ].value.join( "" );
+
+	// Create a new (but temporary) Person object
+	__.tempUser = new __.Person( phoneNumber, loginPrompt.context );
+		// Set the device id
+	__.utils.getAnalyticsId()
+		.then( function ( deviceId ) {
+			__.tempUser.hasDeviceId( deviceId );
+		} )
+		// Attempt to find the person in the database
+		.then( function () {
+			return __.tempUser.getFromDB()
+				// If the person exists, log in
+				.then( function ( person ) {
+					__.user = person;
+					loginPrompt.trigger( "login", person );
+				} )
+				// If the person don't exist, add the person, and send an OTP
+				.catch( function ( person ) {
+					if ( person instanceof Error || ! person )
+						trackConversion( loginPrompt );
+					return __.tempUser.add()
+						.then( function () {
+							__.user = __.tempUser;
+							loginPrompt.trigger( "login" );
+						} )
+						.catch( function () {
+							loginPrompt.trigger( "phoneError" );
+						} );
+				} )
+		} );
+
+} );
+// When the user is logged in
+loginPrompts.bookingForm.on( "login", onLogin );

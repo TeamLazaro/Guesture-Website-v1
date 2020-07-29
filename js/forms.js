@@ -258,17 +258,17 @@ $( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_bo
 	}, 500 );
 } );
 // The "Book Now" button on the "Booking" page
-$( document ).on( "click", ".js_book_a_unit", function ( event ) {
-	var $button = $( event.target );
+// $( document ).on( "click", ".js_book_a_unit", function ( event ) {
+// 	var $button = $( event.target );
 
-	var product = $button.data( "product" );
-	__.user.isInterestedIn( product );
-	__.user.update();
+// 	var product = $button.data( "product" );
+// 	__.user.isInterestedIn( product );
+// 	__.user.update();
 
-	$( ".js_pre_booking_form" ).slideUp( 500, function () {
-		$( ".js_booking_form" ).slideDown( 500 );
-	} );
-} );
+// 	$( ".js_pre_booking_form" ).slideUp( 500, function () {
+// 		$( ".js_booking_form" ).slideDown( 500 );
+// 	} );
+// } );
 
 
 

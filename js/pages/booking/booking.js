@@ -120,6 +120,15 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 	 ----- */
 	event.preventDefault();
 
+	/*
+	 * ----- Trigger the submission of the phone number
+	 */
+	var personAlreadyLoggedIn = false;
+	if ( window.__CUPID.user instanceof window.__CUPID.Person )
+		personAlreadyLoggedIn = true;
+	else
+		loginPrompts.bookingForm.trigger( "phoneSubmit", event );
+
 	var $form = $( event.target );
 
 
@@ -177,44 +186,49 @@ $( document ).on( "submit", ".js_booking_form", function ( event ) {
 	$form.find( ".js_error" ).removeClass( "js_error" );
 
 
-	/* -----
-	 * Process and Assemble the data
-	 ----- */
-	var __ = window.__CUPID;
-	// Get the data in an key-value structure
-	var data = formData.reduce( function ( acc, f ) {
-		acc[ f.name ] = f.value;
-		return acc;
-	}, { } );
-	__.user.name = data.name;
-	__.user.emailAddress = data.emailAddress;
+	// Waiting for the phone number to be submitted to Cupid and the person to be logged in
+	waitFor( personAlreadyLoggedIn ? 0.1 : 4 )
+		.then( function () {
+			/* -----
+			 * Process and Assemble the data
+			 ----- */
+			var __ = window.__CUPID;
+			// Get the data in an key-value structure
+			var data = formData.reduce( function ( acc, f ) {
+				acc[ f.name ] = f.value;
+				return acc;
+			}, { } );
+			__.user.name = data.name;
+			__.user.emailAddress = data.emailAddress;
 
 
-	// /* -----
-	//  * Update the person's information
-	//  ----- */
-	__.user.update();
+			// /* -----
+			//  * Update the person's information
+			//  ----- */
+			__.user.update();
+		} )
+		.then( function () {
+			/*
+			 * Initiate the payment flow
+			 */
+			var unitDetails = JSON.parse( window.atob( ( new URLSearchParams( location.search ) ).get( "q" ) ) );
+			unitDetails.id = window.__BFS.unitId;
+			var booking = {
+				description: window.__BFS.bookingDescription,
+				unit: unitDetails,
+				amount: window.__BFS.bookingAmount,
+				fromDate: window.__BFS.bookingFromDate,
+				toDate: window.__BFS.bookingToDate
+			};
+			var transactionData = {
+				phoneNumber: __.user.phoneNumber,
+				name: __.user.name,
+				emailAddress: __.user.emailAddress,
+				booking: booking
+			};
 
-
-	/*
-	 * Initiate the payment flow
-	 */
-	var unitDetails = JSON.parse( window.atob( ( new URLSearchParams( location.search ) ).get( "q" ) ) );
-	unitDetails.id = window.__BFS.unitId;
-	var booking = {
-		description: window.__BFS.bookingDescription,
-		unit: unitDetails,
-		amount: window.__BFS.bookingAmount,
-		fromDate: window.__BFS.bookingFromDate,
-		toDate: window.__BFS.bookingToDate
-	};
-	var transactionData = {
-		phoneNumber: __.user.phoneNumber,
-		name: __.user.name,
-		emailAddress: __.user.emailAddress,
-		booking: booking
-	};
-	getPaymentTransactionParameters( transactionData )
+			return getPaymentTransactionParameters( transactionData )
+		} )
 		.then( makeSynchronousPOSTRequest )
 
 } );
