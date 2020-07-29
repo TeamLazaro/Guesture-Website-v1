@@ -82,7 +82,7 @@ function onLogin () {
 	// Set cookie ( for a month )
 	__.utils.setCookie( "cupid-user", __.user, 31 * 24 * 60 * 60 );
 	// Hide the OTP form
-	$( loginPrompt.$OTPForm ).slideUp( 500, function () {
+	$( loginPrompt.$OTPForm ).add( loginPrompt.$phoneForm ).slideUp( 500, function () {
 		// Bring back the trigger element
 		$( loginPrompt.triggerRegion ).slideDown( 500, function () {
 			// Trigger the original event
