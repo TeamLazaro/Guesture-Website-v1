@@ -417,7 +417,7 @@ if ( cmsIsEnabled() ) {
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_trio" data-product="Trio" data-c="pricing-book-trio">What is Included</button>
+					<button class="button block fill-green-2 js_book_trio" data-product="Trio" data-c="pricing-book-trio">Package Details</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -532,7 +532,7 @@ if ( cmsIsEnabled() ) {
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block js_book_buddy" data-product="Buddy" data-c="pricing-book-buddy">What is Included</button>
+					<button class="button block js_book_buddy" data-product="Buddy" data-c="pricing-book-buddy">Package Details</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
@@ -647,7 +647,7 @@ if ( cmsIsEnabled() ) {
 				</div>
 				<label class="block space-min-bottom js_login_trigger_region">
 					<span class="label inline text-neutral-1 text-uppercase invisible">Book</span>
-					<button class="button block fill-green-2 js_book_solo" data-product="Solo" data-c="pricing-book-solo">What is Included</button>
+					<button class="button block fill-green-2 js_book_solo" data-product="Solo" data-c="pricing-book-solo">Package Details</button>
 				</label>
 				<!-- Phone Trap form -->
 				<form class="js_phone_form" style="display: none">
