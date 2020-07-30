@@ -275,6 +275,20 @@ $( document ).on( "click", ".js_book_solo, .js_book_buddy, .js_book_trio, .js_bo
 
 /*
  * -------------------------------\
+ * 3-day Trial
+ * -------------------------------|
+ */
+$( document ).on( "click", ".js_book_trial", function ( event ) {
+	event.preventDefault();
+	var package = window.__BFS.livingSituations[ "solo" ];
+	var url = window.__BFS.getUnitBookingURL( package );
+	window.location.href = url;
+} )
+
+
+
+/*
+ * -------------------------------\
  * Deals
  * -------------------------------|
  */
