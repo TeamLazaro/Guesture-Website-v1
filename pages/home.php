@@ -883,7 +883,7 @@ if ( cmsIsEnabled() ) {
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<a class="button block js_book_trial" href="https://www.instamojo.com/guesture/3-day-trial-stay/" target="_blank" data-c="three-day-trial">Book Now</a>
+						<a class="button block js_book_trial" href="#pricing" data-c="three-day-trial">Book Now</a>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
