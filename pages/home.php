@@ -879,13 +879,7 @@ if ( cmsIsEnabled() ) {
 				<div class="h0 text-green-2 space-25-top">₹1199</div>
 			</div>
 			<div class="columns small-10 small-offset-1 scroll-reveal">
-				<div>
-					<label class="columns small-12 medium-6 large-4">
-						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<a class="button block" href="#pricing">Book Now</a>
-					</label>
-				</div>
-				<div class="action row hidden">
+				<div class="action row">
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
