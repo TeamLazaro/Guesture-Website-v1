@@ -159,6 +159,22 @@ if ( cmsIsEnabled() ) {
 <!-- END: Intro Section -->
 
 
+<!-- Covid Safe Strip -->
+<section class="covid-safe-strip fill-yellow space-min-top-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="columns small-10 small-offset-1 clearfix">
+				<img class="covid-safe-badge" src="media/icons/icon-covid-safe.png<?php echo $ver ?>">
+				<div class="message">
+					<span class="h5 hide-for-small space-25-right inline-middle">How do we do this?</span>
+					<a class="button inline-middle" href="/">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END: Covid Safe Strip -->
+
 
 <!-- Booking Section -->
 <section id="booking" class="booking-section space-150-top-bottom" data-section="Booking" data-section-id="booking">

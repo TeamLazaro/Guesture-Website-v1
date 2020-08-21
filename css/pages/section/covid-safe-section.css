@@ -1,0 +1,39 @@
+/*
+ * Covid Safe Section
+ */
+
+.covid-safe-strip { position: relative; }
+.covid-safe-strip .columns {
+	position: relative;
+}
+.covid-safe-strip .covid-safe-badge {
+	width: 165px;
+	position: absolute;
+	top: 50%;
+	left: calc( var(--space-100) * -1 );
+	transform: translateY(-50%);
+}
+
+.covid-safe-strip .message {
+	padding-left: 120px;
+}
+
+@media( min-width: 640px )  {
+	.covid-safe-strip .covid-safe-badge {
+		left: calc( var(--space-50) * -1 );
+	}
+
+	.covid-safe-strip .message {
+		padding-left: 140px;
+	}
+}
+@media( min-width: 1040px )  {
+	.covid-safe-strip .covid-safe-badge {
+		width: 220px;
+	}
+	
+	.covid-safe-strip .message {
+		padding-left: 180px;
+	}
+}
+@media( min-width: 1480px ) {}
