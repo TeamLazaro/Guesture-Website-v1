@@ -95,16 +95,16 @@ if ( cmsIsEnabled() ) {
 					<div class="text h6 inline-middle space-25-left">10 min <br>
 					Check-in</div>
 				</div>
-				<div class="point scroll-reveal pop">
+				<div class="point scroll-reveal">
 					<div class="icon inline-middle"><img src="media/icons/icon-work.svg<?php echo $ver ?>"></div>
-					<div class="text h6 inline-middle space-25-left text-light"><strong>STAY Packages</strong> for <br>
+					<div class="text h6 inline-middle space-25-left"><strong>STAY Packages</strong> for <br>
 					1 day to 60 days</div>
 				</div>
-				<div class="point scroll-reveal pop">
+				<a href="#booking" class="point scroll-reveal pop">
 					<div class="icon inline-middle"><img src="media/icons/icon-house.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left text-light"><strong>LIVE Packages</strong> for <br>
 					2 months to 7 years</div>
-				</div>
+				</a>
 				<div class="point scroll-reveal">
 					<div class="icon inline-middle"><img src="media/icons/icon-living.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left">Fully <br>
@@ -147,6 +147,11 @@ if ( cmsIsEnabled() ) {
 					<div class="text h6 inline-middle space-25-left">Fully Stocked <br>
 					Cafeteria</div>
 				</div>
+				<a href="#coworking" class="point scroll-reveal pop">
+					<div class="icon inline-middle"><img src="media/icons/icon-coworking.svg<?php echo $ver ?>"></div>
+					<div class="text h6 inline-middle space-25-left text-light">Coworking <br>
+					Facility</div>
+				</a>
 			</div>
 		</div>
 	</div>
