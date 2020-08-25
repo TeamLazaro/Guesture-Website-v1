@@ -167,7 +167,7 @@ if ( cmsIsEnabled() ) {
 				<img class="covid-safe-badge" src="media/icons/icon-covid-safe.png<?php echo $ver ?>">
 				<div class="message">
 					<span class="h5 hide-for-small space-25-right inline-middle">How do we do this?</span>
-					<a class="button inline-middle" href="/">Learn More</a>
+					<a class="button inline-middle" target="_blank" href="/news/covid-19-precautions">Learn More</a>
 				</div>
 			</div>
 		</div>
@@ -704,8 +704,8 @@ if ( cmsIsEnabled() ) {
 		</div>
 		<div class="icon-lamp" style="opacity: 0;"><?php include __DIR__ . '/../media/icons/icon-lamp.svg'; ?></div>
 		<div class="irina-label block small text-center text-neutral-3 text-uppercase scroll-reveal" style="--td: .25s;">
-			Guesture is a brand of Irina Hospitality PVT LTD<br>
-			<img width="100" src="media/logo-powered-by-paytm.svg<?php echo $ver ?>" style="width: 100px; margin-top: 12px;">
+			<!-- Guesture is a brand of Irina Hospitality PVT LTD<br> -->
+			<img width="100" src="media/logo-powered-by-paytm.svg<?php echo $ver ?>" style="width: 100px;">
 		</div>
 	</div>
 	<!-- End: Pricing -->
@@ -848,6 +848,11 @@ if ( cmsIsEnabled() ) {
 					</form>
 				</div>
 				<a href="tel:+91-82877-70011" class="h3 strong inline scroll-reveal pop"><span class="sparkle or-light h5 strong text-green-2 text-uppercase">or<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-light.svg'; ?></span></span> Call us on <span class="sparkle or-number-light text-green-2 no-wrap">+91-828-7770011<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-number-light.svg'; ?></span></span></a>
+				<div class="rhai space-100-top">
+					<div class="h4 strong text-uppercase space-min-bottom">Member of the</div>
+					<img src="media/logo-rhai.png<?php echo $ver ?>">
+					<div class="h5 space-min-top">Rental House Association of India</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1409,6 +1414,8 @@ if ( cmsIsEnabled() ) {
 			</div>
 			<div class="columns small-10 small-offset-1 large-7">
 				<div class="description p text-neutral-4 space-50-bottom space-50-right scroll-reveal">
+					<p>The Shanders Group is nearly a century old with a rich legacy of innovation and experience. The group was established in the year 1918, has interests across manufacturing, real estate development, international trade, agriculture, retail and defence. The real estate division was established in the year 1983. Guesture is the shared economy component within the real estate division.</p>
+					<br><br>
 					<p>Guesture believes that CoLiving is the answer to modern day challenges of urban living faced by the youth. It is a way of living in thoughtfully designed spaces meant for collaboration, community building, sustainability and a holistic approach to a good life.</p>
 					<br><br>
 					<p>Guesture provides coliving spaces with top tier amenities like high-speed Wifi, swimming pool, sports arena, coworking spaces, event spaces, laundry and cleaning services, meal services, shuttle services and more. Sign up is hassle free and quick. It is a plug and play approach to living in a city. You don’t need to bring anything other than your suitcase.</p>
