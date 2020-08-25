@@ -9,9 +9,6 @@
 /conf.wip.php
 /conf.production.php
 
-# the media directory
-/media
-
 # the data directory
 /data
 
