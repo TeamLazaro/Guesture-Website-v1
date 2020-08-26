@@ -1311,7 +1311,7 @@ if ( cmsIsEnabled() ) {
 <!-- Coworking : Trap Section -->
 <section class="coworking--trap-section fill-yellow js_women_block_section qpid_login_site" data-section="Coworking Seat" data-section-id="coworking-seat">
 	<div class="container">
-		<div class="character scroll-reveal"><img src="media/characters/coworking-trap/char-1.png<?php echo $ver ?>" style="transform: scaleX(-1);"></div>
+		<div class="character scroll-reveal"><img src="media/characters/coworking-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 large-8 space-50-top-bottom">
 				<div class="h3 strong">
