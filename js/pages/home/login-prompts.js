@@ -333,9 +333,9 @@ loginPrompts.womensBlock.on( "login", onLogin );
 
 
 /*
- * 3. Pricing section
+ * 4. Pricing section
  */
-// 3.1 Solo room
+// 4.1 Solo room
 loginPrompts.soloRoom = new __.LoginPrompt( "Solo Room", $( ".qpid_login_site.js_solo_section" ) );
 loginPrompts.soloRoom.triggerFlowOn( "click", ".js_book_solo" );
 // Skip the phone form because it is already integrated with the contact form
@@ -435,7 +435,7 @@ loginPrompts.soloRoom.on( "login", onLogin );
 
 
 
-// 3.2 Buddy room
+// 4.2 Buddy room
 loginPrompts.buddyRoom = new __.LoginPrompt( "Buddy Room", $( ".qpid_login_site.js_buddy_section" ) );
 loginPrompts.buddyRoom.triggerFlowOn( "click", ".js_book_buddy" );
 // Skip the phone form because it is already integrated with the contact form
@@ -535,7 +535,7 @@ loginPrompts.buddyRoom.on( "login", onLogin );
 
 
 
-// 3.3 Trio room
+// 4.3 Trio room
 loginPrompts.trioRoom = new __.LoginPrompt( "Trio Room", $( ".qpid_login_site.js_trio_section" ) );
 loginPrompts.trioRoom.triggerFlowOn( "click", ".js_book_trio" );
 // Skip the phone form because it is already integrated with the contact form
@@ -635,7 +635,7 @@ loginPrompts.trioRoom.on( "login", onLogin );
 
 
 
-// 3.4 "What's Included" modal
+// 4.4 "What's Included" modal
 // NOTE: This is referenced in `pricing.js`
 loginPrompts.whatsIncluded = new __.LoginPrompt( "What's Included", $( ".js_modal_box_content[ data-mod-id = 'what-is-included' ]" ).find( ".qpid_login_site" ) );
 loginPrompts.whatsIncluded.triggerFlowOn( "click", ".js_book_from_modal" );
@@ -742,7 +742,114 @@ loginPrompts.whatsIncluded.on( "login", onLogin );
 
 
 /*
- * 4. Deals
+ * 5. Coworking Seat section
+ */
+loginPrompts.coworkingSeat = new __.LoginPrompt( "Coworking Seat", $( ".qpid_login_site.js_coworking_seat_section" ) );
+loginPrompts.coworkingSeat.triggerFlowOn( "click", ".js_enquire_coworking_seat" );
+// Skip the phone form because it is already integrated with the contact form
+loginPrompts.coworkingSeat.on( "requirePhone", function ( event ) {
+	var $loginTrigger = this.$site.find( ".js_login_trigger_region" );
+	var $phoneForm = this.$site.find( ".js_phone_form" );
+	$loginTrigger.slideUp( 500, function () {
+		$phoneForm.slideDown();
+	} );
+} );
+// Since the phone number is already provided in the contact form, simply submit it programmatically
+loginPrompts.coworkingSeat.on( "phoneSubmit", function ( event ) {
+	var loginPrompt = this;
+	var $form = $( event.target ).closest( "form" );
+
+	// Pull data from the form
+	var formData;
+	try {
+		formData = getFormData( $form, {
+			phoneNumber: { type: "phone number", $: ".js_phone_country_code, [ name = 'phone-number' ]" }
+		} );
+	}
+	catch ( e ) {
+		// Reflect back sanitized values to the form
+		setFormData( $form, e );
+		// Report the message
+		alert( "Please provide a phone number." );
+		return;
+	}
+
+	// Reflect back sanitized values to the form
+	setFormData( $form, formData );
+
+	// Get the relevant data
+	var phoneNumber = formData[ 0 ].value.join( "" );
+
+	// Create a new (but temporary) Person object
+	__.tempUser = new __.Person( phoneNumber, loginPrompt.context );
+		// Set the device id
+	__.utils.getAnalyticsId()
+		.then( function ( deviceId ) {
+			__.tempUser.hasDeviceId( deviceId );
+		} )
+		// Attempt to find the person in the database
+		.then( function () {
+			return __.tempUser.getFromDB()
+				// If the person exists, log in
+				.then( function ( person ) {
+					if ( person.verification && person.verification.isVerified ) {
+						__.user = person;
+						loginPrompt.$phoneForm.slideUp( 300, function () {
+							$( loginPrompt.triggerElement ).closest( ".js_login_trigger_region" ).slideDown( 300, function () {
+								loginPrompt.trigger( "login", person );
+							} );
+						} );
+					}
+					else
+						throw person;
+				} )
+				// If the person don't exist, add the person, and send an OTP
+				.catch( function ( person ) {
+					if ( person instanceof Error || ! person )
+						trackConversion( loginPrompt );
+					return __.tempUser.add()
+						.then( function () {
+							loginPrompt.trigger( "requireOTP" );
+						} )
+						.catch( function () {
+							loginPrompt.trigger( "phoneError" );
+						} );
+				} )
+		} );
+
+} );
+// When the phone number is to be submitted
+loginPrompts.coworkingSeat.on( "requireOTP", function ( event, phoneNumber ) {
+	var loginPrompt = this;
+	disableForm( loginPrompt.$phoneForm );
+	__.tempUser.requestOTP( loginPrompt.context )
+		.then( function ( otpSessionId ) {
+			__.tempUser.otpSessionId = otpSessionId;
+			// Show OTP form, after hiding the phone form
+			loginPrompt.$phoneForm.slideUp( 500, function () {
+				loginPrompt.$OTPForm.slideDown();
+			} );
+		} )
+		.catch( function ( e ) {
+			alert( e.message );
+			enableForm( loginPrompt.$phoneForm );
+		} )
+} );
+// When the OTP is required
+loginPrompts.coworkingSeat.on( "OTPSubmit", onOTPSubmit );
+loginPrompts.coworkingSeat.on( "OTPError", function ( e ) {
+	alert( e.message );
+} );
+loginPrompts.coworkingSeat.on( "OTPVerified", onOTPVerified );
+// When the user is logged in
+loginPrompts.coworkingSeat.on( "login", onLogin );
+
+
+
+
+
+/*
+ * 6. Deals
  */
 $( ".qpid_login_site.js_deal" ).each( function ( _i, domEl ) {
 	var dealId = $( domEl ).find( ".js_get_deal" ).attr( "id" );

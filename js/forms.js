@@ -236,6 +236,22 @@ $( document ).on( "click", ".js_book_womens_block", function ( event ) {
 
 
 
+/*
+ * -------------------------------\
+ * Coworking Seat Block
+ * -------------------------------|
+ */
+$( document ).on( "click", ".js_enquire_coworking_seat", function ( event ) {
+	var $button = $( event.target );
+	$button.prop( "disabled", true );
+	$button.text( "We'll call you shortly." );
+
+	__.user.isInterestedIn( "Coworking Seat" );
+	__.user.update();
+} );
+
+
+
 
 /*
  * -------------------------------\

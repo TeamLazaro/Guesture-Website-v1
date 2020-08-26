@@ -1309,7 +1309,7 @@ if ( cmsIsEnabled() ) {
 
 
 <!-- Coworking : Trap Section -->
-<section class="coworking--trap-section fill-yellow js_women_block_section qpid_login_site" data-section="Coworking Seat" data-section-id="coworking-seat">
+<section class="coworking--trap-section fill-yellow js_coworking_seat_section qpid_login_site" data-section="Coworking Seat" data-section-id="coworking-seat">
 	<div class="container">
 		<div class="character scroll-reveal"><img src="media/characters/coworking-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
@@ -1323,7 +1323,7 @@ if ( cmsIsEnabled() ) {
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
 						<span class="invisible label inline text-neutral-1 text-uppercase">Enquire Now</span>
-						<button class="button block js_book_womens_block" data-c="block-women-room">Enquire Now</button>
+						<button class="button block js_enquire_coworking_seat" data-c="coworking-seat">Enquire Now</button>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
