@@ -26,3 +26,4 @@
 <link rel="stylesheet" type="text/css" href="css/pages/section/about-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/trial--trap-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/womens-block--trap-section.css<?php echo $ver ?>">
+<link rel="stylesheet" type="text/css" href="css/pages/section/coworking--trap-section.css<?php echo $ver ?>">

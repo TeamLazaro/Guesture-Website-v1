@@ -1,0 +1,70 @@
+/*
+ *	Womens Block - Trap Section
+ */
+
+.coworking--trap-section {
+	background: linear-gradient(315deg, var(--red) 70%, var(--yellow) 100%);
+}
+
+
+.coworking--trap-section .trap {
+	position: relative;
+	z-index: 2;
+}
+
+.coworking--trap-section .trap .text-shadow {
+	margin-bottom: 120px;
+}
+@media( min-width: 640px )  {
+	.coworking--trap-section .trap .text-shadow {
+		line-height: .9;
+		margin-bottom: 130px;
+	}
+}
+@media( min-width: 1040px ) {
+	.coworking--trap-section .trap {
+		padding-top: var(--space-50);
+		padding-bottom: var(--space-50);
+	}
+	.coworking--trap-section .trap .text-shadow {
+		margin-bottom: 0;
+	}
+}
+@media( min-width: 1480px ) {}
+
+
+/* -- Character -- */
+
+.coworking--trap-section .character {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	width: 280px;
+	transform: translate(25%, 0);
+	font-size: 0;
+	line-height: 0;
+}
+
+@media( min-width: 640px )  {
+	.coworking--trap-section .character {
+		width: 340px;
+		transform: translate(10%, 0);
+	}
+}
+@media( min-width: 1040px ) {
+	.coworking--trap-section .character {
+		width: 500px;
+		transform: translate(15%, 0);
+	}
+}
+@media( min-width: 1480px ) {
+	.coworking--trap-section .character {
+		width: 600px;
+		transform: translate(0, 0);
+	}
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

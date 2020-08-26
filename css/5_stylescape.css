@@ -987,6 +987,9 @@ select { cursor: pointer; }
 /* H0 */
 .h0 {
 	font-size: 6.3rem;
+}
+.text-shadow {
+	font-family: museo-sans-rounded, Arial, sans-serif;
 	font-weight: 900;
 	text-shadow: 0px 2px 3px rgba(0,0,0,0.25), 0px 2px 8px rgba(0,0,0,0.25);
 	line-height: .95;
@@ -999,6 +1002,8 @@ select { cursor: pointer; }
 @media( min-width: 1040px ) {
 	.h0 {
 		font-size: 14.4rem;
+	}
+	.text-shadow {
 		text-shadow: 0px 4px 5px rgba(0,0,0,0.25), 0px 2px 15px rgba(0,0,0,0.25);
 	}
 }

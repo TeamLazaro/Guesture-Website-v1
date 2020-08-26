@@ -239,6 +239,14 @@
 	}
 }
 
+.show-for-xlarge { display: none !important; }
+
+@media ( min-width: 1480px ) {
+	.show-for-xlarge {
+		display: block !important;
+	}
+}
+
 
 
 /*
