@@ -1094,7 +1094,7 @@ if ( cmsIsEnabled() ) {
 		<div class="character scroll-reveal"><img src="media/characters/women-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 xlarge-9 space-50-top-bottom">
-				<div class="h3 strong"><span class="opacity-50 scroll-reveal">Peace of mind for you and </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">your parents<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left-dark.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right-dark.svg'; ?></span></span></div>
+				<div class="h3 strong"><span class="opacity-75">Peace of mind for you and </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">your parents<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left-dark.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right-dark.svg'; ?></span></span></div>
 				<div class="h0 text-shadow text-yellow space-25-bottom scroll-reveal">womens only block</div>
 				<div class="action row scroll-reveal">
 					<!-- Phone Trap Trigger -->
@@ -1315,7 +1315,7 @@ if ( cmsIsEnabled() ) {
 		<div class="trap row space-150-top-bottom">
 			<div class="columns small-10 small-offset-1 large-8 space-50-top-bottom">
 				<div class="h3 strong">
-					<span class="opacity-50 scroll-reveal">Better than just </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">work from home. <span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left-dark.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right-dark.svg'; ?></span></span><br class="show-for-xlarge"><span class="opacity-50 scroll-reveal">Live and work in the same building.</span>
+					<span class="opacity-75">Better than just </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">work from home. <span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left-dark.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right-dark.svg'; ?></span></span><br class="show-for-xlarge"><span class="opacity-75">Live and work in the same building.</span>
 				</div>
 				<div class="h1 text-shadow text-lowercase text-red space-min-bottom scroll-reveal">Coworking Seat for <span style="line-height: 1.125">₹4500*</span></div>
 				<div class="h3 text-yellow strong scroll-reveal">*per month </div>
