@@ -110,18 +110,23 @@ if ( cmsIsEnabled() ) {
 					<div class="text h6 inline-middle space-25-left">Fully <br>
 					Furnished</div>
 				</div>
+				<a href="#coworking-seat" class="point scroll-reveal pop">
+					<div class="icon inline-middle"><img src="media/icons/icon-coworking.svg<?php echo $ver ?>"></div>
+					<div class="text h6 inline-middle space-25-left text-light">Work From Home <br>
+					Friendly <strong>#WFH</strong></div>
+				</a>
 				<div class="point scroll-reveal">
 					<div class="icon inline-middle"><img src="media/icons/icon-internet.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left">High Speed <br>
 					Internet</div>
 				</div>
+			</div>
+			<div class="columns small-10 small-offset-1 large-3 xlarge-offset-0">
 				<div class="point scroll-reveal">
 					<div class="icon inline-middle"><img src="media/icons/icon-women.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left">Women's only <br>
 					Block</div>
 				</div>
-			</div>
-			<div class="columns small-10 small-offset-1 large-3 xlarge-offset-0">
 				<div class="point scroll-reveal">
 					<div class="icon inline-middle"><img src="media/icons/icon-night.svg<?php echo $ver ?>"></div>
 					<div class="text h6 inline-middle space-25-left">24x7 Lift and <br>
@@ -147,11 +152,6 @@ if ( cmsIsEnabled() ) {
 					<div class="text h6 inline-middle space-25-left">Fully Stocked <br>
 					Cafeteria</div>
 				</div>
-				<a href="#coworking-seat" class="point scroll-reveal pop">
-					<div class="icon inline-middle"><img src="media/icons/icon-coworking.svg<?php echo $ver ?>"></div>
-					<div class="text h6 inline-middle space-25-left text-light">Coworking <br>
-					Facility</div>
-				</a>
 			</div>
 		</div>
 	</div>
@@ -850,7 +850,7 @@ if ( cmsIsEnabled() ) {
 				<a href="tel:+91-82877-70011" class="h3 strong inline scroll-reveal pop"><span class="sparkle or-light h5 strong text-green-2 text-uppercase">or<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-light.svg'; ?></span></span> Call us on <span class="sparkle or-number-light text-green-2 no-wrap">+91-828-7770011<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/or-number-light.svg'; ?></span></span></a>
 				<div class="rhai space-100-top">
 					<div class="h4 strong text-uppercase space-min-bottom">Member of the</div>
-					<img src="media/logo-rhai.png<?php echo $ver ?>">
+					<a class="inline" href="https://rhai.org" target="_blank"><img src="media/logo-rhai.png<?php echo $ver ?>"></a>
 					<div class="h5 space-min-top">Rental House Association of India</div>
 				</div>
 			</div>
@@ -861,29 +861,22 @@ if ( cmsIsEnabled() ) {
 
 
 
-<!-- Trial : Trap Section -->
-<section id="trial" class="trial--trap-section fill-green-2 js_trial_section qpid_login_site" data-section="Trial" data-section-id="trial">
+<!-- Coworking : Trap Section -->
+<section class="coworking--trap-section fill-yellow js_coworking_seat_section qpid_login_site" id="coworking-seat" data-section="Coworking Seat" data-section-id="coworking-seat">
 	<div class="container">
-		<div class="character scroll-reveal"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
+		<div class="character scroll-reveal"><img src="media/characters/coworking-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
-			<div class="columns small-10 small-offset-1 medium-6 large-10">
-				<div class="h3 strong scroll-reveal"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right scroll-reveal pop">3 Day Trial<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-1-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-1-right.svg'; ?></span></span><span class="opacity-50"> online today</span></div>
-				<div class="h4 space-25-bottom scroll-reveal">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
-				<div class="points">
-					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">3 days and 2 nights</div><br>
-					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">Money back guarantee *</div>
+			<div class="columns small-10 small-offset-1 large-8 space-50-top-bottom">
+				<div class="h3 strong">
+					<span class="opacity-75">Better than just </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">work from home. <span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left-dark.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right-dark.svg'; ?></span></span><br class="show-for-xlarge"><span class="opacity-75">Live and work in the same building.</span>
 				</div>
-				<div class="small opacity-50 scroll-reveal">* If cancelled within 36 hours of check-in</div>
-			</div>
-			<div class="columns small-10 small-offset-1 scroll-reveal">
-				<div class="h0 text-shadow text-green-2 space-25-top">₹1199</div>
-			</div>
-			<div class="columns small-10 small-offset-1 scroll-reveal">
-				<div class="action row">
+				<div class="h1 text-shadow text-lowercase text-red space-min-bottom scroll-reveal">Coworking Seat for <span style="line-height: 1.125">₹4500*</span></div>
+				<div class="h3 text-yellow strong scroll-reveal">*per month </div>
+				<div class="action row scroll-reveal">
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
-						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
-						<a class="button block js_book_trial" href="#" data-c="three-day-trial">Book Now</a>
+						<span class="invisible label inline text-neutral-1 text-uppercase">Enquire Now</span>
+						<button class="button block js_enquire_coworking_seat" data-c="coworking-seat">Enquire Now</button>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
@@ -921,8 +914,8 @@ if ( cmsIsEnabled() ) {
 						</div>
 						<br>
 						<div class="columns small-12 clearfix hidden">
-							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							<div class="label strong text-neutral-4 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+							<div class="label strong text-neutral-4 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 						</div>
 					</form>
 				</div>
@@ -930,7 +923,7 @@ if ( cmsIsEnabled() ) {
 		</div>
 	</div>
 </section>
-<!-- END: Trial : Trap Section -->
+<!-- END: Coworking : Trap Section -->
 
 
 
@@ -1308,22 +1301,29 @@ if ( cmsIsEnabled() ) {
 <!-- END: Testimonial Section -->
 
 
-<!-- Coworking : Trap Section -->
-<section class="coworking--trap-section fill-yellow js_coworking_seat_section qpid_login_site" id="coworking-seat" data-section="Coworking Seat" data-section-id="coworking-seat">
+<!-- Trial : Trap Section -->
+<section id="trial" class="trial--trap-section fill-green-2 js_trial_section qpid_login_site" data-section="Trial" data-section-id="trial">
 	<div class="container">
-		<div class="character scroll-reveal"><img src="media/characters/coworking-trap/char-1.png<?php echo $ver ?>"></div>
+		<div class="character scroll-reveal"><img src="media/characters/trial-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
-			<div class="columns small-10 small-offset-1 large-8 space-50-top-bottom">
-				<div class="h3 strong">
-					<span class="opacity-75">Better than just </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">work from home. <span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left-dark.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right-dark.svg'; ?></span></span><br class="show-for-xlarge"><span class="opacity-75">Live and work in the same building.</span>
+			<div class="columns small-10 small-offset-1 medium-6 large-10">
+				<div class="h3 strong scroll-reveal"><span class="opacity-50">Book a </span><span class="sparkle title-1-left title-1-right scroll-reveal pop">3 Day Trial<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-1-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-1-right.svg'; ?></span></span><span class="opacity-50"> online today</span></div>
+				<div class="h4 space-25-bottom scroll-reveal">Come experience <span class="no-wrap">like-minded</span> coliving.</div>
+				<div class="points">
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">3 days and 2 nights</div><br>
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">Money back guarantee *</div>
 				</div>
-				<div class="h1 text-shadow text-lowercase text-red space-min-bottom scroll-reveal">Coworking Seat for <span style="line-height: 1.125">₹4500*</span></div>
-				<div class="h3 text-yellow strong scroll-reveal">*per month </div>
-				<div class="action row scroll-reveal">
+				<div class="small opacity-50 scroll-reveal">* If cancelled within 36 hours of check-in</div>
+			</div>
+			<div class="columns small-10 small-offset-1 scroll-reveal">
+				<div class="h0 text-shadow text-green-2 space-25-top">₹1199</div>
+			</div>
+			<div class="columns small-10 small-offset-1 scroll-reveal">
+				<div class="action row">
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
-						<span class="invisible label inline text-neutral-1 text-uppercase">Enquire Now</span>
-						<button class="button block js_enquire_coworking_seat" data-c="coworking-seat">Enquire Now</button>
+						<span class="invisible label inline text-neutral-1 text-uppercase">Book Now</span>
+						<a class="button block js_book_trial" href="#" data-c="three-day-trial">Book Now</a>
 					</label>
 					<br>
 					<!-- Phone Trap form -->
@@ -1361,8 +1361,8 @@ if ( cmsIsEnabled() ) {
 						</div>
 						<br>
 						<div class="columns small-12 clearfix hidden">
-							<div class="label strong text-neutral-4 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
-							<div class="label strong text-neutral-4 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+							<div class="label strong text-neutral-1 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
 						</div>
 					</form>
 				</div>
@@ -1370,7 +1370,7 @@ if ( cmsIsEnabled() ) {
 		</div>
 	</div>
 </section>
-<!-- END: Coworking : Trap Section -->
+<!-- END: Trial : Trap Section -->
 
 
 <!-- Address Section -->
