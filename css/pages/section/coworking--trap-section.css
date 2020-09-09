@@ -12,13 +12,46 @@
 	z-index: 2;
 }
 
+.coworking--trap-section .trap .points .point {
+	position: relative;
+	padding-left: 25px;
+}
+.coworking--trap-section .trap .points .point:before,
+.coworking--trap-section .trap .points .point:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: 0px ;
+	width: 15px;
+	height: 15px;
+}
+.coworking--trap-section .trap .points .point:before {
+	background-color: var(--light);
+	opacity: 0.25;
+}
+.coworking--trap-section .trap .points .point:after {
+	content: '✓';
+	font-size: 24px;
+	margin-top: -12px;
+	margin-left: 0px;
+}
+
 .coworking--trap-section .trap .text-shadow {
-	margin-bottom: 120px;
+	margin-top: 80px;
+	margin-bottom: 60px;
+	transform-origin: bottom left;
+	transform: scale(1.125);
 }
 @media( min-width: 640px )  {
+	.coworking--trap-section .trap .points {
+		margin-top: 0;
+	}
+
 	.coworking--trap-section .trap .text-shadow {
 		line-height: .9;
-		margin-bottom: 130px;
+		margin-top: 140px;
+		margin-bottom: 60px;
 	}
 }
 @media( min-width: 1040px ) {
@@ -26,7 +59,23 @@
 		padding-top: var(--space-50);
 		padding-bottom: var(--space-50);
 	}
+
+	.coworking--trap-section .trap .points .point {
+		padding-left: 30px;
+	}
+	.coworking--trap-section .trap .points .point:before,
+	.coworking--trap-section .trap .points .point:after {
+		width: 17px;
+		height: 17px;
+	}
+	.coworking--trap-section .trap .points .point:after {
+		font-size: 28px;
+		margin-top: -14px;
+	}
+
 	.coworking--trap-section .trap .text-shadow {
+		transform: scale(1);
+		margin-top: 0;
 		margin-bottom: 0;
 	}
 }

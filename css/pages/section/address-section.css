@@ -3,7 +3,8 @@
  */
 
 .address-section {
-	background: linear-gradient(135deg, var(--green-1) 60%, var(--green-2) 100%);
+	/*background: linear-gradient(135deg, var(--green-1) 60%, var(--green-2) 100%);*/
+	background: linear-gradient(45deg, var(--dark) 77%, var(--neutral-5) 100%);
 }
 
 .address-section .addresses .address .name {

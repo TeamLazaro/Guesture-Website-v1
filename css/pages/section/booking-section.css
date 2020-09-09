@@ -324,7 +324,7 @@
 }
 @media( min-width: 1480px ) {
 	.booking-section .pricing .irina-label {
-		transform: translateX(-120px); /* delete when 4th pricing item has been added */
+		transform: translateX(-60px); /* delete when 4th pricing item has been added */
 	}
 }
 

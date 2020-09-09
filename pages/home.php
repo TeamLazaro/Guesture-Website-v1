@@ -862,7 +862,9 @@ if ( cmsIsEnabled() ) {
 
 
 <!-- Coworking : Trap Section -->
-<section class="coworking--trap-section fill-yellow js_coworking_seat_section qpid_login_site" id="coworking-seat" data-section="Coworking Seat" data-section-id="coworking-seat">
+<?php /*
+<!-- Original -->
+<section class="hidden coworking--trap-section fill-yellow js_coworking_seat_section qpid_login_site" id="coworking-seat" data-section="Coworking Seat" data-section-id="coworking-seat">
 	<div class="container">
 		<div class="character scroll-reveal"><img src="media/characters/coworking-trap/char-1.png<?php echo $ver ?>"></div>
 		<div class="trap row space-150-top-bottom">
@@ -872,6 +874,75 @@ if ( cmsIsEnabled() ) {
 				</div>
 				<div class="h1 text-shadow text-lowercase text-red space-min-bottom scroll-reveal">Coworking Seat for <span style="line-height: 1.125">₹4500*</span></div>
 				<div class="h3 text-yellow strong scroll-reveal">*per month </div>
+				<div class="action row scroll-reveal">
+					<!-- Phone Trap Trigger -->
+					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
+						<span class="invisible label inline text-neutral-1 text-uppercase">Enquire Now</span>
+						<button class="button block js_enquire_coworking_seat" data-c="coworking-seat">Enquire Now</button>
+					</label>
+					<br>
+					<!-- Phone Trap form -->
+					<form class="js_phone_form" style="display: none">
+						<div class="columns small-12 medium-6" style="position: relative">
+							<label><span class="label inline text-neutral-1 text-uppercase">Mobile Number</span></label>
+							<div class="phone-trap minimal phone-number">
+								<div class="block prefix-group" style="position: relative">
+									<select class="js_phone_country_code" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0">
+										<?php include __DIR__ . '/../inc/phone-country-codes.php' ?>
+									</select>
+									<input class="prefix js_phone_country_code_label button" value="+91" style="pointer-events: none; width: 100%;">
+								</div>
+								<input class="phone block" type="text" name="phone-number">
+								<label class="submit block">
+									<span class="hidden label inline text-neutral-1 text-uppercase">Submit</span>
+									<button class="button block">→</button>
+								</label>
+							</div>
+						</div>
+					</form>
+					<!-- OTP form -->
+					<form class="js_otp_form" style="display: none">
+						<div class="columns small-12 medium-6">
+							<div class="otp-trap minimal">
+								<label class="block">
+									<span class="label inline text-neutral-1 text-uppercase">Enter the OTP</span>
+									<input class="otp block" type="text" name="otp">
+								</label>
+								<label class="submit block">
+									<span class="invisible label inline text-neutral-1 text-uppercase">Submit</span>
+									<button class="button block">→</button>
+								</label>
+							</div>
+						</div>
+						<br>
+						<div class="columns small-12 clearfix hidden">
+							<div class="label strong text-neutral-4 opacity-50 text-uppercase inline-middle cursor-pointer float-left" tabindex="-1">Re-send OTP</div>
+							<div class="label strong text-neutral-4 opacity-50 text-uppercase inline-middle cursor-pointer float-right" tabindex="-1">Enter different number</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+*/?>
+<!-- Duplicate -->
+<section class="coworking--trap-section fill-yellow js_coworking_seat_section qpid_login_site" id="coworking-seat" data-section="Coworking Seat" data-section-id="coworking-seat">
+	<div class="container">
+		<div class="character scroll-reveal"><img src="media/characters/coworking-trap/char-1.png<?php echo $ver ?>"></div>
+		<div class="trap row space-150-top-bottom">
+			<div class="columns small-10 small-offset-1 large-8 space-50-top-bottom">
+				<div class="h3 strong">
+					<span class="opacity-75">Work from home </span><span class="sparkle title-2-left title-2-right scroll-reveal pop">Friendly. <span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-2-left-dark.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-2-right-dark.svg'; ?></span></span><br class="show-for-large"><span class="opacity-75">Live and work in the same building.</span>
+				</div>
+				<div class="points space-25-top">
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">High speed internet connectivity.</div><br>
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">Opt for a dedicated workstation in your 'Solo' room.</div><br>
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">Or stay with a 'Buddy' and book an optional coworking seat for ₹4500*.</div><br>
+					<div class="point label inline text-uppercase space-min-bottom scroll-reveal pop">While your office might be in Whitefield, you can #WFH with like-minded people.</div>
+				</div>
+				<div class="small opacity-50 space-25-bottom scroll-reveal">* monthly rate</div>
+				<div class="h0 text-shadow text-red space-min-bottom scroll-reveal">#WFH</div>
 				<div class="action row scroll-reveal">
 					<!-- Phone Trap Trigger -->
 					<label class="phone-trap-trigger columns small-12 medium-6 large-4 js_login_trigger_region">
@@ -1378,7 +1449,7 @@ if ( cmsIsEnabled() ) {
 	<div class="container">
 		<div class="row">
 			<div class="columns small-10 small-offset-1">
-				<div class="h0 text-shadow text-green-1 scroll-reveal">location</div>
+				<div class="h0 text-shadow text-neutral-5 scroll-reveal">location</div>
 				<div class="addresses row">
 					<div class="address columns medium-6 large-4 space-50-top space-75-right scroll-reveal" style="--td: .25s">
 						<div class="h3 name">Alta Vista</div>
@@ -1392,7 +1463,7 @@ if ( cmsIsEnabled() ) {
 							<div class="point label strong text-uppercase">Buddy Live Package</div>
 							<div class="point label strong text-uppercase">Short Stay Package</div>
 						</div>
-						<a class="inline button" href="#contact">Enquire Now</a>
+						<a class="inline button fill-green-2" href="#contact">Enquire Now</a>
 					</div>
 					<div class="address columns medium-6 large-4 space-50-top space-75-right scroll-reveal" style="--td: .5s">
 						<div class="h3 name">Dwellington</div>
@@ -1405,7 +1476,7 @@ if ( cmsIsEnabled() ) {
 							<div class="point label strong text-uppercase">Trio Live Package</div>
 							<div class="point label strong text-uppercase">Short Stay Package</div>
 						</div>
-						<a class="inline button" href="#contact">Enquire Now</a>
+						<a class="inline button fill-green-2" href="#contact">Enquire Now</a>
 					</div>
 					<div class="address columns medium-6 large-4 space-50-top space-75-right scroll-reveal" style="--td: .75s">
 						<div class="h3 name">Enclave</div>
