@@ -11,7 +11,7 @@
 	display: block;
 	height: auto;
 	pointer-events: none;
-	transform: translateY(100%);
+	transform: translateY(200%);
 	transition: .3s ease-out;
 }
 .sticky-call-section.show {
