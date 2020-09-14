@@ -75,7 +75,7 @@ if ( cmsIsEnabled() ) {
 <section class="sticky-call-section show-for-small">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12 text-center space-75-bottom">
+			<div class="columns small-12 text-center space-50-bottom">
 				<a href="tel: +91-828-7770011" class="call-button button fill-yellow"><span class="material-icons inline-middle">phone_in_talk</span> <span class="call-number">+91-828-7770011</span></a>
 			</div>
 		</div>
