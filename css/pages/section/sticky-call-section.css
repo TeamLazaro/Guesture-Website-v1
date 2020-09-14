@@ -1,0 +1,38 @@
+/*
+ * Sticky Call Section
+ */
+
+.sticky-call-section {
+	position: fixed;
+	z-index: 9;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	display: block;
+	height: auto;
+	pointer-events: none;
+	transform: translateY(100%);
+	transition: .3s ease-out;
+}
+.sticky-call-section.show {
+	transform: translateY(0);
+}
+
+.sticky-call-section .call-button {
+	position: relative;
+	padding: 0 calc( var(--space-50)/2);
+	z-index: 1;
+	pointer-events: all;
+	height: var(--space-100);
+	line-height: var(--space-100);
+	background-image: linear-gradient(45deg, var(--yellow) 60%, var(--green-1) 100%);
+}
+.sticky-call-section .call-button .call-number {
+	font-size: 1.5rem;
+	margin-top: 1px;
+	margin-left: 5px;
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

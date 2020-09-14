@@ -71,6 +71,19 @@ if ( cmsIsEnabled() ) {
 <!-- END: Sample Section -->
 
 
+<!-- Sticky Call Section -->
+<section class="sticky-call-section show show-for-small">
+	<div class="container">
+		<div class="row">
+			<div class="columns small-12 text-center space-75-bottom">
+				<a href="tel: +91-828-7770011" class="call-button button fill-yellow"><span class="material-icons inline-middle">phone_in_talk</span> <span class="call-number">+91-828-7770011</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END: Sticky Call Section -->
+
+
 <!-- Intro Section -->
 <section class="intro-section fill-green-2 text-dark space-150-top-bottom" data-section="Intro" data-section-id="intro" style="background-image: linear-gradient(-135deg, transparent 60%, var(--yellow) 100%), url('../../../media/characters/intro-section/char-<?php echo rand( 1, 5 ) ?>.png?v=20181126'), url('../../../media/characters/intro-section/intro-section-bg-px.png?v=20181126');">
 	<div class="container">
