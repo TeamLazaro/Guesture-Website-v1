@@ -11,6 +11,21 @@ window.__BFS = window.__BFS || { };
 
 
 
+/*
+ *
+ * ----- References and Constants
+ *
+ */
+var SCROLL_THRESHOLD = 10;
+
+var currentScrollTop;
+var previousScrollTop = 0;
+var $stickyCallButton = $( ".js_sticky_call" );
+
+
+
+
+
 
 
 /*
@@ -123,6 +138,40 @@ window.__BFS.engagementIntervalCheck = executeEvery(
 	thingsToDoOnEveryInterval
 );
 window.__BFS.engagementIntervalCheck.start();
+
+
+
+
+
+/*
+ *
+ * Phone Number Button Auto-Hide
+ *
+ */
+function stickyCallButtonOnScroll () {
+
+	currentScrollTop = window.scrollY || document.body.scrollTop;
+
+	/*
+	 * Stick-rolling the Primary Navigation
+	 */
+	if ( Math.abs( currentScrollTop - previousScrollTop ) < SCROLL_THRESHOLD ) {
+		previousScrollTop = currentScrollTop;
+		return;
+	}
+
+	// If scrolling ↓.....
+	if ( currentScrollTop > previousScrollTop )
+		$stickyCallButton.addClass( "hide" );
+	else// if scrolling ↑.....
+		$stickyCallButton.removeClass( "hide" );
+
+	previousScrollTop = currentScrollTop;
+
+}
+
+$( window ).on( "scroll", stickyCallButtonOnScroll );
+
 
 
 

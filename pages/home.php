@@ -72,7 +72,7 @@ if ( cmsIsEnabled() ) {
 
 
 <!-- Sticky Call Section -->
-<section class="sticky-call-section show-for-small">
+<section class="sticky-call-section show-for-small js_sticky_call">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 text-center space-50-bottom">
