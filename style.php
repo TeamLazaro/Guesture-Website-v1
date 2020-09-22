@@ -18,6 +18,7 @@
 <link rel="stylesheet" type="text/css" href="css/pages/section/sample-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/sticky-call-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/document-section.css<?php echo $ver ?>">
+<link rel="stylesheet" type="text/css" href="css/pages/section/enterprise-coliving-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/intro-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/covid-safe-section.css<?php echo $ver ?>">
 <link rel="stylesheet" type="text/css" href="css/pages/section/booking-section.css<?php echo $ver ?>">

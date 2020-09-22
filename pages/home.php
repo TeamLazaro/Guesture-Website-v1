@@ -84,6 +84,23 @@ if ( cmsIsEnabled() ) {
 <!-- END: Sticky Call Section -->
 
 
+<!-- Enterprise Coliving Strip -->
+<section class="enterprise-coliving-strip fill-dark space-min-top-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="columns small-12">
+				<div class="message text-center">
+					<img class="enterprise-icon inline-middle hide-for-small" src="media/icons/icon-enterprise.svg<?php echo $ver ?>" style="margin-right: 8px;">
+					<span class="h5 space-25-right inline-middle" style="line-height: 2;">Enterprise Coliving Solutions</span>
+					<a class="button fill-green-2 inline-middle" target="_blank" href="/news/enterprise-coliving-solutions">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- END: Enterprise Coliving Strip -->
+
+
 <!-- Intro Section -->
 <section class="intro-section fill-green-2 text-dark space-150-top-bottom" data-section="Intro" data-section-id="intro" style="background-image: linear-gradient(-135deg, transparent 60%, var(--yellow) 100%), url('../../../media/characters/intro-section/char-<?php echo rand( 1, 5 ) ?>.png?v=20181126'), url('../../../media/characters/intro-section/intro-section-bg-px.png?v=20181126');">
 	<div class="container">

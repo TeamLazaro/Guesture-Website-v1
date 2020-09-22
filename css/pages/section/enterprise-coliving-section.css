@@ -1,0 +1,17 @@
+/*
+ * Enterprise Coliving Strip
+ */
+
+.enterprise-coliving-strip { position: relative; }
+
+@media( min-width: 640px )  {
+	.enterprise-coliving-strip .enterprise-icon {
+		width: 32px;
+	}
+}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {
+	.enterprise-coliving-strip .enterprise-icon {
+		width: 48px;
+	}
+}
