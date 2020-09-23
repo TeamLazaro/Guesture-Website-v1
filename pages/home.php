@@ -91,8 +91,8 @@ if ( cmsIsEnabled() ) {
 			<div class="columns small-12">
 				<div class="message text-center">
 					<img class="enterprise-icon inline-middle hide-for-small" src="media/icons/icon-enterprise.svg<?php echo $ver ?>" style="margin-right: 8px;">
-					<span class="h5 space-25-right inline-middle" style="line-height: 2;">Enterprise Coliving Solutions</span>
-					<a class="button fill-green-2 inline-middle" target="_blank" href="/news/enterprise-coliving-solutions">Learn More</a>
+					<span class="h5 space-25-right inline-middle" style="line-height: 2;">Enterprise BCP Solutions</span>
+					<a class="button fill-green-2 inline-middle" target="_blank" href="/news/enterprise-bcp-solutions">Learn More</a>
 				</div>
 			</div>
 		</div>
