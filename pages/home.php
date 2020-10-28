@@ -883,7 +883,7 @@ if ( cmsIsEnabled() ) {
 				<div class="rhai space-100-top">
 					<div class="h4 strong text-uppercase space-min-bottom">Member of the</div>
 					<a class="inline" href="https://rhai.org" target="_blank"><img src="media/logo-rhai.png<?php echo $ver ?>"></a>
-					<div class="h5 space-min-top">Rental House Association of India</div>
+					<div class="h5 space-min-top">Rental Housing Association of India</div>
 				</div>
 			</div>
 		</div>
