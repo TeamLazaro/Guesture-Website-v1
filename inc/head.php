@@ -130,6 +130,10 @@
 		<link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker-v5.14.2.min.css<?php echo $ver ?>"/>
 	<?php endif; ?>
 
+	<?php if ( is_user_logged_in() ) : ?>
+		<link rel="stylesheet" type="text/css" href="cms/wp-content/plugins/query-monitor/assets/query-monitor.css<?= $ver ?>"/>
+	<?php endif; ?>
+
 	<!--
 	*
 	*	Fonts and Icons

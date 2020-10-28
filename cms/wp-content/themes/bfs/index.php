@@ -18,3 +18,6 @@ if ( $theURLEndsWithCMS ) {
 	$adminPageURL = preg_replace( '/\/+/', '/', $requestURI . '/wp-admin' );
 	header( 'Location: ' . $adminPageURL );
 }
+
+if ( is_user_logged_in() )
+	get_footer();
