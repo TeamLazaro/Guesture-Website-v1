@@ -220,7 +220,7 @@ require_once __DIR__ . '/../inc/above.php';
 						<?php endif; ?>
 
 
-						<div class="h4 strong space-25-top js_summary space-25-bottom">This option gives you access to a Twin Sharing room in a furnished 3 Bedroom Suite. Your room has an attached bathroom and an attached Balcony.</div>
+						<div class="h4 strong space-25-top js_summary space-25-bottom">This option gives you access to a Twin Sharing room in a furnished 3 Bedroom Flat. Your room has an attached bathroom and an attached Balcony.</div>
 						<div class="virtual-tour-container fill-dark js_virtual_tour_container">
 							<iframe class="virtual-tour js_virtual_tour" data-default-src="/media/favicon/favicon.ico" src="/media/favicon/favicon.ico" frameborder="0" data-hj-allow-iframe=""></iframe>
 						</div>
@@ -234,7 +234,7 @@ require_once __DIR__ . '/../inc/above.php';
 						</span>
 					</div>
 					<div class="columns small-10 small-offset-1 large-8 xlarge-7">
-						<div class="h4 strong space-25-top-bottom text-green-2">What is in your suite?</div>
+						<div class="h4 strong space-25-top-bottom text-green-2">What is in your flat?</div>
 					</div>
 					<div class="p columns small-10 small-offset-1 large-8 xlarge-7 column-wrap js_suite">
 						<span class="p block space-min-bottom js_suite">

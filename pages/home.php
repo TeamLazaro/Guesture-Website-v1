@@ -386,7 +386,7 @@ if ( cmsIsEnabled() ) {
 					<img class="js_image">
 				</div>
 				<div class="intro space-min">
-					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 2 or 3 Bedroom Suite.</div>
+					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">Triple Sharing room in a 2 or 3 Bedroom Flat.</div>
 					<div class="description h6 text-green-2">Preferred by Students, Interns and Trainees living alone in Bangalore.</div>
 				</div>
 				<div class="config space-min">
@@ -501,7 +501,7 @@ if ( cmsIsEnabled() ) {
 					<img class="js_image">
 				</div>
 				<div class="intro space-min">
-					<div class="heading h5 strong opacity-50 space-min-top">Twin Sharing room in a 2 or 3 Bedroom Suite.</div>
+					<div class="heading h5 strong opacity-50 space-min-top">Twin Sharing room in a 2 or 3 Bedroom Flat.</div>
 					<div class="description h6">Preferred by corporate professionals living alone in Bangalore.</div>
 				</div>
 				<div class="config space-min">
@@ -616,7 +616,7 @@ if ( cmsIsEnabled() ) {
 					<img class="js_image">
 				</div>
 				<div class="intro space-min">
-					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 2 or 3 Bedroom Suite.</div>
+					<div class="heading h5 strong text-green-2 opacity-50 space-min-top">A Dedicated room in a 2 or 3 Bedroom Flat.</div>
 					<div class="description h6 text-green-2">Preferred by Managers living alone in Bangalore, away from their family.</div>
 				</div>
 				<div class="config space-min">
