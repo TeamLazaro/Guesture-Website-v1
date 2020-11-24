@@ -746,28 +746,10 @@ if ( cmsIsEnabled() ) {
 			<div class="checkin columns small-10 small-offset-1 space-150-top">
 				<div class="label text-neutral-3 text-uppercase space-min-bottom scroll-reveal">Check-in</div>
 				<div class="h3 strong text-green-2 space-min-bottom scroll-reveal">10 Minute Check-in</div>
-				<div class="h4 text-neutral-3 scroll-reveal">Just carry <span class="strong text-green-2 sparkle title-3-left title-3-right scroll-reveal pop">any one<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-3-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-3-right.svg'; ?></span></span> of these KYC documents for a quick check-in.</div>
+				<div class="h4 text-neutral-3 scroll-reveal">Just carry the <span class="strong text-green-2 sparkle title-3-left title-3-right scroll-reveal pop"> 3 mandatory KYC documents<span class="spark-1"><?php include __DIR__ . '/../media/sparkle/title-3-left.svg'; ?></span><span class="spark-2"><?php include __DIR__ . '/../media/sparkle/title-3-right.svg'; ?></span></span> for a quick check-in.</div>
 			</div>
-			<div class="checkin columns small-10 small-offset-1 xlarge-9">
-				<div class="row space-min-top-bottom">
-					<div class="columns small-12 medium-6 large-3 space-min-bottom scroll-reveal" style="--td: .25s">
-						<div class="icon inline-middle"><img src="media/icons/icon-aadhar.svg<?php echo $ver ?>"></div>
-						<div class="h6 strong text-green-2 text-uppercase inline-middle">AADHAR Card</div>
-					</div>
-					<div class="columns small-12 medium-6 large-3 space-min-bottom scroll-reveal" style="--td: .5s">
-						<div class="icon inline-middle"><img src="media/icons/icon-driverlicense.svg<?php echo $ver ?>"></div>
-						<div class="h6 strong text-green-2 text-uppercase inline-middle">Driver’s License</div>
-					</div>
-					<div class="columns small-12 medium-6 large-3 space-min-bottom scroll-reveal" style="--td: .75s">
-						<div class="icon inline-middle"><img src="media/icons/icon-voterid.svg<?php echo $ver ?>"></div>
-						<div class="h6 strong text-green-2 text-uppercase inline-middle">Voter’s ID Card</div>
-					</div>
-					<div class="columns small-12 medium-6 large-3 space-min-bottom scroll-reveal" style="--td: 1s">
-						<div class="icon inline-middle"><img src="media/icons/icon-passport.svg<?php echo $ver ?>"></div>
-						<div class="h6 strong text-green-2 text-uppercase inline-middle">Passport</div>
-					</div>
-				</div>
-				<div class="h6 strong text-uppercase scroll-reveal">Full KYC Policy ›</div>
+			<div class="checkin columns small-10 small-offset-1 space-25-top">
+				<a href="/kyc-policy" target="_blank" class="button strong text-uppercase scroll-reveal">Read the Full KYC Policy ››</a>
 			</div>
 		</div>
 		<div class="row <?php if ( empty( $deals ) ) echo 'hidden' ?>">
